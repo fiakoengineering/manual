@@ -20,7 +20,6 @@ website:
     type: textbox
   page-navigation: true
 
-
   # FOR TWITTER / open-graph
   image: "fiakologo.png"
   favicon: "fiakologo.png"
@@ -61,7 +60,7 @@ website:
       collapse-level: 1
       pinned: true
       contents:
-        - "---"
+        - webapps/index.qmd
         - webapps/rainfall-apps.qmd
         - section: "`fiako-stations`"
           contents:

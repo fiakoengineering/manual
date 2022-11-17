@@ -1,28 +1,56 @@
 ---
-# pagetitle: "Dokumentasi Aplikasi Web"
+pagetitle: "Artikel | Aplikasi Pengolahan Data Hujan"
 title: Aplikasi Pengolahan Data Hujan
 subtitle: |
-    Dokumentasi dalam pengembangan aplikasi web pengolahan data hujan
+    Pengembangan tiga aplikasi web pengolahan data hujan menggunakan _python_
 
-title-block-banner: true
+title-block-style: default
+
 toc: true
 toc-depth: 2
 toc-location: left
+toc-title: Daftar Isi
 sidebar: false
 page-layout: article
+lang: id
 
-author: Taruma Sakti Megariansyah
-date: 2022-11-17
+author: 
+    - name: Taruma Sakti Megariansyah
+      url: https://taruma.my.id
+      affiliation: fiakodev, PT. FIAKO Enjiniring Indonesia
+      affiliation-url: https://dev.fiako.engineering
+
+author-title: Penulis
+affiliation-title: Divisi/Perusahaan
+published-title: Dipublikasikan
+modified-title: Diperbarui
+abstract-title: Abstrak
+
+citation:
+    url: https://manual.fiako.engineering/rainfall-apps.html
+    language: id
+    type: article
+
+date: 2022-11-18
+# date-modified: 2022-11-20
+date-format: full
+
 abstract: |
     Dalam analisis hidrologi, pengolahan data hujan merupakan proses yang penting. 
     Dengan membesarnya penyimpanan data dan permintaan pengolahan data yang lebih cepat, 
     diperlukan solusi teknologi yang dapat menjawab tantangan tersebut.
     Dikembangkan tiga aplikasi pengolahan data hujan berbasis web yang mampu mempersingkat proses pengerjaan pengolahan data hujan
     dan mengurangi kekeliruan yang terjadi. 
-    Aplikasi yang telah dikembangkan yaitu _Rainfall Stations Explorer_ (`fiako-stations`), 
-    _Rainfall Data Explorer_ (`hidrokit-rainfall`), dan _Frequency Analysis_ (`fiako-anfrek`). 
+    Aplikasi yang telah dikembangkan yaitu Rainfall Stations Explorer, 
+    Rainfall Data Explorer, dan Frequency Analysis. 
     
 ---
+
+<!-- ::: {.callout-important}
+## Sitasi Artikel
+
+Untuk mensitasi artikel ini dalam makalah formal, gunakan sitasi dari prosiding [PIT HATHI ke-39](https://hathi-pusat.org/blog/detail/pit39-hathi) (Saat ini, prosiding belum dipublikasikan). Jika tidak, dapat menggunakan sitasi yang tersedia di akhir halaman.  
+::: -->
 
 ## Aplikasi Web Pengolahan Data Hujan
 

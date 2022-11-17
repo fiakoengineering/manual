@@ -8,7 +8,7 @@ page-layout: full
 sidebar: false
 ---
 
-::: {.callout-important appearance="simple" icon="false"}
-## Dalam Pengembangan
-Situs ini digunakan sebagai dokumentasi manual oleh FIAKO Engineering. Manual dapat berupa penggunaan aplikasi, instalasi, _style guide_. Manual akan menggantikan hidrokit-blog. 
+::: {.callout-important appearance="default" icon="true"}
+## Dalam Pengembangan (_Work in Progress_)
+Situs ini digunakan sebagai dokumentasi/manual oleh FIAKO Engineering untuk panduan internal yang dapat digunakan oleh publik/eksternal. Manual dapat berupa penggunaan aplikasi, instalasi, _style guide_. 
 :::
