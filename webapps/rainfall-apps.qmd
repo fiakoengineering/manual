@@ -1,0 +1,95 @@
+---
+# pagetitle: "Dokumentasi Aplikasi Web"
+title: Aplikasi Pengolahan Data Hujan
+subtitle: |
+    Dokumentasi dalam pengembangan aplikasi web pengolahan data hujan
+
+title-block-banner: true
+toc: true
+toc-depth: 2
+toc-location: left
+sidebar: false
+page-layout: article
+
+author: Taruma Sakti Megariansyah
+date: 2022-11-17
+abstract: |
+    Dalam analisis hidrologi, pengolahan data hujan merupakan proses yang penting. 
+    Dengan membesarnya penyimpanan data dan permintaan pengolahan data yang lebih cepat, 
+    diperlukan solusi teknologi yang dapat menjawab tantangan tersebut.
+    Dikembangkan tiga aplikasi pengolahan data hujan berbasis web yang mampu mempersingkat proses pengerjaan pengolahan data hujan
+    dan mengurangi kekeliruan yang terjadi. 
+    Aplikasi yang telah dikembangkan yaitu _Rainfall Stations Explorer_ (`fiako-stations`), 
+    _Rainfall Data Explorer_ (`hidrokit-rainfall`), dan _Frequency Analysis_ (`fiako-anfrek`). 
+    
+---
+
+## Aplikasi Web Pengolahan Data Hujan
+
+**Aplikasi Web Pengolahan Data Hujan** merupakan tiga aplikasi web yang dapat digunakan sebagai pemerolehan data hujan hingga analisis frekuensi. Aplikasi ini merupakan bentuk terapan dari ilmu hidrologi yang digunakan di Indonesia. 
+
+### _Rainfall Stations Explorer_ (`fiako-stations`)
+
+::::: {.column-margin}
+
+![_Rainfall Stations Explorer_<br>(`fiako-stations`)](https://github.com/fiakoenjiniring/demo-stations/raw/main/_readme/fkstations-ft-01-loop.gif)
+
+:::::
+
+|
+:- | :-
+Judul Aplikasi | _Rainfall Stations Explorer_
+Kode Aplikasi | `fiako-stations`
+Versi Aplikasi | `v3.1.0` (15 November 2022)
+Alamat Aplikasi | [demo-fiako-stations.herokuapp.com](https://demo-fiako-stations.herokuapp.com)
+_Source Code_ | [fiakoenjiniring/demo-stations](https://github.com/fiakoenjiniring/demo-stations)
+
+_Rainfall Stations Explorer_ atau `fiako-stations` adalah aplikasi web yang dapat digunakan untuk mengeksplorasi data hujan harian yang tersedia di _database_. Dari aplikasi ini dapat memperoleh informasi kelengkapan data dan akusisi data hujan harian dengan mudah dan cepat. "Demo" disini diartikan menggunakan dataset publik atau acak dan hanya berfungsi untuk mendemonstrasikan fungsi aplikasi. 
+
+### _Rainfall Data Explorer_ (`hidrokit-rainfall`)
+
+::::: {.column-margin}
+
+![_Rainfall Data Explorer_<br>(`hidrokit-rainfall`)](https://github.com/fiakoenjiniring/demo-stations/raw/main/_readme/fkstations-ft-01-loop.gif)
+
+:::::
+
+|
+:- | :-
+Judul Aplikasi | _Rainfall Data Explorer_
+Kode Aplikasi | `hidrokit-rainfall`
+Versi Aplikasi | `v1.3.0` (15 November 2022)
+Alamat Aplikasi | [hidrokit-rainfall.herokuapp.com](https://hidrokit-rainfall.herokuapp.com)
+_Source Code_ | [fiakoenjiniring/rainfall](https://github.com/fiakoenjiniring/rainfall)
+
+_Rainfall Data Explorer_ atau `hidrokit-rainfall` adalah aplikasi web yang dapat digunakan untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, total hujan, hari hujan, hari kering, dan kejadian hujan maksimum setiap periode yang ditentukannya dengan presentasi menggunakan visualisasi data. Grafik kumulatif tahunan dan konsistensi (kurva massa ganda) juga ditambahkan sejak versi v1.1.x.
+
+### _Frequency Analysis_ (`fiako-anfrek`)
+
+::::: {.column-margin}
+
+![_Frequency Analysis_<br>(`fiako-anfrek`)](https://github.com/fiakoenjiniring/demo-stations/raw/main/_readme/fkstations-ft-01-loop.gif)
+
+:::::
+
+|
+:- | :-
+Judul Aplikasi | _Frequency Analysis_
+Kode Aplikasi | `fiako-anfrek`
+Versi Aplikasi | `v1.1.0` (15 November 2022)
+Alamat Aplikasi | [fiako-anfrek.herokuapp.com](https://fiako-anfrek.herokuapp.com)
+_Source Code_ | [fiakoenjiniring/anfrek](https://github.com/fiakoenjiniring/anfrek)
+
+_Frequency Analysis_ (sebelumnya dikenal _Frequency Analysis in Hydrology_) atau `fiako-anfrek` adalah aplikasi web yang dapat digunakan untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt.
+
+## Informasi Teknis Aplikasi
+
+## Pengembangan Aplikasi
+
+### Struktur Aplikasi
+
+## Penggunaan Aplikasi
+
+## Kekurangan Aplikasi
+
+## Berkontribusi
