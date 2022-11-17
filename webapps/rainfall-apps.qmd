@@ -29,7 +29,9 @@ abstract-title: Abstrak
 citation:
     url: https://manual.fiako.engineering/rainfall-apps.html
     language: id
-    type: article
+    # type: article
+    license: CC-BY-NC-SA 4.0
+    issued: 2022-11-18
 
 date: 2022-11-18
 # date-modified: 2022-11-20
@@ -46,11 +48,11 @@ abstract: |
     
 ---
 
-<!-- ::: {.callout-important}
+::: {.callout-important}
 ## Sitasi Artikel
 
-Untuk mensitasi artikel ini dalam makalah formal, gunakan sitasi dari prosiding [PIT HATHI ke-39](https://hathi-pusat.org/blog/detail/pit39-hathi) (Saat ini, prosiding belum dipublikasikan). Jika tidak, dapat menggunakan sitasi yang tersedia di akhir halaman.  
-::: -->
+Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari prosiding PIT HATHI ke-39. Jika bukan untuk makalah formal, dapat menggunakan sitasi yang tersedia di akhir halaman (mensitasi halaman ini).  
+:::
 
 ## Aplikasi Web Pengolahan Data Hujan
 
@@ -58,11 +60,13 @@ Untuk mensitasi artikel ini dalam makalah formal, gunakan sitasi dari prosiding 
 
 ### _Rainfall Stations Explorer_ (`fiako-stations`)
 
-::::: {.column-margin}
+_Rainfall Stations Explorer_ atau `fiako-stations` adalah aplikasi web yang dapat digunakan untuk mengeksplorasi data hujan harian yang tersedia di _database_. Dari aplikasi ini dapat memperoleh informasi kelengkapan data dan akusisi data hujan harian dengan mudah dan cepat. "Demo" disini diartikan menggunakan dataset publik atau acak dan hanya berfungsi untuk mendemonstrasikan fungsi aplikasi. 
+
+::: {.column-margin}
 
 ![_Rainfall Stations Explorer_<br>(`fiako-stations`)](https://github.com/fiakoenjiniring/demo-stations/raw/main/_readme/fkstations-ft-01-loop.gif)
 
-:::::
+:::
 
 |
 :- | :-
@@ -72,7 +76,8 @@ Versi Aplikasi | `v3.1.0` (15 November 2022)
 Alamat Aplikasi | [demo-fiako-stations.herokuapp.com](https://demo-fiako-stations.herokuapp.com)
 _Source Code_ | [fiakoenjiniring/demo-stations](https://github.com/fiakoenjiniring/demo-stations)
 
-_Rainfall Stations Explorer_ atau `fiako-stations` adalah aplikasi web yang dapat digunakan untuk mengeksplorasi data hujan harian yang tersedia di _database_. Dari aplikasi ini dapat memperoleh informasi kelengkapan data dan akusisi data hujan harian dengan mudah dan cepat. "Demo" disini diartikan menggunakan dataset publik atau acak dan hanya berfungsi untuk mendemonstrasikan fungsi aplikasi. 
+: Tabel informasi `fiako-stations`
+
 
 ### _Rainfall Data Explorer_ (`hidrokit-rainfall`)
 
@@ -113,6 +118,21 @@ _Frequency Analysis_ (sebelumnya dikenal _Frequency Analysis in Hydrology_) atau
 ## Informasi Teknis Aplikasi
 
 ## Pengembangan Aplikasi
+
+```{mermaid}
+%%{init: {'theme': 'neutral'}}%%
+flowchart LR
+    sub1[[Perencanaan]] --> sub2[[Pengembangan]] --> sub3[[Pengujian]] --> sub4[[Publikasi]]
+```
+
+
+```{mermaid}
+%%{init: {'theme': 'neutral'}}%%
+flowchart LR
+    start(start) --> pro1[Penentuan Framework] --> pro2[Penentuan Dependencies] --> pro3[Perencanaan Layout Aplikasi] --> pro4[Penentuan Interaksi] --> finish(end) 
+    something -.-> pro1
+    something2 -.-> pro2
+```
 
 ### Struktur Aplikasi
 
