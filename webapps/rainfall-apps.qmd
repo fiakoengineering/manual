@@ -1,5 +1,5 @@
 ---
-pagetitle: "Artikel | Aplikasi Pengolahan Data Hujan"
+pagetitle: "Artikel: Aplikasi Pengolahan Data Hujan"
 title: Aplikasi Pengolahan Data Hujan
 subtitle: |
     Pengembangan tiga aplikasi web pengolahan data hujan menggunakan _python_
@@ -20,22 +20,18 @@ author:
       affiliation: fiakodev, PT. FIAKO Enjiniring Indonesia
       affiliation-url: https://dev.fiako.engineering
 
-author-title: Penulis
-affiliation-title: Afiliasi
-published-title: Dipublikasikan
-modified-title: Diperbarui
-abstract-title: Abstrak
+language: ../language_id.yml
 
 citation:
     url: https://manual.fiako.engineering/rainfall-apps.html
     language: id
     type: article
     license: CC-BY-NC-SA 4.0
-    issued: 2022-11-18
+    issued: 2022-11-22
 
 license: CC-BY-NC-SA 4.0
 
-date: 2022-11-18
+date: 2022-11-22
 # date-modified: 2022-11-20
 date-format: full
 
@@ -50,6 +46,9 @@ abstract: |
 
 callout-appearance: simple
 reference-location: section
+
+number-sections: true
+fig-responsive: true
 
 format:
   html: 
@@ -79,11 +78,11 @@ Artikel ini juga dapat dikembangkan seiringnya waktu, sesuai perkembangan aplika
 
 ### _Rainfall Stations Explorer_
 
-_Rainfall Stations Explorer_ atau `fiako-stations` adalah aplikasi web yang dapat digunakan untuk mengeksplorasi data hujan harian yang tersedia di _database_. Dari aplikasi ini dapat memperoleh informasi kelengkapan data dan akusisi data hujan harian dengan mudah dan cepat. "Demo" disini diartikan menggunakan dataset publik atau acak dan hanya berfungsi untuk mendemonstrasikan fungsi aplikasi. 
+_Rainfall Stations Explorer_ atau `fiako-stations` adalah aplikasi web yang dapat digunakan untuk mengeksplorasi data hujan harian yang tersedia di _database_. Dari aplikasi ini dapat memperoleh informasi kelengkapan data dan akusisi data hujan harian dengan mudah dan cepat. "Demo" disini diartikan menggunakan dataset publik atau acak dan hanya berfungsi untuk mendemonstrasikan fungsi aplikasi. Demonstrasi aplikasi bisa melihat @fig-demo-fiako-stations.
 
 ::: {.column-margin}
 
-![_Rainfall Stations Explorer_<br>(`fiako-stations`)](img/manual-rainfall-apps-fiako-stations.gif){width="500"}
+![_Rainfall Stations Explorer_<br>(`fiako-stations`)](img/manual-rainfall-apps-fiako-stations.gif){#fig-demo-fiako-stations}
 
 :::
 
@@ -95,16 +94,16 @@ Versi Aplikasi | `v3.1.0` (15 November 2022)
 Alamat Aplikasi | [demo-fiako-stations.herokuapp.com](https://demo-fiako-stations.herokuapp.com)
 _Source Code_ | [fiakoenjiniring/demo-stations](https://github.com/fiakoenjiniring/demo-stations)
 
-: Tabel informasi `fiako-stations`
+: Tabel informasi `fiako-stations` {#tbl-info-fiako-stations}
 
 
 ### _Rainfall Data Explorer_
 
-_Rainfall Data Explorer_ atau `hidrokit-rainfall` adalah aplikasi web yang dapat digunakan untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, total hujan, hari hujan, hari kering, dan kejadian hujan maksimum setiap periode yang ditentukannya dengan presentasi menggunakan visualisasi data. Grafik kumulatif tahunan dan konsistensi (kurva massa ganda) juga ditambahkan sejak versi v1.1.x.
+_Rainfall Data Explorer_ atau `hidrokit-rainfall` adalah aplikasi web yang dapat digunakan untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, total hujan, hari hujan, hari kering, dan kejadian hujan maksimum setiap periode yang ditentukannya dengan presentasi menggunakan visualisasi data. Grafik kumulatif tahunan dan konsistensi (kurva massa ganda) juga ditambahkan sejak versi v1.1.x. Demonstrasi aplikasi bisa melihat @fig-demo-hidrokit-rainfall.
 
 ::: {.column-margin}
 
-![_Rainfall Data Explorer_<br>(`hidrokit-rainfall`)](img/manual-rainfall-apps-hidrokit-rainfall.gif)
+![_Rainfall Data Explorer_<br>(`hidrokit-rainfall`)](img/manual-rainfall-apps-hidrokit-rainfall.gif){#fig-demo-hidrokit-rainfall}
 
 :::
 
@@ -116,15 +115,15 @@ Versi Aplikasi | `v1.3.0` (15 November 2022)
 Alamat Aplikasi | [hidrokit-rainfall.herokuapp.com](https://hidrokit-rainfall.herokuapp.com)
 _Source Code_ | [fiakoenjiniring/rainfall](https://github.com/fiakoenjiniring/rainfall)
 
-: Tabel informasi `hidrokit-rainfall`
+: Tabel informasi `hidrokit-rainfall` {#tbl-info-hidrokit-rainfall}
 
 ### _Frequency Analysis_
 
-_Frequency Analysis_ (sebelumnya dikenal _Frequency Analysis in Hydrology_) atau `fiako-anfrek` adalah aplikasi web yang dapat digunakan untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt.
+_Frequency Analysis_ (sebelumnya dikenal _Frequency Analysis in Hydrology_) atau `fiako-anfrek` adalah aplikasi web yang dapat digunakan untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt. Demonstrasi aplikasi bisa melihat @fig-demo-fiako-anfrek.
 
 ::: {.column-margin}
 
-![_Frequency Analysis_<br>(`fiako-anfrek`)](img/manual-rainfall-apps-fiako-anfrek.gif)
+![_Frequency Analysis_<br>(`fiako-anfrek`)](img/manual-rainfall-apps-fiako-anfrek.gif){#fig-demo-fiako-anfrek}
 
 :::
 
@@ -136,12 +135,11 @@ Versi Aplikasi | `v1.1.0` (15 November 2022)
 Alamat Aplikasi | [fiako-anfrek.herokuapp.com](https://fiako-anfrek.herokuapp.com)
 _Source Code_ | [fiakoenjiniring/anfrek](https://github.com/fiakoenjiniring/anfrek)
 
-: Tabel informasi `fiako-anfrek`
+: Tabel informasi `fiako-anfrek` {#tbl-info-fiako-anfrek}
 
-## Informasi Teknis Aplikasi
+## Informasi Teknis
 
 Pengembangan aplikasi ini dibangun menggunakan bahasa pemrograman _Python_. Berikut daftar _dependencies_ yang digunakan dalam pengembangan aplikasi. 
-
 
 ::: {.column-body-outset}
 
@@ -163,7 +161,7 @@ _Package/Library_ | `fiako-stations` | `hidrokit-rainfall` | `fiako-anfrek`
 environment.yml (conda) | [env](https://github.com/fiakoenjiniring/demo-stations/blob/main/environment.yml) | [env](https://github.com/fiakoenjiniring/rainfall/blob/main/environment.yml) | [env](https://github.com/fiakoenjiniring/anfrek/blob/main/environment.yml)
 requirements.txt (venv) | [env](https://github.com/fiakoenjiniring/demo-stations/blob/main/requirements.txt) | [env](https://github.com/fiakoenjiniring/rainfall/blob/main/requirements.txt) | [env](https://github.com/fiakoenjiniring/anfrek/blob/main/requirements.txt)
 
-: _Packages_ yang digunakan dalam pengembangan aplikasi pengolahan data hujan
+: _Packages_ yang digunakan dalam pengembangan aplikasi pengolahan data hujan {#tbl-dependencies}
 
 :::
 
@@ -179,28 +177,17 @@ Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda].
 
 ## Pengembangan Aplikasi
 
-Aplikasi dikembangkan menggunakan 
-
-::: {.column-screen-inset .text-center}
-
-```{mermaid}
-%%{init: {'theme': 'neutral'}}%%
-flowchart LR
-    sub1[[Perencanaan]] --> sub2[[Pengembangan]] --> sub3[[Pengujian]] --> sub4[[Publikasi]]
-```
-
-
-```{mermaid}
-%%{init: {'theme': 'neutral'}}%%
-flowchart LR
-    start(start) --> pro1[Penentuan Framework] --> pro2[Penentuan Dependencies] --> pro3[Perencanaan Layout Aplikasi] --> pro4[Penentuan Interaksi] --> finish(end) 
-    something -.-> pro1
-    something2 -.-> pro2
-```
-
-:::
+Pada artikel ini, saya tidak akan fokus ke tahapan/alur pengembangan. Akan tetapi, saya akan fokus kepada beberapa topik penting yang cukup penting bagi _developer_ atau kontributor.
 
 ### Struktur Aplikasi
+
+Struktur aplikasi biasanya berbeda-beda tergantung pada keputusan _developer_. Sedangkan informasi mengenai struktur aplikasi cukup penting dalam melakukan pengembangan lebih lanjut ataupun mengevaluasi aplikasi. 
+
+### Setup _Environment_
+
+
+### _Callback_
+
 
 ## Penggunaan Aplikasi
 
