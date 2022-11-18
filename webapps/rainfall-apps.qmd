@@ -21,7 +21,7 @@ author:
       affiliation-url: https://dev.fiako.engineering
 
 author-title: Penulis
-affiliation-title: Divisi/Perusahaan
+affiliation-title: Afiliasi
 published-title: Dipublikasikan
 modified-title: Diperbarui
 abstract-title: Abstrak
@@ -29,9 +29,11 @@ abstract-title: Abstrak
 citation:
     url: https://manual.fiako.engineering/rainfall-apps.html
     language: id
-    # type: article
+    type: article
     license: CC-BY-NC-SA 4.0
     issued: 2022-11-18
+
+license: CC-BY-NC-SA 4.0
 
 date: 2022-11-18
 # date-modified: 2022-11-20
@@ -45,26 +47,43 @@ abstract: |
     dan mengurangi kekeliruan yang terjadi. 
     Aplikasi yang telah dikembangkan yaitu Rainfall Stations Explorer, 
     Rainfall Data Explorer, dan Frequency Analysis. 
-    
+
+callout-appearance: simple
+reference-location: section
+
+format:
+  html: 
+    css: article.css
+
 ---
 
 ::: {.callout-important}
 ## Sitasi Artikel
 
-Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari prosiding PIT HATHI ke-39. Jika bukan untuk makalah formal, dapat menggunakan sitasi yang tersedia di akhir halaman (mensitasi halaman ini).  
+Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari prosiding PIT HATHI ke-39. Jika bukan untuk makalah formal, dapat menggunakan sitasi yang tersedia [di akhir halaman](#citation) (mensitasi halaman ini).  
 :::
 
-## Aplikasi Web Pengolahan Data Hujan
+::: {.callout-note}
+## Perbedaan artikel ini dengan makalah PIT HATHI ke-39
 
-**Aplikasi Web Pengolahan Data Hujan** merupakan tiga aplikasi web yang dapat digunakan sebagai pemerolehan data hujan hingga analisis frekuensi. Aplikasi ini merupakan bentuk terapan dari ilmu hidrologi yang digunakan di Indonesia. 
+Ketiga aplikasi ini telah dipresentasikan di kegiatan Pertemuan Ilmiah Tahunan (PIT) Himpunan Ahli Teknik Hidrolik Indonesia (HATHI) ke-39 yang diadakan pada tanggal 29 Oktober 2022 dalam bentuk makalah berjudul "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web". 
 
-### _Rainfall Stations Explorer_ (`fiako-stations`)
+Artikel ini ditujukan sebagai penjelasan lebih detail dengan penyampaian informal dan bukan sebagai pengganti makalah yang dipublikasikan di PIT HATHI ke-39. Harapannya, artikel ini memudahkan pengguna atau _developer_ untuk berkontribusi maupun mengembangkan aplikasi yang serupa. Karena tidak ada batasan halaman pada artikel, informasi yang disampaikan bisa sejelas mungkin. 
+
+Artikel ini juga dapat dikembangkan seiringnya waktu, sesuai perkembangan aplikasi ataupun teknologi yang digunakan. 
+:::
+
+## Aplikasi Pengolahan Data Hujan
+
+**Aplikasi Pengolahan Data Hujan** merupakan tiga aplikasi web yang dapat digunakan sebagai pemerolehan data hujan hingga analisis frekuensi. Aplikasi ini merupakan bentuk terapan dari ilmu hidrologi yang digunakan di Indonesia. 
+
+### _Rainfall Stations Explorer_
 
 _Rainfall Stations Explorer_ atau `fiako-stations` adalah aplikasi web yang dapat digunakan untuk mengeksplorasi data hujan harian yang tersedia di _database_. Dari aplikasi ini dapat memperoleh informasi kelengkapan data dan akusisi data hujan harian dengan mudah dan cepat. "Demo" disini diartikan menggunakan dataset publik atau acak dan hanya berfungsi untuk mendemonstrasikan fungsi aplikasi. 
 
 ::: {.column-margin}
 
-![_Rainfall Stations Explorer_<br>(`fiako-stations`)](https://github.com/fiakoenjiniring/demo-stations/raw/main/_readme/fkstations-ft-01-loop.gif)
+![_Rainfall Stations Explorer_<br>(`fiako-stations`)](img/manual-rainfall-apps-fiako-stations.gif){width="500"}
 
 :::
 
@@ -79,13 +98,15 @@ _Source Code_ | [fiakoenjiniring/demo-stations](https://github.com/fiakoenjiniri
 : Tabel informasi `fiako-stations`
 
 
-### _Rainfall Data Explorer_ (`hidrokit-rainfall`)
+### _Rainfall Data Explorer_
 
-::::: {.column-margin}
+_Rainfall Data Explorer_ atau `hidrokit-rainfall` adalah aplikasi web yang dapat digunakan untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, total hujan, hari hujan, hari kering, dan kejadian hujan maksimum setiap periode yang ditentukannya dengan presentasi menggunakan visualisasi data. Grafik kumulatif tahunan dan konsistensi (kurva massa ganda) juga ditambahkan sejak versi v1.1.x.
 
-![_Rainfall Data Explorer_<br>(`hidrokit-rainfall`)](https://github.com/fiakoenjiniring/demo-stations/raw/main/_readme/fkstations-ft-01-loop.gif)
+::: {.column-margin}
 
-:::::
+![_Rainfall Data Explorer_<br>(`hidrokit-rainfall`)](img/manual-rainfall-apps-hidrokit-rainfall.gif)
+
+:::
 
 |
 :- | :-
@@ -95,15 +116,17 @@ Versi Aplikasi | `v1.3.0` (15 November 2022)
 Alamat Aplikasi | [hidrokit-rainfall.herokuapp.com](https://hidrokit-rainfall.herokuapp.com)
 _Source Code_ | [fiakoenjiniring/rainfall](https://github.com/fiakoenjiniring/rainfall)
 
-_Rainfall Data Explorer_ atau `hidrokit-rainfall` adalah aplikasi web yang dapat digunakan untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, total hujan, hari hujan, hari kering, dan kejadian hujan maksimum setiap periode yang ditentukannya dengan presentasi menggunakan visualisasi data. Grafik kumulatif tahunan dan konsistensi (kurva massa ganda) juga ditambahkan sejak versi v1.1.x.
+: Tabel informasi `hidrokit-rainfall`
 
-### _Frequency Analysis_ (`fiako-anfrek`)
+### _Frequency Analysis_
 
-::::: {.column-margin}
+_Frequency Analysis_ (sebelumnya dikenal _Frequency Analysis in Hydrology_) atau `fiako-anfrek` adalah aplikasi web yang dapat digunakan untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt.
 
-![_Frequency Analysis_<br>(`fiako-anfrek`)](https://github.com/fiakoenjiniring/demo-stations/raw/main/_readme/fkstations-ft-01-loop.gif)
+::: {.column-margin}
 
-:::::
+![_Frequency Analysis_<br>(`fiako-anfrek`)](img/manual-rainfall-apps-fiako-anfrek.gif)
+
+:::
 
 |
 :- | :-
@@ -113,11 +136,52 @@ Versi Aplikasi | `v1.1.0` (15 November 2022)
 Alamat Aplikasi | [fiako-anfrek.herokuapp.com](https://fiako-anfrek.herokuapp.com)
 _Source Code_ | [fiakoenjiniring/anfrek](https://github.com/fiakoenjiniring/anfrek)
 
-_Frequency Analysis_ (sebelumnya dikenal _Frequency Analysis in Hydrology_) atau `fiako-anfrek` adalah aplikasi web yang dapat digunakan untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt.
+: Tabel informasi `fiako-anfrek`
 
 ## Informasi Teknis Aplikasi
 
+Pengembangan aplikasi ini dibangun menggunakan bahasa pemrograman _Python_. Berikut daftar _dependencies_ yang digunakan dalam pengembangan aplikasi. 
+
+
+::: {.column-body-outset}
+
+_Package/Library_ | `fiako-stations` | `hidrokit-rainfall` | `fiako-anfrek`
+:- | :-: | :-: | :-:
+`python==3.9.13` | ✔️ | ✔️ | ✔️
+`pandas==1.5.1` | ✔️ | ✔️ | ✔️
+`dash==2.7.0` | ✔️ | ✔️ | ✔️
+`dash-bootstrap-components==1.2.1` | ✔️ | ✔️ | ✔️
+`dash-bootstrap-templates==1.0.7` | ✔️ | ✔️ | ✔️
+`python-box==6.1.0` | ✔️ | ✔️ | ✔️
+`pyyaml==6.0` | ✔️ | ✔️ | ✔️
+`dash-auth==1.4.1`[^dash-auth] | ✔️ | ❌ | ❌
+`geopy==2.3.0` | ✔️ | ❌ | ❌
+`pytables==3.7.0` | ✔️ | ❌ | ❌
+`hidrokit==0.4.1` | ❌ | ✔️ | ✔️
+`statmodels==0.13.5` | ❌ | ✔️ | ❌
+`scipy==1.8`[^scipy] | ❌ | ❌ | ✔️
+environment.yml (conda) | [env](https://github.com/fiakoenjiniring/demo-stations/blob/main/environment.yml) | [env](https://github.com/fiakoenjiniring/rainfall/blob/main/environment.yml) | [env](https://github.com/fiakoenjiniring/anfrek/blob/main/environment.yml)
+requirements.txt (venv) | [env](https://github.com/fiakoenjiniring/demo-stations/blob/main/requirements.txt) | [env](https://github.com/fiakoenjiniring/rainfall/blob/main/requirements.txt) | [env](https://github.com/fiakoenjiniring/anfrek/blob/main/requirements.txt)
+
+: _Packages_ yang digunakan dalam pengembangan aplikasi pengolahan data hujan
+
+:::
+
+[^dash-auth]: `dash-auth` hanya digunakan untuk aplikasi `fiako-stations` internal. 
+[^scipy]: versi `scipy` **harus** menggunakan versi `1.8.x`. Hal ini terkait fungsi distribusi pearson. Untuk lebih jelasnya bisa membaca isu [hidrokit/hidrokit#228](https://github.com/hidrokit/hidrokit/issues/228). 
+
+Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda]. Environment untuk setiap aplikasi sudah tersedia di repository dengan nama file `environment.yml`. [Visual Studio Code] digunakan sebagai editor. Beberapa _package_ tambahan dalam _development_ antara lain `black`, `flake8`. Untuk pengembangan visualisasinya menggunakan [fitur _notebook_](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) yang tersedia di VSCode. Alternatifnya menggunakan [Google Colab], hanya perlu diperhatikan untuk versi setiap _library_ yang digunakan[^versi-colab].
+
+[miniconda]: https://docs.conda.io/en/latest/miniconda.html
+[Visual Studio Code]: https://code.visualstudio.com/
+[Google Colab]: https://colab.research.google.com/
+[^versi-colab]: Per tanggal 18 November 2022, [Google Colab] masih menggunakan python versi `3.7`.
+
 ## Pengembangan Aplikasi
+
+Aplikasi dikembangkan menggunakan 
+
+::: {.column-screen-inset .text-center}
 
 ```{mermaid}
 %%{init: {'theme': 'neutral'}}%%
@@ -133,6 +197,8 @@ flowchart LR
     something -.-> pro1
     something2 -.-> pro2
 ```
+
+:::
 
 ### Struktur Aplikasi
 
