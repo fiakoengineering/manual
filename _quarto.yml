@@ -2,6 +2,7 @@ project:
   type: website
   preview: 
       port: 3637
+  
 
 execute: 
   freeze: auto
@@ -9,15 +10,15 @@ execute:
 website:
   title: "FIAKO Manual"
   description: "Dokumentasi Manual oleh FIAKO Engineering"
-
+  
   site-url: https://manual.fiako.engineering
   repo-url: https://github.com/fiakoenjiniring/manual
   repo-actions: [edit, issue]
 
   reader-mode: true
   search: 
-    location: sidebar
-    type: textbox
+    location: navbar
+    type: overlay
   page-navigation: true
 
   # FOR TWITTER / open-graph
@@ -36,8 +37,8 @@ website:
     logo: "fiakologo.png"
 
     left:
-      - text: Home
-        href: index.qmd
+      # - text: Home
+      #   href: index.qmd
       - text: Web Apps
         href: webapps/index.qmd
 
@@ -60,8 +61,9 @@ website:
       collapse-level: 1
       pinned: true
       contents:
-        - webapps/index.qmd
-        - webapps/rainfall-apps.qmd
+        - text: "Ringkasan"
+          href: webapps/index.qmd
+        - webapps/webapps-rainfall.qmd
         - section: "`fiako-stations`"
           contents:
             - README
@@ -80,10 +82,14 @@ website:
   ## SIDEBAR
   page-footer:
     right: >-
-      developed by **fiako**dev. 
-      built with ❤️ and [Quarto](https://quarto.org/).
+      website by **fiako**dev, 
+      built with [Quarto](https://quarto.org/).
     left: >-
       &copy; 2022 PT. FIAKO ENJINIRING INDONESIA.
+    # center:
+    #   - "About"
+
+  
 
 format:
   html:
@@ -91,6 +97,7 @@ format:
     css: styles.css
     toc: true
     link-external-newwindow: true
+    language: language_id.yml
 
 
 

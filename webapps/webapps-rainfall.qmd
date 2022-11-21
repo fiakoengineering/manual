@@ -20,7 +20,7 @@ author:
       affiliation: fiakodev, PT. FIAKO Enjiniring Indonesia
       affiliation-url: https://dev.fiako.engineering
 
-language: ../language_id.yml
+# language: ../language_id.yml
 
 citation:
     url: https://manual.fiako.engineering/rainfall-apps.html

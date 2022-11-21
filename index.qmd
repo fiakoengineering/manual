@@ -1,6 +1,6 @@
 ---
-pagetitle: "fiako-manual | Dokumentasi Manual FIAKO Engineering"
-title: Dokumentasi Manual
+pagetitle: "fiako-manual | Dokumentasi/Manual FIAKO Engineering"
+# title: Dokumentasi/Manual
 format: html
 toc: false
 link-external-newwindow: true
