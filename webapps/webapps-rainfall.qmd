@@ -9,7 +9,6 @@ title-block-style: default
 toc: true
 toc-depth: 3
 toc-location: right
-toc-title: Daftar Isi
 sidebar: side-webapps
 page-layout: article
 lang: id
@@ -136,7 +135,11 @@ _Source Code_ | [fiakoenjiniring/anfrek](https://github.com/fiakoenjiniring/anfr
 
 : Tabel informasi `fiako-anfrek` {#tbl-info-fiako-anfrek}
 
-## _Dependencies_ Aplikasi {#sec-dependencies-apps}
+## Pengembangan Aplikasi {#sec-development-apps}
+
+Pengembangan aplikasi ini tidak mengikuti _template_ yang sudah tersedia sehingga penulisan kode ataupun strukturnya yang dihasilkan dari aplikasi ini masih perlu dievaluasi kembali. Dalam bab ini, akan dibahas beberapa informasi mengenai _development_ aplikasi sehingga memudahkan _developer_ membaca _source code_ atau mengembangkannya. 
+
+### _Dependencies_ {#sec-dependencies-apps}
 
 Pengembangan aplikasi ini dibangun menggunakan bahasa pemrograman _Python_. Berikut daftar paket yang digunakan dalam pengembangan aplikasi di @tbl-dependencies. 
 
@@ -174,18 +177,36 @@ Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda].
 [Google Colab]: https://colab.research.google.com/
 [^versi-colab]: Per tanggal 18 November 2022, [Google Colab] masih menggunakan python versi `3.7`.
 
-## Pengembangan Aplikasi {#sec-development-apps}
+### Struktur Aplikasi {#sec-structure-apps}
 
-Pengembangan aplikasi ini tidak mengikuti _template_ yang sudah tersedia sehingga penulisan kode ataupun strukturnya yang dihasilkan dari aplikasi ini masih perlu dievaluasi kembali. Dalam bab ini, akan dibahas beberapa informasi mengenai _development_ aplikasi sehingga memudahkan _developer_ membaca _source code_ atau mengembangkannya. 
+Aplikasi ini terdiri beberapa file atau komponen yang saling berhubungan. Pada dasarnya aplikasi berpusat pada file `app.py` sebagai file utama menjalankannya aplikasi. Daftar file yang digunakan dalam aplikasi dapat dilihat pada @tbl-str-apps.
 
-### Struktur Aplikasi
+::: {.column-page}
 
-Aplikasi ini terdiri beberapa file atau komponen yang saling berhubungan. Pada dasarnya aplikasi berpusat pada file `app.py` sebagai file utama menjalankannya aplikasi. Berikut struktur aplikasi yang digunakan di ketiga aplikasi:
+_Filename_ | Kegunaan | Catatan
+:- | :- | :-
+`app_config.yml` | Konfigurasi aplikasi dalam bentuk `.yml` | -
+`pyconfig.py` | Mengubah `app_config.yml` menjadi objek `appConfig` | Hanya digunakan untuk membaca `app_config.yml`
+`pytemplate.py` | Konfigurasi _template_ untuk _interactive plot_ `plotly` | -
+`pyfigure.py` | Membangkitkan objek `figure` grafik interaktif | .
+`pylayoutfunc.py` | Kumpulan fungsi terkait tampilan/_layout_ aplikasi | .
+`pylayout.py` | File utama untuk menyimpan _layout_ aplikasi  | .
+`pyfunc.py` | Kumpulan fungsi umum yang digunakan dalam aplikasi | .
+`app.py` | File utama aplikasi | Seluruh _callback_ diatur dalam file ini
+
+: Daftar _file_ yang digunakan dalam menjalankan aplikasi {#tbl-str-apps tbl-colwidths="[20,50,30]"}
+
+:::
+
+Hubungan antara file bisa dilihat pada @fig-structure-apps. Struktur aplikasi ini tidak begitu ketat sehingga beberapa file yang seharusnya tidak digunakan di `app.py` tetap dipanggil. Struktur ini hanya memudahkan _developer_ untuk menyusun fitur ataupun menelusuri fungsi. Dengan struktur tersebut, harapannya memudahkan untuk _developer_ atau kontributor untuk berkontribusi ataupun mengembangkan. 
 
 ::: {.column-screen-inset .text-center}
 
 ```{mermaid}
-flowchart TD
+%%| label: fig-structure-apps
+%%| fig-cap: Gambaran struktur aplikasi[^str-apps]
+%%{ init: { 'flowchart': { 'curve': 'bump' } } }%%
+flowchart RL
     pylayout[pylayout.py]
     pylayoutfunc[pylayoutfunc.py]
     pyfigure[pyfigure.py]
@@ -195,32 +216,139 @@ flowchart TD
     appconfig[app_config.yml]
     app[app.py]
 
-    pylayoutfunc -.-> pylayout --> app
-    appconfig -.-> pyconfig --> app
-    pyconfig --> pylayout
-    pyfunc --> app
-    pytemplate --> pyfigure --> app
+    appconfig -.- pyconfig
+
+    pyconfig -.-> pylayout
+    pyconfig -.-> pyfigure
+    pyconfig -.-> pytemplate
+    pyconfig -.-> pyfunc
+    
+    pytemplate -.-> pyfigure
+    pytemplate -.-> pylayoutfunc
+    
+    
+    pylayoutfunc -.-> pylayout
+    pyfigure -.-> pylayout
+    
+    pyconfig ====> app
+    pylayout ====> app
+    pyfunc ====> app
 ```
 
 :::
 
+[^str-apps]: Terdapat perbedaan antara artikel ini dengan makalah PIT HATHI ke-39. Gambar ini merupakan gambar terbaru yang telah dikoreksi. 
 
-### Setup _Environment_
+Struktur diatas masih bisa diperbaiki atau dikembangkan lagi seperti memisahkan _callback_ ke file tersendiri. 
+
+### Pengujian {#sec-testing-apps}
+
+Aplikasi ini tidak memiliki pengujian seperti _unit test_. Hal ini dikarenakan untuk pengujian ini memakan waktu pengembangan aplikasi. Pada `Dash` versi `v2.6`, fitur [_unit tests_](https://dash.plotly.com/testing#unit-tests) sudah ditambahkan. Aplikasi ini tetap melalui tahap pengujian, hanya saja dilakukan secara manual dan mandiri. 
+
+Aplikasi pengolahan data hujan hanya fokus pada visualisasi. Jadi, beberapa fitur analisis itu tergantung _package/library_ yang digunakan pada aplikasinya. Untuk `fiako-stations` tidak ada proses analisis sehingga pengujian hanya sebatas visualisasi dan interaktif antar komponen. Pada `hidrokit-rainfall` dan `fiako-anfrek` bergantung dengan paket [`hidrokit`], sehingga untuk hasil analisis akan bergantung pengujian pada paket tersebut. Proses pengujian manual ini dapat diilustrasikan pada @fig-testing-apps.
+
+::: {.column-screen-inset .text-center}
+
+```{mermaid}
+%%| label: fig-testing-apps
+%%| fig-cap: Gambaran pengujian aplikasi secara manual
+%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'neutral' } }%%
+flowchart LR
+    pengujian[[Pengujian]]
+    pengembangan[[Pengembangan]]
+    publikasi[[Publikasi]]
+    interaksi[Interaksi Komponen]
+    intended{Interaksi Sesuai Ekspetasi?}
+    visualisasi[Visualisasi]
+    output["Output (CSV / TXT)"]
+
+    intended == sesuai ekspetasi ==> publikasi
+    pengujian ==> interaksi
+    interaksi ==> intended
+    interaksi -.- visualisasi
+    interaksi -.- output
+    pengembangan -.-> pengujian
+    visualisasi -.-> intended
+    output -.-> intended
+    intended -. tidak sesuai ekspetasi .-> pengembangan
+
+```
+
+:::
+
+### _Open-Source_ dan GitHub {#sec-opensource}
+
+Setelah hasil aplikasi memuaskan dan dapat digunakan, aplikasi dirilis dalam bentuk proyek _open-source_ di GitHub. Ketiga aplikasi menggunakan [lisensi MIT](https://opensource.org/licenses/MIT). Karena proyek akan diserahkan ke komunitas, maka menyusun struktur dan mengikuti tata cara penulisan kode perlu diperhatikan. Alur publikasi seperti pada gambaran @fig-publish-apps. 
+
+::: {.text-center}
+
+```{mermaid}
+%%| label: fig-publish-apps
+%%| fig-cap: Gambaran publikasi dan rilis aplikasi
+%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'neutral' } }%%
+flowchart TD
+    publikasi[[Publikasi]]
+    pengujian[[Pengujian]]
+    refactor["Refactor & Dokumentasi"]
+    publish["Publikasi dan Rilis di GitHub"]
+    osdev["Open Source Software Development"]
+    deploy["Deployment"]
+    maintain["Pengelolaan / Maintenance"]
+
+    publikasi ==> refactor
+    refactor ==> publish
+    refactor -.-> pengujian
+    pengujian -.-> publikasi
+    publish == "Tanggung Jawab Komunitas" ====> osdev
+    publish -.-> deploy
+    deploy -.-> maintain
+    publish -.-> maintain
+    maintain -.-> osdev
+
+```
+
+:::
+
+Sesuai ilustrasi diatas, aplikasi yang telah dipublikasikan diserahkan ke komunitas untuk mengembangkannya lebih lanjut. Dengan lisensi MIT, aplikasi juga bisa dimodifikasi dan dirilis dengan lisensi yang berbeda^[Harap membaca lisensi masing-masing aplikasi untuk lebih jelasnya.]. Pada tahap terakhir mengacu pada pengembangan dengan menggunakan [_Open Source Software Development_](https://en.wikipedia.org/wiki/Open-source_software_development).
 
 
-### _Callback_
+## Fitur Aplikasi {#sec-feature-apps}
 
+Tiga aplikasi yang telah dipublikasi memiliki fitur-fitur yang dapat membantu pekerjaan analisis hidrologi dari penyimpanan/pengambilan data hujan hingga analisis frekuensi. 
 
-## Teknis Aplikasi {#sec-technical-in-apps}
+### _Rainfall Stations Explorer_ {#sec-feat-fiako-stations}
 
-### `fiako-stations` {#sec-tech-fiako-stations}
+Fitur aplikasi _Rainfall Stations Explorer_ (`fiako-stations`) antara lain:
 
-### `hidrokit-rainfall` {#sec-tech-hidrokit-rainfall}
+1. Memudahkan **eksplorasi stasiun hujan** yang dimiliki.
+2. Mengetahui **informasi stasiun terdekat** terhadap titik lokasi tinjauan.
+3. Melihat secara sekilas **kelengkapan data** dengan _heatmap_.
+4. **Memilih stasiun dan periode** yang akan digunakan untuk analisis.
+5. **Visualisasi & download** data hujan harian dengan periode yang telah dipilih.
 
-### `fiako-anfrek` {#sec-tech-fiako-anfrek}
+### _Rainfall Data Explorer_ {#sec-feat-hidrokit-rainfall}
+
+Fitur aplikasi _Rainfall Data Explorer_ (`hidrokit-rainfall`) antara lain:
+
+1. **Eksplorasi data hujan** dalam bentuk _table_. Termasuk melakukan modifikasi dan _filter_. 
+2. **Visualisasi data hujan** untuk setiap stasiun dalam bentuk _line_ atau _bar_ (jika datasetnya kecil). 
+3. **Analisis data hujan** yang mengeluarkan rekapitulasi/ringkasan untuk tiga periode yaitu _biweekly_, _monthly_, dan _yearly_. 
+4. Mempresentasikan hasil analisis dalam bentuk **visualisasi analisis data hujan** berupa _bar plot_ dan _bubble chart_.
+
+### _Frequency Analysis_ {#sec-feat-fiako-anfrek}
+
+Fitur aplikasi _Frequency Analysis_ (`fiako-anfrek`) antara lain:
+
+1. **Eksplorasi data deret waktu** (_time series_) dengan visualisasi _bar_ dan _bubble_.
+2. Menghitung **parameter statistik dan _outlier_** beserta visualisasinya.
+3. Menghitung **analisis frekuensi** setiap distribusi dengan periode ulang beserta visualisasinya.
+4. Melakukan **uji kecocokan distribusi** _Chi-Square_ dan _Kolmogorov-Smirnov_ beserta visualisasinya.
 
 ## Penggunaan Aplikasi
 
 ## Kekurangan Aplikasi
 
 ## Berkontribusi
+
+
+[`hidrokit`]: https://github.com/hidrokit/hidrokit
