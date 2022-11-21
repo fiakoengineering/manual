@@ -7,10 +7,10 @@ subtitle: |
 title-block-style: default
 
 toc: true
-toc-depth: 2
-toc-location: left
+toc-depth: 3
+toc-location: right
 toc-title: Daftar Isi
-sidebar: false
+sidebar: side-webapps
 page-layout: article
 lang: id
 
@@ -68,12 +68,12 @@ Ketiga aplikasi ini telah dipresentasikan di kegiatan Pertemuan Ilmiah Tahunan (
 
 Artikel ini ditujukan sebagai penjelasan teknis dengan penyampaian informal dan bukan sebagai pengganti makalah yang dipublikasikan di PIT HATHI ke-39. Harapannya, artikel ini memudahkan kontributor dan _developer_ untuk berkontribusi maupun mengembangkan aplikasi yang serupa. 
 
-Artikel ini juga dikembangkan seiringnya waktu, sesuai perkembangan aplikasi ataupun teknologi yang digunakan. 
+Artikel ini juga dapat dikembangkan seiringnya waktu, sesuai perkembangan aplikasi ataupun teknologi yang digunakan. 
 :::
 
 ## Aplikasi Pengolahan Data Hujan {#sec-web-apps}
 
-**Aplikasi Pengolahan Data Hujan** merupakan tiga aplikasi web yang dapat digunakan sebagai pemerolehan data hujan hingga analisis frekuensi. Aplikasi ini merupakan bentuk terapan dari ilmu hidrologi yang digunakan di Indonesia. 
+**Aplikasi Pengolahan Data Hujan** merupakan tiga aplikasi web yang dapat membantu saat pengolahan data hujan berupa penyimpanan data hingga analisis frekuensi. Aplikasi ini menerapkan ilmu hidrologi yang digunakan di Indonesia^[Aplikasi ini bergantung pada paket [`hidrokit`](https://github.com/hidrokit/hidrokit) yang menerapkan ilmu hidrologi dalam bentuk python.]. 
 
 ### _Rainfall Stations Explorer_ {#sec-fiako-stations}
 
@@ -167,7 +167,7 @@ requirements.txt (venv) | [env](https://github.com/fiakoenjiniring/demo-stations
 [^dash-auth]: `dash-auth` hanya digunakan untuk aplikasi `fiako-stations` internal. 
 [^scipy]: versi `scipy` **harus** menggunakan versi `1.8.x`. Hal ini terkait fungsi distribusi pearson. Untuk lebih jelasnya bisa membaca isu [hidrokit/hidrokit#228](https://github.com/hidrokit/hidrokit/issues/228). 
 
-Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda]. Environment untuk setiap aplikasi sudah tersedia di repository dengan nama file `environment.yml` (conda) atau `requirements.txt` (venv). [Visual Studio Code] digunakan sebagai editor. Beberapa _package_ tambahan dalam _development_ antara lain `black`, `flake8`. Untuk pengembangan visualisasinya menggunakan [fitur _notebook_](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) yang tersedia di VSCode. Alternatifnya menggunakan [Google Colab], hanya perlu diperhatikan untuk versi setiap _library_ yang digunakan[^versi-colab].
+Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda]. Environment untuk setiap aplikasi sudah tersedia di repository dengan nama file `environment.yml` (conda) atau `requirements.txt` (venv). Beberapa _package/library_ tambahan dalam _development_ antara lain `black`, `flake8` untuk _code-formatting_ atau _linting_. Untuk pengembangan visualisasinya menggunakan [fitur _notebook_](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) yang tersedia di VSCode. Alternatifnya menggunakan [Google Colab], hanya perlu diperhatikan untuk versi setiap _library_ yang digunakan[^versi-colab].
 
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [Visual Studio Code]: https://code.visualstudio.com/
@@ -176,11 +176,34 @@ Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda].
 
 ## Pengembangan Aplikasi {#sec-development-apps}
 
-Pengembangan aplikasi ini tidak mengikuti _template_ yang sudah tersedia sehingga penulisan kode ataupun strukturnya yang dihasilkan dari aplikasi ini masih perlu dievaluasi kembali. Dalam @sec-development-apps ini, akan dibahasa beberapa informasi penting mengenai _development_ sehingga _developer_ bisa membaca _source code_ aplikasi ini lebih mudah. 
+Pengembangan aplikasi ini tidak mengikuti _template_ yang sudah tersedia sehingga penulisan kode ataupun strukturnya yang dihasilkan dari aplikasi ini masih perlu dievaluasi kembali. Dalam bab ini, akan dibahas beberapa informasi mengenai _development_ aplikasi sehingga memudahkan _developer_ membaca _source code_ atau mengembangkannya. 
 
 ### Struktur Aplikasi
 
-Informasi struktur aplikasi sangat penting dalam melakukan pengembangan lebih lanjut ataupun mengevaluasi aplikasi. Sayangnya, struktur aplikasi biasanya berbeda-beda tergantung pada keputusan _developer_.  
+Aplikasi ini terdiri beberapa file atau komponen yang saling berhubungan. Pada dasarnya aplikasi berpusat pada file `app.py` sebagai file utama menjalankannya aplikasi. Berikut struktur aplikasi yang digunakan di ketiga aplikasi:
+
+::: {.column-screen-inset .text-center}
+
+```{mermaid}
+flowchart TD
+    pylayout[pylayout.py]
+    pylayoutfunc[pylayoutfunc.py]
+    pyfigure[pyfigure.py]
+    pytemplate[pytemplate.py]
+    pyfunc[pyfunc.py]
+    pyconfig[pyconfig.py]
+    appconfig[app_config.yml]
+    app[app.py]
+
+    pylayoutfunc -.-> pylayout --> app
+    appconfig -.-> pyconfig --> app
+    pyconfig --> pylayout
+    pyfunc --> app
+    pytemplate --> pyfigure --> app
+```
+
+:::
+
 
 ### Setup _Environment_
 

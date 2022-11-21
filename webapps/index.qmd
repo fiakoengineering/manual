@@ -1,5 +1,5 @@
 ---
-pagetitle: "Dokumentasi Aplikasi Web"
+pagetitle: "Aplikasi Web"
 title: Aplikasi Web
 subtitle: |
     Dokumentasi/Manual Aplikasi Web
@@ -8,6 +8,8 @@ title-block-banner: true
 
 toc: true
 sidebar: side-webapps
+
+page-layout: article
 
 author: Taruma Sakti Megariansyah
 date: 2022-11-21
