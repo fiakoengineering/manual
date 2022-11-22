@@ -64,18 +64,18 @@ website:
         - text: "Ringkasan"
           href: webapps/index.qmd
         - webapps/webapps-rainfall.qmd
-        - section: "`fiako-stations`"
-          contents:
-            - README
-            - Penggunaan / Tutorial
-        - section: "`hidrokit-rainfall`"
-          contents:
-            - README
-            - Penggunaan / Tutorial
-        - section: "`fiako-anfrek`"
-          contents:
-            - README
-            - Penggunaan / Tutorial
+        # - section: "`fiako-stations`"
+        #   contents:
+        #     - README
+        #     - Penggunaan / Tutorial
+        # - section: "`hidrokit-rainfall`"
+        #   contents:
+        #     - README
+        #     - Penggunaan / Tutorial
+        # - section: "`fiako-anfrek`"
+        #   contents:
+        #     - README
+        #     - Penggunaan / Tutorial
         - "---"
           
 
