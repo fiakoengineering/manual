@@ -1,0 +1,14 @@
+---
+pagetitle: "fiako-manual | Dokumentasi/Manual FIAKO Engineering"
+# title: Dokumentasi/Manual
+format: html
+toc: false
+link-external-newwindow: true
+page-layout: full
+sidebar: false
+---
+
+::: {.callout-important appearance="default" icon="true"}
+## Dalam Pengembangan (_Work in Progress_)
+Situs ini digunakan sebagai dokumentasi/manual oleh FIAKO Engineering untuk panduan internal yang dapat digunakan oleh publik/eksternal. Manual dapat berupa penggunaan aplikasi, instalasi, _style guide_. 
+:::

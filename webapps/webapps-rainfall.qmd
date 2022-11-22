@@ -1,0 +1,626 @@
+---
+pagetitle: "Artikel: Aplikasi Pengolahan Data Hujan"
+title: Aplikasi Pengolahan Data Hujan
+subtitle: |
+    Pengembangan tiga aplikasi web pengolahan data hujan menggunakan _python_
+
+title-block-style: default
+
+toc: true
+toc-depth: 4
+toc-location: right
+toc-title: Daftar isi
+sidebar: side-webapps
+page-layout: article
+lang: id
+
+author: 
+    - name: Taruma Sakti Megariansyah
+      url: https://taruma.my.id
+      affiliation: fiakodev, PT. FIAKO Enjiniring Indonesia
+      affiliation-url: https://dev.fiako.engineering
+
+# language: ../language_id.yml
+
+citation:
+    language: id
+    type: article
+    license: CC-BY-NC-SA 4.0
+    issued: 2022-11-22
+
+license: CC-BY-NC-SA 4.0
+
+date: 2022-11-22
+# date-modified: 2022-11-20
+date-format: full
+
+abstract: |
+    Dalam analisis hidrologi, pengolahan data hujan merupakan proses yang penting. 
+    Dengan membesarnya penyimpanan data dan permintaan pengolahan data yang lebih cepat, 
+    diperlukan solusi teknologi yang dapat menjawab tantangan tersebut.
+    Dikembangkan tiga aplikasi pengolahan data hujan berbasis web yang mampu mempersingkat proses pengerjaan pengolahan data hujan
+    dan mengurangi kekeliruan yang terjadi. 
+    Aplikasi yang telah dikembangkan yaitu Rainfall Stations Explorer, 
+    Rainfall Data Explorer, dan Frequency Analysis. 
+
+callout-appearance: simple
+number-sections: true
+fig-responsive: true
+tbl-cap-location: top
+
+format:
+  html: 
+    css: article.css
+    mermaid-format: png # js
+
+---
+
+::: {.callout-important}
+## Mengutip Artikel
+
+Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari prosiding PIT HATHI ke-39. Jika bukan untuk makalah formal, dapat menggunakan sitasi yang tersedia [di akhir halaman](#citation) (mensitasi halaman ini).  
+:::
+
+::: {.callout-note}
+## Perbedaan Artikel dengan Makalah PIT HATHI ke-39
+
+Ketiga aplikasi ini telah dipresentasikan di kegiatan Pertemuan Ilmiah Tahunan (PIT) Himpunan Ahli Teknik Hidrolik Indonesia (HATHI) ke-39 yang diadakan pada tanggal 29 Oktober 2022 dalam bentuk makalah berjudul "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web". 
+
+Artikel ini ditujukan sebagai penjelasan teknis dengan penyampaian informal dan bukan sebagai pengganti makalah yang dipublikasikan di PIT HATHI ke-39. Harapannya, artikel ini memudahkan kontributor dan _developer_ untuk berkontribusi maupun mengembangkan aplikasi yang serupa. 
+
+Artikel ini juga dapat dikembangkan seiringnya waktu, sesuai perkembangan aplikasi ataupun teknologi yang digunakan. 
+:::
+
+## Aplikasi Pengolahan Data Hujan {#sec-web-apps}
+
+**Aplikasi Pengolahan Data Hujan** merupakan tiga aplikasi web yang dapat membantu saat pengolahan data hujan berupa penyimpanan data hingga analisis frekuensi. Aplikasi ini menerapkan ilmu hidrologi yang digunakan di Indonesia^[Aplikasi ini bergantung pada paket [`hidrokit`](https://github.com/hidrokit/hidrokit) yang menerapkan ilmu hidrologi dalam bentuk python.]. 
+
+### _Rainfall Stations Explorer_ {#sec-fiako-stations}
+
+_Rainfall Stations Explorer_ atau `fiako-stations` adalah aplikasi web yang dapat digunakan untuk mengeksplorasi data hujan harian yang tersedia di _database_. Dari aplikasi ini dapat memperoleh informasi kelengkapan data dan akusisi data hujan harian dengan mudah dan cepat. "Demo" disini diartikan menggunakan dataset publik atau acak dan hanya berfungsi untuk mendemonstrasikan fungsi aplikasi. Demonstrasi aplikasi bisa melihat @fig-demo-fiako-stations dan tabel informasi di @tbl-info-fiako-stations.
+
+::: {.column-margin}
+
+![_Rainfall Stations Explorer_<br>(`fiako-stations`)](img/manual-rainfall-apps-fiako-stations.gif){#fig-demo-fiako-stations}
+
+:::
+
+|
+:- | :-
+Judul Aplikasi | _Rainfall Stations Explorer_
+Kode Aplikasi | `fiako-stations`
+Versi Aplikasi | `v3.1.0` (15 November 2022)
+Alamat Aplikasi | [demo-fiako-stations.herokuapp.com](https://demo-fiako-stations.herokuapp.com)
+_Source Code_ | [fiakoenjiniring/demo-stations](https://github.com/fiakoenjiniring/demo-stations)
+
+: Tabel informasi `fiako-stations` {#tbl-info-fiako-stations}
+
+
+### _Rainfall Data Explorer_ {#sec-hidrokit-rainfall}
+
+_Rainfall Data Explorer_ atau `hidrokit-rainfall` adalah aplikasi web yang dapat digunakan untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, total hujan, hari hujan, hari kering, dan kejadian hujan maksimum setiap periode yang ditentukannya dengan presentasi menggunakan visualisasi data. Grafik kumulatif tahunan dan konsistensi (kurva massa ganda) juga ditambahkan sejak versi v1.1.x. Demonstrasi aplikasi bisa melihat @fig-demo-hidrokit-rainfall dan tabel informasi di @tbl-info-hidrokit-rainfall.
+
+::: {.column-margin}
+
+![_Rainfall Data Explorer_<br>(`hidrokit-rainfall`)](img/manual-rainfall-apps-hidrokit-rainfall.gif){#fig-demo-hidrokit-rainfall}
+
+:::
+
+|
+:- | :-
+Judul Aplikasi | _Rainfall Data Explorer_
+Kode Aplikasi | `hidrokit-rainfall`
+Versi Aplikasi | `v1.3.0` (15 November 2022)
+Alamat Aplikasi | [hidrokit-rainfall.herokuapp.com](https://hidrokit-rainfall.herokuapp.com)
+_Source Code_ | [fiakoenjiniring/rainfall](https://github.com/fiakoenjiniring/rainfall)
+
+: Tabel informasi `hidrokit-rainfall` {#tbl-info-hidrokit-rainfall}
+
+### _Frequency Analysis_ {#sec-fiako-anfrek}
+
+_Frequency Analysis_ (sebelumnya dikenal _Frequency Analysis in Hydrology_) atau `fiako-anfrek` adalah aplikasi web yang dapat digunakan untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt. Demonstrasi aplikasi bisa melihat @fig-demo-fiako-anfrek dan tabel informasi di @tbl-info-fiako-anfrek.
+
+::: {.column-margin}
+
+![_Frequency Analysis_<br>(`fiako-anfrek`)](img/manual-rainfall-apps-fiako-anfrek.gif){#fig-demo-fiako-anfrek}
+
+:::
+
+|
+:- | :-
+Judul Aplikasi | _Frequency Analysis_
+Kode Aplikasi | `fiako-anfrek`
+Versi Aplikasi | `v1.1.0` (15 November 2022)
+Alamat Aplikasi | [fiako-anfrek.herokuapp.com](https://fiako-anfrek.herokuapp.com)
+_Source Code_ | [fiakoenjiniring/anfrek](https://github.com/fiakoenjiniring/anfrek)
+
+: Tabel informasi `fiako-anfrek` {#tbl-info-fiako-anfrek}
+
+## Pengembangan Aplikasi {#sec-development-apps}
+
+Pengembangan aplikasi ini tidak mengikuti _template_ yang sudah tersedia sehingga penulisan kode ataupun strukturnya yang dihasilkan dari aplikasi ini masih perlu dievaluasi kembali. Dalam bab ini, akan dibahas beberapa informasi mengenai _development_ aplikasi sehingga memudahkan _developer_ membaca _source code_ atau mengembangkannya. 
+
+### _Dependencies_ {#sec-dependencies-apps}
+
+Pengembangan aplikasi ini dibangun menggunakan bahasa pemrograman _Python_. Berikut daftar paket yang digunakan dalam pengembangan aplikasi di @tbl-dependencies. 
+
+::: {.column-body-outset}
+
+_Package/Library_ | `fiako-stations` | `hidrokit-rainfall` | `fiako-anfrek`
+:- | :-: | :-: | :-:
+`python==3.9.13` | ✔️ | ✔️ | ✔️
+`pandas==1.5.1` | ✔️ | ✔️ | ✔️
+`dash==2.7.0` | ✔️ | ✔️ | ✔️
+`dash-bootstrap-components==1.2.1` | ✔️ | ✔️ | ✔️
+`dash-bootstrap-templates==1.0.7` | ✔️ | ✔️ | ✔️
+`python-box==6.1.0` | ✔️ | ✔️ | ✔️
+`pyyaml==6.0` | ✔️ | ✔️ | ✔️
+`dash-auth==1.4.1`[^dash-auth] | ✔️ | ❌ | ❌
+`geopy==2.3.0` | ✔️ | ❌ | ❌
+`pytables==3.7.0` | ✔️ | ❌ | ❌
+`hidrokit==0.4.1` | ❌ | ✔️ | ✔️
+`statmodels==0.13.5` | ❌ | ✔️ | ❌
+`scipy==1.8`[^scipy] | ❌ | ❌ | ✔️
+environment.yml (conda) | [env](https://github.com/fiakoenjiniring/demo-stations/blob/main/environment.yml) | [env](https://github.com/fiakoenjiniring/rainfall/blob/main/environment.yml) | [env](https://github.com/fiakoenjiniring/anfrek/blob/main/environment.yml)
+requirements.txt (venv) | [env](https://github.com/fiakoenjiniring/demo-stations/blob/main/requirements.txt) | [env](https://github.com/fiakoenjiniring/rainfall/blob/main/requirements.txt) | [env](https://github.com/fiakoenjiniring/anfrek/blob/main/requirements.txt)
+
+: _Packages_ yang digunakan dalam pengembangan aplikasi pengolahan data hujan {#tbl-dependencies}
+
+:::
+
+[^dash-auth]: `dash-auth` hanya digunakan untuk aplikasi `fiako-stations` internal. 
+[^scipy]: versi `scipy` **harus** menggunakan versi `1.8.x`. Hal ini terkait fungsi distribusi pearson. Untuk lebih jelasnya bisa membaca isu [hidrokit/hidrokit#228](https://github.com/hidrokit/hidrokit/issues/228). 
+
+Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda]. Environment untuk setiap aplikasi sudah tersedia di repository dengan nama file `environment.yml` (conda) atau `requirements.txt` (venv). Beberapa _package/library_ tambahan dalam _development_ antara lain `black`, `flake8` untuk _code-formatting_ atau _linting_. Untuk pengembangan visualisasinya menggunakan [fitur _notebook_](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) yang tersedia di VSCode. Alternatifnya menggunakan [Google Colab], hanya perlu diperhatikan untuk versi setiap _library_ yang digunakan[^versi-colab].
+
+[miniconda]: https://docs.conda.io/en/latest/miniconda.html
+[Visual Studio Code]: https://code.visualstudio.com/
+[Google Colab]: https://colab.research.google.com/
+[^versi-colab]: Per tanggal 18 November 2022, [Google Colab] masih menggunakan python versi `3.7`.
+
+### Struktur Aplikasi {#sec-structure-apps}
+
+Aplikasi ini terdiri beberapa file atau komponen yang saling berhubungan. Pada dasarnya aplikasi berpusat pada file `app.py` sebagai file utama menjalankannya aplikasi. Daftar file yang digunakan dalam aplikasi dapat dilihat pada @tbl-str-apps.
+
+::: {.column-page}
+
+_Filename_ | Kegunaan | Catatan
+:- | :- | :-
+`app_config.yml` | Konfigurasi aplikasi dalam bentuk `.yml` | -
+`pyconfig.py` | Mengubah `app_config.yml` menjadi objek `appConfig` | Hanya digunakan untuk membaca `app_config.yml`
+`pytemplate.py` | Konfigurasi _template_ untuk _interactive plot_ `plotly` | -
+`pyfigure.py` | Membangkitkan objek `figure` grafik interaktif | .
+`pylayoutfunc.py` | Kumpulan fungsi terkait tampilan/_layout_ aplikasi | .
+`pylayout.py` | File utama untuk menyimpan _layout_ aplikasi  | .
+`pyfunc.py` | Kumpulan fungsi umum yang digunakan dalam aplikasi | .
+`app.py` | File utama aplikasi | Seluruh _callback_ diatur dalam file ini
+
+: Daftar _file_ yang digunakan dalam menjalankan aplikasi {#tbl-str-apps tbl-colwidths="[20,50,30]"}
+
+:::
+
+Hubungan antara file bisa dilihat pada @fig-structure-apps. Struktur aplikasi ini tidak begitu ketat sehingga beberapa file yang seharusnya tidak digunakan di `app.py` tetap dipanggil. Struktur ini hanya memudahkan _developer_ untuk menyusun fitur ataupun menelusuri fungsi. Dengan struktur tersebut, harapannya memudahkan untuk _developer_ atau kontributor untuk berkontribusi ataupun mengembangkan. 
+
+::: {.column-body-outset .text-center}
+
+```{mermaid}
+%%| label: fig-structure-apps
+%%| fig-cap: Gambaran struktur aplikasi[^str-apps].
+%%| fig-height: 100%
+%%{ init: { 'flowchart': { 'curve': 'bump' } } }%%
+flowchart RL
+    pylayout[pylayout.py]
+    pylayoutfunc[pylayoutfunc.py]
+    pyfigure[pyfigure.py]
+    pytemplate[pytemplate.py]
+    pyfunc[pyfunc.py]
+    pyconfig[pyconfig.py]
+    appconfig[app_config.yml]
+    app[app.py]
+
+    appconfig -.- pyconfig
+
+    pyconfig -.-> pylayout
+    pyconfig -.-> pyfigure
+    pyconfig -.-> pytemplate
+    pyconfig -.-> pyfunc
+    
+    pytemplate -.-> pyfigure
+    pytemplate -.-> pylayoutfunc
+    
+    
+    pylayoutfunc -.-> pylayout
+    pyfigure -.-> pylayout
+    
+    pyconfig ====> app
+    pylayout ====> app
+    pyfunc ====> app
+```
+
+:::
+
+[^str-apps]: Terdapat perbedaan antara artikel ini dengan makalah PIT HATHI ke-39. Gambar ini merupakan gambar terbaru yang telah dikoreksi. 
+
+Struktur diatas masih bisa diperbaiki atau dikembangkan lagi seperti memisahkan _callback_ ke file tersendiri. 
+
+### Pengujian {#sec-testing-apps}
+
+Aplikasi ini tidak memiliki pengujian seperti _unit test_. Hal ini dikarenakan untuk pengujian ini memakan waktu pengembangan aplikasi. Pada `Dash` versi `v2.6`, fitur [_unit tests_](https://dash.plotly.com/testing#unit-tests) sudah ditambahkan. Aplikasi ini tetap melalui tahap pengujian, hanya saja dilakukan secara manual dan mandiri. 
+
+Aplikasi pengolahan data hujan hanya fokus pada visualisasi. Jadi, beberapa fitur analisis itu tergantung _package/library_ yang digunakan pada aplikasinya. Untuk `fiako-stations` tidak ada proses analisis sehingga pengujian hanya sebatas visualisasi dan interaktif antar komponen. Pada `hidrokit-rainfall` dan `fiako-anfrek` bergantung dengan paket [`hidrokit`], sehingga untuk hasil analisis akan bergantung pengujian pada paket tersebut. Proses pengujian manual ini dapat diilustrasikan pada @fig-testing-apps.
+
+::: {.column-page}
+
+```{mermaid}
+%%| label: fig-testing-apps
+%%| fig-cap: Gambaran pengujian aplikasi secara manual.
+%%| fig-height: 100%
+%%| fig-align: center
+%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'neutral' } }%%
+flowchart LR
+    pengujian[[Pengujian]]
+    pengembangan[[Pengembangan]]
+    publikasi[[Publikasi]]
+    interaksi[Interaksi Komponen]
+    intended{Interaksi Sesuai Ekspetasi?}
+    visualisasi[Visualisasi]
+    output["Output (CSV / TXT)"]
+
+    intended == sesuai ekspetasi ==> publikasi
+    pengujian ==> interaksi
+    interaksi ==> intended
+    interaksi -.- visualisasi
+    interaksi -.- output
+    pengembangan -.-> pengujian
+    visualisasi -.-> intended
+    output -.-> intended
+    intended -. tidak sesuai ekspetasi .-> pengembangan
+
+```
+
+:::
+
+### _Open-Source_ dan GitHub {#sec-opensource}
+
+Setelah hasil aplikasi memuaskan dan dapat digunakan, aplikasi dirilis dalam bentuk proyek _open-source_ di GitHub. Ketiga aplikasi menggunakan [lisensi MIT](https://opensource.org/licenses/MIT). Karena proyek akan diserahkan ke komunitas, maka menyusun struktur dan mengikuti tata cara penulisan kode perlu diperhatikan. Alur publikasi seperti pada gambaran @fig-publish-apps. 
+
+```{mermaid}
+%%| label: fig-publish-apps
+%%| fig-cap: Gambaran publikasi dan rilis aplikasi.
+%%| fig-align: center
+%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'neutral' } }%%
+flowchart TD
+    publikasi[[Publikasi]]
+    pengujian[[Pengujian]]
+    refactor["Refactor & Dokumentasi"]
+    publish["Publikasi dan Rilis di GitHub"]
+    osdev["Open Source Software Development"]
+    deploy["Deployment"]
+    maintain["Pengelolaan / Maintenance"]
+
+    publikasi ==> refactor
+    refactor ==> publish
+    refactor -.-> pengujian
+    pengujian -.-> publikasi
+    publish == "Tanggung Jawab Komunitas" ====> osdev
+    publish -.-> deploy
+    deploy -.-> maintain
+    publish -.-> maintain
+    maintain -.-> osdev
+
+```
+
+
+Sesuai ilustrasi diatas, aplikasi yang telah dipublikasikan diserahkan ke komunitas untuk mengembangkannya lebih lanjut. Dengan lisensi MIT, aplikasi juga bisa dimodifikasi dan dirilis dengan lisensi yang berbeda^[Harap membaca lisensi masing-masing aplikasi untuk lebih jelasnya.]. Pada tahap terakhir mengacu pada pengembangan dengan menggunakan [_Open Source Software Development_](https://en.wikipedia.org/wiki/Open-source_software_development).
+
+
+## Fitur Aplikasi {#sec-feature-apps}
+
+Tiga aplikasi yang telah dipublikasi memiliki fitur-fitur yang dapat membantu pekerjaan analisis hidrologi dari penyimpanan/pengambilan data hujan hingga analisis frekuensi. 
+
+### _Rainfall Stations Explorer_ {#sec-feat-fiako-stations}
+
+Fitur aplikasi _Rainfall Stations Explorer_ (`fiako-stations`) antara lain:
+
+#### Eksplorasi stasiun hujan
+
+Memudahkan **eksplorasi stasiun hujan** yang dimiliki. Demonstrasi fitur bisa dilihat pada @fig-stations-01 seperti navigasi dan interaksi di @fig-stations-01-01.
+
+::: {#fig-stations-01}
+
+![Navigasi dan interaksi peta.](fiako-stations/img/fkstations-ft-01-loop.gif){#fig-stations-01-01 width="65%" .border}
+
+Memudahkan eksplorasi stasiun hujan yang dimiliki.
+
+:::
+
+#### Informasi stasiun terdekat
+
+Mengetahui **informasi stasiun terdekat** terhadap titik lokasi tinjauan. Demonstrasi fitur bisa dilihat pada @fig-stations-02 seperti pengisian koordinat titik tinjau di @fig-stations-02-01 dan interaksi peta dan tabel di @fig-stations-02-02.
+
+::: {#fig-stations-02 layout-ncol=2 layout-valign="center" .column-page}
+
+![Pengisian koordinat titik tinjau.](fiako-stations/img/fkstations-ft-2-1-loop.gif){#fig-stations-02-01 .border}
+
+![Interaksi peta dan tabel.](fiako-stations/img/fkstations-ft-2-2-loop.gif){#fig-stations-02-02 .border}
+
+Mengetahui informasi stasiun terdekat terhadap titik lokasi tinjauan.
+
+:::
+
+#### Kelengkapan data
+
+Melihat secara sekilas **kelengkapan data** dengan _heatmap_. Demonstrasi fitur bisa dilihat pada @fig-stations-03 seperti grafik _heatmap_ di @fig-stations-03-01 dan grafik _bar plot_ di @fig-stations-03-02.
+
+::: {#fig-stations-03 layout-ncol=2 layout-valign="center" .column-page}
+
+![Navigasi dan interaksi _heatmap_.](fiako-stations/img/fkstations-ft-3-1-loop.gif){#fig-stations-03-01 .border}
+
+![Navigasi dan interaksi _bar plot_.](fiako-stations/img/fkstations-ft-3-2-loop.gif){#fig-stations-03-02 .border}
+
+Melihat secara sekilas kelengkapan data dengan _heatmap_.
+
+:::
+
+#### Memilih stasiun dan periode
+
+**Memilih stasiun dan periode** yang akan digunakan untuk analisis. Demonstrasi fitur bisa dilihat pada @fig-stations-04 seperti navigasi saat memilih stasiun di @fig-stations-04-01.
+
+::: {#fig-stations-04}
+
+![Navigasi memilih stasiun.](fiako-stations/img/fkstations-ft-4-1-loop.gif){#fig-stations-04-01 .border}
+
+Memilih stasiun dan periode yang akan digunakan untuk analisis.
+
+:::
+
+#### Visualisasi & download
+
+**Visualisasi & download** data hujan harian dengan periode yang telah dipilih. Demonstrasi fitur bisa dilihat pada @fig-stations-05 seperti interaksi visualisasi di @fig-stations-05-01, download data hujan harian di @fig-stations-05-02, isi file CSV di @fig-stations-05-03. 
+
+::: {#fig-stations-05 layout="[[-10,60,-10], [50,50]]" layout-valign="center" .column-body-outset}
+
+![Navigasi dan interaksi visualisasi.](fiako-stations/img/fkstations-ft-5-1-loop.gif){#fig-stations-05-01 width=40% .border}
+
+![Download data hujan harian.](fiako-stations/img/fkstations-ft-5-2-loop.gif){#fig-stations-05-02 .border}
+
+![Isi file CSV.](fiako-stations/img/fkstations-ft-5-3-loop.gif){#fig-stations-05-03 .border}
+
+Visualisasi & download data hujan harian dengan periode yang telah dipilih.
+
+:::
+
+### _Rainfall Data Explorer_ {#sec-feat-hidrokit-rainfall}
+
+Fitur aplikasi _Rainfall Data Explorer_ (`hidrokit-rainfall`) antara lain:
+
+#### Eksplorasi data hujan
+
+**Eksplorasi data hujan** dalam bentuk _table_. Termasuk melakukan modifikasi dan _filter_. Demonstrasi bisa dilihat pada @fig-rainfall-01 seperti interaksi tabel di @fig-rainfall-01-01.
+
+::: {#fig-rainfall-01}
+
+![Interaksi tabel data hujan.](hidrokit-rainfall/img/fkrainfall-ft-1-1.gif){#fig-rainfall-01-01 .border}
+
+Eksplorasi data hujan dalam bentuk _table_. Termasuk melakukan modifikasi dan _filter_. 
+
+:::
+
+#### Visualisasi data hujan
+
+**Visualisasi data hujan** untuk setiap stasiun dalam bentuk _line_ atau _bar_ (jika datasetnya kecil). Demonstrasi bisa dilihat pada @fig-rainfall-02 seperti visualisasi dalam bentuk garis / _line_ di @fig-rainfall-02-01 dan dalam bentuk _bar_ di @fig-rainfall-02-02.
+
+::: {#fig-rainfall-02 layout-ncol=2 layout-valign="center" .column-page}
+
+![Visualisasi data hujan (_line_).](hidrokit-rainfall/img/fkrainfall-ft-2-1.gif){#fig-rainfall-02-01 .border}
+
+![Visualisasi data hujan (_bar_).](hidrokit-rainfall/img/fkrainfall-ft-2-2.gif){#fig-rainfall-02-02 .border}
+
+Visualisasi data hujan untuk setiap stasiun dalam bentuk _line_ atau _bar_ (jika datasetnya kecil). 
+
+:::
+
+#### Analisis data hujan
+
+**Analisis data hujan** yang mengeluarkan rekapitulasi/ringkasan untuk tiga periode yaitu _biweekly_, _monthly_, dan _yearly_. 
+
+::: {#fig-rainfall-03 layout-ncol=2 layout-valign="center" .column-page}
+
+![Hasil analisis (tabel).](hidrokit-rainfall/img/fkrainfall-ft-3-1.gif){#fig-rainfall-03-01 .border}
+
+![Download hasil analisis (CSV).](hidrokit-rainfall/img/fkrainfall-ft-3-2.gif){#fig-rainfall-03-02 .border}
+
+Analisis data hujan yang mengeluarkan rekapitulasi/ringkasan untuk tiga periode yaitu _biweekly_, _monthly_, dan _yearly_. 
+
+:::
+
+#### Visualisai analisis data hujan
+
+Mempresentasikan hasil analisis dalam bentuk **visualisasi analisis data hujan** berupa _bar plot_ dan _bubble chart_. Demonstrasi fitur ini bisa dilihat pada @fig-rainfall-04. Visualisasi rekap bisa dilihat di @fig-rainfall-04-01 atau lebih detailnya untuk maksimum dan jumlah hujan di @fig-rainfall-04-02, jumlah hari kering dan basah di @fig-rainfall-04-03, dan visualisasi kejadian hujan maksimum di @fig-rainfall-04-04. Terdapat visualisasi baru sejak versi 1.1 yaitu kumulatif tahunan di @fig-rainfall-04-05 dan konsistensi di @fig-rainfall-04-06.
+
+::: {#fig-rainfall-04 layout="[[-10,60,-10], [50,50], [-10,60,-10], [50,50]]" layout-valign="center" .column-page}
+
+![Visualisasi analisis (rekap).](hidrokit-rainfall/img/fkrainfall-ft-4-1.gif){#fig-rainfall-04-01 .border}
+
+![Visualisasi Max + Sum.](hidrokit-rainfall/img/fkrainfall-ft-4-2.gif){#fig-rainfall-04-02 .border}
+
+![Visualisasi Dry + Rain.](hidrokit-rainfall/img/fkrainfall-ft-4-3.gif){#fig-rainfall-04-03 .border}
+
+![Visualisasi Kejadian Hujan Maksimum.](hidrokit-rainfall/img/fkrainfall-ft-4-4.gif){#fig-rainfall-04-04 .border}
+
+![Kumulatif Tahunan.](hidrokit-rainfall/img/fkrainfall-ft-4-5.gif){#fig-rainfall-04-05 .border}
+
+![Konsistensi (Kurva Massa Ganda).](hidrokit-rainfall/img/fkrainfall-ft-4-6.gif){#fig-rainfall-04-06 .border}
+
+Mempresentasikan hasil analisis dalam bentuk visualisasi analisis data hujan berupa _bar plot_ dan _bubble chart_.
+
+:::
+
+### _Frequency Analysis_ {#sec-feat-fiako-anfrek}
+
+Fitur aplikasi _Frequency Analysis_ (`fiako-anfrek`) antara lain:
+
+#### Eksplorasi data deret waktu
+
+**Eksplorasi data deret waktu** (_time series_) dengan visualisasi _bar_ dan _bubble_. Demonstrasi fitur dapat dilihat pada @fig-anfrek-01 seperti interaksi tabel dan grafik di @fig-anfrek-01-01.
+
+::: {#fig-anfrek-01}
+
+![Interaksi tabel dan grafik.](fiako-anfrek/img/fkanfrek-ft-1-1.gif){#fig-anfrek-01-01 .border}
+
+Eksplorasi data deret waktu (_time series_) dengan visualisasi _bar_ dan _bubble_.
+
+:::
+
+#### Parameter statistik dan _outlier_
+
+Menghitung **parameter statistik dan _outlier_** beserta visualisasinya. Demonstrasi fitur dapat dilihat pada @fig-anfrek-02 seperti visualisasi statistik & _outlier_ di @fig-anfrek-02-01, visualisasi distribusi di @fig-anfrek-02-02, dan download hasil perhitungan di @fig-anfrek-02-03.
+
+::: {#fig-anfrek-02 layout="[[1,1,1]]" layout-valign="center" .column-screen-inset}
+
+![Visualisasi statistik & _outlier_.](fiako-anfrek/img/fkanfrek-ft-2-1.gif){#fig-anfrek-02-01 .border}
+
+![Visualisasi distribusi.](fiako-anfrek/img/fkanfrek-ft-2-2.gif){#fig-anfrek-02-02 .border}
+
+![Download hasil perhitungan.](fiako-anfrek/img/fkanfrek-ft-2-3.gif){#fig-anfrek-02-03 .border}
+
+Menghitung parameter statistik dan _outlier_ beserta visualisasinya.
+
+:::
+
+#### Analisis frekuensi
+
+Menghitung **analisis frekuensi** setiap distribusi dengan periode ulang beserta visualisasinya. Demonstrasi fitur dapat dilihat pada @fig-anfrek-03 seperti interaksi input di @fig-anfrek-03-01, interaksi grafik di @fig-anfrek-03-02, dan download hasil analisis di @fig-anfrek-03-03. 
+
+::: {#fig-anfrek-03 layout="[[1,1,1]]" layout-valign="center" .column-screen-inset}
+
+![Interaksi input.](fiako-anfrek/img/fkanfrek-ft-3-1.gif){#fig-anfrek-03-01 .border}
+
+![Interaksi grafik.](fiako-anfrek/img/fkanfrek-ft-3-2.gif){#fig-anfrek-03-02 .border}
+
+![Download hasil analisis.](fiako-anfrek/img/fkanfrek-ft-3-3.gif){#fig-anfrek-03-03 .border}
+
+Menghitung analisis frekuensi setiap distribusi dengan periode ulang beserta visualisasinya.
+
+:::
+
+#### Uji kecocokan distribusi
+
+Melakukan **uji kecocokan distribusi** _Chi-Square_ dan _Kolmogorov-Smirnov_ beserta visualisasinya. Demonstrasi fitur ini dapat dilihat pada @fig-anfrek-04 seperti interaksinya di @fig-anfrek-04-01, visualisasi uji kecocokdan distribusi di @fig-anfrek-04-02, visualisasi hasil pengujian di @fig-anfrek-04-03, dan bentuk download hasilnya di @fig-anfrek-04-04.
+
+::: {#fig-anfrek-04 layout="[[-4, 10, -4], [1,1], [-4, 10, -4]]" layout-valign="center" .column-page}
+
+![Interaksi input dan grafik.](fiako-anfrek/img/fkanfrek-ft-4-1.gif){#fig-anfrek-04-01 .border}
+
+![Visualisasi uji kecocokan distribusi.](fiako-anfrek/img/fkanfrek-ft-4-2.gif){#fig-anfrek-04-02 .border}
+
+![Visualisasi hasil pengujian.](fiako-anfrek/img/fkanfrek-ft-4-3.gif){#fig-anfrek-04-03 .border}
+
+![Download hasil pengujian.](fiako-anfrek/img/fkanfrek-ft-4-4.gif){#fig-anfrek-04-04 .border}
+
+Melakukan uji kecocokan distribusi _Chi-Square_ dan _Kolmogorov-Smirnov_ beserta visualisasinya.
+
+:::
+
+## Penggunaan Aplikasi {#sec-using-apps}
+
+Ketiga aplikasi diatas dapat membantu proses analisis hidrologi dari menyimpan data hingga analisis frekuensi. Berikut proses analisis hidrologi menggunakan ketiga aplikasi:
+
+1. Setelah memperoleh koordinat lokasi yang ditinjau, masukkan **titik koordinat** tersebut di aplikasi `fiako-stations`. 
+2. Dari aplikasi `fiako-stations` diperoleh **hujan harian seluruh stasiun** dengan format CSV.
+3. Hasil dari aplikasi `fiako-stations` dapat langsung digunakan sebagai input di aplikasi `hidrokit-rainfall`.
+4. **_Resample_ data hujan per periode** yang dihasilkan dari aplikasi `hidrokit-rainfall` harus diolah kembali secara manual dan mandiri. 
+5. Proses manual ini bisa termasuk menghitung hujan wilayahnya (poligon thiessen), merekap hujan tahunan maksimum, koreksi data hujan harian. Dari proses manual ini bisa juga dimasukkan kembali ke aplikasi `hidrokit-rainfall`.
+6. Setelah memperoleh hasil final dari aplikasi `hidrokit-rainfall` dan mengolahnya dalam bentuk ringkasan untuk analisis frekuensi, file CSV tersebut bisa digunakan sebagai input di aplikasi `fiako-anfrek`. 
+7. Hasil dari `fiako-anfrek` berupa **analisis frekuensi & uji kecocokan distribusi** bisa dioleh menjadi laporan ataupun digunakan sebagai analisis berikutnya. Dan laporan tersebut bisa juga disampaikan ke _engineer_ lain untuk diperiksa ataupun dievaluasi. 
+
+Proses tersebut dapat dilihat ilustrasinya dalam bentuk _sequence diagram_ di @fig-using-apps. 
+
+::: {.column-body-outset}
+
+```{mermaid}
+%%| label: fig-using-apps
+%%| fig-cap: _Sequence diagram_ penggunaan ketiga aplikasi.
+%%| fig-width: 100%
+%%| fig-align: center
+%%{ init: { 'sequence': {'useMaxWidth': false, 'showSequenceNumbers': true }, 'theme': 'forest' } }%%
+sequenceDiagram
+    actor user as Engineer 1
+    participant stations as FIAKO-STATIONS
+    participant rainfall as HIDROKIT-RAINFALL
+    participant anfrek as FIAKO-ANFREK
+    actor super as Engineer 2
+
+    user->>stations: Titik koordinat
+    Note over user, stations: INPUT: latitude, longitude
+    
+    activate stations
+    %% stations --> user: evaluasi dan pengambilan keputusan
+    stations ->> rainfall: Hujan harian<br/>seluruh stasiun
+    Note over stations, rainfall: OUTPUT: CSV
+    deactivate stations
+
+    activate rainfall
+    %% rainfall --> user: evaluasi dan pengambilan keputusan
+    rainfall ->> user: Resample data hujan per periode
+    Note over rainfall, user: OUTPUT: CSV
+    deactivate rainfall
+
+    activate user
+    Note right of user: Proses manual
+    opt Evaluasi ulang
+    user -->> rainfall: Hujan harian (wilayah / koreksi)
+    Note over user, rainfall: INPUT: CSV
+    end
+    user ->> anfrek: Hujan wilayah maksimum tahunan
+    Note over user, anfrek: INPUT: CSV
+    deactivate user
+
+    activate anfrek
+    %% anfrek --> user: evaluasi dan pengambilan keputusan
+    anfrek ->> user: Analisis frekuensi &<br>Uji kecocokan distribusi
+    Note over anfrek, user: OUTPUT: CSV
+    deactivate anfrek
+
+    activate user
+    user ->> super: Laporan analisis data hujan
+    deactivate user
+
+```
+
+:::
+
+Dari diagram diatas dapat disimpulkan juga bahwa aplikasi pengolahan data hujan ini dapat membantu kinerja pengguna lebih cepat mengevaluasi, menganalisis, dan menghasilkan analisis data hujan sampai analisis frekuensi. 
+
+## Kekurangan Aplikasi {#sec-limitation-apps}
+
+Ketiga aplikasi ini jauh dari sempurna masih banyak yang bisa diperbaiki dan dikembangkan lagi untuk membuat aplikasi yang memudahkan ahli hidrologi memperoleh analisis lebih cepat. Berikut kekurangan atau batasan aplikasi pengolahan data hujan:
+
+1. Tidak adanya pengujian otomasi untuk setiap fungsi yang tersedia di aplikasi.
+2. Mengevaluasi paket tambahan seperti `hidrokit`, karena paket `hidrokit` masih dalam tahap pengembangan dini.
+3. Layout aplikasi yang tidak konsisten antar aplikasi.
+
+Selain kekurangan atau batasan tersebut, terdapat juga beberapa kekurangan/batasan yang diketahui untuk masing-masing aplikasi.
+
+### _Rainfall Stations Explorer_
+
+1. Penentuan data stasiun hujan terdekat masih berdasarkan radius dari titik tinjau. Seharusnya berdasarkan DAS dari titik tinjau/outlet. 
+2. Proses pembuatan dataset/dataabse masih bersifat _case-by-case_. 
+
+### _Rainfall Data Explorer_
+
+1. Perlu dilakukan koreksi ataupun analisis lebih lanjut sebelum digunakan di aplikasi `fiako-anfrek`. Seperti:
+    a. Koreksi dari informasi kurva massa ganda.
+    b. Menghitung hujan wilayah.
+2. Harus melakukan pengolahan tabel setelah menerima hasil analisis dalam bentuk CSV.
+
+### _Frequency Analysis_
+
+1. Penggunaan distribusi Log Pearson III harus dievaluasi kembali. Hal ini terkait perilaku pada fungsi `pearson` di `scipy`. Saat ini, aplikasi harus menggunakan `scipy` versi `1.8` untuk menghasilkan nilai yang diharapkan. Alternatif lainnya menggunakan sumber tabel di distribusi Log Pearson III. 
+2. Dasar teori mengenai penentuan kelas dan parameter untuk uji Chi-Square harus dievaluasi kembali. 
+
+## Kesimpulan
+
+Aplikasi pengolahan data hujan yang terdiri dari: 1. _Rainfall Stations Explorer_ (`fiako-stations`); 2. _Rainfall Data Explorer_ (`hidrokit-rainfall`); 3. _Frequency Analysis_ (`fiako-anfrek`), mampu membantu mempercepat proses analisis hidrologi tanpa mengorbankan akurasi dan mengurangi kekeliruan. 
+
+[`hidrokit`]: https://github.com/hidrokit/hidrokit

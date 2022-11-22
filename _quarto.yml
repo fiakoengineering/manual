@@ -1,0 +1,103 @@
+project:
+  type: website
+  preview: 
+      port: 3637
+  
+
+execute: 
+  freeze: auto
+
+website:
+  title: "FIAKO Manual"
+  description: "Dokumentasi Manual oleh FIAKO Engineering"
+  
+  site-url: https://manual.fiako.engineering
+  repo-url: https://github.com/fiakoenjiniring/manual
+  repo-actions: [edit, issue]
+
+  reader-mode: true
+  search: 
+    location: navbar
+    type: overlay
+  page-navigation: true
+
+  # FOR TWITTER / open-graph
+  image: "fiakologo.png"
+  favicon: "fiakologo.png"
+
+  ## NAVIGATION BAR
+  navbar:
+    title: fiako-manual
+    background: dark
+    # foreground: warning
+    # pinned: false
+
+    collapse: true
+
+    logo: "fiakologo.png"
+
+    left:
+      # - text: Home
+      #   href: index.qmd
+      - text: Web Apps
+        href: webapps/index.qmd
+
+    right:
+      - icon: github
+        href: https://github.com/fiakoenjiniring/manual
+
+  sidebar:
+    - id: side-home
+      style: floating
+      contents:
+        - section: Manual
+          contents:
+            - "test 1 2 3"
+
+    - id: side-webapps
+      style: docked
+      search: true
+      border: true
+      collapse-level: 1
+      pinned: true
+      contents:
+        - text: "Ringkasan"
+          href: webapps/index.qmd
+        - webapps/webapps-rainfall.qmd
+        # - section: "`fiako-stations`"
+        #   contents:
+        #     - README
+        #     - Penggunaan / Tutorial
+        # - section: "`hidrokit-rainfall`"
+        #   contents:
+        #     - README
+        #     - Penggunaan / Tutorial
+        # - section: "`fiako-anfrek`"
+        #   contents:
+        #     - README
+        #     - Penggunaan / Tutorial
+        - "---"
+          
+
+  ## SIDEBAR
+  page-footer:
+    right: >-
+      website by **fiako**dev, 
+      built with [Quarto](https://quarto.org/).
+    left: >-
+      &copy; 2022 PT. FIAKO ENJINIRING INDONESIA.
+    # center:
+    #   - "About"
+
+  
+
+format:
+  html:
+    theme: yeti # spacelab, yeti, zephyr
+    css: styles.css
+    toc: true
+    link-external-newwindow: true
+    language: language_id.yml
+
+
+
