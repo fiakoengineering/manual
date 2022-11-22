@@ -7,8 +7,9 @@ subtitle: |
 title-block-style: default
 
 toc: true
-toc-depth: 3
+toc-depth: 4
 toc-location: right
+toc-title: Daftar isi
 sidebar: side-webapps
 page-layout: article
 lang: id
@@ -22,7 +23,6 @@ author:
 # language: ../language_id.yml
 
 citation:
-    url: https://manual.fiako.engineering/rainfall-apps.html
     language: id
     type: article
     license: CC-BY-NC-SA 4.0
@@ -320,29 +320,205 @@ Tiga aplikasi yang telah dipublikasi memiliki fitur-fitur yang dapat membantu pe
 
 Fitur aplikasi _Rainfall Stations Explorer_ (`fiako-stations`) antara lain:
 
-1. Memudahkan **eksplorasi stasiun hujan** yang dimiliki.
-2. Mengetahui **informasi stasiun terdekat** terhadap titik lokasi tinjauan.
-3. Melihat secara sekilas **kelengkapan data** dengan _heatmap_.
-4. **Memilih stasiun dan periode** yang akan digunakan untuk analisis.
-5. **Visualisasi & download** data hujan harian dengan periode yang telah dipilih.
+#### Eksplorasi stasiun hujan
+
+Memudahkan **eksplorasi stasiun hujan** yang dimiliki. Demonstrasi fitur bisa dilihat pada @fig-stations-01 seperti navigasi dan interaksi di @fig-stations-01-01.
+
+::: {#fig-stations-01}
+
+![Navigasi dan interaksi peta](fiako-stations/img/fkstations-ft-01-loop.gif){#fig-stations-01-01 width="65%" .border}
+
+Memudahkan eksplorasi stasiun hujan yang dimiliki.
+
+:::
+
+#### Informasi stasiun terdekat
+
+Mengetahui **informasi stasiun terdekat** terhadap titik lokasi tinjauan. Demonstrasi fitur bisa dilihat pada @fig-stations-02 seperti pengisian koordinat titik tinjau di @fig-stations-02-01 dan interaksi peta dan tabel di @fig-stations-02-02.
+
+::: {#fig-stations-02 layout-ncol=2 layout-valign="center" .column-page}
+
+![Pengisian koordinat titik tinjau](fiako-stations/img/fkstations-ft-2-1-loop.gif){#fig-stations-02-01 .border}
+
+![Interaksi peta dan tabel](fiako-stations/img/fkstations-ft-2-2-loop.gif){#fig-stations-02-02 .border}
+
+Mengetahui informasi stasiun terdekat terhadap titik lokasi tinjauan.
+
+:::
+
+#### Kelengkapan data
+
+Melihat secara sekilas **kelengkapan data** dengan _heatmap_. Demonstrasi fitur bisa dilihat pada @fig-stations-03 seperti grafik _heatmap_ di @fig-stations-03-01 dan grafik _bar plot_ di @fig-stations-03-02.
+
+::: {#fig-stations-03 layout-ncol=2 layout-valign="center" .column-page}
+
+![Navigasi dan interaksi _heatmap_](fiako-stations/img/fkstations-ft-3-1-loop.gif){#fig-stations-03-01 .border}
+
+![Navigasi dan interaksi _bar plot_](fiako-stations/img/fkstations-ft-3-2-loop.gif){#fig-stations-03-02 .border}
+
+Melihat secara sekilas kelengkapan data dengan _heatmap_.
+
+:::
+
+#### Memilih stasiun dan periode
+
+**Memilih stasiun dan periode** yang akan digunakan untuk analisis. Demonstrasi fitur bisa dilihat pada @fig-stations-04 seperti navigasi saat memilih stasiun di @fig-stations-04-01.
+
+::: {#fig-stations-04}
+
+![Navigasi memilih stasiun](fiako-stations/img/fkstations-ft-4-1-loop.gif){#fig-stations-04-01 .border}
+
+Memilih stasiun dan periode yang akan digunakan untuk analisis.
+
+:::
+
+#### Visualisasi & download
+
+**Visualisasi & download** data hujan harian dengan periode yang telah dipilih. Demonstrasi fitur bisa dilihat pada @fig-stations-05 seperti interaksi visualisasi di @fig-stations-05-01, download data hujan harian di @fig-stations-05-02, isi file CSV di @fig-stations-05-03. 
+
+::: {#fig-stations-05 layout="[[-10,60,-10], [50,50]]" layout-valign="center" .column-body-outset}
+
+![Navigasi dan interaksi visualisasi](fiako-stations/img/fkstations-ft-5-1-loop.gif){#fig-stations-05-01 width=40% .border}
+
+![Download data hujan harian](fiako-stations/img/fkstations-ft-5-2-loop.gif){#fig-stations-05-02 .border}
+
+![Isi file CSV](fiako-stations/img/fkstations-ft-5-3-loop.gif){#fig-stations-05-03 .border}
+
+Visualisasi & download data hujan harian dengan periode yang telah dipilih.
+
+:::
 
 ### _Rainfall Data Explorer_ {#sec-feat-hidrokit-rainfall}
 
 Fitur aplikasi _Rainfall Data Explorer_ (`hidrokit-rainfall`) antara lain:
 
-1. **Eksplorasi data hujan** dalam bentuk _table_. Termasuk melakukan modifikasi dan _filter_. 
-2. **Visualisasi data hujan** untuk setiap stasiun dalam bentuk _line_ atau _bar_ (jika datasetnya kecil). 
-3. **Analisis data hujan** yang mengeluarkan rekapitulasi/ringkasan untuk tiga periode yaitu _biweekly_, _monthly_, dan _yearly_. 
-4. Mempresentasikan hasil analisis dalam bentuk **visualisasi analisis data hujan** berupa _bar plot_ dan _bubble chart_.
+#### Eksplorasi data hujan
+
+**Eksplorasi data hujan** dalam bentuk _table_. Termasuk melakukan modifikasi dan _filter_. Demonstrasi bisa dilihat pada @fig-rainfall-01 seperti interaksi tabel di @fig-rainfall-01-01.
+
+::: {#fig-rainfall-01}
+
+![Interaksi tabel data hujan](hidrokit-rainfall/img/fkrainfall-ft-1-1.gif){#fig-rainfall-01-01 .border}
+
+Eksplorasi data hujan dalam bentuk _table_. Termasuk melakukan modifikasi dan _filter_. 
+
+:::
+
+#### Visualisasi data hujan
+
+**Visualisasi data hujan** untuk setiap stasiun dalam bentuk _line_ atau _bar_ (jika datasetnya kecil). Demonstrasi bisa dilihat pada @fig-rainfall-02 seperti visualisasi dalam bentuk garis / _line_ di @fig-rainfall-02-01 dan dalam bentuk _bar_ di @fig-rainfall-02-02.
+
+::: {#fig-rainfall-02 layout-ncol=2 layout-valign="center" .column-page}
+
+![Visualisasi data hujan (_line_)](hidrokit-rainfall/img/fkrainfall-ft-2-1.gif){#fig-rainfall-02-01 .border}
+
+![Visualisasi data hujan (_bar_)](hidrokit-rainfall/img/fkrainfall-ft-2-2.gif){#fig-rainfall-02-02 .border}
+
+Visualisasi data hujan untuk setiap stasiun dalam bentuk _line_ atau _bar_ (jika datasetnya kecil). 
+
+:::
+
+#### Analisis data hujan
+
+**Analisis data hujan** yang mengeluarkan rekapitulasi/ringkasan untuk tiga periode yaitu _biweekly_, _monthly_, dan _yearly_. 
+
+::: {#fig-rainfall-03 layout-ncol=2 layout-valign="center" .column-page}
+
+![Hasil analisis (tabel)](hidrokit-rainfall/img/fkrainfall-ft-3-1.gif){#fig-rainfall-03-01 .border}
+
+![Download hasil analisis (CSV)](hidrokit-rainfall/img/fkrainfall-ft-3-2.gif){#fig-rainfall-03-02 .border}
+
+Analisis data hujan yang mengeluarkan rekapitulasi/ringkasan untuk tiga periode yaitu _biweekly_, _monthly_, dan _yearly_. 
+
+:::
+
+#### Visualisai analisis data hujan
+
+Mempresentasikan hasil analisis dalam bentuk **visualisasi analisis data hujan** berupa _bar plot_ dan _bubble chart_. Demonstrasi fitur ini bisa dilihat pada @fig-rainfall-04. Visualisasi rekap bisa dilihat di @fig-rainfall-04-01 atau lebih detailnya untuk maksimum dan jumlah hujan di @fig-rainfall-04-02, jumlah hari kering dan basah di @fig-rainfall-04-03, dan visualisasi kejadian hujan maksimum di @fig-rainfall-04-04. Terdapat visualisasi baru sejak versi 1.1 yaitu kumulatif tahunan di @fig-rainfall-04-05 dan konsistensi di @fig-rainfall-04-06.
+
+::: {#fig-rainfall-04 layout="[[-10,60,-10], [50,50], [-10,60,-10], [50,50]]" layout-valign="center" .column-page}
+
+![Visualisasi analisis (rekap)](hidrokit-rainfall/img/fkrainfall-ft-4-1.gif){#fig-rainfall-04-01 .border}
+
+![Visualisasi Max + Sum](hidrokit-rainfall/img/fkrainfall-ft-4-2.gif){#fig-rainfall-04-02 .border}
+
+![Visualisasi Dry + Rain](hidrokit-rainfall/img/fkrainfall-ft-4-3.gif){#fig-rainfall-04-03 .border}
+
+![Visualisasi Kejadian Hujan Maksimum](hidrokit-rainfall/img/fkrainfall-ft-4-4.gif){#fig-rainfall-04-04 .border}
+
+![Kumulatif Tahunan](hidrokit-rainfall/img/fkrainfall-ft-4-5.gif){#fig-rainfall-04-05 .border}
+
+![Konsistensi (Kurva Massa Ganda)](hidrokit-rainfall/img/fkrainfall-ft-4-6.gif){#fig-rainfall-04-06 .border}
+
+Mempresentasikan hasil analisis dalam bentuk visualisasi analisis data hujan berupa _bar plot_ dan _bubble chart_.
+
+:::
 
 ### _Frequency Analysis_ {#sec-feat-fiako-anfrek}
 
 Fitur aplikasi _Frequency Analysis_ (`fiako-anfrek`) antara lain:
 
-1. **Eksplorasi data deret waktu** (_time series_) dengan visualisasi _bar_ dan _bubble_.
-2. Menghitung **parameter statistik dan _outlier_** beserta visualisasinya.
-3. Menghitung **analisis frekuensi** setiap distribusi dengan periode ulang beserta visualisasinya.
-4. Melakukan **uji kecocokan distribusi** _Chi-Square_ dan _Kolmogorov-Smirnov_ beserta visualisasinya.
+#### Eksplorasi data deret waktu
+
+**Eksplorasi data deret waktu** (_time series_) dengan visualisasi _bar_ dan _bubble_. Demonstrasi fitur dapat dilihat pada @fig-anfrek-01 seperti interaksi tabel dan grafik di @fig-anfrek-01-01.
+
+::: {#fig-anfrek-01}
+
+![Interaksi tabel dan grafik](fiako-anfrek/img/fkanfrek-ft-1-1.gif){#fig-anfrek-01-01 .border}
+
+Eksplorasi data deret waktu (_time series_) dengan visualisasi _bar_ dan _bubble_.
+
+:::
+
+#### Parameter statistik dan _outlier_
+
+Menghitung **parameter statistik dan _outlier_** beserta visualisasinya. Demonstrasi fitur dapat dilihat pada @fig-anfrek-02 seperti visualisasi statistik & _outlier_ di @fig-anfrek-02-01, visualisasi distribusi di @fig-anfrek-02-02, dan download hasil perhitungan di @fig-anfrek-02-03.
+
+::: {#fig-anfrek-02 layout="[[1,1,1]]" layout-valign="center" .column-screen-inset}
+
+![Visualisasi statistik & _outlier_](fiako-anfrek/img/fkanfrek-ft-2-1.gif){#fig-anfrek-02-01 .border}
+
+![Visualisasi distribusi](fiako-anfrek/img/fkanfrek-ft-2-2.gif){#fig-anfrek-02-02 .border}
+
+![Download hasil perhitungan](fiako-anfrek/img/fkanfrek-ft-2-3.gif){#fig-anfrek-02-03 .border}
+
+Menghitung parameter statistik dan _outlier_ beserta visualisasinya.
+
+:::
+
+#### Analisis frekuensi
+
+Menghitung **analisis frekuensi** setiap distribusi dengan periode ulang beserta visualisasinya. Demonstrasi fitur dapat dilihat pada @fig-anfrek-03 seperti interaksi input di @fig-anfrek-03-01, interaksi grafik di @fig-anfrek-03-02, dan download hasil analisis di @fig-anfrek-03-03. 
+
+::: {#fig-anfrek-03 layout="[[1,1,1]]" layout-valign="center" .column-screen-inset}
+
+![Interaksi input](fiako-anfrek/img/fkanfrek-ft-3-1.gif){#fig-anfrek-03-01 .border}
+
+![Interaksi grafik](fiako-anfrek/img/fkanfrek-ft-3-2.gif){#fig-anfrek-03-02 .border}
+
+![Download hasil analisis](fiako-anfrek/img/fkanfrek-ft-3-3.gif){#fig-anfrek-03-03 .border}
+
+Menghitung analisis frekuensi setiap distribusi dengan periode ulang beserta visualisasinya.
+
+:::
+
+#### Uji kecocokan distribusi
+
+Melakukan **uji kecocokan distribusi** _Chi-Square_ dan _Kolmogorov-Smirnov_ beserta visualisasinya. Demonstrasi fitur ini dapat dilihat pada @fig-anfrek-04 seperti interaksinya di @fig-anfrek-04-01, visualisasi uji kecocokdan distribusi di @fig-anfrek-04-02, visualisasi hasil pengujian di @fig-anfrek-04-03, dan bentuk download hasilnya di @fig-anfrek-04-04.
+
+::: {#fig-anfrek-04 layout="[[-4, 10, -4], [1,1], [-4, 10, -4]]" layout-valign="center" .column-page}
+
+![Interaksi input dan grafik](fiako-anfrek/img/fkanfrek-ft-4-1.gif){#fig-anfrek-04-01 .border}
+
+![Visualisasi uji kecocokan distribusi](fiako-anfrek/img/fkanfrek-ft-4-2.gif){#fig-anfrek-04-02 .border}
+
+![Visualisasi hasil pengujian](fiako-anfrek/img/fkanfrek-ft-4-3.gif){#fig-anfrek-04-03 .border}
+
+![Download hasil pengujian](fiako-anfrek/img/fkanfrek-ft-4-4.gif){#fig-anfrek-04-04 .border}
+
+Melakukan uji kecocokan distribusi _Chi-Square_ dan _Kolmogorov-Smirnov_ beserta visualisasinya.
+
+:::
 
 ## Penggunaan Aplikasi
 
