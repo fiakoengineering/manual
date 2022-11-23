@@ -31,8 +31,10 @@ citation:
 license: CC-BY-NC-SA 4.0
 
 date: 2022-11-22
-# date-modified: 2022-11-20
+date-modified: 2022-11-23
 date-format: full
+language:
+  title-block-modified: "Diperbarui"
 
 abstract: |
     Dalam analisis hidrologi, pengolahan data hujan merupakan proses yang penting. 
@@ -51,7 +53,7 @@ tbl-cap-location: top
 format:
   html: 
     css: article.css
-    mermaid-format: png # js
+    mermaid-format: js # js
 
 ---
 
@@ -77,7 +79,7 @@ Artikel ini juga dapat dikembangkan seiringnya waktu, sesuai perkembangan aplika
 
 ### _Rainfall Stations Explorer_ {#sec-fiako-stations}
 
-_Rainfall Stations Explorer_ atau `fiako-stations` adalah aplikasi web yang dapat digunakan untuk mengeksplorasi data hujan harian yang tersedia di _database_. Dari aplikasi ini dapat memperoleh informasi kelengkapan data dan akusisi data hujan harian dengan mudah dan cepat. "Demo" disini diartikan menggunakan dataset publik atau acak dan hanya berfungsi untuk mendemonstrasikan fungsi aplikasi. Demonstrasi aplikasi bisa melihat @fig-demo-fiako-stations dan tabel informasi di @tbl-info-fiako-stations.
+_Rainfall Stations Explorer_ atau `fiako-stations` adalah aplikasi web yang dapat digunakan untuk mengeksplorasi data hujan harian yang tersedia di _database_. Dari aplikasi ini dapat memperoleh informasi kelengkapan data dan akusisi data hujan harian dengan mudah dan cepat. "Demo" disini diartikan menggunakan dataset publik atau acak dan hanya berfungsi untuk mendemonstrasikan fungsi aplikasi. Demonstrasi aplikasi bisa dilihat pada @fig-demo-fiako-stations dengan tabel informasi di @tbl-info-fiako-stations.
 
 ::: {.column-margin}
 
@@ -98,7 +100,7 @@ _Source Code_ | [fiakoenjiniring/demo-stations](https://github.com/fiakoenjiniri
 
 ### _Rainfall Data Explorer_ {#sec-hidrokit-rainfall}
 
-_Rainfall Data Explorer_ atau `hidrokit-rainfall` adalah aplikasi web yang dapat digunakan untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, total hujan, hari hujan, hari kering, dan kejadian hujan maksimum setiap periode yang ditentukannya dengan presentasi menggunakan visualisasi data. Grafik kumulatif tahunan dan konsistensi (kurva massa ganda) juga ditambahkan sejak versi v1.1.x. Demonstrasi aplikasi bisa melihat @fig-demo-hidrokit-rainfall dan tabel informasi di @tbl-info-hidrokit-rainfall.
+_Rainfall Data Explorer_ atau `hidrokit-rainfall` adalah aplikasi web yang dapat digunakan untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, total hujan, hari hujan, hari kering, dan kejadian hujan maksimum setiap periode yang ditentukannya dengan presentasi menggunakan visualisasi data. Grafik kumulatif tahunan dan konsistensi (kurva massa ganda) juga ditambahkan sejak versi v1.1.x. Demonstrasi aplikasi bisa dilihat di @fig-demo-hidrokit-rainfall dengan tabel informasi di @tbl-info-hidrokit-rainfall.
 
 ::: {.column-margin}
 
@@ -118,7 +120,7 @@ _Source Code_ | [fiakoenjiniring/rainfall](https://github.com/fiakoenjiniring/ra
 
 ### _Frequency Analysis_ {#sec-fiako-anfrek}
 
-_Frequency Analysis_ (sebelumnya dikenal _Frequency Analysis in Hydrology_) atau `fiako-anfrek` adalah aplikasi web yang dapat digunakan untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt. Demonstrasi aplikasi bisa melihat @fig-demo-fiako-anfrek dan tabel informasi di @tbl-info-fiako-anfrek.
+_Frequency Analysis_ (sebelumnya dikenal _Frequency Analysis in Hydrology_) atau `fiako-anfrek` adalah aplikasi web yang dapat digunakan untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt. Demonstrasi aplikasi bisa dilihat di @fig-demo-fiako-anfrek dengan tabel informasi di @tbl-info-fiako-anfrek.
 
 ::: {.column-margin}
 
@@ -138,11 +140,11 @@ _Source Code_ | [fiakoenjiniring/anfrek](https://github.com/fiakoenjiniring/anfr
 
 ## Pengembangan Aplikasi {#sec-development-apps}
 
-Pengembangan aplikasi ini tidak mengikuti _template_ yang sudah tersedia sehingga penulisan kode ataupun strukturnya yang dihasilkan dari aplikasi ini masih perlu dievaluasi kembali. Dalam bab ini, akan dibahas beberapa informasi mengenai _development_ aplikasi sehingga memudahkan _developer_ membaca _source code_ atau mengembangkannya. 
+Pengembangan aplikasi ini tidak mengikuti _template_ yang sudah tersedia sehingga penulisan kode ataupun strukturnya yang dihasilkan masih perlu dievaluasi kembali. Dalam bab ini, akan dibahas informasi mengenai _development_ aplikasi sehingga memudahkan _developer_ membaca _source code_ atau mengembangkannya. 
 
 ### _Dependencies_ {#sec-dependencies-apps}
 
-Pengembangan aplikasi ini dibangun menggunakan bahasa pemrograman _Python_. Berikut daftar paket yang digunakan dalam pengembangan aplikasi di @tbl-dependencies. 
+Pengembangan aplikasi ini dibangun menggunakan bahasa pemrograman [_python_](https://www.python.org/). Daftar _package/library_ yang digunakan dalam pengembangan aplikasi disajikan dalam bentuk tabel di @tbl-dependencies. 
 
 ::: {.column-body-outset}
 
@@ -164,14 +166,14 @@ _Package/Library_ | `fiako-stations` | `hidrokit-rainfall` | `fiako-anfrek`
 environment.yml (conda) | [env](https://github.com/fiakoenjiniring/demo-stations/blob/main/environment.yml) | [env](https://github.com/fiakoenjiniring/rainfall/blob/main/environment.yml) | [env](https://github.com/fiakoenjiniring/anfrek/blob/main/environment.yml)
 requirements.txt (venv) | [env](https://github.com/fiakoenjiniring/demo-stations/blob/main/requirements.txt) | [env](https://github.com/fiakoenjiniring/rainfall/blob/main/requirements.txt) | [env](https://github.com/fiakoenjiniring/anfrek/blob/main/requirements.txt)
 
-: _Packages_ yang digunakan dalam pengembangan aplikasi pengolahan data hujan {#tbl-dependencies}
+: _Packages_ yang digunakan di aplikasi pengolahan data hujan {#tbl-dependencies}
 
 :::
 
 [^dash-auth]: `dash-auth` hanya digunakan untuk aplikasi `fiako-stations` internal. 
 [^scipy]: versi `scipy` **harus** menggunakan versi `1.8.x`. Hal ini terkait fungsi distribusi pearson. Untuk lebih jelasnya bisa membaca isu [hidrokit/hidrokit#228](https://github.com/hidrokit/hidrokit/issues/228). 
 
-Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda]. Environment untuk setiap aplikasi sudah tersedia di repository dengan nama file `environment.yml` (conda) atau `requirements.txt` (venv). Beberapa _package/library_ tambahan dalam _development_ antara lain `black`, `flake8` untuk _code-formatting_ atau _linting_. Untuk pengembangan visualisasinya menggunakan [fitur _notebook_](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) yang tersedia di VSCode. Alternatifnya menggunakan [Google Colab], hanya perlu diperhatikan untuk versi setiap _library_ yang digunakan[^versi-colab].
+Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda]. Informasi _environment_ untuk setiap aplikasi sudah tersedia di repository dengan nama file `environment.yml` (conda) atau `requirements.txt` (venv). Beberapa _package/library_ tambahan dalam _development_ antara lain `black`, `flake8` untuk _code-formatting_ atau _linting_. Untuk pengembangan visualisasinya menggunakan [fitur _notebook_](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) yang tersedia di VSCode. Alternatifnya menggunakan [Google Colab], hanya perlu diperhatikan untuk versi setiap _library_ yang digunakan[^versi-colab].
 
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [Visual Studio Code]: https://code.visualstudio.com/
@@ -180,7 +182,7 @@ Pengembangan aplikasi ini menggunakan sistem operasi Windows 11 dan [miniconda].
 
 ### Struktur Aplikasi {#sec-structure-apps}
 
-Aplikasi ini terdiri beberapa file atau komponen yang saling berhubungan. Pada dasarnya aplikasi berpusat pada file `app.py` sebagai file utama menjalankannya aplikasi. Daftar file yang digunakan dalam aplikasi dapat dilihat pada @tbl-str-apps.
+Aplikasi ini terdiri beberapa file atau komponen yang saling berhubungan. Pada dasarnya aplikasi berpusat pada file `app.py` sebagai file utama menjalankannya aplikasi. Daftar file yang digunakan dalam aplikasi dapat dilihat di @tbl-str-apps.
 
 ::: {.column-page}
 
@@ -199,7 +201,7 @@ _Filename_ | Kegunaan | Catatan
 
 :::
 
-Hubungan antara file bisa dilihat pada @fig-structure-apps. Struktur aplikasi ini tidak begitu ketat sehingga beberapa file yang seharusnya tidak digunakan di `app.py` tetap dipanggil. Struktur ini hanya memudahkan _developer_ untuk menyusun fitur ataupun menelusuri fungsi. Dengan struktur tersebut, harapannya memudahkan untuk _developer_ atau kontributor untuk berkontribusi ataupun mengembangkan. 
+Hubungan antara file bisa dilihat pada @fig-structure-apps. Struktur aplikasi tersebut tidak begitu ketat sehingga beberapa file/modul yang seharusnya tidak digunakan di `app.py` tetap dipanggil. Struktur ini hanya memudahkan _developer_ untuk menyusun fitur ataupun menelusuri fungsi. Dengan struktur tersebut, harapannya memudahkan untuk _developer_ atau kontributor untuk berkontribusi ataupun mengembangkan. 
 
 ::: {.column-body-outset .text-center}
 
@@ -245,9 +247,11 @@ Struktur diatas masih bisa diperbaiki atau dikembangkan lagi seperti memisahkan 
 
 ### Pengujian {#sec-testing-apps}
 
-Aplikasi ini tidak memiliki pengujian seperti _unit test_. Hal ini dikarenakan untuk pengujian ini memakan waktu pengembangan aplikasi. Pada `Dash` versi `v2.6`, fitur [_unit tests_](https://dash.plotly.com/testing#unit-tests) sudah ditambahkan. Aplikasi ini tetap melalui tahap pengujian, hanya saja dilakukan secara manual dan mandiri. 
+Aplikasi ini tidak memiliki pengujian seperti _unit test_. Hal ini dikarenakan untuk pengujian tersebut memakan waktu pengembangan aplikasi. Pada `Dash` versi `v2.6`, fitur [_unit tests_](https://dash.plotly.com/testing#unit-tests) sudah ditambahkan, sehingga memungkinkan pada pengembangan lanjutannya menyertakan _unit test_. Akan tetapi, aplikasi ini tetap melalui tahap pengujian, hanya saja dilakukan secara manual dan mandiri. 
 
-Aplikasi pengolahan data hujan hanya fokus pada visualisasi. Jadi, beberapa fitur analisis itu tergantung _package/library_ yang digunakan pada aplikasinya. Untuk `fiako-stations` tidak ada proses analisis sehingga pengujian hanya sebatas visualisasi dan interaktif antar komponen. Pada `hidrokit-rainfall` dan `fiako-anfrek` bergantung dengan paket [`hidrokit`], sehingga untuk hasil analisis akan bergantung pengujian pada paket tersebut. Proses pengujian manual ini dapat diilustrasikan pada @fig-testing-apps.
+Aplikasi pengolahan data hujan hanya fokus pada visualisasi. Jadi, beberapa fitur analisis itu tergantung _package/library_ yang digunakan pada aplikasinya. Untuk `fiako-stations` tidak ada proses analisis sehingga pengujian hanya sebatas visualisasi dan interaktif antar komponennya. Pada `hidrokit-rainfall` dan `fiako-anfrek` bergantung dengan paket [`hidrokit`], sehingga untuk hasil analisis akan bergantung pengujian pada paket tersebut. 
+
+Pengujian dimulai dengan memeriksa interaksi komponen dengan melihat visualisasi dan outputnya sesuai ekspetasi. Jika tidak sesuai ekspetasi, kembali lagi ke tahap pengembangan, tapi jika sesuai ekspetasi bisa dilanjutkan ke tahap publikasi. Proses pengujian manual ini dapat diilustrasikan seperti @fig-testing-apps.
 
 ::: {.column-page}
 
@@ -258,7 +262,7 @@ Aplikasi pengolahan data hujan hanya fokus pada visualisasi. Jadi, beberapa fitu
 %%| fig-align: center
 %%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'neutral' } }%%
 flowchart LR
-    pengujian[[Pengujian]]
+    pengujian[Mulai Pengujian]
     pengembangan[[Pengembangan]]
     publikasi[[Publikasi]]
     interaksi[Interaksi Komponen]
