@@ -27,11 +27,12 @@ citation:
     type: article
     license: CC-BY-NC-SA 4.0
     issued: 2022-11-22
+    url: "https://manual.fiako.engineering/webapps/webapps-rainfall.html"
 
 license: CC-BY-NC-SA 4.0
 
 date: 2022-11-22
-date-modified: 2022-11-23
+date-modified: 2022-11-24
 date-format: full
 language:
   title-block-modified: "Diperbarui"
@@ -546,7 +547,7 @@ Proses tersebut bisa dilihat pada @fig-prepare-fiako-stations.
 
 ```{mermaid}
 %%| label: fig-prepare-fiako-stations
-%%| fig-cap: Gambaran persiapan aplikasi `fiako-stations`
+%%| fig-cap: Gambaran persiapan aplikasi `fiako-stations`.
 %%| fig-align: center
 %%| fig-width: 100%
 %%{ init: { 'flowchart':{'curve': 'bump'}, 'theme': 'forest' } }%%
@@ -593,7 +594,7 @@ Proses tersebut dapat dilihat ilustrasinya dalam bentuk _sequence diagram_ di @f
 
 ```{mermaid}
 %%| label: fig-using-apps
-%%| fig-cap: _Sequence diagram_ penggunaan ketiga aplikasi.
+%%| fig-cap: Contoh alur pekerjaan dengan menggunakan aplikasi pengolahan data hujan.
 %%| fig-width: 100%
 %%| fig-align: center
 %%{ init: { 'sequence': {'useMaxWidth': false, 'showSequenceNumbers': true }, 'theme': 'forest' } }%%
@@ -621,9 +622,15 @@ sequenceDiagram
 
     activate user
     Note right of user: Proses manual
-    opt Evaluasi ulang
+    opt Evaluasi ulang/Koreksi
     user -->> rainfall: Hujan harian (wilayah / koreksi)
     Note over user, rainfall: INPUT: CSV
+    deactivate user
+    activate rainfall
+    rainfall ->> user: Resample data hujan per periode
+    Note over rainfall, user: OUTPUT: CSV
+    deactivate rainfall
+    activate user
     end
     user ->> anfrek: Hujan wilayah maksimum tahunan
     Note over user, anfrek: INPUT: CSV
@@ -637,6 +644,7 @@ sequenceDiagram
 
     activate user
     user ->> super: Laporan analisis data hujan
+    Note over user, super: REPORT/DELEGATE
     deactivate user
 
 ```
@@ -674,6 +682,6 @@ Selain hal tersebut, terdapat juga beberapa kekurangan/batasan yang diketahui un
 
 ## Kesimpulan
 
-Aplikasi pengolahan data hujan yang terdiri dari: 1. _Rainfall Stations Explorer_ (`fiako-stations`); 2. _Rainfall Data Explorer_ (`hidrokit-rainfall`); 3. _Frequency Analysis_ (`fiako-anfrek`), mampu membantu mempercepat proses analisis hidrologi tanpa mengorbankan akurasi dan mengurangi kekeliruan. 
+Aplikasi pengolahan data hujan yang terdiri dari: 1. _Rainfall Stations Explorer_ (`fiako-stations`); 2. _Rainfall Data Explorer_ (`hidrokit-rainfall`); 3. _Frequency Analysis_ (`fiako-anfrek`), mampu membantu mempercepat proses analisis hidrologi. 
 
 [`hidrokit`]: https://github.com/hidrokit/hidrokit
