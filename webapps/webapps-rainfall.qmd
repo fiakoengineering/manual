@@ -53,7 +53,7 @@ tbl-cap-location: top
 format:
   html: 
     css: article.css
-    mermaid-format: js # js
+    mermaid-format: png # js
 
 ---
 
@@ -209,7 +209,7 @@ Hubungan antara file bisa dilihat pada @fig-structure-apps. Struktur aplikasi te
 %%| label: fig-structure-apps
 %%| fig-cap: Gambaran struktur aplikasi[^str-apps].
 %%| fig-height: 100%
-%%{ init: { 'flowchart': { 'curve': 'bump' } } }%%
+%%{ init: { 'flowchart': { 'curve': 'bump' }, 'theme': 'forest' } }%%
 flowchart RL
     pylayout[pylayout.py]
     pylayoutfunc[pylayoutfunc.py]
@@ -260,9 +260,9 @@ Pengujian dimulai dengan memeriksa interaksi komponen dengan melihat visualisasi
 %%| fig-cap: Gambaran pengujian aplikasi secara manual.
 %%| fig-height: 100%
 %%| fig-align: center
-%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'neutral' } }%%
+%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'forest' } }%%
 flowchart LR
-    pengujian[Mulai Pengujian]
+    pengujian(Mulai Pengujian)
     pengembangan[[Pengembangan]]
     publikasi[[Publikasi]]
     interaksi[Interaksi Komponen]
@@ -286,15 +286,17 @@ flowchart LR
 
 ### _Open-Source_ dan GitHub {#sec-opensource}
 
-Setelah hasil aplikasi memuaskan dan dapat digunakan, aplikasi dirilis dalam bentuk proyek _open-source_ di GitHub. Ketiga aplikasi menggunakan [lisensi MIT](https://opensource.org/licenses/MIT). Karena proyek akan diserahkan ke komunitas, maka menyusun struktur dan mengikuti tata cara penulisan kode perlu diperhatikan. Alur publikasi seperti pada gambaran @fig-publish-apps. 
+Setelah hasil aplikasi memuaskan dan dapat digunakan, aplikasi dirilis dalam bentuk proyek _open-source_ di GitHub. Ketiga aplikasi menggunakan [lisensi MIT](https://opensource.org/licenses/MIT). Karena proyek akan diserahkan ke komunitas, maka menyusun struktur dan mengikuti tata cara penulisan kode perlu diperhatikan. 
+
+Sebelum dipublikasikan ke publik, ada tahap _refactoring_ dengan harapannya memudahkan _developer_ lain membaca kode aplikasi. Setelah dipublikasikan di github, aplikasi bisa didemonstrasikan melalui _deployment_ ke server, dan pengelolaan. Akan tetapi, tahap tersebut merupakan opsional dan tergantung kebutuhan saja. Pada akhirnya, setelah dipublikasikan di github, dikembalikan ke tanggung jawab komunitas untuk mengembangkannya ketika repository tidak ada pengelolanya. Alur publikasi seperti pada gambaran @fig-publish-apps. 
 
 ```{mermaid}
 %%| label: fig-publish-apps
 %%| fig-cap: Gambaran publikasi dan rilis aplikasi.
 %%| fig-align: center
-%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'neutral' } }%%
+%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'forest' } }%%
 flowchart TD
-    publikasi[[Publikasi]]
+    publikasi(Mulai Publikasi)
     pengujian[[Pengujian]]
     refactor["Refactor & Dokumentasi"]
     publish["Publikasi dan Rilis di GitHub"]
@@ -320,7 +322,7 @@ Sesuai ilustrasi diatas, aplikasi yang telah dipublikasikan diserahkan ke komuni
 
 ## Fitur Aplikasi {#sec-feature-apps}
 
-Tiga aplikasi yang telah dipublikasi memiliki fitur-fitur yang dapat membantu pekerjaan analisis hidrologi dari penyimpanan/pengambilan data hujan hingga analisis frekuensi. 
+Tiga aplikasi yang telah dipublikasikan memiliki fitur-fitur yang dapat membantu pekerjaan analisis hidrologi dari penyimpanan/pengambilan data hujan hingga analisis frekuensi. 
 
 ### _Rainfall Stations Explorer_ {#sec-feat-fiako-stations}
 
@@ -528,6 +530,53 @@ Melakukan uji kecocokan distribusi _Chi-Square_ dan _Kolmogorov-Smirnov_ beserta
 
 ## Penggunaan Aplikasi {#sec-using-apps}
 
+Dalam penggunaan aplikasi pengolahan data hujan terdapat langkah yang harus dilakukan untuk aplikasi `fiako-stations` di @sec-using-pre-fiako-stations. Dan ketiga aplikasi ini pada akhirnya juga merupakan satu kesatuan yang dapat membantu pekerjaan analisis hidrologi seperti dijelaskan pada @sec-using-workflow.
+
+### Persiapan aplikasi `fiako-stations` {#sec-using-pre-fiako-stations}
+
+Berbeda dengan aplikasi lain yang cukup langsung digunakan dengan memberikan data ke aplikasi. Pada aplikasi `fiako-stations`, terdapat langkah-langkah yang harus dilakukan atau diperhatikan agar aplikasi bekerja sesuai dengan harapan pengguna. Berikut langkah-langkah yang harus dilakukan sebelum menggunakan aplikasi `fiako-stations`:
+
+1. Mengompilasi dataset (bisa berupa .xlsx / .csv) menjadi format HDF5 (.h5). Contoh kompilasi dataset hujan harian dari CSV ke format HDF5 bisa dilihat di [notebook: Compile Rainfall Dataset to HDF5](https://www.kaggle.com/code/tarumainfo/compile-rainfall-dataset-to-hdf5).
+2. Setelah memiliki dataset berbentuk HDF5, pengguna harus menjalankan dua _python script_ yaitu `run_completeness.py` kemudian `run_metadata.py`. Untuk membangkitkan kelengkapan data dan metadata setiap stasiun yang ada di aplikasi.
+3. Aplikasi bisa dijalankan ketika kelengkapan data dan metadata terbaru (dengan dataset baru) sudah tersedia. 
+
+Proses tersebut bisa dilihat pada @fig-prepare-fiako-stations.
+
+::: {.column-screen-inset}
+
+```{mermaid}
+%%| label: fig-prepare-fiako-stations
+%%| fig-cap: Gambaran persiapan aplikasi `fiako-stations`
+%%| fig-align: center
+%%| fig-width: 100%
+%%{ init: { 'flowchart':{'curve': 'bump'}, 'theme': 'forest' } }%%
+flowchart LR
+    rawdata[Data Mentah]
+    storedata[Dataset HDF5 di aplikasi]
+    completescript[Menjalankan <code>run_completeness.py</code>]
+    metadatascript[Menjalankan <code>run_metadata.py</code>]
+    outcomplete[Completeness HDF5]
+    outmetadata[Metadata CSV]
+    aplikasi[["Aplikasi <code>fiako-stations</code>"]]
+    runapp["Jalankan Aplikasi"]
+
+    rawdata -- Kompilasi Dataset --> storedata
+    completescript --> metadatascript
+    metadatascript --> outmetadata
+    storedata --> completescript
+    completescript --> outcomplete
+
+    storedata -.- runapp
+    outcomplete -.- runapp
+    outmetadata -.- runapp
+    runapp --> aplikasi
+
+```
+
+:::
+
+### Alur kerja aplikasi {#sec-using-workflow}
+
 Ketiga aplikasi diatas dapat membantu proses analisis hidrologi dari menyimpan data hingga analisis frekuensi. Berikut proses analisis hidrologi menggunakan ketiga aplikasi:
 
 1. Setelah memperoleh koordinat lokasi yang ditinjau, masukkan **titik koordinat** tersebut di aplikasi `fiako-stations`. 
@@ -598,13 +647,13 @@ Dari diagram diatas dapat disimpulkan juga bahwa aplikasi pengolahan data hujan 
 
 ## Kekurangan Aplikasi {#sec-limitation-apps}
 
-Ketiga aplikasi ini jauh dari sempurna masih banyak yang bisa diperbaiki dan dikembangkan lagi untuk membuat aplikasi yang memudahkan ahli hidrologi memperoleh analisis lebih cepat. Berikut kekurangan atau batasan aplikasi pengolahan data hujan:
+Ketiga aplikasi ini jauh dari sempurna dan masih banyak yang bisa diperbaiki dan dikembangkan lagi. Berikut kekurangan atau batasan aplikasi pengolahan data hujan:
 
-1. Tidak adanya pengujian otomasi untuk setiap fungsi yang tersedia di aplikasi.
+1. Tidak adanya pengujian (_unit test_) untuk setiap fungsi yang tersedia di aplikasi.
 2. Mengevaluasi paket tambahan seperti `hidrokit`, karena paket `hidrokit` masih dalam tahap pengembangan dini.
 3. Layout aplikasi yang tidak konsisten antar aplikasi.
 
-Selain kekurangan atau batasan tersebut, terdapat juga beberapa kekurangan/batasan yang diketahui untuk masing-masing aplikasi.
+Selain hal tersebut, terdapat juga beberapa kekurangan/batasan yang diketahui untuk masing-masing aplikasi.
 
 ### _Rainfall Stations Explorer_
 
