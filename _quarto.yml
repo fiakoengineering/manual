@@ -40,7 +40,20 @@ website:
       # - text: Home
       #   href: index.qmd
       - text: Web Apps
-        href: webapps/index.qmd
+        menu:
+          - text: Ringkasan
+            href: webapps/index.qmd
+          - text: "Aplikasi Pengolahan Data Hujan"
+            href: webapps/webapps-rainfall.qmd
+      - text: Tutorial Web Apps
+        menu:
+          - text: "`fiako-stations`"
+            href: tutorial/webapps/fiako-stations.qmd
+          - text: "`hidrokit-rainfall`"
+            href: tutorial/webapps/hidrokit-rainfall.qmd
+          - text: "`fiako-anfrek`"
+            href: tutorial/webapps/fiako-anfrek.qmd
+
 
     right:
       - icon: github
@@ -55,7 +68,7 @@ website:
             - "test 1 2 3"
 
     - id: side-webapps
-      style: docked
+      style: floating
       search: true
       border: true
       collapse-level: 1
@@ -64,18 +77,14 @@ website:
         - text: "Ringkasan"
           href: webapps/index.qmd
         - webapps/webapps-rainfall.qmd
-        # - section: "`fiako-stations`"
-        #   contents:
-        #     - README
-        #     - Penggunaan / Tutorial
-        # - section: "`hidrokit-rainfall`"
-        #   contents:
-        #     - README
-        #     - Penggunaan / Tutorial
-        # - section: "`fiako-anfrek`"
-        #   contents:
-        #     - README
-        #     - Penggunaan / Tutorial
+        - section: Tutorial _Rainfall Apps_
+          contents:
+            - text: "`fiako-stations`"
+              href: tutorial/webapps/fiako-stations.qmd
+            - text: "`hidrokit-rainfall`"
+              href: tutorial/webapps/hidrokit-rainfall.qmd
+            - text: "`fiako-anfrek`"
+              href: tutorial/webapps/fiako-anfrek.qmd
         - "---"
           
 
