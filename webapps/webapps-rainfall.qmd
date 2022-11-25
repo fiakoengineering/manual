@@ -32,7 +32,7 @@ citation:
 license: CC-BY-NC-SA 4.0
 
 date: 2022-11-22
-date-modified: 2022-11-24
+date-modified: 2022-11-25
 date-format: full
 language:
   title-block-modified: "Diperbarui"
@@ -61,7 +61,7 @@ format:
 ::: {.callout-important}
 ## Mengutip Artikel
 
-Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari prosiding PIT HATHI ke-39. Jika bukan untuk makalah formal, dapat menggunakan sitasi yang tersedia [di akhir halaman](#citation) (mensitasi halaman ini).  
+Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari prosiding PIT HATHI ke-39. Jika bukan untuk makalah formal, dapat menggunakan sitasi yang tersedia [di akhir halaman](#sitasi) (mensitasi halaman ini).  
 :::
 
 ::: {.callout-note}
@@ -680,7 +680,7 @@ Selain hal tersebut, terdapat juga beberapa kekurangan/batasan yang diketahui un
 1. Penggunaan distribusi Log Pearson III harus dievaluasi kembali. Hal ini terkait perilaku pada fungsi `pearson` di `scipy`. Saat ini, aplikasi harus menggunakan `scipy` versi `1.8` untuk menghasilkan nilai yang diharapkan. Alternatif lainnya menggunakan sumber tabel di distribusi Log Pearson III. 
 2. Dasar teori mengenai penentuan kelas dan parameter untuk uji Chi-Square harus dievaluasi kembali. 
 
-## Kesimpulan
+## Kesimpulan {#sec-conclusion}
 
 Aplikasi pengolahan data hujan yang terdiri dari: 1. _Rainfall Stations Explorer_ (`fiako-stations`); 2. _Rainfall Data Explorer_ (`hidrokit-rainfall`); 3. _Frequency Analysis_ (`fiako-anfrek`), mampu membantu mempercepat proses analisis hidrologi. 
 
