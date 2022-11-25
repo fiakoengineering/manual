@@ -1,5 +1,68 @@
 [
   {
+    "objectID": "tutorial/webapps/fiako-stations.html",
+    "href": "tutorial/webapps/fiako-stations.html",
+    "title": "Tutorial: Rainfall Stations Explorer (fiako-stations)",
+    "section": "",
+    "text": "Anda dapat mengeksplorasi stasiun mana saja yang tersedia di dalam database. \n\n\n\n\n\n\nStep 3\n\n\n\n\n\n\n\n\nStep 4\n\n\n\n\n\n\n\n\nStep 5\n\n\n\n\n\n\n\n\nStep 6"
+  },
+  {
+    "objectID": "tutorial/webapps/fiako-stations.html#eksplorasi-stasiun-terdekat",
+    "href": "tutorial/webapps/fiako-stations.html#eksplorasi-stasiun-terdekat",
+    "title": "Tutorial: Rainfall Stations Explorer (fiako-stations)",
+    "section": "Eksplorasi Stasiun Terdekat",
+    "text": "Eksplorasi Stasiun Terdekat\n\n7. Klik Find Nearest Stations untuk mencari stasiun terdekat dari titik tinjauan\n\n\n\nStep 7\n\n\n\n\n8. Eksplorasi di peta stasiun terdekat\n\n\n\nStep 8\n\n\n\n\n9. Anda bisa menyimpan peta dalam bentuk gambar dengan mengklik gambar kamera\n\n\n\nStep 9\n\n\n\n\n10. Lihat juga stasiun terdekat dalam format tabel\nAnda dapat memilih stasiun yang ingin ditampilkan kelengkapannya dengan menandai kotak kecil di sisi kiri setiap stasiun."
+  },
+  {
+    "objectID": "tutorial/webapps/fiako-stations.html#kelengkapan-data",
+    "href": "tutorial/webapps/fiako-stations.html#kelengkapan-data",
+    "title": "Tutorial: Rainfall Stations Explorer (fiako-stations)",
+    "section": "Kelengkapan Data",
+    "text": "Kelengkapan Data\n\n11. Klik “Show Completeness Rainfall Data” untuk melihat kelengkapan data stasiun\n\n\n\nStep 11\n\n\n\n\n12. Setelah selesai mengeksplorasi mengenai kelengkapan data bisa langsung ke tahap pemerolehan data\n\n\n\nStep 12"
+  },
+  {
+    "objectID": "tutorial/webapps/fiako-stations.html#pemilihan-stasiun-dan-download-data",
+    "href": "tutorial/webapps/fiako-stations.html#pemilihan-stasiun-dan-download-data",
+    "title": "Tutorial: Rainfall Stations Explorer (fiako-stations)",
+    "section": "Pemilihan Stasiun dan Download Data",
+    "text": "Pemilihan Stasiun dan Download Data\n\n13. Masukkan kata kunci atau id untuk mempercepat proses pemilihan stasiun\n\n\n\nStep 13\n\n\n\n\n14. Atur periode tahun yang akan digunakan\n\n\n\nStep 14\n\n\n\n\n15. Klik “Plot Rainfall Data” untuk menampilkan data hujan\n\n\n\nStep 15\n\n\n\n\n16. Eksplorasi plot data hujan\n\n\n\nStep 16\n\n\n\n\n17. Jika sudah sesuai keinginan klik “Download Rainfall Data” untuk mendownload data hujan berbentuk CSV\n\n\n\nStep 17\n\n\n\nThis workflow was created with Tango"
+  },
+  {
+    "objectID": "tutorial/webapps/hidrokit-rainfall.html",
+    "href": "tutorial/webapps/hidrokit-rainfall.html",
+    "title": "Tutorial: Rainfall Data Explorer (hidrokit-rainfall)",
+    "section": "",
+    "text": "Dashboard ini bisa membaca berkas berformat ‘.csv’ dengan:\n\nKolom pertama merupakan tanggal dengan format yang dapat dibaca oleh fitur parse_dates yang tersedia di pandas. Direkomendasikan mengubahnya menjadi format YYYY-MM-DD.\nKolom lainnya merupakan data hujan dengan header.\nBaris pertama akan dibaca sebagai header tabel, sehingga dianjurkan menambahkan label untuk setiap kolomnya. Gunakan label DATE untuk kolom tanggal yang akan digunakan sebagai index.\n\nNavigasi dashboard ini antara lain:\n\nDrag and Drop berkas atau pilih berkas pada tombol “Drag and Drop or Select Files”. Klik “Use Example Data” jika ingin melihat demonstrasi dashboard ini.\nJika prosesnya berhasil, akan muncul tabel dengan data yang di-upload atau contoh data. Tabel ini editable sehingga bisa menyesuaikan saat proses pengoreksian saat eksplorasi data. Bisa juga diubah nama tabelnya. Pastikan nama kolom berbeda dan nama kolom pertama (tanggal) selalu “DATE”.\nKlik “Visualize Data” untuk melihat visualisasi data. Pada tahap ini, Anda bisa kembali ke tabel jika ingin melakukan pengoreksian data. Anda juga bisa melakukan filter pada setiap kolom untuk eksplorasi selanjutnya.`\nTabel yang telah diubah, bisa di-download kembali dalam bentuk CSV.\nSetelah tabel sudah dikoreksi. Bisa dilanjutkan ke tahapan analisis data. Perlu diingat, data yang dianalisis sesuai dengan tampilan/informasi tabel terkini. Jadi, jika masih ada filter, maka analisis hanya dilakukan pada data yang telah terfilter.\nKlik “Analyze Data” untuk melakukan analisis data. Perlu diingat, proses ini akan memakan waktu jika memiliki dataset yang besar. Jadi, sangat disarankan menggunakan mesin lokal untuk proses ini. Karena yang dapat diakses di web hanya berupa demonstrasi saja dan menggunakan layanan gratis sehingga sangat terbatas kemampuannya.\nAnalisis data terbagi menjadi tiga periode yaitu 2 periode (biweekly), setiap bulanan (monthly), dan tahunan (yearly). Sebagai catatan, biweekly itu dibagi berdasarkan 16 hari pertama kemudian sisa harinya pada setiap bulan.\nBaru di v1.1.0: Analisis konsistensi (kurva massa ganda) dan kumulatif hujan tahunan.\nAnalisis data yang dilakukan berupa:\n\ndays: Jumlah hari pada setiap periodenya (16 hari untuk biweekly, 1 bulan untuk monthly, dan 1 tahun untuk yearly).\nmax: Nilai maksimum pada setiap periode.\nsum: Total nilai pada setiap periode.\nn_rain: Jumlah hari hujan di setiap periode.\nn_dry: Jumlah hari kering di setiap periode. Catatan: Ini akan menghitung nilai np.nan sebagai hari kering.\nmax_date: Tanggal kejadian hujan maksimum terjadi pada setiap periode.\n\nTabel analisis tidak dapat diubah dan hanya sebagai penyedia informasi saja.\nMelihat tabel analisis rasanya cukup sulit untuk diceritakan atau diinterpretasikan, oleh karena itu disediakan tombol “Visualize it!” untuk melakuakn visualisasi tabel analisis.\nSelain melakukan visualisasi, tabel analisis juga dapat di-download dengan mengklik tombol “Download Results as CSV”. Perlu dicatat, dataframe tabel analisis menggunakan MultiIndex sehingga pada format CSV akan perlu dilakukan pengolahan lagi.\nVisualisasi dari tabel analisis berupa:\n\nGroup Bar Chart untuk setiap periode dengan kolom max dan sum. Grafik ini bisa melihat secara langsung perbandingan nilai antar stasiun.\nStack Bar Chart untuk setiap periode dengan kolom n_rain dan n_dry. Grafik ini bisa memberikan gambaran periode yang memiliki frekuensi hujan/kekeringan tinggi/rendah secara sekilas.\nBubble Chart (Maximum Rainfall Events) memberikan gambaran besar terkait tanggal kejadian saat hujan maksimum terjadi di setiap stasiun. Ukuran lingkaran menunjukkan seberapa besar hujan maksimum yang terjadi.\nBaru di v1.1.0: Ditambahkan grafik kumulatif hujan tahunan dan konsistensi (kurva massa ganda) untuk setiap stasiun. Navigasi dengan grafik interaktif plotly:\n\nPada setiap grafik plotly, dapat dilakukan interaksi langsung dengan grafik seperti mengatur stasiun/data mana saja yang ditampilkan, pembesaran pada periode tertentu. mengatur ukuran sumbu, dll.\nSangat dianjurkan untuk mengeksplorasi sendiri mengenai mode bar yang ada di kanan atas setiap grafik plotly.\nSetiap grafik bisa di-download dalam bentuk .png untuk kepentingan menaruh di dokumen atau lainnya."
+  },
+  {
+    "objectID": "tutorial/webapps/fiako-anfrek.html",
+    "href": "tutorial/webapps/fiako-anfrek.html",
+    "title": "Tutorial: Frequency Analysis (fiako-anfrek)",
+    "section": "",
+    "text": "Pada sisi kiri, terdapat tiga tombol yang berfungsi untuk mengupload dan mendownload data.\nPada sisi kanan, terdapat empat tab yang digunakan untuk mengganti menu perhitungan. \n\n\n\nBaca pada README untuk ketentuan jenis file yang dapat digunakan.\nKlik “Use Example Data” jika ingin menggunakan contoh data. \n\n\n\nAnda dapat mengeksplorasi maupun mengubah nilai yang ada di tabel ini. Visualisasi akan berubah otomatis saat ada perubahan di tabel.\nDirekomendasikan untuk mengolah data di luar aplikasi ini. \n\n\n\nTerdapat dua visualisasi yaitu line/scatter/bar plot dan bubble plot. Tujuan visualisasi atas untuk memberikan gambaran besar mengenai data, sedangkan dibawahnya dapat digunakan untuk melihat perbandingan nilai dalam data dengan melihat ukuran lingkarannya. \n\n\n\n\n\n\nStep 6"
+  },
+  {
+    "objectID": "tutorial/webapps/fiako-anfrek.html#statistik-dan-outlier",
+    "href": "tutorial/webapps/fiako-anfrek.html#statistik-dan-outlier",
+    "title": "Tutorial: Frequency Analysis (fiako-anfrek)",
+    "section": "Statistik dan outlier",
+    "text": "Statistik dan outlier\n\n7. Klik “STATISTICS & OUTLIER”\nTab ini untuk memberikan gambaran mengenai statistik dan uji outlier yang terdapat dalam data \n\n\n8. Klik “CALCULATE” untuk menghitung dan memvisualisasikannya\n\n\n\nStep 8\n\n\n\n\n9. Eksplorasi Visualisasi “STATISTICS & OUTLIER”\nTerdapat dua jenis plot yaitu scatter plot dan box plot. Kedua plot ini memberikan gambaran mengenai parameter statistik (plot kiri) dan distribusinya (plot kanan). \n\n\n10. Hover box plot untuk melihat nilai distribusinya\n\n\n\nStep 10\n\n\n\n\n11. Eksplorasi Visualisasi “Distribution”\nVisualisasi ini merupakan ilustrasi dalam melihat jenis sebaran berdasarkan SNI: 2415:2016 Tata Cara Perhitungan Debit Banjir Rencana. \n\n\n12. Klik “DOWNLOAD STATOUT.TXT” untuk mendownload nilai statistik dan outlier\n\n\n\nStep 12"
+  },
+  {
+    "objectID": "tutorial/webapps/fiako-anfrek.html#analisis-frekuensi",
+    "href": "tutorial/webapps/fiako-anfrek.html#analisis-frekuensi",
+    "title": "Tutorial: Frequency Analysis (fiako-anfrek)",
+    "section": "Analisis Frekuensi",
+    "text": "Analisis Frekuensi\n\n13. Klik tab “FREQUENCY ANALYSIS”\nPada tab ini akan dilakukan analisis frekuensi dengan empat distribusi yaitu normal, log normal, gumbel, dan log pearson 3. \n\n\n14. Ketik periode ulang pada bagian “Return Period”\nSetiap tahun pisahkan dengan spasi. \n\n\n15. Pilih sumber tabel/nilai pada bagian “SOURCE” untuk masing-masing distribusi\n\n\n\nStep 15\n\n\n\n\n16. Klik “CALCULATE” untuk menghitung analisis frekuensi\n\n\n\nStep 16\n\n\n\n\n17. Eksplorasi Visualisasi Analisis Frekuensi\n\n\n\nStep 17\n\n\n\n\n18. Klik “DOWNLOAD FREQUENCY.CSV” untuk mendownload hasil analisis frekuensi\n\n\n\nStep 18"
+  },
+  {
+    "objectID": "tutorial/webapps/fiako-anfrek.html#uji-kecocokan-distribusi",
+    "href": "tutorial/webapps/fiako-anfrek.html#uji-kecocokan-distribusi",
+    "title": "Tutorial: Frequency Analysis (fiako-anfrek)",
+    "section": "Uji Kecocokan Distribusi",
+    "text": "Uji Kecocokan Distribusi\n\n19. Klik tab “GOODNESS OF FIT” untuk melakukan uji kecocokan distribusi\n\n\n\nStep 19\n\n\n\n\n20. Isi nilai alpha dari 0.00 - 1.00\n\n\n\nStep 20\n\n\n\n\n21. Pilih sumber tabel/nilai kritis untuk setiap uji\n\n\n\nStep 21\n\n\n\n\n22. Klik “CALCULATE” untuk menghitung uji kecocokan distribusi\n\n\n\nStep 22\n\n\n\n\n23. Eksplorasi Visualisasi “GOODNESS OF FIT”\nPada plot paling kiri menunjukkan nilai yang telah diurutkan/diranking. Untuk Kolmogorov-Smirnov akan ditampilkan kurva Cumulative Distribution Function (CDF), sedangkan untuk Chi-Square akan ditampilkan jumlah pembagian setiap kelasnya. \n\n\n24. Eksplorasi Visualisasi “RESULTS”\nVisualisasi ini menunjukkan nilai kritis dan perhitungan/data. \n\n\n25. Klik “DOWNLOAD ALL RESULTS” untuk mendownload hasil uji kecocokan distribusi\nAkan tiga file yang akan di download yaitu KS.csv (hasil kolmogorov-smirnov), CHI.csv (hasil chi-square), FIT.txt (perbandingan nilai kritis dan perhitungan). \n\nThis workflow was created with Tango"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "FIAKO Manual",

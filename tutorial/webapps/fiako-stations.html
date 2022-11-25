@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Taruma Sakti Megariansyah">
+
+<title>Tutorial: Rainfall Stations Explorer (fiako-stations)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../tutorial/webapps/hidrokit-rainfall.html" rel="next">
+<link href="../../webapps/webapps-rainfall.html" rel="prev">
+<link href="../../fiakologo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../fiakologo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">fiako-manual</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-web-apps" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Web Apps</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-web-apps">    
+        <li>
+    <a class="dropdown-item" href="../../webapps/index.html">
+ <span class="dropdown-text">Ringkasan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../webapps/webapps-rainfall.html">
+ <span class="dropdown-text">Aplikasi Pengolahan Data Hujan</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorial-web-apps" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tutorial Web Apps</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorial-web-apps">    
+        <li>
+    <a class="dropdown-item" href="../../tutorial/webapps/fiako-stations.html">
+ <span class="dropdown-text"><code>fiako-stations</code></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorial/webapps/hidrokit-rainfall.html">
+ <span class="dropdown-text"><code>hidrokit-rainfall</code></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorial/webapps/fiako-anfrek.html">
+ <span class="dropdown-text"><code>fiako-anfrek</code></span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fiakoenjiniring/manual"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><p>Tutorial: <em>Rainfall Stations Explorer</em> (<code>fiako-stations</code>)</p></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../webapps/index.html" class="sidebar-item-text sidebar-link">Ringkasan</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../webapps/webapps-rainfall.html" class="sidebar-item-text sidebar-link">Aplikasi Pengolahan Data Hujan</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Tutorial <em>Rainfall Apps</em></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorial/webapps/fiako-stations.html" class="sidebar-item-text sidebar-link active"><code>fiako-stations</code></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorial/webapps/hidrokit-rainfall.html" class="sidebar-item-text sidebar-link"><code>hidrokit-rainfall</code></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorial/webapps/fiako-anfrek.html" class="sidebar-item-text sidebar-link"><code>fiako-anfrek</code></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Pada halaman ini</h2>
+   
+  <ul>
+  <li><a href="#explorasi-dan-input-koordinat" id="toc-explorasi-dan-input-koordinat" class="nav-link active" data-scroll-target="#explorasi-dan-input-koordinat">Explorasi dan Input Koordinat</a>
+  <ul class="collapse">
+  <li><a href="#buka-situs-rainfall-stations-explorer-fiako-stations-fiako-demo-stations" id="toc-buka-situs-rainfall-stations-explorer-fiako-stations-fiako-demo-stations" class="nav-link" data-scroll-target="#buka-situs-rainfall-stations-explorer-fiako-stations-fiako-demo-stations">1. Buka Situs Rainfall Stations Explorer (fiako-stations / fiako-demo-stations)</a></li>
+  <li><a href="#eksplorasi-peta-rainfall-stations" id="toc-eksplorasi-peta-rainfall-stations" class="nav-link" data-scroll-target="#eksplorasi-peta-rainfall-stations">2. Eksplorasi Peta “Rainfall Stations”</a></li>
+  <li><a href="#isi-nama-koordinat" id="toc-isi-nama-koordinat" class="nav-link" data-scroll-target="#isi-nama-koordinat">3. Isi Nama Koordinat</a></li>
+  <li><a href="#isi-koordinat-lintang-derajatlatitude-dalam-format-desimal-ataupun-derajat" id="toc-isi-koordinat-lintang-derajatlatitude-dalam-format-desimal-ataupun-derajat" class="nav-link" data-scroll-target="#isi-koordinat-lintang-derajatlatitude-dalam-format-desimal-ataupun-derajat">4. Isi koordinat lintang derajat/latitude dalam format desimal ataupun derajat</a></li>
+  <li><a href="#isi-koordinat-bujur-derajatlongitude-dalam-format-desimal-maupun-derajat" id="toc-isi-koordinat-bujur-derajatlongitude-dalam-format-desimal-maupun-derajat" class="nav-link" data-scroll-target="#isi-koordinat-bujur-derajatlongitude-dalam-format-desimal-maupun-derajat">5. Isi koordinat bujur derajat/longitude dalam format desimal maupun derajat</a></li>
+  <li><a href="#isi-radius-atau-jumlah-stasiun-yang-ingin-ditampilkan" id="toc-isi-radius-atau-jumlah-stasiun-yang-ingin-ditampilkan" class="nav-link" data-scroll-target="#isi-radius-atau-jumlah-stasiun-yang-ingin-ditampilkan">6. Isi radius atau jumlah stasiun yang ingin ditampilkan</a></li>
+  </ul></li>
+  <li><a href="#eksplorasi-stasiun-terdekat" id="toc-eksplorasi-stasiun-terdekat" class="nav-link" data-scroll-target="#eksplorasi-stasiun-terdekat">Eksplorasi Stasiun Terdekat</a>
+  <ul class="collapse">
+  <li><a href="#klik-find-nearest-stations-untuk-mencari-stasiun-terdekat-dari-titik-tinjauan" id="toc-klik-find-nearest-stations-untuk-mencari-stasiun-terdekat-dari-titik-tinjauan" class="nav-link" data-scroll-target="#klik-find-nearest-stations-untuk-mencari-stasiun-terdekat-dari-titik-tinjauan">7. Klik Find Nearest Stations untuk mencari stasiun terdekat dari titik tinjauan</a></li>
+  <li><a href="#eksplorasi-di-peta-stasiun-terdekat" id="toc-eksplorasi-di-peta-stasiun-terdekat" class="nav-link" data-scroll-target="#eksplorasi-di-peta-stasiun-terdekat">8. Eksplorasi di peta stasiun terdekat</a></li>
+  <li><a href="#anda-bisa-menyimpan-peta-dalam-bentuk-gambar-dengan-mengklik-gambar-kamera" id="toc-anda-bisa-menyimpan-peta-dalam-bentuk-gambar-dengan-mengklik-gambar-kamera" class="nav-link" data-scroll-target="#anda-bisa-menyimpan-peta-dalam-bentuk-gambar-dengan-mengklik-gambar-kamera">9. Anda bisa menyimpan peta dalam bentuk gambar dengan mengklik gambar kamera</a></li>
+  <li><a href="#lihat-juga-stasiun-terdekat-dalam-format-tabel" id="toc-lihat-juga-stasiun-terdekat-dalam-format-tabel" class="nav-link" data-scroll-target="#lihat-juga-stasiun-terdekat-dalam-format-tabel">10. Lihat juga stasiun terdekat dalam format tabel</a></li>
+  </ul></li>
+  <li><a href="#kelengkapan-data" id="toc-kelengkapan-data" class="nav-link" data-scroll-target="#kelengkapan-data">Kelengkapan Data</a>
+  <ul class="collapse">
+  <li><a href="#klik-show-completeness-rainfall-data-untuk-melihat-kelengkapan-data-stasiun" id="toc-klik-show-completeness-rainfall-data-untuk-melihat-kelengkapan-data-stasiun" class="nav-link" data-scroll-target="#klik-show-completeness-rainfall-data-untuk-melihat-kelengkapan-data-stasiun">11. Klik “Show Completeness Rainfall Data” untuk melihat kelengkapan data stasiun</a></li>
+  <li><a href="#setelah-selesai-mengeksplorasi-mengenai-kelengkapan-data-bisa-langsung-ke-tahap-pemerolehan-data" id="toc-setelah-selesai-mengeksplorasi-mengenai-kelengkapan-data-bisa-langsung-ke-tahap-pemerolehan-data" class="nav-link" data-scroll-target="#setelah-selesai-mengeksplorasi-mengenai-kelengkapan-data-bisa-langsung-ke-tahap-pemerolehan-data">12. Setelah selesai mengeksplorasi mengenai kelengkapan data bisa langsung ke tahap pemerolehan data</a></li>
+  </ul></li>
+  <li><a href="#pemilihan-stasiun-dan-download-data" id="toc-pemilihan-stasiun-dan-download-data" class="nav-link" data-scroll-target="#pemilihan-stasiun-dan-download-data">Pemilihan Stasiun dan Download Data</a>
+  <ul class="collapse">
+  <li><a href="#masukkan-kata-kunci-atau-id-untuk-mempercepat-proses-pemilihan-stasiun" id="toc-masukkan-kata-kunci-atau-id-untuk-mempercepat-proses-pemilihan-stasiun" class="nav-link" data-scroll-target="#masukkan-kata-kunci-atau-id-untuk-mempercepat-proses-pemilihan-stasiun">13. Masukkan kata kunci atau id untuk mempercepat proses pemilihan stasiun</a></li>
+  <li><a href="#atur-periode-tahun-yang-akan-digunakan" id="toc-atur-periode-tahun-yang-akan-digunakan" class="nav-link" data-scroll-target="#atur-periode-tahun-yang-akan-digunakan">14. Atur periode tahun yang akan digunakan</a></li>
+  <li><a href="#klik-plot-rainfall-data-untuk-menampilkan-data-hujan" id="toc-klik-plot-rainfall-data-untuk-menampilkan-data-hujan" class="nav-link" data-scroll-target="#klik-plot-rainfall-data-untuk-menampilkan-data-hujan">15. Klik “Plot Rainfall Data” untuk menampilkan data hujan</a></li>
+  <li><a href="#eksplorasi-plot-data-hujan" id="toc-eksplorasi-plot-data-hujan" class="nav-link" data-scroll-target="#eksplorasi-plot-data-hujan">16. Eksplorasi plot data hujan</a></li>
+  <li><a href="#jika-sudah-sesuai-keinginan-klik-download-rainfall-data-untuk-mendownload-data-hujan-berbentuk-csv" id="toc-jika-sudah-sesuai-keinginan-klik-download-rainfall-data-untuk-mendownload-data-hujan-berbentuk-csv" class="nav-link" data-scroll-target="#jika-sudah-sesuai-keinginan-klik-download-rainfall-data-untuk-mendownload-data-hujan-berbentuk-csv">17. Jika sudah sesuai keinginan klik “Download Rainfall Data” untuk mendownload data hujan berbentuk CSV</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fiakoenjiniring/manual/edit/main/tutorial/webapps/fiako-stations.qmd" class="toc-action">Ubah halaman ini</a></p><p><a href="https://github.com/fiakoenjiniring/manual/issues/new" class="toc-action">Melaporkan isu</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><p>Tutorial: <em>Rainfall Stations Explorer</em> (<code>fiako-stations</code>)</p></h1>
+<p class="subtitle lead"></p><p>Penggunaan <em>Rainfall Stations Explorer</em>.</p><p></p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Penulis</div>
+    <div class="quarto-title-meta-contents">
+             <p>Taruma Sakti Megariansyah </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Diterbitkan</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Kamis, 23 Juni 2022</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Diubah</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">Jumat, 25 November 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="explorasi-dan-input-koordinat" class="level2">
+<h2 class="anchored" data-anchor-id="explorasi-dan-input-koordinat">Explorasi dan Input Koordinat</h2>
+<section id="buka-situs-rainfall-stations-explorer-fiako-stations-fiako-demo-stations" class="level3">
+<h3 class="anchored" data-anchor-id="buka-situs-rainfall-stations-explorer-fiako-stations-fiako-demo-stations">1. <a href="https://demo-fiako-stations.herokuapp.com/">Buka Situs Rainfall Stations Explorer (fiako-stations / fiako-demo-stations)</a></h3>
+</section>
+<section id="eksplorasi-peta-rainfall-stations" class="level3">
+<h3 class="anchored" data-anchor-id="eksplorasi-peta-rainfall-stations">2. Eksplorasi Peta “Rainfall Stations”</h3>
+<p>Anda dapat mengeksplorasi stasiun mana saja yang tersedia di dalam database. <img src="https://images.tango.us/public/screenshot_dcc4de46-05c7-482a-b4a8-b2b232a4b8d3.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.4958&amp;fp-y=0.4370&amp;fp-z=1.1903&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid" alt="Step 2"></p>
+</section>
+<section id="isi-nama-koordinat" class="level3">
+<h3 class="anchored" data-anchor-id="isi-nama-koordinat">3. Isi Nama Koordinat</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_8fa7c048-1d36-404f-93ab-6c09c963cbee.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.2346&amp;fp-y=0.4441&amp;fp-z=4.0000&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 3</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="isi-koordinat-lintang-derajatlatitude-dalam-format-desimal-ataupun-derajat" class="level3">
+<h3 class="anchored" data-anchor-id="isi-koordinat-lintang-derajatlatitude-dalam-format-desimal-ataupun-derajat">4. Isi koordinat lintang derajat/latitude dalam format desimal ataupun derajat</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_13ccbd8b-e668-4d82-8ec3-f2f3a1fb6b2f.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.4085&amp;fp-y=0.4585&amp;fp-z=3.0000&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 4</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="isi-koordinat-bujur-derajatlongitude-dalam-format-desimal-maupun-derajat" class="level3">
+<h3 class="anchored" data-anchor-id="isi-koordinat-bujur-derajatlongitude-dalam-format-desimal-maupun-derajat">5. Isi koordinat bujur derajat/longitude dalam format desimal maupun derajat</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_b97bb253-41cf-46cd-a70b-d3ae30d16d7e.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5753&amp;fp-y=0.4571&amp;fp-z=4.0000&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 5</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="isi-radius-atau-jumlah-stasiun-yang-ingin-ditampilkan" class="level3">
+<h3 class="anchored" data-anchor-id="isi-radius-atau-jumlah-stasiun-yang-ingin-ditampilkan">6. Isi radius atau jumlah stasiun yang ingin ditampilkan</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_3107b6be-8ff1-48bf-9ae7-52d4c6d8973a.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.7393&amp;fp-y=0.4395&amp;fp-z=4.0000&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 6</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="eksplorasi-stasiun-terdekat" class="level2">
+<h2 class="anchored" data-anchor-id="eksplorasi-stasiun-terdekat">Eksplorasi Stasiun Terdekat</h2>
+<section id="klik-find-nearest-stations-untuk-mencari-stasiun-terdekat-dari-titik-tinjauan" class="level3">
+<h3 class="anchored" data-anchor-id="klik-find-nearest-stations-untuk-mencari-stasiun-terdekat-dari-titik-tinjauan">7. Klik Find Nearest Stations untuk mencari stasiun terdekat dari titik tinjauan</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_3524dfac-4efd-47bd-ac98-eb484e9ac3e1.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.7690&amp;fp-y=0.5401&amp;fp-z=2.8576&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 7</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="eksplorasi-di-peta-stasiun-terdekat" class="level3">
+<h3 class="anchored" data-anchor-id="eksplorasi-di-peta-stasiun-terdekat">8. Eksplorasi di peta stasiun terdekat</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_7fdaa8da-615f-4104-a368-693c38462049.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.3271&amp;fp-y=0.4334&amp;fp-z=1.3782&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 8</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="anda-bisa-menyimpan-peta-dalam-bentuk-gambar-dengan-mengklik-gambar-kamera" class="level3">
+<h3 class="anchored" data-anchor-id="anda-bisa-menyimpan-peta-dalam-bentuk-gambar-dengan-mengklik-gambar-kamera">9. Anda bisa menyimpan peta dalam bentuk gambar dengan mengklik gambar kamera</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_9f9c2e20-776e-4c2a-b251-36431fa9efd9.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.3391&amp;fp-y=0.1951&amp;fp-z=3.1895&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 9</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="lihat-juga-stasiun-terdekat-dalam-format-tabel" class="level3">
+<h3 class="anchored" data-anchor-id="lihat-juga-stasiun-terdekat-dalam-format-tabel">10. Lihat juga stasiun terdekat dalam format tabel</h3>
+<p>Anda dapat memilih stasiun yang ingin ditampilkan kelengkapannya dengan menandai kotak kecil di sisi kiri setiap stasiun. <img src="https://images.tango.us/public/screenshot_8c1d338c-740b-44f8-bcd3-41ded4263d7b.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.6162&amp;fp-y=0.4515&amp;fp-z=1.3030&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid" alt="Step 10"></p>
+</section>
+</section>
+<section id="kelengkapan-data" class="level2">
+<h2 class="anchored" data-anchor-id="kelengkapan-data">Kelengkapan Data</h2>
+<section id="klik-show-completeness-rainfall-data-untuk-melihat-kelengkapan-data-stasiun" class="level3">
+<h3 class="anchored" data-anchor-id="klik-show-completeness-rainfall-data-untuk-melihat-kelengkapan-data-stasiun">11. Klik “Show Completeness Rainfall Data” untuk melihat kelengkapan data stasiun</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_9292fa6f-1f1b-4aba-b620-7aecfe0b7146.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.7713&amp;fp-y=0.7208&amp;fp-z=3.2912&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 11</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="setelah-selesai-mengeksplorasi-mengenai-kelengkapan-data-bisa-langsung-ke-tahap-pemerolehan-data" class="level3">
+<h3 class="anchored" data-anchor-id="setelah-selesai-mengeksplorasi-mengenai-kelengkapan-data-bisa-langsung-ke-tahap-pemerolehan-data">12. Setelah selesai mengeksplorasi mengenai kelengkapan data bisa langsung ke tahap pemerolehan data</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/edited_image_fb2f87f6-d321-4faf-8dcd-835a41e6aa26.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.3622&amp;fp-y=0.6960&amp;fp-z=2.0608&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 12</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="pemilihan-stasiun-dan-download-data" class="level2">
+<h2 class="anchored" data-anchor-id="pemilihan-stasiun-dan-download-data">Pemilihan Stasiun dan Download Data</h2>
+<section id="masukkan-kata-kunci-atau-id-untuk-mempercepat-proses-pemilihan-stasiun" class="level3">
+<h3 class="anchored" data-anchor-id="masukkan-kata-kunci-atau-id-untuk-mempercepat-proses-pemilihan-stasiun">13. Masukkan kata kunci atau id untuk mempercepat proses pemilihan stasiun</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_f2100526-c94b-4376-8637-ffd15cf8193c.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.3113&amp;fp-y=0.7117&amp;fp-z=2.9572&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 13</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="atur-periode-tahun-yang-akan-digunakan" class="level3">
+<h3 class="anchored" data-anchor-id="atur-periode-tahun-yang-akan-digunakan">14. Atur periode tahun yang akan digunakan</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_d8f25028-c656-4a46-99bb-18fd7ac751ff.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.3961&amp;fp-y=0.7573&amp;fp-z=2.0584&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 14</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="klik-plot-rainfall-data-untuk-menampilkan-data-hujan" class="level3">
+<h3 class="anchored" data-anchor-id="klik-plot-rainfall-data-untuk-menampilkan-data-hujan">15. Klik “Plot Rainfall Data” untuk menampilkan data hujan</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_69124e93-1523-428a-8405-47934b7ea353.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.7909&amp;fp-y=0.6374&amp;fp-z=3.6556&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 15</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="eksplorasi-plot-data-hujan" class="level3">
+<h3 class="anchored" data-anchor-id="eksplorasi-plot-data-hujan">16. Eksplorasi plot data hujan</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_717fb018-724a-4bd7-8377-8b212e757987.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.4317&amp;fp-y=0.5555&amp;fp-z=1.8696&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 16</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="jika-sudah-sesuai-keinginan-klik-download-rainfall-data-untuk-mendownload-data-hujan-berbentuk-csv" class="level3">
+<h3 class="anchored" data-anchor-id="jika-sudah-sesuai-keinginan-klik-download-rainfall-data-untuk-mendownload-data-hujan-berbentuk-csv">17. Jika sudah sesuai keinginan klik “Download Rainfall Data” untuk mendownload data hujan berbentuk CSV</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://images.tango.us/public/screenshot_7b7e220a-007b-42de-9406-7a2692f92d41.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5794&amp;fp-y=0.8533&amp;fp-z=2.3501&amp;w=1200&amp;mark-w=0.2&amp;mark-pad=0&amp;mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&amp;ar=1920%3A961" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Step 17</figcaption><p></p>
+</figure>
+</div>
+<hr>
+<p><em><a href="https://app.tango.us/app/workflow/7cab5577-5fdb-4b70-8b81-79442923b63f?utm_source=markdown&amp;utm_medium=markdown&amp;utm_campaign=workflow%20export%20links">This workflow was created with Tango</a></em></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/manual\.fiako\.engineering/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="../../webapps/webapps-rainfall.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Aplikasi Pengolahan Data Hujan</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../tutorial/webapps/hidrokit-rainfall.html" class="pagination-link">
+        <span class="nav-page-text"><code>hidrokit-rainfall</code></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2022 PT. FIAKO ENJINIRING INDONESIA.</div>   
+    <div class="nav-footer-right">website by <strong>fiako</strong>dev, built with <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>

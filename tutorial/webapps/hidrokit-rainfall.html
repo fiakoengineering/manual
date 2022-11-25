@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.269">
@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Taruma Sakti Megariansyah">
-<meta name="dcterms.date" content="2022-11-21">
 
-<title>Aplikasi Web</title>
+<title>Tutorial: Rainfall Data Explorer (hidrokit-rainfall)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,23 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../webapps/webapps-rainfall.html" rel="next">
-<link href="../fiakologo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../tutorial/webapps/fiako-anfrek.html" rel="next">
+<link href="../../tutorial/webapps/fiako-stations.html" rel="prev">
+<link href="../../fiakologo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -73,10 +73,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../fiakologo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../fiakologo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">fiako-manual</span>
     </a>
   </div>
@@ -91,11 +91,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-web-apps">    
         <li>
-    <a class="dropdown-item" href="../webapps/index.html">
+    <a class="dropdown-item" href="../../webapps/index.html">
  <span class="dropdown-text">Ringkasan</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../webapps/webapps-rainfall.html">
+    <a class="dropdown-item" href="../../webapps/webapps-rainfall.html">
  <span class="dropdown-text">Aplikasi Pengolahan Data Hujan</span></a>
   </li>  
     </ul>
@@ -106,15 +106,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorial-web-apps">    
         <li>
-    <a class="dropdown-item" href="../tutorial/webapps/fiako-stations.html">
+    <a class="dropdown-item" href="../../tutorial/webapps/fiako-stations.html">
  <span class="dropdown-text"><code>fiako-stations</code></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorial/webapps/hidrokit-rainfall.html">
+    <a class="dropdown-item" href="../../tutorial/webapps/hidrokit-rainfall.html">
  <span class="dropdown-text"><code>hidrokit-rainfall</code></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorial/webapps/fiako-anfrek.html">
+    <a class="dropdown-item" href="../../tutorial/webapps/fiako-anfrek.html">
  <span class="dropdown-text"><code>fiako-anfrek</code></span></a>
   </li>  
     </ul>
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Aplikasi Web</h1>
+      <h1 class="quarto-secondary-nav-title"><p>Tutorial: Rainfall Data Explorer (<code>hidrokit-rainfall</code>)</p></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -148,36 +148,7 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">Aplikasi Web</h1>
-            <p class="subtitle lead"></p><p>Dokumentasi/Manual Aplikasi Web</p><p></p>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Penulis</div>
-      <div class="quarto-title-meta-contents">
-               <p>Taruma Sakti Megariansyah </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Diterbitkan</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">November 21, 2022</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -189,35 +160,35 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../webapps/index.html" class="sidebar-item-text sidebar-link active">Ringkasan</a>
+  <a href="../../webapps/index.html" class="sidebar-item-text sidebar-link">Ringkasan</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../webapps/webapps-rainfall.html" class="sidebar-item-text sidebar-link">Aplikasi Pengolahan Data Hujan</a>
+  <a href="../../webapps/webapps-rainfall.html" class="sidebar-item-text sidebar-link">Aplikasi Pengolahan Data Hujan</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Tutorial <em>Rainfall Apps</em></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Tutorial <em>Rainfall Apps</em></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorial/webapps/fiako-stations.html" class="sidebar-item-text sidebar-link"><code>fiako-stations</code></a>
+  <a href="../../tutorial/webapps/fiako-stations.html" class="sidebar-item-text sidebar-link"><code>fiako-stations</code></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorial/webapps/hidrokit-rainfall.html" class="sidebar-item-text sidebar-link"><code>hidrokit-rainfall</code></a>
+  <a href="../../tutorial/webapps/hidrokit-rainfall.html" class="sidebar-item-text sidebar-link active"><code>hidrokit-rainfall</code></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorial/webapps/fiako-anfrek.html" class="sidebar-item-text sidebar-link"><code>fiako-anfrek</code></a>
+  <a href="../../tutorial/webapps/fiako-anfrek.html" class="sidebar-item-text sidebar-link"><code>fiako-anfrek</code></a>
   </div>
 </li>
       </ul>
@@ -231,69 +202,83 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><p>Tutorial: Rainfall Data Explorer (<code>hidrokit-rainfall</code>)</p></h1>
+<p class="subtitle lead"></p><p>Penggunaan <em>Rainfall Data Explorer</em>.</p><p></p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<p><strong>Aplikasi Web</strong> (<em>Web Application</em>) adalah aplikasi yang dapat diakses melalui <em>Web Browser</em>. Aplikasi web ini merupakan solusi teknologi untuk memudahkan para praktisi ataupun akademisi dalam menyelesaikan masalah yang dihadapi. Aplikasi web ini juga digunakan sebagai demonstrasi pemanfaatan teknologi bahasa pemrograman <a href="https://www.python.org/"><em>python</em></a> sebagai <em>tool</em> dan <em>skill</em> yang dapat memudahkan pekerjaan.</p>
-<p>Per November 2022, terdapat tiga aplikasi web yang telah dikembangkan dan dapat digunakan dalam pekerjaan. Ketiga aplikasi tersebut digabung menjadi satu paket aplikasi web yang dinamai sebagai “Aplikasi Pengolahan Data Hujan”. Artikel mengenai aplikasi bisa baca di halaman <a href="../webapps/webapps-rainfall.html">Artikel: Aplikasi Pengolahan Data Hujan</a>.</p>
-<div class="column-page">
-<table class="table">
-<caption><a href="../webapps/webapps-rainfall.html"><strong>Aplikasi Pengolahan Data Hujan</strong></a></caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;"><em>codename</em></th>
-<th style="text-align: left;">Judul Aplikasi</th>
-<th style="text-align: center;">Versi</th>
-<th style="text-align: left;">Deskripsi Singkat</th>
-<th style="text-align: center;"><em>Live App</em></th>
-<th style="text-align: center;"><em>Source Code</em></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>fiako-stations</code></td>
-<td style="text-align: left;"><em>Rainfall Stations Explorer</em></td>
-<td style="text-align: center;"><code>v3.1.x</code></td>
-<td style="text-align: left;">Eksplorasi stasiun data hujan harian</td>
-<td style="text-align: center;"><a href="https://demo-fiako-stations.herokuapp.com">Heroku</a> | <a href="https://demo-fiako-stations.onrender.com">Render</a></td>
-<td style="text-align: center;"><a href="https://github.com/fiakoenjiniring/demo-stations">GitHub</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>hidrokit-rainfall</code></td>
-<td style="text-align: left;"><em>Rainfall Data Explorer</em></td>
-<td style="text-align: center;"><code>v1.3.x</code></td>
-<td style="text-align: left;">Eksplorasi dan analisis data hujan harian</td>
-<td style="text-align: center;"><a href="https://hidrokit-rainfall.herokuapp.com">Heroku</a> | <a href="https://hidrokit-rainfall.onrender.com">Render</a></td>
-<td style="text-align: center;"><a href="https://github.com/fiakoenjiniring/rainfall">GitHub</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>fiako-anfrek</code></td>
-<td style="text-align: left;"><em>Frequency Analaysis</em></td>
-<td style="text-align: center;"><code>v1.1.x</code></td>
-<td style="text-align: left;">Menghitung parameter statistik hingga analisis frekuensi</td>
-<td style="text-align: center;"><a href="https://fiako-anfrek.herokuapp.com">Heroku</a> | <a href="https://fiako-anfrek.onrender.com">Render</a></td>
-<td style="text-align: center;"><a href="https://github.com/fiakoenjiniring/anfrek">GitHub</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Catatan
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Aplikasi yang menggunakan layanan Heroku memiliki batasan kuota penggunaan maksimal 1000 jam/bulan.</p>
-</div>
-</div>
-<hr>
-<p>Aplikasi Web merupakan hasil tim penelitian dan pengembangan (<em>research and development</em>) <a href="https://fiako.engineering">FIAKO Engineering</a> yang lebih dikenal sebagai <a href="https://dev.fiako.engineering"><strong>fiako</strong>dev</a>.</p>
+    <div>
+    <div class="quarto-title-meta-heading">Penulis</div>
+    <div class="quarto-title-meta-contents">
+             <p>Taruma Sakti Megariansyah </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Diterbitkan</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Minggu, 03 Juli 2022</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Diubah</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">Jumat, 25 November 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Dashboard ini bisa membaca berkas berformat ‘.csv’ dengan:</p>
+<ul>
+<li>Kolom pertama merupakan tanggal dengan format yang dapat dibaca oleh fitur <code>parse_dates</code> yang tersedia di <code>pandas</code>. Direkomendasikan mengubahnya menjadi format <code>YYYY-MM-DD</code>.</li>
+<li>Kolom lainnya merupakan data hujan dengan header.</li>
+<li>Baris pertama akan dibaca sebagai header tabel, sehingga dianjurkan menambahkan label untuk setiap kolomnya. Gunakan label <code>DATE</code> untuk kolom tanggal yang akan digunakan sebagai index.</li>
+</ul>
+<p>Navigasi dashboard ini antara lain:</p>
+<ul>
+<li><em>Drag and Drop</em> berkas atau pilih berkas pada tombol “Drag and Drop or Select Files”. Klik “Use Example Data” jika ingin melihat demonstrasi dashboard ini.</li>
+<li>Jika prosesnya berhasil, akan muncul tabel dengan data yang di-<em>upload</em> atau contoh data. Tabel ini <em>editable</em> sehingga bisa menyesuaikan saat proses pengoreksian saat eksplorasi data. Bisa juga diubah nama tabelnya. Pastikan nama kolom berbeda dan nama kolom pertama (tanggal) selalu “DATE”.</li>
+<li>Klik “Visualize Data” untuk melihat visualisasi data. Pada tahap ini, Anda bisa kembali ke tabel jika ingin melakukan pengoreksian data. Anda juga bisa melakukan filter pada setiap kolom untuk eksplorasi selanjutnya.`</li>
+<li>Tabel yang telah diubah, bisa di-<em>download</em> kembali dalam bentuk CSV.</li>
+<li>Setelah tabel sudah dikoreksi. Bisa dilanjutkan ke tahapan analisis data. Perlu diingat, data yang dianalisis sesuai dengan tampilan/informasi tabel terkini. Jadi, jika masih ada filter, maka analisis hanya dilakukan pada data yang telah terfilter.</li>
+<li>Klik “Analyze Data” untuk melakukan analisis data. Perlu diingat, proses ini akan memakan waktu jika memiliki dataset yang besar. Jadi, sangat disarankan menggunakan mesin lokal untuk proses ini. Karena yang dapat diakses di web hanya berupa demonstrasi saja dan menggunakan layanan gratis sehingga sangat terbatas kemampuannya.</li>
+<li>Analisis data terbagi menjadi tiga periode yaitu 2 periode (biweekly), setiap bulanan (monthly), dan tahunan (yearly). Sebagai catatan, biweekly itu dibagi berdasarkan 16 hari pertama kemudian sisa harinya pada setiap bulan.</li>
+<li><strong>Baru di <code>v1.1.0</code></strong>: Analisis konsistensi (kurva massa ganda) dan kumulatif hujan tahunan.</li>
+<li>Analisis data yang dilakukan berupa:
+<ul>
+<li><code>days</code>: Jumlah hari pada setiap periodenya (16 hari untuk biweekly, 1 bulan untuk monthly, dan 1 tahun untuk yearly).</li>
+<li><code>max</code>: Nilai maksimum pada setiap periode.</li>
+<li><code>sum</code>: Total nilai pada setiap periode.</li>
+<li><code>n_rain</code>: Jumlah hari hujan di setiap periode.</li>
+<li><code>n_dry</code>: Jumlah hari kering di setiap periode. Catatan: Ini akan menghitung nilai <code>np.nan</code> sebagai hari kering.</li>
+<li><code>max_date</code>: Tanggal kejadian hujan maksimum terjadi pada setiap periode.</li>
+</ul></li>
+<li>Tabel analisis tidak dapat diubah dan hanya sebagai penyedia informasi saja.</li>
+<li>Melihat tabel analisis rasanya cukup sulit untuk diceritakan atau diinterpretasikan, oleh karena itu disediakan tombol “Visualize it!” untuk melakuakn visualisasi tabel analisis.</li>
+<li>Selain melakukan visualisasi, tabel analisis juga dapat di-<em>download</em> dengan mengklik tombol “Download Results as CSV”. Perlu dicatat, <code>dataframe</code> tabel analisis menggunakan <code>MultiIndex</code> sehingga pada format CSV akan perlu dilakukan pengolahan lagi.</li>
+<li>Visualisasi dari tabel analisis berupa:
+<ul>
+<li>Group Bar Chart untuk setiap periode dengan kolom <code>max</code> dan <code>sum</code>. Grafik ini bisa melihat secara langsung perbandingan nilai antar stasiun.</li>
+<li>Stack Bar Chart untuk setiap periode dengan kolom <code>n_rain</code> dan <code>n_dry</code>. Grafik ini bisa memberikan gambaran periode yang memiliki frekuensi hujan/kekeringan tinggi/rendah secara sekilas.</li>
+<li>Bubble Chart (Maximum Rainfall Events) memberikan gambaran besar terkait tanggal kejadian saat hujan maksimum terjadi di setiap stasiun. Ukuran lingkaran menunjukkan seberapa besar hujan maksimum yang terjadi.</li>
+<li><strong>Baru di <code>v1.1.0</code></strong>: Ditambahkan grafik kumulatif hujan tahunan dan konsistensi (kurva massa ganda) untuk setiap stasiun. Navigasi dengan grafik interaktif plotly:</li>
+</ul></li>
+<li>Pada setiap grafik plotly, dapat dilakukan interaksi langsung dengan grafik seperti mengatur stasiun/data mana saja yang ditampilkan, pembesaran pada periode tertentu. mengatur ukuran sumbu, dll.</li>
+<li>Sangat dianjurkan untuk mengeksplorasi sendiri mengenai <em>mode bar</em> yang ada di kanan atas setiap grafik plotly.</li>
+<li>Setiap grafik bisa di-<em>download</em> dalam bentuk <code>.png</code> untuk kepentingan menaruh di dokumen atau lainnya.</li>
+</ul>
 
 
 
@@ -447,10 +432,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../tutorial/webapps/fiako-stations.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><code>fiako-stations</code></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../webapps/webapps-rainfall.html" class="pagination-link">
-        <span class="nav-page-text">Aplikasi Pengolahan Data Hujan</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorial/webapps/fiako-anfrek.html" class="pagination-link">
+        <span class="nav-page-text"><code>fiako-anfrek</code></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
