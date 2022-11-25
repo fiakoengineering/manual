@@ -56,8 +56,8 @@
     "text": "5 Kekurangan Aplikasi\nKetiga aplikasi ini jauh dari sempurna dan masih banyak yang bisa diperbaiki dan dikembangkan lagi. Berikut kekurangan atau batasan aplikasi pengolahan data hujan:\n\nTidak adanya pengujian (unit test) untuk setiap fungsi yang tersedia di aplikasi.\nMengevaluasi paket tambahan seperti hidrokit, karena paket hidrokit masih dalam tahap pengembangan dini.\nLayout aplikasi yang tidak konsisten antar aplikasi.\n\nSelain hal tersebut, terdapat juga beberapa kekurangan/batasan yang diketahui untuk masing-masing aplikasi.\n\n5.1 Rainfall Stations Explorer\n\nPenentuan data stasiun hujan terdekat masih berdasarkan radius dari titik tinjau. Seharusnya berdasarkan DAS dari titik tinjau/outlet.\nProses pembuatan dataset/dataabse masih bersifat case-by-case.\n\n\n\n5.2 Rainfall Data Explorer\n\nPerlu dilakukan koreksi ataupun analisis lebih lanjut sebelum digunakan di aplikasi fiako-anfrek. Seperti:\n\nKoreksi dari informasi kurva massa ganda.\nMenghitung hujan wilayah.\n\nHarus melakukan pengolahan tabel setelah menerima hasil analisis dalam bentuk CSV.\n\n\n\n5.3 Frequency Analysis\n\nPenggunaan distribusi Log Pearson III harus dievaluasi kembali. Hal ini terkait perilaku pada fungsi pearson di scipy. Saat ini, aplikasi harus menggunakan scipy versi 1.8 untuk menghasilkan nilai yang diharapkan. Alternatif lainnya menggunakan sumber tabel di distribusi Log Pearson III.\nDasar teori mengenai penentuan kelas dan parameter untuk uji Chi-Square harus dievaluasi kembali."
   },
   {
-    "objectID": "webapps/webapps-rainfall.html#kesimpulan",
-    "href": "webapps/webapps-rainfall.html#kesimpulan",
+    "objectID": "webapps/webapps-rainfall.html#sec-conclusion",
+    "href": "webapps/webapps-rainfall.html#sec-conclusion",
     "title": "Aplikasi Pengolahan Data Hujan",
     "section": "6 Kesimpulan",
     "text": "6 Kesimpulan\nAplikasi pengolahan data hujan yang terdiri dari: 1. Rainfall Stations Explorer (fiako-stations); 2. Rainfall Data Explorer (hidrokit-rainfall); 3. Frequency Analysis (fiako-anfrek), mampu membantu mempercepat proses analisis hidrologi."
