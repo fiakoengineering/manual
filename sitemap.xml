@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://manual.fiako.engineering/tutorial/greenhorn/2022-11-29.html</loc>
+    <lastmod>2022-11-28T03:27:23.096Z</lastmod>
+  </url>
+  <url>
     <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-stations.html</loc>
-    <lastmod>2022-11-25T05:57:54.077Z</lastmod>
+    <lastmod>2022-11-28T03:27:23.864Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/tutorial/webapps/hidrokit-rainfall.html</loc>
-    <lastmod>2022-11-25T05:57:54.945Z</lastmod>
+    <lastmod>2022-11-28T03:27:24.240Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-anfrek.html</loc>
-    <lastmod>2022-11-25T05:57:55.445Z</lastmod>
+    <lastmod>2022-11-28T03:27:24.708Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/index.html</loc>
-    <lastmod>2022-11-25T05:57:55.829Z</lastmod>
+    <lastmod>2022-11-28T03:27:25.028Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/webapps/index.html</loc>
-    <lastmod>2022-11-25T05:57:56.249Z</lastmod>
+    <lastmod>2022-11-28T03:27:25.384Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/webapps/webapps-rainfall.html</loc>
-    <lastmod>2022-11-25T05:58:03.086Z</lastmod>
+    <lastmod>2022-11-28T03:27:30.972Z</lastmod>
   </url>
 </urlset>

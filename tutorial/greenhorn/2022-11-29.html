@@ -8,7 +8,7 @@
 
 <meta name="author" content="Taruma Sakti Megariansyah">
 
-<title>Tutorial: Rainfall Data Explorer (hidrokit-rainfall)</title>
+<title>G22.11.29: Studi Kasus Lambda/Dynamic Array</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../tutorial/webapps/fiako-anfrek.html" rel="next">
-<link href="../../tutorial/webapps/fiako-stations.html" rel="prev">
 <link href="../../fiakologo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -66,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -149,76 +147,19 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><p>Tutorial: Rainfall Data Explorer (<code>hidrokit-rainfall</code>)</p></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../webapps/index.html" class="sidebar-item-text sidebar-link">Ringkasan</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../webapps/webapps-rainfall.html" class="sidebar-item-text sidebar-link">Aplikasi Pengolahan Data Hujan</a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Tutorial <em>Rainfall Apps</em></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorial/webapps/fiako-stations.html" class="sidebar-item-text sidebar-link"><code>fiako-stations</code></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorial/webapps/hidrokit-rainfall.html" class="sidebar-item-text sidebar-link active"><code>hidrokit-rainfall</code></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorial/webapps/fiako-anfrek.html" class="sidebar-item-text sidebar-link"><code>fiako-anfrek</code></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-    </ul>
-    </div>
-</nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><p>Tutorial: Rainfall Data Explorer (<code>hidrokit-rainfall</code>)</p></h1>
-<p class="subtitle lead"></p><p>Penggunaan <em>Rainfall Data Explorer</em>.</p><p></p>
+<h1 class="title"><p>Studi Kasus Lambda/Dynamic Array</p></h1>
+<p class="subtitle lead"></p><p>Materi/Sumber untuk <em>Greenhorn</em> hari Selasa, 29 November 2022</p><p></p>
 </div>
 
 
@@ -235,14 +176,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Diterbitkan</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Minggu, 03 Juli 2022</p>
+      <p class="date">Senin, 28 November 2022</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Diubah</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Jumat, 25 November 2022</p>
+      <p class="date-modified">Senin, 28 November 2022</p>
     </div>
   </div>
     
@@ -251,47 +192,36 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Dashboard ini bisa membaca berkas berformat ‘.csv’ dengan:</p>
+<p>Halaman ini digunakan sebagai portal informasi terkait materi/sumber yang digunakan untuk <em>Greenhorn</em> hari Selasa, 29 November 2022.</p>
+<section id="kegiatan" class="level2">
+<h2 class="anchored" data-anchor-id="kegiatan">Kegiatan</h2>
+<p>Kegiatan diadakan pada hari Selasa, 29 November 2022 secara <em>hybrid</em> (Online + Offline) dengan lokasi <em>on-site</em> di ruang meeting <em>FIAKO Engineering</em>.</p>
+</section>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<p>Agenda <em>greenhorn</em> antara lain:</p>
+<ol type="1">
+<li>[General] Instalasi VSCode dan extension mermaid.js</li>
+<li>[Mermaid] Demonstrasi penggunaan mermaid.js</li>
+<li>[Mermaid] Export mermaid.js ke jpg/png dengan mermaid.live</li>
+<li>[Excel] Studi kasus implementasi <em>dynamic array</em> / <code>LAMBDA</code>.</li>
+</ol>
+</section>
+<section id="materisumber" class="level2">
+<h2 class="anchored" data-anchor-id="materisumber">Materi/Sumber</h2>
+<p>Berikut materi/sumber yang digunakan di <code>G22.11.29</code>.</p>
 <ul>
-<li>Kolom pertama merupakan tanggal dengan format yang dapat dibaca oleh fitur <code>parse_dates</code> yang tersedia di <code>pandas</code>. Direkomendasikan mengubahnya menjadi format <code>YYYY-MM-DD</code>.</li>
-<li>Kolom lainnya merupakan data hujan dengan header.</li>
-<li>Baris pertama akan dibaca sebagai header tabel, sehingga dianjurkan menambahkan label untuk setiap kolomnya. Gunakan label <code>DATE</code> untuk kolom tanggal yang akan digunakan sebagai index.</li>
-</ul>
-<p>Navigasi dashboard ini antara lain:</p>
+<li><p>VSCode bisa didownload <a href="https://code.visualstudio.com/">halaman VSCode</a>. Instalasinya cukup sederhana dengan mengikuti petunjuknya.</p></li>
+<li><p>Extension yang digunakan untuk mermaid adalah:</p>
 <ul>
-<li><em>Drag and Drop</em> berkas atau pilih berkas pada tombol “Drag and Drop or Select Files”. Klik “Use Example Data” jika ingin melihat demonstrasi dashboard ini.</li>
-<li>Jika prosesnya berhasil, akan muncul tabel dengan data yang di-<em>upload</em> atau contoh data. Tabel ini <em>editable</em> sehingga bisa menyesuaikan saat proses pengoreksian saat eksplorasi data. Bisa juga diubah nama tabelnya. Pastikan nama kolom berbeda dan nama kolom pertama (tanggal) selalu “DATE”.</li>
-<li>Klik “Visualize Data” untuk melihat visualisasi data. Pada tahap ini, Anda bisa kembali ke tabel jika ingin melakukan pengoreksian data. Anda juga bisa melakukan filter pada setiap kolom untuk eksplorasi selanjutnya.`</li>
-<li>Tabel yang telah diubah, bisa di-<em>download</em> kembali dalam bentuk CSV.</li>
-<li>Setelah tabel sudah dikoreksi. Bisa dilanjutkan ke tahapan analisis data. Perlu diingat, data yang dianalisis sesuai dengan tampilan/informasi tabel terkini. Jadi, jika masih ada filter, maka analisis hanya dilakukan pada data yang telah terfilter.</li>
-<li>Klik “Analyze Data” untuk melakukan analisis data. Perlu diingat, proses ini akan memakan waktu jika memiliki dataset yang besar. Jadi, sangat disarankan menggunakan mesin lokal untuk proses ini. Karena yang dapat diakses di web hanya berupa demonstrasi saja dan menggunakan layanan gratis sehingga sangat terbatas kemampuannya.</li>
-<li>Analisis data terbagi menjadi tiga periode yaitu 2 periode (biweekly), setiap bulanan (monthly), dan tahunan (yearly). Sebagai catatan, biweekly itu dibagi berdasarkan 16 hari pertama kemudian sisa harinya pada setiap bulan.</li>
-<li><strong>Baru di <code>v1.1.0</code></strong>: Analisis konsistensi (kurva massa ganda) dan kumulatif hujan tahunan.</li>
-<li>Analisis data yang dilakukan berupa:
-<ul>
-<li><code>days</code>: Jumlah hari pada setiap periodenya (16 hari untuk biweekly, 1 bulan untuk monthly, dan 1 tahun untuk yearly).</li>
-<li><code>max</code>: Nilai maksimum pada setiap periode.</li>
-<li><code>sum</code>: Total nilai pada setiap periode.</li>
-<li><code>n_rain</code>: Jumlah hari hujan di setiap periode.</li>
-<li><code>n_dry</code>: Jumlah hari kering di setiap periode. Catatan: Ini akan menghitung nilai <code>np.nan</code> sebagai hari kering.</li>
-<li><code>max_date</code>: Tanggal kejadian hujan maksimum terjadi pada setiap periode.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=tomoyukim.vscode-mermaid-editor">ext: Mermaid Editor</a> (untuk editor .mmd).</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid">ext: Markdown Preview Mermaid</a> (untuk preview mermaid di markdown).</li>
 </ul></li>
-<li>Tabel analisis tidak dapat diubah dan hanya sebagai penyedia informasi saja.</li>
-<li>Melihat tabel analisis rasanya cukup sulit untuk diceritakan atau diinterpretasikan, oleh karena itu disediakan tombol “Visualize it!” untuk melakuakn visualisasi tabel analisis.</li>
-<li>Selain melakukan visualisasi, tabel analisis juga dapat di-<em>download</em> dengan mengklik tombol “Download Results as CSV”. Perlu dicatat, <code>dataframe</code> tabel analisis menggunakan <code>MultiIndex</code> sehingga pada format CSV akan perlu dilakukan pengolahan lagi.</li>
-<li>Visualisasi dari tabel analisis berupa:
-<ul>
-<li>Group Bar Chart untuk setiap periode dengan kolom <code>max</code> dan <code>sum</code>. Grafik ini bisa melihat secara langsung perbandingan nilai antar stasiun.</li>
-<li>Stack Bar Chart untuk setiap periode dengan kolom <code>n_rain</code> dan <code>n_dry</code>. Grafik ini bisa memberikan gambaran periode yang memiliki frekuensi hujan/kekeringan tinggi/rendah secara sekilas.</li>
-<li>Bubble Chart (Maximum Rainfall Events) memberikan gambaran besar terkait tanggal kejadian saat hujan maksimum terjadi di setiap stasiun. Ukuran lingkaran menunjukkan seberapa besar hujan maksimum yang terjadi.</li>
-<li><strong>Baru di <code>v1.1.0</code></strong>: Ditambahkan grafik kumulatif hujan tahunan dan konsistensi (kurva massa ganda) untuk setiap stasiun. Navigasi dengan grafik interaktif plotly:</li>
-</ul></li>
-<li>Pada setiap grafik plotly, dapat dilakukan interaksi langsung dengan grafik seperti mengatur stasiun/data mana saja yang ditampilkan, pembesaran pada periode tertentu. mengatur ukuran sumbu, dll.</li>
-<li>Sangat dianjurkan untuk mengeksplorasi sendiri mengenai <em>mode bar</em> yang ada di kanan atas setiap grafik plotly.</li>
-<li>Setiap grafik bisa di-<em>download</em> dalam bentuk <code>.png</code> untuk kepentingan menaruh di dokumen atau lainnya.</li>
+<li><p>Presentasi <a href="https://lambda.fiako.engineering/greenhorn/feidlambda-2/presentation.html#/title-slide">Greenhron feidlambda II: Exploring Dynamic Array + User Defined Lambda (UDL)</a></p></li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -441,18 +371,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../tutorial/webapps/fiako-stations.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><code>fiako-stations</code></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../tutorial/webapps/fiako-anfrek.html" class="pagination-link">
-        <span class="nav-page-text"><code>fiako-anfrek</code></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

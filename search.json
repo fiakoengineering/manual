@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "tutorial/greenhorn/2022-11-29.html",
+    "href": "tutorial/greenhorn/2022-11-29.html",
+    "title": "Studi Kasus Lambda/Dynamic Array",
+    "section": "",
+    "text": "Halaman ini digunakan sebagai portal informasi terkait materi/sumber yang digunakan untuk Greenhorn hari Selasa, 29 November 2022."
+  },
+  {
+    "objectID": "tutorial/greenhorn/2022-11-29.html#kegiatan",
+    "href": "tutorial/greenhorn/2022-11-29.html#kegiatan",
+    "title": "Studi Kasus Lambda/Dynamic Array",
+    "section": "Kegiatan",
+    "text": "Kegiatan\nKegiatan diadakan pada hari Selasa, 29 November 2022 secara hybrid (Online + Offline) dengan lokasi on-site di ruang meeting FIAKO Engineering."
+  },
+  {
+    "objectID": "tutorial/greenhorn/2022-11-29.html#agenda",
+    "href": "tutorial/greenhorn/2022-11-29.html#agenda",
+    "title": "Studi Kasus Lambda/Dynamic Array",
+    "section": "Agenda",
+    "text": "Agenda\nAgenda greenhorn antara lain:\n\n[General] Instalasi VSCode dan extension mermaid.js\n[Mermaid] Demonstrasi penggunaan mermaid.js\n[Mermaid] Export mermaid.js ke jpg/png dengan mermaid.live\n[Excel] Studi kasus implementasi dynamic array / LAMBDA."
+  },
+  {
+    "objectID": "tutorial/greenhorn/2022-11-29.html#materisumber",
+    "href": "tutorial/greenhorn/2022-11-29.html#materisumber",
+    "title": "Studi Kasus Lambda/Dynamic Array",
+    "section": "Materi/Sumber",
+    "text": "Materi/Sumber\nBerikut materi/sumber yang digunakan di G22.11.29.\n\nVSCode bisa didownload halaman VSCode. Instalasinya cukup sederhana dengan mengikuti petunjuknya.\nExtension yang digunakan untuk mermaid adalah:\n\next: Mermaid Editor (untuk editor .mmd).\next: Markdown Preview Mermaid (untuk preview mermaid di markdown).\n\nPresentasi Greenhron feidlambda II: Exploring Dynamic Array + User Defined Lambda (UDL)"
+  },
+  {
     "objectID": "tutorial/webapps/fiako-stations.html",
     "href": "tutorial/webapps/fiako-stations.html",
     "title": "Tutorial: Rainfall Stations Explorer (fiako-stations)",
