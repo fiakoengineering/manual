@@ -1,0 +1,46 @@
+---
+pagetitle: "G22.11.29: Studi Kasus Lambda/Dynamic Array"
+title: | 
+    Studi Kasus Lambda/Dynamic Array
+subtitle: |
+    Materi/Sumber untuk _Greenhorn_ hari Selasa, 29 November 2022
+
+toc: false
+toc-location: right
+sidebar: false
+
+page-layout: article
+
+author: Taruma Sakti Megariansyah
+date: 2022-11-28
+date-modified: 2022-11-28
+date-format: full
+lang: id
+---
+
+Halaman ini digunakan sebagai portal informasi terkait materi/sumber yang digunakan untuk _Greenhorn_ hari Selasa, 29 November 2022.
+
+## Kegiatan
+
+Kegiatan diadakan pada hari Selasa, 29 November 2022 secara _hybrid_ (Online + Offline) dengan lokasi _on-site_ di ruang meeting _FIAKO Engineering_.
+
+## Agenda
+
+Agenda _greenhorn_ antara lain:
+
+1. [General] Instalasi VSCode dan extension mermaid.js
+2. [Mermaid] Demonstrasi penggunaan mermaid.js
+3. [Mermaid] Export mermaid.js ke jpg/png dengan mermaid.live
+4. [Excel] Studi kasus implementasi _dynamic array_ / `LAMBDA`.
+
+## Materi/Sumber
+
+Berikut materi/sumber yang digunakan di `G22.11.29`. 
+
+- VSCode bisa didownload [halaman VSCode](https://code.visualstudio.com/). Instalasinya cukup sederhana dengan mengikuti petunjuknya.
+
+- Extension yang digunakan untuk mermaid adalah:
+    - [ext: Mermaid Editor](https://marketplace.visualstudio.com/items?itemName=tomoyukim.vscode-mermaid-editor) (untuk editor .mmd). 
+    - [ext: Markdown Preview Mermaid](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) (untuk preview mermaid di markdown).
+
+- Presentasi [Greenhron feidlambda II: Exploring Dynamic Array + User Defined Lambda (UDL)](https://lambda.fiako.engineering/greenhorn/feidlambda-2/presentation.html#/title-slide)
