@@ -18,7 +18,7 @@
     "href": "tutorial/greenhorn/2022-11-29.html#agenda",
     "title": "Studi Kasus Lambda/Dynamic Array",
     "section": "Agenda",
-    "text": "Agenda\nAgenda greenhorn antara lain:\n\n[General] Instalasi VSCode dan extension mermaid.js\n[Mermaid] Demonstrasi penggunaan mermaid.js\n[Mermaid] Export mermaid.js ke jpg/png dengan mermaid.live\n[Excel] Studi kasus implementasi dynamic array / LAMBDA."
+    "text": "Agenda\nAgenda greenhorn antara lain:\n\n[General] Instalasi VSCode dan extension mermaid.js\n[Mermaid] Demonstrasi penggunaan mermaid.js di VSCode.\n[Excel] Studi kasus implementasi dynamic array / LAMBDA."
   },
   {
     "objectID": "tutorial/greenhorn/2022-11-29.html#materisumber",
@@ -26,6 +26,13 @@
     "title": "Studi Kasus Lambda/Dynamic Array",
     "section": "Materi/Sumber",
     "text": "Materi/Sumber\nBerikut materi/sumber yang digunakan di G22.11.29.\n\nVSCode bisa didownload halaman VSCode. Instalasinya cukup sederhana dengan mengikuti petunjuknya.\nExtension yang digunakan untuk mermaid adalah:\n\next: Mermaid Editor (untuk editor .mmd).\next: Markdown Preview Mermaid (untuk preview mermaid di markdown).\n\nPresentasi Greenhron feidlambda II: Exploring Dynamic Array + User Defined Lambda (UDL)"
+  },
+  {
+    "objectID": "tutorial/greenhorn/2022-11-29.html#lembar-kerja-workbook",
+    "href": "tutorial/greenhorn/2022-11-29.html#lembar-kerja-workbook",
+    "title": "Studi Kasus Lambda/Dynamic Array",
+    "section": "Lembar Kerja (Workbook)",
+    "text": "Lembar Kerja (Workbook)\nBerikut lembar kerja untuk materi excel, implementasi interpolasi linear dengan LAMBDA + LET + XLOOKUP.\n\nG22.11.29_interpolasi_linear.xlsx"
   },
   {
     "objectID": "tutorial/webapps/fiako-stations.html",
