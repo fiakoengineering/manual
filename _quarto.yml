@@ -58,10 +58,10 @@ website:
     right:
       - icon: github
         href: https://github.com/fiakoenjiniring/manual
-      - text: "`G22`"
+      - text: "`G2X`"
         menu:
           - text: "`G22.11.29`"
-            href: tutorial/greenhorn/2022-11-29.qmd
+            href: greenhorn/G22-11-29.qmd
 
   sidebar:
     - id: side-home
