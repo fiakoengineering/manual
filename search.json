@@ -1,40 +1,5 @@
 [
   {
-    "objectID": "tutorial/greenhorn/2022-11-29.html",
-    "href": "tutorial/greenhorn/2022-11-29.html",
-    "title": "Studi Kasus Lambda/Dynamic Array",
-    "section": "",
-    "text": "Halaman ini digunakan sebagai portal informasi terkait materi/sumber yang digunakan untuk Greenhorn hari Selasa, 29 November 2022."
-  },
-  {
-    "objectID": "tutorial/greenhorn/2022-11-29.html#kegiatan",
-    "href": "tutorial/greenhorn/2022-11-29.html#kegiatan",
-    "title": "Studi Kasus Lambda/Dynamic Array",
-    "section": "Kegiatan",
-    "text": "Kegiatan\nKegiatan diadakan pada hari Selasa, 29 November 2022 secara hybrid (Online + Offline) dengan lokasi on-site di ruang meeting FIAKO Engineering."
-  },
-  {
-    "objectID": "tutorial/greenhorn/2022-11-29.html#agenda",
-    "href": "tutorial/greenhorn/2022-11-29.html#agenda",
-    "title": "Studi Kasus Lambda/Dynamic Array",
-    "section": "Agenda",
-    "text": "Agenda\nAgenda greenhorn antara lain:\n\n[General] Instalasi VSCode dan extension mermaid.js\n[Mermaid] Demonstrasi penggunaan mermaid.js di VSCode.\n[Excel] Studi kasus implementasi dynamic array / LAMBDA."
-  },
-  {
-    "objectID": "tutorial/greenhorn/2022-11-29.html#materisumber",
-    "href": "tutorial/greenhorn/2022-11-29.html#materisumber",
-    "title": "Studi Kasus Lambda/Dynamic Array",
-    "section": "Materi/Sumber",
-    "text": "Materi/Sumber\nBerikut materi/sumber yang digunakan di G22.11.29.\n\nVSCode bisa didownload halaman VSCode. Instalasinya cukup sederhana dengan mengikuti petunjuknya.\nExtension yang digunakan untuk mermaid adalah:\n\next: Mermaid Editor (untuk editor .mmd).\next: Markdown Preview Mermaid (untuk preview mermaid di markdown).\n\nPresentasi Greenhron feidlambda II: Exploring Dynamic Array + User Defined Lambda (UDL)"
-  },
-  {
-    "objectID": "tutorial/greenhorn/2022-11-29.html#lembar-kerja-workbook",
-    "href": "tutorial/greenhorn/2022-11-29.html#lembar-kerja-workbook",
-    "title": "Studi Kasus Lambda/Dynamic Array",
-    "section": "Lembar Kerja (Workbook)",
-    "text": "Lembar Kerja (Workbook)\nBerikut lembar kerja untuk materi excel, implementasi interpolasi linear dengan LAMBDA + LET + XLOOKUP.\n\nG22.11.29_interpolasi_linear.xlsx (password: G22.11.29)."
-  },
-  {
     "objectID": "tutorial/webapps/fiako-stations.html",
     "href": "tutorial/webapps/fiako-stations.html",
     "title": "Tutorial: Rainfall Stations Explorer (fiako-stations)",
@@ -96,6 +61,55 @@
     "title": "Tutorial: Frequency Analysis (fiako-anfrek)",
     "section": "Uji Kecocokan Distribusi",
     "text": "Uji Kecocokan Distribusi\n\n19. Klik tab “GOODNESS OF FIT” untuk melakukan uji kecocokan distribusi\n\n\n\nStep 19\n\n\n\n\n20. Isi nilai alpha dari 0.00 - 1.00\n\n\n\nStep 20\n\n\n\n\n21. Pilih sumber tabel/nilai kritis untuk setiap uji\n\n\n\nStep 21\n\n\n\n\n22. Klik “CALCULATE” untuk menghitung uji kecocokan distribusi\n\n\n\nStep 22\n\n\n\n\n23. Eksplorasi Visualisasi “GOODNESS OF FIT”\nPada plot paling kiri menunjukkan nilai yang telah diurutkan/diranking. Untuk Kolmogorov-Smirnov akan ditampilkan kurva Cumulative Distribution Function (CDF), sedangkan untuk Chi-Square akan ditampilkan jumlah pembagian setiap kelasnya. \n\n\n24. Eksplorasi Visualisasi “RESULTS”\nVisualisasi ini menunjukkan nilai kritis dan perhitungan/data. \n\n\n25. Klik “DOWNLOAD ALL RESULTS” untuk mendownload hasil uji kecocokan distribusi\nAkan tiga file yang akan di download yaitu KS.csv (hasil kolmogorov-smirnov), CHI.csv (hasil chi-square), FIT.txt (perbandingan nilai kritis dan perhitungan). \n\nThis workflow was created with Tango"
+  },
+  {
+    "objectID": "greenhorn/G22-11-29.html",
+    "href": "greenhorn/G22-11-29.html",
+    "title": "Mermaid.js dan Interpolasi Linear",
+    "section": "",
+    "text": "Halaman ini digunakan sebagai portal informasi terkait materi/sumber yang digunakan untuk Greenhorn hari Selasa, 29 November 2022."
+  },
+  {
+    "objectID": "greenhorn/G22-11-29.html#kegiatan",
+    "href": "greenhorn/G22-11-29.html#kegiatan",
+    "title": "Mermaid.js dan Interpolasi Linear",
+    "section": "Kegiatan",
+    "text": "Kegiatan\nKegiatan diadakan pada hari Selasa, 29 November 2022 secara hybrid (Online + Offline) dengan lokasi on-site di ruang meeting FIAKO Engineering. Durasi kegiatan selama 2 jam dari 9.15 WIB sampai 11.15 WIB."
+  },
+  {
+    "objectID": "greenhorn/G22-11-29.html#agenda",
+    "href": "greenhorn/G22-11-29.html#agenda",
+    "title": "Mermaid.js dan Interpolasi Linear",
+    "section": "Agenda",
+    "text": "Agenda\nAgenda greenhorn antara lain:\n\n[General] Instalasi VSCode dan extension mermaid.js\n[Mermaid] Demonstrasi penggunaan mermaid.js di VSCode.\n[Excel] Studi kasus implementasi interpolasi linear menggunakan dynamic array / LAMBDA."
+  },
+  {
+    "objectID": "greenhorn/G22-11-29.html#persiapan-sebelum-g22.11.29",
+    "href": "greenhorn/G22-11-29.html#persiapan-sebelum-g22.11.29",
+    "title": "Mermaid.js dan Interpolasi Linear",
+    "section": "Persiapan sebelum G22.11.29",
+    "text": "Persiapan sebelum G22.11.29\nBerikut materi yang harus dibaca/dilakukan sebelum G22.11.29:\n\nInstall VSCode. VSCode bisa didownload di halaman VSCode. Instalasinya cukup sederhana dengan mengikuti petunjuknya.\nExtension yang digunakan untuk mermaid.js adalah:\n\next: Mermaid Editor (untuk editor .mmd).\n(Opsional) ext: Markdown Preview Mermaid (untuk preview mermaid di markdown).\n\nMereview ulang materi G2X feidlambda II. Berikut presentasi Greenhorn feidlambda II: Exploring Dynamic Array + User Defined Lambda (UDL)."
+  },
+  {
+    "objectID": "greenhorn/G22-11-29.html#materisumber",
+    "href": "greenhorn/G22-11-29.html#materisumber",
+    "title": "Mermaid.js dan Interpolasi Linear",
+    "section": "Materi/Sumber",
+    "text": "Materi/Sumber\nBerikut materi/sumber di G22.11.29:\n\nFolder mermaid G22.11.29 di onedrive (password: G22.11.29).\nExcel implementasi interpolasi linear: G22.11.29_interpolasi_linear.xlsx (password: G22.11.29)."
+  },
+  {
+    "objectID": "greenhorn/G22-11-29.html#rekaman-g2x",
+    "href": "greenhorn/G22-11-29.html#rekaman-g2x",
+    "title": "Mermaid.js dan Interpolasi Linear",
+    "section": "Rekaman G2X",
+    "text": "Rekaman G2X\nRekaman G22.11.29 bisa diakses di XAGANT::TSM::05 VIDEO LEARNING::greenhorn::G22.11.29_mermaid-and-linear-interpolation.mp4."
+  },
+  {
+    "objectID": "greenhorn/G22-11-29.html#evaluasi-g22.11.29",
+    "href": "greenhorn/G22-11-29.html#evaluasi-g22.11.29",
+    "title": "Mermaid.js dan Interpolasi Linear",
+    "section": "Evaluasi G22.11.29",
+    "text": "Evaluasi G22.11.29\nYang harus ditambahkan:\n\nTutorial pengaturan dan penggunaan mermaid.js di VSCode.\n\nUntuk kedepannya:\n\nMembuat panduan jelas sebelum mengikuti greenhorn G2X yang terkait dengan instalasi aplikasi. Bagi yang belum menginstall diharapkan hadir 30 menit sebelum kegiatan G2X.\n30 menit sebelum kegiatan akan digunakan sebagai review materi sebelum kegiatan G2X."
   },
   {
     "objectID": "index.html",
