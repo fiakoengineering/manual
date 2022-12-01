@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "tutorial/editor/inr-1-batch-multiple-picture-into-word.html",
+    "href": "tutorial/editor/inr-1-batch-multiple-picture-into-word.html",
+    "title": "Batch Multiple Picture Into Word via HTML",
+    "section": "",
+    "text": "Berikut tutorial Batch Multiple Picture Into Word via HTML yang dibuat oleh INR."
+  },
+  {
+    "objectID": "tutorial/editor/inr-1-batch-multiple-picture-into-word.html#ketentuan",
+    "href": "tutorial/editor/inr-1-batch-multiple-picture-into-word.html#ketentuan",
+    "title": "Batch Multiple Picture Into Word via HTML",
+    "section": "1 Ketentuan",
+    "text": "1 Ketentuan\n\nTelah memahami pola teks di UltraEdit."
+  },
+  {
+    "objectID": "tutorial/editor/inr-1-batch-multiple-picture-into-word.html#tutorial",
+    "href": "tutorial/editor/inr-1-batch-multiple-picture-into-word.html#tutorial",
+    "title": "Batch Multiple Picture Into Word via HTML",
+    "section": "2 Tutorial",
+    "text": "2 Tutorial\n\n2.1 Persiapkan identitas gambar, nama heading & caption gambar\n\nUntuk mendapatkan/edit identitas gambar dapat dilakukan dengan cmd:\n\nbuka cmd di lokasi gambar berada\nketik dir /b | clip paste di excel atau di notepad\n\nRenamer identitas gambar dapat menggunakan bantuan cmd dengan cara:\n\nbuka cmd dilokasi gambar berada\nren \"odd name\" \"new name\", contoh ren \"detail tulangan kolom-balok.jpg\" \"tulangan balok.jpg\"\n\n\n\n\n2.2 Folderisasi gambar\n\nSusun folder & rename gambar\n\nfolder di tempatkan di satu tempat untuk memudahkan pekerjaan\nrencanakan identitas gambar sehingga memiliki pola contoh: nnmm.jpg, dengan nn: number, mm: nama gambar\n\n\n\n\n2.3 Susun heading, gambar & caption di word\n\nSusun format heading\n\n\n\nInsert picture dengan format: link to file\n\n\n\n\ninsert + picture + this device + pilih gambar + link to file (alternatif: alt + N + P + D)\n\n\n\nGunakan heading “caption” pada nama gambar\n\n\n\n\nreference + insert caption (alternatif: alt + S + P)\n\n\n\nSave file word dengan format “html”\n\n\n\n\n2.4 Editing HTML dengan UltraEdit\n\nBuka file “html” yang telah di save sebelumnya menggunakan UltraEdit\n\n\n\nuntuk memudahkan proses editing pada UltraEdit maka lakukan pencarian terkait nama/identitas heading yang telah di tulis sebelumnya.\nfind dalam ultraEdit : ctrl + F + kata kunci yang di cari + Next\nbiasanya format heading terdapat di </h4> sehingga pencarian dapat dilakukan dengan kata kunci </h4>\n\n\n2.4.1 Text yang menunjukkan identitas heading\n\n\n\n2.4.2 Text yang menunjukkan link/identitas gambar\n\n\n\n2.4.3 Text yang menunjukkan caption gambar\n\n\n\n\n2.5 Cut & Paste bagian data yang akan diedit\n\nOpen new sheet pada Ultra Edit\nCut & Paste bagian data yang akan di edit di new sheet\n\n\n\n\n2.6 Lakukan Duplikasi\n\nDuplikasi TH, TG, TC sesuai jumlah yang di rencanakan untuk mempermudah proses duplikasi maka bentuk paragraf TH, TG, TC dapat diubah menjadi 1 baris dengan cara: ctrl + L + conPtab\n\n\nmenjadi\n\n\n\n2.7 Numbering\ninsert number pada setiap baris, numbering dilakukan untuk mempermudah proses shorting aktifkan column mode : Alt +C + arahkan pada kolom pertama + column + insert number\n\n\n\n2.8 Sorting Data\nLakukan sorting data  inctive column mode : alt + C  sorting data : file + sort+ advanced sort/option + masukan number + sort\n\n\nbagian yang di highlight tidak selalu di isi dengan angka 3. number di isi sesuai dengan jumlah karakter\nterdiri dari tiga angka sehingga kolom sorting di isi dengan number (3)\n\n\n\nmasing2 format text TH, TG, TC telah terpisah dan lebih mudah untuk di edit\n\n\n\n2.9 Isolasi & Edit Data\n\nIsolasi salah satu text dan paste di new sheet\nSetelah di isolasi urutkan kembali data dengan cara sorting “step-8”, start column di isi dengan angka 1 sehingga urutan no kembali seperti sebelumnya\nEdit masing-masing TC, TH, TG sesuai dengan format nama yang telah di siapkan\n\n\n\n\n\n\n2.10 Sorting data kembali\n\nSetelah di edit, semua text (TH,TG,TC) di sort ulang dengan mengisi start column dengan angka 1 sehingga tampilan text kembali seperti sebelumnya (tampilan di “step-7”)\nHapus urutan no\n\n\n\n\n2.11 Replace\n\nCopy semua data pada step-10 dan replace ke body asli (tampilan gambar di step-4)\nSave as file (format file masih dalam bentuk html)\nOpen file tersebut di word\n\n\nSELESAI"
+  },
+  {
     "objectID": "tutorial/webapps/fiako-stations.html",
     "href": "tutorial/webapps/fiako-stations.html",
     "title": "Tutorial: Rainfall Stations Explorer (fiako-stations)",

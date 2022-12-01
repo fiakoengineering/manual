@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="INR">
+
+<title>Tutorial: Batch Multiple Picture Into Word via HTML</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../fiakologo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../fiakologo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">fiako-manual</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-web-apps" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Web Apps</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-web-apps">    
+        <li>
+    <a class="dropdown-item" href="../../webapps/index.html">
+ <span class="dropdown-text">Ringkasan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../webapps/webapps-rainfall.html">
+ <span class="dropdown-text">Aplikasi Pengolahan Data Hujan</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorial-web-apps" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tutorial Web Apps</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorial-web-apps">    
+        <li>
+    <a class="dropdown-item" href="../../tutorial/webapps/fiako-stations.html">
+ <span class="dropdown-text"><code>fiako-stations</code></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorial/webapps/hidrokit-rainfall.html">
+ <span class="dropdown-text"><code>hidrokit-rainfall</code></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorial/webapps/fiako-anfrek.html">
+ <span class="dropdown-text"><code>fiako-anfrek</code></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorial" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tutorial</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorial">    
+        <li>
+    <a class="dropdown-item" href="../../tutorial/editor/inr-1-batch-multiple-picture-into-word.html">
+ <span class="dropdown-text">INR1</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fiakoenjiniring/manual"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-g2x" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><code>G2X</code></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-g2x">    
+        <li>
+    <a class="dropdown-item" href="../../greenhorn/G22-11-29.html">
+ <span class="dropdown-text"><code>G22.11.29</code></span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Pada halaman ini</h2>
+   
+  <ul>
+  <li><a href="#ketentuan" id="toc-ketentuan" class="nav-link active" data-scroll-target="#ketentuan"><span class="toc-section-number">1</span>  Ketentuan</a></li>
+  <li><a href="#tutorial" id="toc-tutorial" class="nav-link" data-scroll-target="#tutorial"><span class="toc-section-number">2</span>  Tutorial</a>
+  <ul>
+  <li><a href="#persiapkan-identitas-gambar-nama-heading-caption-gambar" id="toc-persiapkan-identitas-gambar-nama-heading-caption-gambar" class="nav-link" data-scroll-target="#persiapkan-identitas-gambar-nama-heading-caption-gambar"><span class="toc-section-number">2.1</span>  Persiapkan identitas gambar, nama heading &amp; caption gambar</a></li>
+  <li><a href="#folderisasi-gambar" id="toc-folderisasi-gambar" class="nav-link" data-scroll-target="#folderisasi-gambar"><span class="toc-section-number">2.2</span>  Folderisasi gambar</a></li>
+  <li><a href="#susun-heading-gambar-caption-di-word" id="toc-susun-heading-gambar-caption-di-word" class="nav-link" data-scroll-target="#susun-heading-gambar-caption-di-word"><span class="toc-section-number">2.3</span>  Susun heading, gambar &amp; caption di word</a></li>
+  <li><a href="#editing-html-dengan-ultraedit" id="toc-editing-html-dengan-ultraedit" class="nav-link" data-scroll-target="#editing-html-dengan-ultraedit"><span class="toc-section-number">2.4</span>  Editing HTML dengan UltraEdit</a>
+  <ul class="collapse">
+  <li><a href="#text-yang-menunjukkan-identitas-heading" id="toc-text-yang-menunjukkan-identitas-heading" class="nav-link" data-scroll-target="#text-yang-menunjukkan-identitas-heading"><span class="toc-section-number">2.4.1</span>  Text yang menunjukkan identitas heading</a></li>
+  <li><a href="#text-yang-menunjukkan-linkidentitas-gambar" id="toc-text-yang-menunjukkan-linkidentitas-gambar" class="nav-link" data-scroll-target="#text-yang-menunjukkan-linkidentitas-gambar"><span class="toc-section-number">2.4.2</span>  Text yang menunjukkan link/identitas gambar</a></li>
+  <li><a href="#text-yang-menunjukkan-caption-gambar" id="toc-text-yang-menunjukkan-caption-gambar" class="nav-link" data-scroll-target="#text-yang-menunjukkan-caption-gambar"><span class="toc-section-number">2.4.3</span>  Text yang menunjukkan caption gambar</a></li>
+  </ul></li>
+  <li><a href="#cut-paste-bagian-data-yang-akan-diedit" id="toc-cut-paste-bagian-data-yang-akan-diedit" class="nav-link" data-scroll-target="#cut-paste-bagian-data-yang-akan-diedit"><span class="toc-section-number">2.5</span>  Cut &amp; Paste bagian data yang akan diedit</a></li>
+  <li><a href="#lakukan-duplikasi" id="toc-lakukan-duplikasi" class="nav-link" data-scroll-target="#lakukan-duplikasi"><span class="toc-section-number">2.6</span>  Lakukan Duplikasi</a></li>
+  <li><a href="#numbering" id="toc-numbering" class="nav-link" data-scroll-target="#numbering"><span class="toc-section-number">2.7</span>  Numbering</a></li>
+  <li><a href="#sorting-data" id="toc-sorting-data" class="nav-link" data-scroll-target="#sorting-data"><span class="toc-section-number">2.8</span>  Sorting Data</a></li>
+  <li><a href="#isolasi-edit-data" id="toc-isolasi-edit-data" class="nav-link" data-scroll-target="#isolasi-edit-data"><span class="toc-section-number">2.9</span>  Isolasi &amp; Edit Data</a></li>
+  <li><a href="#sorting-data-kembali" id="toc-sorting-data-kembali" class="nav-link" data-scroll-target="#sorting-data-kembali"><span class="toc-section-number">2.10</span>  Sorting data kembali</a></li>
+  <li><a href="#replace" id="toc-replace" class="nav-link" data-scroll-target="#replace"><span class="toc-section-number">2.11</span>  Replace</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fiakoenjiniring/manual/edit/main/tutorial/editor/inr-1-batch-multiple-picture-into-word.md" class="toc-action">Ubah halaman ini</a></p><p><a href="https://github.com/fiakoenjiniring/manual/issues/new" class="toc-action">Melaporkan isu</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>Batch Multiple Picture Into Word via HTML</p></h1>
+<p class="subtitle lead"></p><p>Memasukkan sejumlah gambar ke <em>Word</em> sekaligus melalui HTML</p><p></p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Nama</div>
+  <div class="quarto-title-meta-heading">Sebagai</div>
+  
+    <div class="quarto-title-meta-contents">
+    INR 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Penulis
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Diterbitkan</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Kamis, 01 Desember 2022</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Diperbarui</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">Kamis, 01 Desember 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Berikut tutorial <em>Batch Multiple Picture Into Word via HTML</em> yang dibuat oleh INR.</p>
+<section id="ketentuan" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="ketentuan"><span class="header-section-number">1</span> Ketentuan</h2>
+<ul>
+<li>Telah memahami pola teks di UltraEdit.</li>
+</ul>
+</section>
+<section id="tutorial" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="tutorial"><span class="header-section-number">2</span> Tutorial</h2>
+<section id="persiapkan-identitas-gambar-nama-heading-caption-gambar" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="persiapkan-identitas-gambar-nama-heading-caption-gambar"><span class="header-section-number">2.1</span> Persiapkan identitas gambar, nama heading &amp; caption gambar</h3>
+<ol type="1">
+<li>Untuk mendapatkan/edit identitas gambar dapat dilakukan dengan <code>cmd</code>:
+<ul>
+<li>buka <code>cmd</code> di lokasi gambar berada</li>
+<li>ketik <code>dir /b | clip</code> paste di excel atau di notepad</li>
+</ul></li>
+<li>Renamer identitas gambar dapat menggunakan bantuan <code>cmd</code> dengan cara:
+<ul>
+<li>buka <code>cmd</code> dilokasi gambar berada</li>
+<li><code>ren "odd name" "new name"</code>, contoh<br> <code>ren "detail tulangan kolom-balok.jpg" "tulangan balok.jpg"</code></li>
+</ul></li>
+</ol>
+</section>
+<section id="folderisasi-gambar" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="folderisasi-gambar"><span class="header-section-number">2.2</span> Folderisasi gambar</h3>
+<ul>
+<li>Susun folder &amp; rename gambar
+<ul>
+<li>folder di tempatkan di satu tempat untuk memudahkan pekerjaan</li>
+<li>rencanakan identitas gambar sehingga memiliki pola<br> contoh: <code>nnmm.jpg</code>, dengan <code>nn</code>: number, <code>mm</code>: nama gambar</li>
+</ul></li>
+</ul>
+</section>
+<section id="susun-heading-gambar-caption-di-word" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="susun-heading-gambar-caption-di-word"><span class="header-section-number">2.3</span> Susun heading, gambar &amp; caption di word</h3>
+<ul>
+<li>Susun format heading</li>
+</ul>
+<p><img src="img_INR_1/20221201135723.png" class="img-fluid"></p>
+<ul>
+<li>Insert picture dengan format: link to file</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img_INR_1/20221201140029.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">insert + picture + this device + pilih gambar + link to file (alternatif: alt + N + P + D)</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Gunakan heading “caption” pada nama gambar</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img_INR_1/20221201140152.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">reference + insert caption (alternatif: alt + S + P)</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Save file word dengan format “html”</li>
+</ul>
+<p><img src="img_INR_1/20221201140243.png" class="img-fluid"></p>
+</section>
+<section id="editing-html-dengan-ultraedit" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="editing-html-dengan-ultraedit"><span class="header-section-number">2.4</span> Editing HTML dengan UltraEdit</h3>
+<ul>
+<li>Buka file “html” yang telah di save sebelumnya menggunakan UltraEdit</li>
+</ul>
+<p><img src="img_INR_1/20221201140406.png" class="img-fluid"></p>
+<ul>
+<li>untuk memudahkan proses editing pada UltraEdit maka lakukan pencarian terkait nama/identitas heading yang telah di tulis sebelumnya.</li>
+<li>find dalam ultraEdit : ctrl + F + kata kunci yang di cari + Next</li>
+<li>biasanya format heading terdapat di <code>&lt;/h4&gt;</code> sehingga pencarian dapat dilakukan dengan kata kunci <code>&lt;/h4&gt;</code></li>
+</ul>
+<section id="text-yang-menunjukkan-identitas-heading" class="level4" data-number="2.4.1">
+<h4 data-number="2.4.1" class="anchored" data-anchor-id="text-yang-menunjukkan-identitas-heading"><span class="header-section-number">2.4.1</span> Text yang menunjukkan identitas heading</h4>
+<p><img src="img_INR_1/20221201140546.png" class="img-fluid"></p>
+</section>
+<section id="text-yang-menunjukkan-linkidentitas-gambar" class="level4" data-number="2.4.2">
+<h4 data-number="2.4.2" class="anchored" data-anchor-id="text-yang-menunjukkan-linkidentitas-gambar"><span class="header-section-number">2.4.2</span> Text yang menunjukkan link/identitas gambar</h4>
+<p><img src="img_INR_1/20221201140653.png" class="img-fluid"></p>
+</section>
+<section id="text-yang-menunjukkan-caption-gambar" class="level4" data-number="2.4.3">
+<h4 data-number="2.4.3" class="anchored" data-anchor-id="text-yang-menunjukkan-caption-gambar"><span class="header-section-number">2.4.3</span> Text yang menunjukkan caption gambar</h4>
+<p><img src="img_INR_1/20221201140749.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="cut-paste-bagian-data-yang-akan-diedit" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="cut-paste-bagian-data-yang-akan-diedit"><span class="header-section-number">2.5</span> Cut &amp; Paste bagian data yang akan diedit</h3>
+<ol type="1">
+<li>Open new sheet pada Ultra Edit</li>
+<li>Cut &amp; Paste bagian data yang akan di edit di new sheet</li>
+</ol>
+<p><img src="img_INR_1/20221201140843.png" class="img-fluid"></p>
+</section>
+<section id="lakukan-duplikasi" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="lakukan-duplikasi"><span class="header-section-number">2.6</span> Lakukan Duplikasi</h3>
+<ol type="1">
+<li>Duplikasi TH, TG, TC sesuai jumlah yang di rencanakan untuk mempermudah proses duplikasi maka bentuk paragraf TH, TG, TC dapat diubah menjadi 1 baris dengan cara: <code>ctrl + L + conPtab</code></li>
+</ol>
+<p><img src="img_INR_1/20221201141953.png" class="img-fluid"></p>
+<p>menjadi</p>
+<p><img src="img_INR_1/20221201142020.png" class="img-fluid"></p>
+</section>
+<section id="numbering" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="numbering"><span class="header-section-number">2.7</span> Numbering</h3>
+<p>insert number pada setiap baris, numbering dilakukan untuk mempermudah proses shorting aktifkan column mode : Alt +C + arahkan pada kolom pertama + column + insert number</p>
+<p><img src="img_INR_1/20221201142111.png" class="img-fluid"></p>
+</section>
+<section id="sorting-data" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="sorting-data"><span class="header-section-number">2.8</span> Sorting Data</h3>
+<p>Lakukan sorting data <br> inctive column mode : alt + C <br> sorting data : file + sort+ advanced sort/option + masukan number + sort</p>
+<p><img src="img_INR_1/20221201142255.png" class="img-fluid"></p>
+<ul>
+<li>bagian yang di highlight tidak selalu di isi dengan angka 3. number di isi sesuai dengan jumlah karakter</li>
+<li>terdiri dari tiga angka sehingga kolom sorting di isi dengan number (3)</li>
+</ul>
+<p><img src="img_INR_1/20221201142354.png" class="img-fluid"></p>
+<ul>
+<li>masing2 format text TH, TG, TC telah terpisah dan lebih mudah untuk di edit</li>
+</ul>
+</section>
+<section id="isolasi-edit-data" class="level3" data-number="2.9">
+<h3 data-number="2.9" class="anchored" data-anchor-id="isolasi-edit-data"><span class="header-section-number">2.9</span> Isolasi &amp; Edit Data</h3>
+<ol type="1">
+<li>Isolasi salah satu text dan paste di new sheet</li>
+<li>Setelah di isolasi urutkan kembali data dengan cara sorting “step-8”, start column di isi dengan angka 1 sehingga urutan no kembali seperti sebelumnya</li>
+<li>Edit masing-masing TC, TH, TG sesuai dengan format nama yang telah di siapkan</li>
+</ol>
+<p><img src="img_INR_1/20221201142505.png" class="img-fluid"></p>
+<p><img src="img_INR_1/20221201142537.png" class="img-fluid"></p>
+<p><img src="img_INR_1/20221201142552.png" class="img-fluid"></p>
+</section>
+<section id="sorting-data-kembali" class="level3" data-number="2.10">
+<h3 data-number="2.10" class="anchored" data-anchor-id="sorting-data-kembali"><span class="header-section-number">2.10</span> Sorting data kembali</h3>
+<ol type="1">
+<li>Setelah di edit, semua text (TH,TG,TC) di sort ulang dengan mengisi start column dengan angka 1 sehingga tampilan text kembali seperti sebelumnya (tampilan di “step-7”)</li>
+<li>Hapus urutan no</li>
+</ol>
+<p><img src="img_INR_1/20221201142641.png" class="img-fluid"></p>
+</section>
+<section id="replace" class="level3" data-number="2.11">
+<h3 data-number="2.11" class="anchored" data-anchor-id="replace"><span class="header-section-number">2.11</span> Replace</h3>
+<ol type="1">
+<li>Copy semua data pada step-10 dan replace ke body asli (tampilan gambar di step-4)</li>
+<li>Save as file (format file masih dalam bentuk html)</li>
+<li>Open file tersebut di word</li>
+</ol>
+<hr>
+<p>SELESAI</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/manual\.fiako\.engineering/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2022 PT. FIAKO ENJINIRING INDONESIA.</div>   
+    <div class="nav-footer-right">website by <strong>fiako</strong>dev, built with <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>
