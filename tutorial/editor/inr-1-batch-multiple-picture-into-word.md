@@ -1,0 +1,165 @@
+---
+pagetitle: "Tutorial: Batch Multiple Picture Into Word via HTML"
+title: | 
+    Batch Multiple Picture Into Word via HTML
+subtitle: |
+    Memasukkan sejumlah gambar ke _Word_ sekaligus melalui HTML
+
+toc: true
+toc-location: right
+toc-depth: 4
+number-sections: true
+sidebar: false
+
+author-title: Nama
+affiliation-title: Sebagai
+
+language:
+    title-block-modified: Diperbarui
+
+page-layout: article
+
+author: 
+    - name: INR
+      affiliation: Penulis
+    # - name: TSM
+    #   affiliation: Editor
+date: 2022-12-01
+date-modified: 2022-12-01
+date-format: full
+lang: id
+---
+
+Berikut tutorial _Batch Multiple Picture Into Word via HTML_ yang dibuat oleh INR.
+
+## Ketentuan
+
+- Telah memahami pola teks di UltraEdit.
+
+## Tutorial
+
+
+### Persiapkan identitas gambar, nama heading & caption gambar
+
+1. Untuk mendapatkan/edit identitas gambar dapat dilakukan dengan `cmd`:
+    - buka `cmd` di lokasi gambar berada
+    - ketik `dir /b | clip` paste di excel atau di notepad
+
+2. Renamer identitas gambar dapat menggunakan bantuan `cmd` dengan cara:
+    - buka `cmd` dilokasi gambar berada
+    - `ren "odd name" "new name"`, contoh<br/>
+      `ren "detail tulangan kolom-balok.jpg" "tulangan balok.jpg"`
+
+### Folderisasi gambar
+
+- Susun folder & rename gambar 
+    - folder di tempatkan di satu tempat untuk memudahkan pekerjaan
+    - rencanakan identitas gambar sehingga memiliki pola<br/>
+      contoh: `nnmm.jpg`, dengan `nn`: number, `mm`: nama gambar
+
+### Susun heading, gambar & caption di word
+
+- Susun format heading
+
+![](img_INR_1/20221201135723.png)
+
+- Insert picture dengan format: link to file
+
+![insert + picture + this device + pilih gambar + link to file (alternatif: alt + N + P + D)](img_INR_1/20221201140029.png)  
+
+- Gunakan  heading "caption" pada nama gambar
+
+![reference + insert caption (alternatif: alt + S + P)](img_INR_1/20221201140152.png)
+
+- Save file word dengan format "html"
+
+![](img_INR_1/20221201140243.png)  
+
+### Editing HTML dengan UltraEdit
+
+- Buka file "html" yang telah di save sebelumnya menggunakan UltraEdit
+
+![](img_INR_1/20221201140406.png)  
+
+- untuk memudahkan proses editing pada UltraEdit maka lakukan pencarian terkait nama/identitas heading yang telah di tulis sebelumnya.
+- find dalam ultraEdit : ctrl + F + kata kunci yang di cari + Next 
+- biasanya format heading terdapat di `</h4>` sehingga pencarian dapat dilakukan dengan kata kunci `</h4>`
+
+#### Text yang menunjukkan identitas heading
+
+![](img_INR_1/20221201140546.png)  
+
+#### Text yang menunjukkan link/identitas gambar
+
+![](img_INR_1/20221201140653.png)  
+
+#### Text yang menunjukkan caption gambar
+
+![](img_INR_1/20221201140749.png)  
+
+### Cut & Paste bagian data yang akan diedit
+
+1. Open new sheet pada Ultra Edit
+2. Cut & Paste bagian data yang akan di edit di new sheet
+
+![](img_INR_1/20221201140843.png)  
+
+### Lakukan Duplikasi
+
+1. Duplikasi TH, TG, TC sesuai jumlah yang di rencanakan untuk mempermudah proses duplikasi maka bentuk paragraf TH, TG, TC dapat diubah menjadi 1 baris dengan cara: `ctrl + L + conPtab`
+
+![](img_INR_1/20221201141953.png)  
+
+menjadi
+
+![](img_INR_1/20221201142020.png)  
+
+### Numbering
+
+insert number pada setiap baris, numbering dilakukan untuk mempermudah proses shorting aktifkan column mode : Alt +C + arahkan pada kolom pertama + column + insert number
+
+![](img_INR_1/20221201142111.png)  
+
+### Sorting Data
+
+Lakukan sorting data <br/>
+inctive column mode : alt + C <br/>
+sorting data : file + sort+ advanced sort/option + masukan number + sort
+
+![](img_INR_1/20221201142255.png)  
+
+- bagian yang di highlight tidak selalu di isi dengan angka 3. number di isi sesuai dengan jumlah karakter 
+- terdiri dari tiga angka sehingga kolom sorting di isi dengan number (3)
+
+![](img_INR_1/20221201142354.png)  
+
+- masing2 format text TH, TG, TC telah terpisah dan lebih mudah untuk di edit
+
+### Isolasi & Edit Data
+
+1. Isolasi salah satu text dan paste di new sheet
+2. Setelah di isolasi urutkan kembali data dengan cara sorting "step-8", start column di isi dengan angka 1 sehingga urutan no kembali seperti sebelumnya
+3. Edit masing-masing TC, TH, TG sesuai dengan format nama yang telah di siapkan
+
+![](img_INR_1/20221201142505.png)  
+
+![](img_INR_1/20221201142537.png)  
+
+![](img_INR_1/20221201142552.png)  
+
+### Sorting data kembali
+
+1. Setelah di edit, semua text (TH,TG,TC) di sort ulang dengan mengisi start column dengan angka 1 sehingga tampilan text kembali seperti sebelumnya (tampilan di "step-7")
+2. Hapus urutan no 
+
+![](img_INR_1/20221201142641.png)  
+
+### Replace
+
+1. Copy semua data pada step-10 dan replace ke body asli (tampilan gambar di step-4)
+2. Save as file (format file masih dalam bentuk html) 
+3. Open file tersebut di word
+
+---
+
+SELESAI

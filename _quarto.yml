@@ -53,7 +53,10 @@ website:
             href: tutorial/webapps/hidrokit-rainfall.qmd
           - text: "`fiako-anfrek`"
             href: tutorial/webapps/fiako-anfrek.qmd
-
+      - text: Tutorial
+        menu:
+          - text: "INR1"
+            href: tutorial/editor/inr-1-batch-multiple-picture-into-word.md
 
     right:
       - icon: github
