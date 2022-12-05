@@ -28,7 +28,15 @@ date: 2022-12-01
 date-modified: 2022-12-01
 date-format: full
 lang: id
+
+# aliases:
+#     - /tutorial/editor/inr-1-batch-multiple-picture-into-word.html
 ---
+
+::: {.callout-note}
+Tersedia juga tutorial yang serupa menggunakan quarto di [TSM-1: Tutorial: Batch Multiple Picture Into Word via Quarto](/tutorial/editor/tsm-1-batch-multiple-picture.qmd).
+:::
+
 
 Berikut tutorial _Batch Multiple Picture Into Word via HTML_ yang dibuat oleh INR.
 

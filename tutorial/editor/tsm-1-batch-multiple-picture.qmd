@@ -1,0 +1,217 @@
+---
+pagetitle: "Tutorial: Batch Multiple Picture Into Word via Quarto"
+title: | 
+    Batch Multiple Picture Into Word via Quarto
+subtitle: |
+    Memasukkan sejumlah gambar ke _Word_ sekaligus menggunakan Quarto
+
+toc: true
+toc-location: right
+toc-depth: 3
+number-sections: true
+sidebar: false
+
+author-title: Nama
+affiliation-title: Sebagai
+
+language:
+    title-block-modified: Diperbarui
+
+page-layout: article
+
+author: 
+    - name: TSM
+      affiliation: Penulis
+
+date: 2022-12-05
+date-modified: 2022-12-05
+date-format: full
+lang: id
+
+---
+
+Tutorial ini memproses gambar dalam folder dan memindahkannya seluruh gambar ke dalam bentuk dokumen Microsoft Word beserta _heading_ dan _caption_ setiap gambarnya. Dokumen hasil kompilasi tersebut bisa digunakan sebagai lampiran. 
+
+::: {.callout-note}
+Dokumen ini mereplikasi pekerjaan yang serupa di dokumen [INR-1: Tutorial: Batch Multiple Picture Into Word via HTML](/tutorial/editor/inr-1-batch-multiple-picture-into-word.qmd).
+:::
+
+## Pros & Cons
+
+Berikut yang harus diketahui mengenai keuntungan/kelemahan terkait tutorial ini.
+
+### Pros
+
+- Dokumen yang sudah dibuat (`.qmd` atau `.md`) bisa dikompilasi ke berbagai format seperti `.pdf` atau `.html`. 
+- Dengan [Quarto] juga bisa mengubah dokumen tersebut dalam format presentasi (`.pptx` atau `.html`). Sehingga lebih fleksibel saat ingin pindah ke format lainnya. 
+
+### Cons
+
+- Saat kompilasi ke `.docx`, _caption_ gambar dalam bentuk teks dan setiap angkanya bukan merupakan objek yang dapat diperbarui di Word. 
+- Harus membiasakan dengan _markdown_ dan [VSCode] (sebagai editor).
+- Harus menginstall [Quarto] di mesin. 
+- Caption hasil kompilasi / _render_ akan rata kiri (_left alignment_). Untuk mengubahnya bisa memodifikasi style output dokumen.
+
+## Persyaratan / Persiapan
+
+Berikut daftar persyaratan atau hal yang harus dipersiapkan sebelum melakukan tutorial ini. 
+
+### Program
+
+Berikut daftar program yang digunakan dan yang harus terinstall di mesin:
+
+1. Windows 10/11 dengan powershell (clip.exe). 
+1. Microsoft Excel (v2210).
+1. [Visual Studio Code / VSCode](https://code.visualstudio.com/).
+1. [Quarto CLI](https://quarto.org/docs/get-started/).
+1. Extension VS Code: [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+
+Alternatif Download (Untuk Lokal) bisa diakses di `XAGANT::TSM\_apps`
+
+1. VSCode: `VSCodeUserSetup-x64-1.73.1.exe`
+2. Quarto: `quarto-1.2.269-win.msi`
+
+### Nama File (Gambar)
+
+- Informasi _heading_ dan _caption_ tersedia di nama gambar.
+- Pola mengikuti `{Nama Proyek},{STG-XXY}_{KETERANGAN}__CS__Summation-str.jpg`. Koma (`,`) harus tersedia di nama file sebagai pemisah. _Double underscore_ `__` sebelum `CS` digunakan sebagai pemisah antara Caption.
+- _Heading_ menggunakan `{STG-XXY}`.
+- _Caption_ menggunakan `{STG-XXY} {KETERANGAN}`.
+
+### Tips 
+
+- Mengubah karakter spesial nama gambar menjadi `-` atau `_`. Agar dapat dikompilasi menjadi format PDF. Gunakan regex `[^a-zA-Z 0-9-,_]`.
+- Hindari menggunakan nama file yang memiliki spasi ` `. Ubah menjadi `_`. Agar tidak perlu mengubahnya menjadi `%20` (URL-encode).
+
+### Contoh Dokumen
+
+Contoh hasil akhir tutorial ini bisa dilihat di `STAGNATZ` dengan alamat `STAGNATZ::TSM Taruma\D\02 DEVELOPMENT\fiakodev\fiako-batchimage`.
+
+## Tutorial
+
+Pada dasarnya pembuatan dokumen `.docx` ini memanfaatkan quarto untuk mengkonversi dokumen _markdown_ menjadi format `.docx` via pandoc (_engine_ yang digunakan oleh quarto). Jadi, langkah akhirnya adalah membuat dokumen _markdown_ yang berisikan gambar menuju folder tersebut. Untuk gambar sendiri, di dokumen _markdown_ menggunakan sintaks `![{CAPTION}]({ALAMAT-GAMBAR})`.
+Hanya saja untuk dokumen _markdown_ quarto harus diberi label gambar `{#fig-label-gambar}`, sehingga sintaks lengkapnya adalah `![{CAPTION}]({ALAMAT-GAMBAR}){#fig-label-gambar}`.
+
+### Persiapan {#sec-step-0}
+
+- Simpan gambar-gambar dalam satu folder. Dalam contoh ini gambar disimpan di folder `FOLDER-GAMBAR` (@fig-01-folder-image).
+
+![FOLDER GAMBAR](img/ss-20221205140253.png){#fig-01-folder-image}
+
+### Ambil Daftar Nama Gambar {#sec-step-1}
+
+- Buka `Command Prompt (CMD)` atau `terminal` pada folder tersebut dengan cara mengetikkan `cmd` di `Windows Explorer` (atau cara lainnya) (@fig-02-cmd-address-bar). 
+
+![Ketik `CMD` di _address bar_](img/ss-20221205142951.png){#fig-02-cmd-address-bar}
+
+- Ketik perintah `dir *.jpg /b | clip` yang artinya melihat daftar file dengan _extension_ `.jpg` dengan format sederhana `/b` (@fig-03-cmd-dir-b) kemudian `|` hasilnya di simpan ke _clipboard_ dengan `clip` (@fig-04-cmd-dir-b-clip). 
+
+![Tampilan perintah `dir *.jpg /b`](img/ss-20221205143320.png){#fig-03-cmd-dir-b}
+
+![Menyimpan perintah sebelumnya ke _clipboard_](img/ss-20221205143438.png){#fig-04-cmd-dir-b-clip}
+
+### Buat Dokumen Quarto {#sec-step-2}
+
+- Buka folder **satu** level keluar dari folder gambar. Pada contoh ini, folder `tutorial` merupakan folder sebelum folder `FOLDER-GAMBAR`. 
+
+![Folder `tutorial`](img/ss-20221205143749.png){#fig-05-folder-tutorial}
+
+- Buka VS Code dengan folder tersebut (`tutorial`). Membuka _context menu_ (klik kanan) dan memilih _"Open with Code"_ (@fig-06-open-with-code). 
+
+![Membuka folder kerja (_workspace_) dengan _"Open with Code"_](img/ss-20221205144134.png){#fig-06-open-with-code}
+
+- Setelah membuka VS Code, buat dokumen baru dengan extension `.qmd` (menggunakan `.md` juga bisa jika ingin sambil melihat _preview built-in_ dari VS Code). Pada contoh ini dibuat dokumen `daftar-gambar.qmd`. 
+
+![Membuat dokumen `.qmd`](img/ss-20221205144754.png){#fig-07-create-qmd}
+
+### Menggunakan `image-concatenator.xlsx`
+
+- Mengingat pada tahap @sec-step-1, kita menyimpan daftar gambar di _clipboard_. Buka dokumen `image-concatenator.xlsx`. (Ulangi tahap @sec-step-1 jika _clipboard_ tertimpa dengan yang lain).
+
+- Pada `A2` _sheet_ `INPUT` _paste_ daftar gambar yang tersimpan di _clipboard_ (@fig-08-paste-to-image-concatenator). 
+
+![_Paste_ daftar gambar ke sel `A2` ](img/ss-20221205150054.png){#fig-08-paste-to-image-concatenator}
+
+- Salin seluruh kolom `D:D` dari `image-concatenator` di sheets `OUTPUT_FINAL` (@fig-09-copy-output-final). Pastikan `FOLDER IMAGES` sudah diatur dengan nama folder gambar (Pada contoh) dan ditambah karakter `/` diakhir folder. 
+
+![Salin seluruh kolom `D:D`](img/ss-20221205153516.png){#fig-09-copy-output-final}
+
+::: {.callout-important}
+Pastikan nama folder tidak memiliki karakter spesial atau spasi. Jika karakter spesial tidak bisa dibaca langsung di markdown, ubah karakter tersebut dengan _URL-encode_. 
+:::
+
+::: {.callout-note}
+Pada @fig-09-copy-output-final tertulis nama folder `FOLDER_IMAGES/` yang seharusnya `FOLDER-GAMBAR/` (sesuai dengan nama folder kumpulan gambar). 
+:::
+
+- _Paste_ hasil salin ke dokumen `.qmd` yang telah dibuat. 
+
+![_Paste_ di dokumen `.qmd`](img/ss-20221205153817.png){#fig-10-paste-to-qmd}
+
+### Kompilasi
+
+- Sebelum mengkompilasi dokumen quarto `.qmd` ke word, sebaiknya ditambahkan informasi _YAML front matter_ di dokumen. _Front matter_ merupakan bagian teratas dari dokumen yang dicirikan dengan batas `---`. _Front matter_ tersebut bisa menyimpan informasi mengenai dokumen dan konfigurasinya. 
+
+- Taruh _front matter_ berikut ke paling atas dokumen. Contohnya seperti pada @fig-11-front-matter-qmd.
+
+```yaml
+---
+title: "Lampiran GAMBAR"
+date: 2022-12-05
+author: TSM
+
+format:
+    docx:
+        toc: true
+        toc-title: Daftar Isi
+        number-sections: true
+        reference-doc: template-laporan.docx
+        fig-align: center
+crossref: 
+    chapters: true
+language: _language.yml
+---
+```
+
+![_Front matter_ dokumen](img/ss-20221205154959.png){#fig-11-front-matter-qmd}
+
+::: {.callout-important}
+Pastikan dokumen `template-laporan.docx` dan `_language.yml` dalam satu folder dengan dokumen `daftar-gambar.qmd`.
+:::
+
+- Ubah konfigurasi sesuai kepentingan. Jika tidak ingin menampilkan `title`, `date`, atau `author`. Bisa mengubah baris tersebut menjadi komentar dengan menambah karakter `#` di depan baris. Seperti ini contohnya. 
+
+```yaml
+# title: "Lampiran GAMBAR"
+# date: 2022-12-05
+# author: TSM
+```
+
+- Buka terminal di dalam vscode dengan menekan ```Ctrl + ` ``` (atau via `cmd` di _explorer_ juga bisa). Hasilnya seperti pada @fig-12-terminal-cmd-in-vscode.
+
+::: {.callout-note}
+Jika terminal dalam vscode belum diatur, maka terminal yang digunakan adalah `powershell`. Untuk mengaturnya menjadi `Command Prompt`, buka Command Palette (`Ctrl + Shift + P`), pilih `Terminal: Select Default Profile`, dan pilih `Command prompt`. 
+:::
+
+![Pastikan terminal yang dibuka adalah `Command Prompt` atau `cmd`](img/ss-20221205160141.png){#fig-12-terminal-cmd-in-vscode}
+
+- Ketik perintah `quarto render daftar-gambar.qmd --to docx`. Perintah tersebut me-_render_ / mengompilasi (`quarto render`) dokumen quarto (`daftar-gambar.qmd`) menjadi word (`--to docx`). Dokumen _output_ akan dinamai sama dengan dokumen kuarto, sehingga _output_-nya `daftar-gambar.docx` (@fig-13-render-document).
+
+![Hasil merender dokumen](img/ss-20221205160842.png){#fig-13-render-document}
+
+### Selesai
+
+- Dokumen output yaitu `daftar-gambar.docx` dan dapat diakses di folder yang sama dengan dokumen quarto-nya (@fig-14-output-docx).
+
+![Hasil _render_ dokumen quarto](img/ss-20221205161512.png){#fig-14-output-docx}
+
+## Adaptasi / Penyesuaian
+
+- Penyesuaian bisa diatur dengan memodifikasi `image-concatenator.xlsx`. 
+
+---
+
+Jika terdapat pertanyaan, bisa langsung menghubungi saya. 
+
+[Quarto]: https://quarto.org/
+[VSCode]: https://code.visualstudio.com/
