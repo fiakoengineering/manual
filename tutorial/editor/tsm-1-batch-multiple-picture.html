@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="TSM">
+
+<title>Tutorial: Batch Multiple Picture Into Word via Quarto</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../fiakologo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../fiakologo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">fiako-manual</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-web-apps" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Web Apps</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-web-apps">    
+        <li>
+    <a class="dropdown-item" href="../../webapps/index.html">
+ <span class="dropdown-text">Ringkasan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../webapps/webapps-rainfall.html">
+ <span class="dropdown-text">Aplikasi Pengolahan Data Hujan</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorial-web-apps" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tutorial Web Apps</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorial-web-apps">    
+        <li>
+    <a class="dropdown-item" href="../../tutorial/webapps/fiako-stations.html">
+ <span class="dropdown-text"><code>fiako-stations</code></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorial/webapps/hidrokit-rainfall.html">
+ <span class="dropdown-text"><code>hidrokit-rainfall</code></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorial/webapps/fiako-anfrek.html">
+ <span class="dropdown-text"><code>fiako-anfrek</code></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorial" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tutorial</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorial">    
+        <li>
+    <a class="dropdown-item" href="../../tutorial/editor/inr-1-batch-multiple-picture-into-word.md">
+ <span class="dropdown-text">INR1</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fiakoenjiniring/manual"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-g2x" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><code>G2X</code></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-g2x">    
+        <li>
+    <a class="dropdown-item" href="../../greenhorn/G22-11-29.html">
+ <span class="dropdown-text"><code>G22.11.29</code></span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Pada halaman ini</h2>
+   
+  <ul>
+  <li><a href="#pros-cons" id="toc-pros-cons" class="nav-link active" data-scroll-target="#pros-cons"><span class="toc-section-number">1</span>  Pros &amp; Cons</a>
+  <ul class="collapse">
+  <li><a href="#pros" id="toc-pros" class="nav-link" data-scroll-target="#pros"><span class="toc-section-number">1.1</span>  Pros</a></li>
+  <li><a href="#cons" id="toc-cons" class="nav-link" data-scroll-target="#cons"><span class="toc-section-number">1.2</span>  Cons</a></li>
+  </ul></li>
+  <li><a href="#persyaratan-persiapan" id="toc-persyaratan-persiapan" class="nav-link" data-scroll-target="#persyaratan-persiapan"><span class="toc-section-number">2</span>  Persyaratan / Persiapan</a>
+  <ul class="collapse">
+  <li><a href="#program" id="toc-program" class="nav-link" data-scroll-target="#program"><span class="toc-section-number">2.1</span>  Program</a></li>
+  <li><a href="#nama-file-gambar" id="toc-nama-file-gambar" class="nav-link" data-scroll-target="#nama-file-gambar"><span class="toc-section-number">2.2</span>  Nama File (Gambar)</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips"><span class="toc-section-number">2.3</span>  Tips</a></li>
+  <li><a href="#contoh-dokumen" id="toc-contoh-dokumen" class="nav-link" data-scroll-target="#contoh-dokumen"><span class="toc-section-number">2.4</span>  Contoh Dokumen</a></li>
+  </ul></li>
+  <li><a href="#tutorial" id="toc-tutorial" class="nav-link" data-scroll-target="#tutorial"><span class="toc-section-number">3</span>  Tutorial</a>
+  <ul class="collapse">
+  <li><a href="#sec-step-0" id="toc-sec-step-0" class="nav-link" data-scroll-target="#sec-step-0"><span class="toc-section-number">3.1</span>  Persiapan</a></li>
+  <li><a href="#sec-step-1" id="toc-sec-step-1" class="nav-link" data-scroll-target="#sec-step-1"><span class="toc-section-number">3.2</span>  Ambil Daftar Nama Gambar</a></li>
+  <li><a href="#sec-step-2" id="toc-sec-step-2" class="nav-link" data-scroll-target="#sec-step-2"><span class="toc-section-number">3.3</span>  Buat Dokumen Quarto</a></li>
+  <li><a href="#menggunakan-image-concatenator.xlsx" id="toc-menggunakan-image-concatenator.xlsx" class="nav-link" data-scroll-target="#menggunakan-image-concatenator.xlsx"><span class="toc-section-number">3.4</span>  Menggunakan <code>image-concatenator.xlsx</code></a></li>
+  <li><a href="#kompilasi" id="toc-kompilasi" class="nav-link" data-scroll-target="#kompilasi"><span class="toc-section-number">3.5</span>  Kompilasi</a></li>
+  <li><a href="#selesai" id="toc-selesai" class="nav-link" data-scroll-target="#selesai"><span class="toc-section-number">3.6</span>  Selesai</a></li>
+  </ul></li>
+  <li><a href="#adaptasi-penyesuaian" id="toc-adaptasi-penyesuaian" class="nav-link" data-scroll-target="#adaptasi-penyesuaian"><span class="toc-section-number">4</span>  Adaptasi / Penyesuaian</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fiakoenjiniring/manual/edit/main/tutorial/editor/tsm-1-batch-multiple-picture.qmd" class="toc-action">Ubah halaman ini</a></p><p><a href="https://github.com/fiakoenjiniring/manual/issues/new" class="toc-action">Melaporkan isu</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>Batch Multiple Picture Into Word via Quarto</p></h1>
+<p class="subtitle lead"></p><p>Memasukkan sejumlah gambar ke <em>Word</em> sekaligus menggunakan Quarto</p><p></p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Nama</div>
+  <div class="quarto-title-meta-heading">Sebagai</div>
+  
+    <div class="quarto-title-meta-contents">
+    TSM 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Penulis
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Diterbitkan</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Senin, 05 Desember 2022</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Diperbarui</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">Senin, 05 Desember 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Tutorial ini memproses gambar dalam folder dan memindahkannya seluruh gambar ke dalam bentuk dokumen Microsoft Word beserta <em>heading</em> dan <em>caption</em> setiap gambarnya. Dokumen hasil kompilasi tersebut bisa digunakan sebagai lampiran.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Catatan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dokumen ini mereplikasi pekerjaan yang serupa di dokumen <a href="../../tutorial/editor/inr-1-batch-multiple-picture-into-word.html">INR-1: Tutorial: Batch Multiple Picture Into Word via HTML</a>.</p>
+</div>
+</div>
+<section id="pros-cons" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="pros-cons"><span class="header-section-number">1</span> Pros &amp; Cons</h2>
+<p>Berikut yang harus diketahui mengenai keuntungan/kelemahan terkait tutorial ini.</p>
+<section id="pros" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="pros"><span class="header-section-number">1.1</span> Pros</h3>
+<ul>
+<li>Dokumen yang sudah dibuat (<code>.qmd</code> atau <code>.md</code>) bisa dikompilasi ke berbagai format seperti <code>.pdf</code> atau <code>.html</code>.</li>
+<li>Dengan <a href="https://quarto.org/">Quarto</a> juga bisa mengubah dokumen tersebut dalam format presentasi (<code>.pptx</code> atau <code>.html</code>). Sehingga lebih fleksibel saat ingin pindah ke format lainnya.</li>
+</ul>
+</section>
+<section id="cons" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="cons"><span class="header-section-number">1.2</span> Cons</h3>
+<ul>
+<li>Saat kompilasi ke <code>.docx</code>, <em>caption</em> gambar dalam bentuk teks dan setiap angkanya bukan merupakan objek yang dapat diperbarui di Word.</li>
+<li>Harus membiasakan dengan <em>markdown</em> dan <a href="https://code.visualstudio.com/">VSCode</a> (sebagai editor).</li>
+<li>Harus menginstall <a href="https://quarto.org/">Quarto</a> di mesin.</li>
+<li>Caption hasil kompilasi / <em>render</em> akan rata kiri (<em>left alignment</em>). Untuk mengubahnya bisa memodifikasi style output dokumen.</li>
+</ul>
+</section>
+</section>
+<section id="persyaratan-persiapan" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="persyaratan-persiapan"><span class="header-section-number">2</span> Persyaratan / Persiapan</h2>
+<p>Berikut daftar persyaratan atau hal yang harus dipersiapkan sebelum melakukan tutorial ini.</p>
+<section id="program" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="program"><span class="header-section-number">2.1</span> Program</h3>
+<p>Berikut daftar program yang digunakan dan yang harus terinstall di mesin:</p>
+<ol type="1">
+<li>Windows 10/11 dengan powershell (clip.exe).</li>
+<li>Microsoft Excel (v2210).</li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code / VSCode</a>.</li>
+<li><a href="https://quarto.org/docs/get-started/">Quarto CLI</a>.</li>
+<li>Extension VS Code: <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a></li>
+</ol>
+<p>Alternatif Download (Untuk Lokal) bisa diakses di <code>XAGANT::TSM\_apps</code></p>
+<ol type="1">
+<li>VSCode: <code>VSCodeUserSetup-x64-1.73.1.exe</code></li>
+<li>Quarto: <code>quarto-1.2.269-win.msi</code></li>
+</ol>
+</section>
+<section id="nama-file-gambar" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="nama-file-gambar"><span class="header-section-number">2.2</span> Nama File (Gambar)</h3>
+<ul>
+<li>Informasi <em>heading</em> dan <em>caption</em> tersedia di nama gambar.</li>
+<li>Pola mengikuti <code>{Nama Proyek},{STG-XXY}_{KETERANGAN}__CS__Summation-str.jpg</code>. Koma (<code>,</code>) harus tersedia di nama file sebagai pemisah. <em>Double underscore</em> <code>__</code> sebelum <code>CS</code> digunakan sebagai pemisah antara Caption.</li>
+<li><em>Heading</em> menggunakan <code>{STG-XXY}</code>.</li>
+<li><em>Caption</em> menggunakan <code>{STG-XXY} {KETERANGAN}</code>.</li>
+</ul>
+</section>
+<section id="tips" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="tips"><span class="header-section-number">2.3</span> Tips</h3>
+<ul>
+<li>Mengubah karakter spesial nama gambar menjadi <code>-</code> atau <code>_</code>. Agar dapat dikompilasi menjadi format PDF. Gunakan regex <code>[^a-zA-Z 0-9-,_]</code>.</li>
+<li>Hindari menggunakan nama file yang memiliki spasi <code></code>. Ubah menjadi <code>_</code>. Agar tidak perlu mengubahnya menjadi <code>%20</code> (URL-encode).</li>
+</ul>
+</section>
+<section id="contoh-dokumen" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="contoh-dokumen"><span class="header-section-number">2.4</span> Contoh Dokumen</h3>
+<p>Contoh hasil akhir tutorial ini bisa dilihat di <code>STAGNATZ</code> dengan alamat <code>STAGNATZ::TSM Taruma\D\02 DEVELOPMENT\fiakodev\fiako-batchimage</code>.</p>
+</section>
+</section>
+<section id="tutorial" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="tutorial"><span class="header-section-number">3</span> Tutorial</h2>
+<p>Pada dasarnya pembuatan dokumen <code>.docx</code> ini memanfaatkan quarto untuk mengkonversi dokumen <em>markdown</em> menjadi format <code>.docx</code> via pandoc (<em>engine</em> yang digunakan oleh quarto). Jadi, langkah akhirnya adalah membuat dokumen <em>markdown</em> yang berisikan gambar menuju folder tersebut. Untuk gambar sendiri, di dokumen <em>markdown</em> menggunakan sintaks <code>![{CAPTION}]({ALAMAT-GAMBAR})</code>. Hanya saja untuk dokumen <em>markdown</em> quarto harus diberi label gambar <code>{#fig-label-gambar}</code>, sehingga sintaks lengkapnya adalah <code>![{CAPTION}]({ALAMAT-GAMBAR}){#fig-label-gambar}</code>.</p>
+<section id="sec-step-0" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="sec-step-0"><span class="header-section-number">3.1</span> Persiapan</h3>
+<ul>
+<li>Simpan gambar-gambar dalam satu folder. Dalam contoh ini gambar disimpan di folder <code>FOLDER-GAMBAR</code> (<a href="#fig-01-folder-image">Gambar&nbsp;1</a>).</li>
+</ul>
+<div id="fig-01-folder-image" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205140253.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;1: FOLDER GAMBAR</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sec-step-1" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="sec-step-1"><span class="header-section-number">3.2</span> Ambil Daftar Nama Gambar</h3>
+<ul>
+<li>Buka <code>Command Prompt (CMD)</code> atau <code>terminal</code> pada folder tersebut dengan cara mengetikkan <code>cmd</code> di <code>Windows Explorer</code> (atau cara lainnya) (<a href="#fig-02-cmd-address-bar">Gambar&nbsp;2</a>).</li>
+</ul>
+<div id="fig-02-cmd-address-bar" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205142951.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;2: Ketik <code>CMD</code> di <em>address bar</em></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Ketik perintah <code>dir *.jpg /b | clip</code> yang artinya melihat daftar file dengan <em>extension</em> <code>.jpg</code> dengan format sederhana <code>/b</code> (<a href="#fig-03-cmd-dir-b">Gambar&nbsp;3</a>) kemudian <code>|</code> hasilnya di simpan ke <em>clipboard</em> dengan <code>clip</code> (<a href="#fig-04-cmd-dir-b-clip">Gambar&nbsp;4</a>).</li>
+</ul>
+<div id="fig-03-cmd-dir-b" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205143320.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;3: Tampilan perintah <code>dir *.jpg /b</code></figcaption><p></p>
+</figure>
+</div>
+<div id="fig-04-cmd-dir-b-clip" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205143438.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4: Menyimpan perintah sebelumnya ke <em>clipboard</em></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sec-step-2" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="sec-step-2"><span class="header-section-number">3.3</span> Buat Dokumen Quarto</h3>
+<ul>
+<li>Buka folder <strong>satu</strong> level keluar dari folder gambar. Pada contoh ini, folder <code>tutorial</code> merupakan folder sebelum folder <code>FOLDER-GAMBAR</code>.</li>
+</ul>
+<div id="fig-05-folder-tutorial" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205143749.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;5: Folder <code>tutorial</code></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Buka VS Code dengan folder tersebut (<code>tutorial</code>). Membuka <em>context menu</em> (klik kanan) dan memilih <em>“Open with Code”</em> (<a href="#fig-06-open-with-code">Gambar&nbsp;6</a>).</li>
+</ul>
+<div id="fig-06-open-with-code" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205144134.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;6: Membuka folder kerja (<em>workspace</em>) dengan <em>“Open with Code”</em></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Setelah membuka VS Code, buat dokumen baru dengan extension <code>.qmd</code> (menggunakan <code>.md</code> juga bisa jika ingin sambil melihat <em>preview built-in</em> dari VS Code). Pada contoh ini dibuat dokumen <code>daftar-gambar.qmd</code>.</li>
+</ul>
+<div id="fig-07-create-qmd" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205144754.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;7: Membuat dokumen <code>.qmd</code></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="menggunakan-image-concatenator.xlsx" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="menggunakan-image-concatenator.xlsx"><span class="header-section-number">3.4</span> Menggunakan <code>image-concatenator.xlsx</code></h3>
+<ul>
+<li><p>Mengingat pada tahap <a href="#sec-step-1">Bab&nbsp;3.2</a>, kita menyimpan daftar gambar di <em>clipboard</em>. Buka dokumen <code>image-concatenator.xlsx</code>. (Ulangi tahap <a href="#sec-step-1">Bab&nbsp;3.2</a> jika <em>clipboard</em> tertimpa dengan yang lain).</p></li>
+<li><p>Pada <code>A2</code> <em>sheet</em> <code>INPUT</code> <em>paste</em> daftar gambar yang tersimpan di <em>clipboard</em> (<a href="#fig-08-paste-to-image-concatenator">Gambar&nbsp;8</a>).</p></li>
+</ul>
+<div id="fig-08-paste-to-image-concatenator" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205150054.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;8: <em>Paste</em> daftar gambar ke sel <code>A2</code></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Salin seluruh kolom <code>D:D</code> dari <code>image-concatenator</code> di sheets <code>OUTPUT_FINAL</code> (<a href="#fig-09-copy-output-final">Gambar&nbsp;9</a>). Pastikan <code>FOLDER IMAGES</code> sudah diatur dengan nama folder gambar (Pada contoh) dan ditambah karakter <code>/</code> diakhir folder.</li>
+</ul>
+<div id="fig-09-copy-output-final" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205153516.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;9: Salin seluruh kolom <code>D:D</code></figcaption><p></p>
+</figure>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Penting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pastikan nama folder tidak memiliki karakter spesial atau spasi. Jika karakter spesial tidak bisa dibaca langsung di markdown, ubah karakter tersebut dengan <em>URL-encode</em>.</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Catatan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pada <a href="#fig-09-copy-output-final">Gambar&nbsp;9</a> tertulis nama folder <code>FOLDER_IMAGES/</code> yang seharusnya <code>FOLDER-GAMBAR/</code> (sesuai dengan nama folder kumpulan gambar).</p>
+</div>
+</div>
+<ul>
+<li><em>Paste</em> hasil salin ke dokumen <code>.qmd</code> yang telah dibuat.</li>
+</ul>
+<div id="fig-10-paste-to-qmd" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205153817.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;10: <em>Paste</em> di dokumen <code>.qmd</code></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="kompilasi" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="kompilasi"><span class="header-section-number">3.5</span> Kompilasi</h3>
+<ul>
+<li><p>Sebelum mengkompilasi dokumen quarto <code>.qmd</code> ke word, sebaiknya ditambahkan informasi <em>YAML front matter</em> di dokumen. <em>Front matter</em> merupakan bagian teratas dari dokumen yang dicirikan dengan batas <code>---</code>. <em>Front matter</em> tersebut bisa menyimpan informasi mengenai dokumen dan konfigurasinya.</p></li>
+<li><p>Taruh <em>front matter</em> berikut ke paling atas dokumen. Contohnya seperti pada <a href="#fig-11-front-matter-qmd">Gambar&nbsp;11</a>.</p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Lampiran GAMBAR"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2022-12-05</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> TSM</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">docx</span><span class="kw">:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">toc-title</span><span class="kw">:</span><span class="at"> Daftar Isi</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">reference-doc</span><span class="kw">:</span><span class="at"> template-laporan.docx</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">fig-align</span><span class="kw">:</span><span class="at"> center</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">crossref</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">chapters</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span><span class="at"> _language.yml</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fig-11-front-matter-qmd" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205154959.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;11: <em>Front matter</em> dokumen</figcaption><p></p>
+</figure>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Penting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pastikan dokumen <code>template-laporan.docx</code> dan <code>_language.yml</code> dalam satu folder dengan dokumen <code>daftar-gambar.qmd</code>.</p>
+</div>
+</div>
+<ul>
+<li>Ubah konfigurasi sesuai kepentingan. Jika tidak ingin menampilkan <code>title</code>, <code>date</code>, atau <code>author</code>. Bisa mengubah baris tersebut menjadi komentar dengan menambah karakter <code>#</code> di depan baris. Seperti ini contohnya.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># title: "Lampiran GAMBAR"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># date: 2022-12-05</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># author: TSM</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Buka terminal di dalam vscode dengan menekan <code>Ctrl + `</code> (atau via <code>cmd</code> di <em>explorer</em> juga bisa). Hasilnya seperti pada <a href="#fig-12-terminal-cmd-in-vscode">Gambar&nbsp;12</a>.</li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Catatan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jika terminal dalam vscode belum diatur, maka terminal yang digunakan adalah <code>powershell</code>. Untuk mengaturnya menjadi <code>Command Prompt</code>, buka Command Palette (<code>Ctrl + Shift + P</code>), pilih <code>Terminal: Select Default Profile</code>, dan pilih <code>Command prompt</code>.</p>
+</div>
+</div>
+<div id="fig-12-terminal-cmd-in-vscode" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205160141.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;12: Pastikan terminal yang dibuka adalah <code>Command Prompt</code> atau <code>cmd</code></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Ketik perintah <code>quarto render daftar-gambar.qmd --to docx</code>. Perintah tersebut me-<em>render</em> / mengompilasi (<code>quarto render</code>) dokumen quarto (<code>daftar-gambar.qmd</code>) menjadi word (<code>--to docx</code>). Dokumen <em>output</em> akan dinamai sama dengan dokumen kuarto, sehingga <em>output</em>-nya <code>daftar-gambar.docx</code> (<a href="#fig-13-render-document">Gambar&nbsp;13</a>).</li>
+</ul>
+<div id="fig-13-render-document" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205160842.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;13: Hasil merender dokumen</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="selesai" class="level3" data-number="3.6">
+<h3 data-number="3.6" class="anchored" data-anchor-id="selesai"><span class="header-section-number">3.6</span> Selesai</h3>
+<ul>
+<li>Dokumen output yaitu <code>daftar-gambar.docx</code> dan dapat diakses di folder yang sama dengan dokumen quarto-nya (<a href="#fig-14-output-docx">Gambar&nbsp;14</a>).</li>
+</ul>
+<div id="fig-14-output-docx" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/ss-20221205161512.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;14: Hasil <em>render</em> dokumen quarto</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="adaptasi-penyesuaian" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="adaptasi-penyesuaian"><span class="header-section-number">4</span> Adaptasi / Penyesuaian</h2>
+<ul>
+<li>Penyesuaian bisa diatur dengan memodifikasi <code>image-concatenator.xlsx</code>.</li>
+</ul>
+<hr>
+<p>Jika terdapat pertanyaan, bisa langsung menghubungi saya.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/manual\.fiako\.engineering/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2022 PT. FIAKO ENJINIRING INDONESIA.</div>   
+    <div class="nav-footer-right">website by <strong>fiako</strong>dev, built with <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>
