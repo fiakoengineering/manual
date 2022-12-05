@@ -2,7 +2,6 @@ project:
   type: website
   preview: 
       port: 3637
-  
 
 execute: 
   freeze: auto
