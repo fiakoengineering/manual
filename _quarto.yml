@@ -36,43 +36,25 @@ website:
     logo: "fiakologo.png"
 
     left:
-      # - text: Home
-      #   href: index.qmd
-      - text: Web Apps
-        menu:
-          - text: Ringkasan
-            href: webapps/index.qmd
-          - text: "Aplikasi Pengolahan Data Hujan"
-            href: webapps/webapps-rainfall.qmd
-      - text: Tutorial Web Apps
-        menu:
-          - text: "`fiako-stations`"
-            href: tutorial/webapps/fiako-stations.qmd
-          - text: "`hidrokit-rainfall`"
-            href: tutorial/webapps/hidrokit-rainfall.qmd
-          - text: "`fiako-anfrek`"
-            href: tutorial/webapps/fiako-anfrek.qmd
+      - text: Home
+        href: index.qmd
       - text: Tutorial
-        menu:
-          - text: "INR1"
-            href: tutorial/editor/inr-1-batch-multiple-picture-into-word.md
+        href: tutorial/index.qmd
+      - text: Artikel
+        menu: 
+          - href: webapps/webapps-rainfall.qmd
 
     right:
-      - icon: github
-        href: https://github.com/fiakoenjiniring/manual
+      - text: Aplikasi Web
+        href: webapps/index.qmd
       - text: "`G2X`"
         menu:
           - text: "`G22.11.29`"
             href: greenhorn/G22-11-29.qmd
+      - icon: github
+        href: https://github.com/fiakoenjiniring/manual
 
   sidebar:
-    - id: side-home
-      style: floating
-      contents:
-        - section: Manual
-          contents:
-            - "test 1 2 3"
-
     - id: side-webapps
       style: floating
       search: true
@@ -108,7 +90,7 @@ website:
 
 format:
   html:
-    theme: yeti # spacelab, yeti, zephyr
+    theme: journal # spacelab, yeti, zephyr
     css: styles.css
     toc: true
     link-external-newwindow: true

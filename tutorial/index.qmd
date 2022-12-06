@@ -1,0 +1,22 @@
+---
+pagetitle: "Daftar Tutorial"
+sidebar: false
+toc: false
+---
+
+## Daftar Tutorial
+
+_ID_ | Nama Tutorial | Oleh
+:- | :- | :-: 
+`INR-1` | [Batch Multiple Picture Into Word via HTML](/tutorial/editor/inr-1-batch-multiple-picture-into-word.qmd) | INR
+`TSM-1` | [Batch Multiple Picture Into Word via Quarto](/tutorial/editor/tsm-1-batch-multiple-picture.qmd) | TSM
+
+: _Editor_
+
+_ID_ | Judul | Oleh
+:- | :- | :-:
+`fiako-stations` | [_Rainfall Stations Explorer_](/tutorial/webapps/fiako-stations.qmd) | TSM
+`hidrokit-rainfall` | [_Rainfall Data Explorer_](/tutorial/webapps/hidrokit-rainfall.qmd) | TSM
+`fiako-stations` | [_Frequency Analysis_](/tutorial/webapps/fiako-anfrek.qmd) | TSM
+
+: _Webapps_
