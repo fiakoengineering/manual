@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://manual.fiako.engineering/tutorial/editor/tsm-1-batch-multiple-picture.html</loc>
-    <lastmod>2022-12-05T09:26:49.673Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/editor/inr-1-batch-multiple-picture-into-word.html</loc>
-    <lastmod>2022-12-05T09:26:50.629Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-stations.html</loc>
-    <lastmod>2022-12-05T09:26:51.153Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/webapps/hidrokit-rainfall.html</loc>
-    <lastmod>2022-12-05T09:26:51.721Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-anfrek.html</loc>
-    <lastmod>2022-12-05T09:26:52.277Z</lastmod>
-  </url>
-  <url>
     <loc>https://manual.fiako.engineering/greenhorn/G22-11-29.html</loc>
-    <lastmod>2022-12-05T09:26:52.701Z</lastmod>
+    <lastmod>2022-12-06T07:20:45.721Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/index.html</loc>
-    <lastmod>2022-12-05T09:26:53.113Z</lastmod>
+    <lastmod>2022-12-06T07:20:46.501Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/webapps/index.html</loc>
-    <lastmod>2022-12-05T09:26:53.549Z</lastmod>
+    <lastmod>2022-12-06T07:20:46.965Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/webapps/webapps-rainfall.html</loc>
-    <lastmod>2022-12-05T09:27:00.385Z</lastmod>
+    <lastmod>2022-12-06T07:20:53.690Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/editor/inr-1-batch-multiple-picture-into-word.html</loc>
+    <lastmod>2022-12-06T07:20:54.242Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/editor/tsm-1-batch-multiple-picture.html</loc>
+    <lastmod>2022-12-06T07:20:54.818Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/index.html</loc>
+    <lastmod>2022-12-06T07:20:55.238Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/webapps/hidrokit-rainfall.html</loc>
+    <lastmod>2022-12-06T07:20:55.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-anfrek.html</loc>
+    <lastmod>2022-12-06T07:20:56.214Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-stations.html</loc>
+    <lastmod>2022-12-06T07:20:56.686Z</lastmod>
   </url>
 </urlset>
