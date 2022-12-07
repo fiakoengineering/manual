@@ -8,6 +8,13 @@ page-layout: full
 sidebar: false
 ---
 
+::: {.text-center .fs-4 .fw-bold}
+
+Situs tersedia juga di `STAGNATZ::_INSITE::fiako-manual`
+
+:::
+
+
 ::: {.callout-important appearance="default" icon="true"}
 ## Dalam Pengembangan (_Work in Progress_)
 Situs ini digunakan sebagai dokumentasi/manual oleh FIAKO Engineering untuk panduan internal yang dapat digunakan oleh publik/eksternal. Manual dapat berupa penggunaan aplikasi, instalasi, _style guide_. 
