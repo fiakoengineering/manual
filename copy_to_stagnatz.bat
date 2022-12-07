@@ -1,1 +1,1 @@
-quarto render && xcopy _site\ "Z:\_INSITE\fiako-manual\" /s
+quarto render && xcopy _site\ "Z:\_INSITE\fiako-manual\" /S /Y
