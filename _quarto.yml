@@ -74,6 +74,8 @@ website:
             - text: "`fiako-anfrek`"
               href: tutorial/webapps/fiako-anfrek.qmd
         - "---"
+    - id: side-hidrokit
+      contents: hidrokit/blog/*
           
 
   ## SIDEBAR
@@ -95,6 +97,8 @@ format:
     toc: true
     link-external-newwindow: true
     language: language_id.yml
+    lang: id
+    date-format: full
 
 
 
