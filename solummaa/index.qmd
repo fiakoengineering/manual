@@ -1,0 +1,39 @@
+---
+pagetitle: "fiako-solummaa"
+format: html
+toc: false
+html-math-method: mathjax
+link-external-newwindow: true
+page-layout: full
+sidebar: false
+---
+
+
+::: {.text-center}
+<img src="assets/logo-by-midjourney.png" alt="fiako-solummaa logo" width="300" class="border border-dark rounded">
+:::
+
+::: {.text-center}
+# FIAKO-SOLUMMAA
+
+`fiako-solummaa` merupakan kumpulan proyek penelitian dan pengembangan oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering). _"Solummmaa"_ diambil dari _"solum"_ berarti _soil_ (tanah) di bahasa Latin dan _"maa"_ berarti _earth_ (bumi) di bahasa Finlandia.
+
+:::
+
+
+
+::: {.text-center}
+
+[<button type="button" class="btn btn-primary m-1">GPCONVERTER</button>](/solummaa/gpconverter.qmd)
+[<button type="button" class="btn btn-info m-1">GPTREADER.XL</button>](/solummaa/gptreader-xl.qmd)
+
+:::
+
+::: {.text-center .callout-tip appearance="minimal"}
+## **STATUS PENGEMBANGAN**
+
+---
+
+Saat ini `fiako-solummaa` masih dalam status pengembangan. Proyek yang telah dipublikasikan antara lain: fiako-gpconverter, fiako-gptreader.xl.
+
+:::

@@ -1,0 +1,54 @@
+---
+pagetitle: "fiako-solummaa | gptreader.xl"
+title: "`fiako-gptreader.xl`"
+subtitle: Berkas membaca _records_ dari `fiako-gpconverter`
+sidebar: false
+toc: true
+---
+
+::: {.text-center}
+
+<img src="assets/logo-by-midjourney-3.png" alt="fiako-gptreader.xl logo" width="300" class="border border-dark rounded">
+
+# FIAKO-GPTREADER.XL {.unlisted}
+
+[<button type="button" class="btn btn-light m-1">FIAKO-SOLUMMAA</button>](/solummaa/index.qmd)
+[<button type="button" class="btn btn-primary m-1">LEMBAR KERJA (v1.0.0)</button>](https://github.com/fiakoenjiniring/openxl/raw/main/solummaa/gptreader.xl/fiako-gptreader-v1-0-0.xlsx)
+[<button type="button" class="btn btn-info m-1">GITHUB</button>](https://github.com/fiakoenjiniring/openxl/tree/main/solummaa)
+
+:::
+
+:::{.callout-warning .text-center appearance="minimal"} 
+Halaman ini masih dalam pengembangan
+:::
+
+## INFO
+
+`fiako-gptreader.xl` merupakan lembar kerja _Microsoft Excel_ yang digunakan setelah memperoleh berkas `.csv` dari aplikasi [`fiako-gpconverter`](https://fiako-gpconverter.herokuapp.com). Lembar kerja ini digunakan sebagai _starter project_, sehingga pengembangan lebih lanjut dan modifikasi sangat disarankan untuk menyesuaikan dengan pengguna dan keperluannya. 
+
+## FITUR `GPTREADER.XL`
+
+`fiako-gptreader.xl` memiliki beberapa fitur yang dapat digunakan untuk mengeksplorasi data _summary_ hasil GROUP.
+
+1. Mengeksplorasi tabel _reactions_, _displacements_, _lateral_ yang tersedia di `.gp*t` (_summary_).
+2. Eksplorasi tabel setiap _load case_ pada _sheet_ `LOAD_VIEWER`. 
+3. Eksplorasi tabel setiap _pile_ pada _sheet_ `PILE_VIEWER`. 
+4. Melihat rangkuman untuk setiap _load case_ dan _pile_ untuk variabel _reactions_ atau _displacements_. Rangkuman menunjukkan nilai minimum dan maksimum setiap _load case_ dan setiap kategori. Rangkuman dapat dilihat di `SUMMARY`.
+5. Evaluasi setiap variabel tunggal seperti pada `SUMMARY` di `SINGLE_SUMMARY`.
+
+## PENGGUNAAN
+
+Berikut langkah penggunaan / pengaturan `fiako-gptreader.xl`:
+
+1. Setelah mengunduh berkas CSV dari [`fiako-gpconverter`](/solummaa/gpconverter.qmd), salin seluruh isi CSV (dibuka dengan Excel) ke lembar kerja `gptreader.xl` di _sheet_ **`INPUT`**.
+2. _Sheet_ yang berwarna _Orange_ / Jingga (**`PROJECT`, `INPUT`, `GPT_INFO`**) merupakan _sheet_ **pengaturan**. _Sheet_ tersebut harus diatur sebelum melakukan eksplorasi data.
+    - **`PROJECT`** dapat diisi dengan informasi proyek atau metadata lainnya. 
+    - **`INPUT`** diisi dengan data yang diperoleh dari `fiako-gpconverter`. Pastikan untuk mengosongkan seluruh sheet sebelum menyalin data dari CSV ke lembar kerja agar menghindari baris yang ditinggal oleh data sebelumnya.
+    - **`GPT_INFO`** terdapat bagian `SECTION SEPARATOR` yang berfungsi untuk menentukan kategori-kategori yang terdapat di dataset. Jumlah maksimum kategori yang dapat digunakan adalah **empat** (4). Untuk menggunakan kategori yang kurang dari empat, dapat mengisi _load case_ terakhir pada _section_ jumlah kategori yang digunakan. 
+3. _Sheet_ yang berwarna Biru / _Blue_ (**`LOAD_VIEWER`, `PILE_VIEWER`, `SUMMARY`, `SINGLE_SUMMARY`**) merupakan _sheet_ **eksplorasi**. _Sheet ini memiliki _cell_ input yang diatur untuk mengubah data yang ditampilkan. 
+    - **`LOAD_VIEWER`**: Lembar untuk mengeksplorasi setiap tabel yang tersedia dalam data untuk **setiap _load case_**. Klik panah atas dan bawah untuk mengatur _load case_ yang ingin ditampilkan. Ubah nilai `TABLE` untuk melihat tabel lainnya. Nilai `TABLE` antara lain: `Reduction Factor`, `GLOBAL`, `LOCAL`, `LATERAL MINIMUM`, dan `LATERAL MAKSIMUM`. 
+    - **`PILE_VIEWER`**: Lembar untuk mengeksplorasi semua variabel dalam data untuk **setiap _pile_**. Navigasi dan nilai `TABLE` sama dengan opsi di **`LOAD_VIEWER`**. 
+    - **`SUMMARY`**: Lembar untuk mengeksplorasi ringkasan dataset. Pada lembar ini terdapat dua bagian, yaitu bagian atas yang berupa ringkasan minimum dan maksimum, dan bagian bawah yang berupa nilai setiap _load case_ dan _pile_ untuk variabel GLOBAL/LOCAL yang dipilih. Visualisasi merah menandakan nilai minimum sedangkan hijau untuk nilai maksimum. Setiap indikator maksimum dan minimum pada bagian atas, dibagi berdasarkan kategorinya. 
+    - **`SINGLE_SUMMARY`**: Merupakan lembar penyederhanaan dari **`SUMMARY`** yang mengubah tabel melebar menjadi memanjang ke bawah. Pada lembar ini hanya fokus variabel yang difokuskan saja. 
+4. Untuk _sheet_ yang berawalan garis bawah (`_`) seperti **`_INFO`** dan **`_LICENSE`** **jangan dihapus** dan cukup disembunyikan saja. Hal ini memudahkan untuk mengetahui versi `fiako-gptreader.xl` yang digunakan dalam lembar kerjanya. 
+

@@ -1,0 +1,38 @@
+---
+pagetitle: "fiako-solummaa | gpconverter"
+title: "`fiako-gpconverter`"
+subtitle: Aplikasi web mengubah berkas `.gp*t` menjadi `.csv`
+sidebar: false
+toc: true
+---
+
+::: {.text-center}
+
+<img src="assets/logo-by-midjourney-2.png" alt="fiako-gpconverter logo" width="300" class="border border-dark rounded">
+
+# FIAKO-GPCONVERTER {.unlisted}
+
+[<button type="button" class="btn btn-light m-1">FIAKO-SOLUMMAA</button>](/solummaa/index.qmd)
+[<button type="button" class="btn btn-primary m-1">APLIKASI WEB</button>](https://fiako-gpconverter.herokuapp.com)
+[<button type="button" class="btn btn-info m-1">GITHUB</button>](https://github.com/fiakoenjiniring/gpconverter)
+
+:::
+
+:::{.callout-warning .text-center appearance="minimal"} 
+Halaman ini masih dalam pengembangan
+:::
+
+## INFO
+
+`fiako-gpconverter` merupakan aplikasi web yang mengkonversi keluaran _summary_ aplikasi GROUP (Ensoft) yang berekstensi `.gp*t` (dengan versi yang diuji 8, 11, dan 12) menjadi terstruktur berupa CSV atau JSON. Aplikasi dapat diakses di [fiako-gpconverter.herokuapp.com](https://fiako-gpconverter.herokuapp.com).
+
+## PENGGUNAAN
+
+Penggunaan aplikasi `fiako-gpconverter` cukup sederhana yaitu:
+
+1. Setelah melakukan analisis/perhitungan menggunakan software GROUP, buka folder kerja yang menyimpan berkas `.gp*t`. Untuk versi 2022, ekstensi yang digunakan yaitu `.gp12t`. 
+2. Kompres berkas tunggal `.gp*t` ke `.zip`. Berkas `.zip` harus hanya memiliki satu berkas berekstensi `.gp*t`.
+3. Buka aplikasi [fiako-gpconverter](https://fiako-gpconverter.herokuapp.com) dan _upload_ berkas `.zip` yang telah disiapkan.
+4. Setelah diproses akan muncul informasi umum mengenai data yang telah di-_upload_.
+5. Unduh data dalam bentuk CSV dengan memilih "_Download Records (csv)_" yang dapat digunakan sebagai input `fiako-gptreader.xl`. 
+
