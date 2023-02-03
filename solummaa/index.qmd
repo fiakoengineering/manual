@@ -2,7 +2,6 @@
 pagetitle: "fiako-solummaa"
 format: html
 toc: false
-html-math-method: mathjax
 link-external-newwindow: true
 page-layout: full
 sidebar: false
@@ -16,7 +15,7 @@ sidebar: false
 ::: {.text-center}
 # FIAKO-SOLUMMAA
 
-`fiako-solummaa` merupakan kumpulan proyek penelitian dan pengembangan oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering). _"Solummmaa"_ diambil dari _"solum"_ berarti _soil_ (tanah) di bahasa Latin dan _"maa"_ berarti _earth_ (bumi) di bahasa Finlandia.
+`fiako-solummaa` merupakan kumpulan proyek penelitian dan pengembangan oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering) yang fokus pada bidang geoteknik. _"Solummmaa"_ diambil dari kata _"solum"_ berarti _soil_ (tanah) di bahasa Latin dan kata _"maa"_ berarti _earth_ (bumi) di bahasa Finlandia.
 
 :::
 
