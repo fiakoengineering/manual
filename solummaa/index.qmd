@@ -9,17 +9,24 @@ sidebar: false
 
 
 ::: {.text-center}
-<img src="assets/logo-by-midjourney.png" alt="fiako-solummaa logo" width="300" class="border border-dark rounded">
+<img src="assets/fiako-solummaa.png" alt="fiako-solummaa logo" width="300" class="border border-dark rounded">
+:::
+
+::: {.text-center .mb-4}
+
+![](https://img.shields.io/github/v/release/fiakoenjiniring/feidlambda?color=informational&label=feidlambda&labelColor=blueviolet&logo=Microsoft%20Excel&style=flat-square){height=25}
+![](https://img.shields.io/github/release-date/fiakoenjiniring/feidlambda?color=black&label=release%20date&labelColor=brown&logo=GitHub&logoColor=white){height=25}
+![](https://img.shields.io/github/actions/workflow/status/fiakoenjiniring/feidlambda/publish.yml?branch=main&label=quarto&labelColor=informational&logo=GitHub%20Actions&logoColor=white){height=25}
+![](https://img.shields.io/github/license/fiakoenjiniring/feidlambda?color=yellow&labelColor=brown&label=license&){height=25}
+
 :::
 
 ::: {.text-center}
 # FIAKO-SOLUMMAA
 
-`fiako-solummaa` merupakan kumpulan proyek penelitian dan pengembangan oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering) yang fokus pada bidang geoteknik. _"Solummmaa"_ diambil dari kata _"solum"_ berarti _soil_ (tanah) di bahasa Latin dan kata _"maa"_ berarti _earth_ (bumi) di bahasa Finlandia.
+`fiako-solummaa` merupakan kumpulan proyek penelitian dan pengembangan oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering) yang fokus pada bidang geoteknik. _"Solummaa"_ diambil dari kata _"solum"_ berarti _soil_ (tanah) di bahasa Latin dan kata _"maa"_ berarti _earth_ (bumi) di bahasa Finlandia.
 
 :::
-
-
 
 ::: {.text-center}
 
@@ -33,6 +40,6 @@ sidebar: false
 
 ---
 
-Saat ini `fiako-solummaa` masih dalam status pengembangan. Proyek yang telah dipublikasikan antara lain: fiako-gpconverter, fiako-gptreader.xl.
+Saat ini `fiako-solummaa` masih dalam status pengembangan. Proyek yang telah dipublikasikan antara lain: [fiako-gpconverter](/solummaa/gpconverter.qmd), [fiako-gptreader.xl](/solummaa/gptreader-xl.qmd).
 
 :::
