@@ -7,7 +7,7 @@ execute:
   freeze: auto
 
 website:
-  title: "FIAKO Manual"
+  title: "fiako-manual | Dokumentasi & Manual oleh FIAKO Engineering"
   description: "Dokumentasi Manual oleh FIAKO Engineering"
   
   site-url: https://manual.fiako.engineering
@@ -21,8 +21,8 @@ website:
   page-navigation: true
 
   # FOR TWITTER / open-graph
-  image: "fiakologo.png"
-  favicon: "fiakologo.png"
+  image: /assets/logo-fiako-manual.png
+  favicon: /assets/logo-fiako-manual.png
 
   ## NAVIGATION BAR
   navbar:
@@ -33,11 +33,15 @@ website:
 
     collapse: true
 
-    logo: "fiakologo.png"
+    logo: /assets/logo-fiako-manual.png
 
     left:
       - text: Home
         href: index.qmd
+      - text: HIDROKIT
+        href: https://hidrokit.github.io/hidrokit
+      - text: SOLUMMAA
+        href: solummaa/index.qmd
       - text: Tutorial
         href: tutorial/index.qmd
       - text: Artikel
@@ -79,10 +83,9 @@ website:
   ## SIDEBAR
   page-footer:
     right: >-
-      website by **fiako**dev, 
-      built with [Quarto](https://quarto.org/).
+      [open-source](https://github.com/fiakoenjiniring/manual) website by [**fiako**dev](https://dev.fiako.engineering)
     left: >-
-      &copy; 2022 PT. FIAKO ENJINIRING INDONESIA.
+      &copy; 2022-2023 PT. FIAKO ENJINIRING INDONESIA.
     # center:
     #   - "About"
 
@@ -94,7 +97,7 @@ format:
     css: styles.css
     toc: true
     link-external-newwindow: true
-    language: language_id.yml
+    # language: language_id.yml
 
 
 

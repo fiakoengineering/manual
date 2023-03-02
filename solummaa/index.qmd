@@ -33,7 +33,7 @@ sidebar: false
 :::
 
 ::: {.text-center}
-## PROJECTS
+## SOLUMMAA-PROJECTS
 :::
 
 ::: {.text-center}

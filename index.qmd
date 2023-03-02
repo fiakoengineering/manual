@@ -1,5 +1,5 @@
 ---
-pagetitle: "fiako-manual | Dokumentasi/Manual FIAKO Engineering"
+# pagetitle: "fiako-manual | Dokumentasi & Manual oleh FIAKO Engineering"
 # title: Dokumentasi/Manual
 format: html
 toc: false
