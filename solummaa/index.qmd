@@ -14,22 +14,25 @@ sidebar: false
 
 ::: {.text-center .mb-4}
 # FIAKO-SOLUMMAA
-##### Technology for Geotechnical Engineering by FIAKO Engineering
+##### Technology for Geotechnical Engineering by FIAKO Engineering & **fiako**dev
 :::
 
 ::: {.text-center}
 
 ![](https://img.shields.io/github/license/fiakoenjiniring/feidlambda?color=yellow&labelColor=brown&label=license&){height=25}
 
-![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square){height=25}
-![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release%20gpconverter&labelColor=brown&logo=Plotly&logoColor=white){height=25}
-![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gptreader%2Exl&labelColor=blueviolet&logo=Microsoft%20Excel&style=flat-square){height=25}
-![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release%20gptreader%2Exl&labelColor=brown&logo=Microsoft%20Excel&logoColor=white){height=25}
+:::
+
+::: {.text-center .px-5}
+
+Project & Version | Release Date | Status 
+:-: | :-: | :-:
+![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release%20gpconverter&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-development-blueviolet)
+![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release%20gptreader%2Exl&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
 :::
 
 ::: {.text-center}
-`fiako-solummaa` merupakan kumpulan proyek penelitian dan pengembangan teknologi oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering) yang fokus pada bidang geoteknik.
-
+**`fiako-solummaa`** merupakan kumpulan proyek penelitian dan pengembangan teknologi di bidang geoteknik oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering).
 :::
 
 ::: {.text-center}
@@ -43,13 +46,9 @@ sidebar: false
 
 :::
 
----
-
-::: {.text-center .callout-tip appearance="minimal"}
-## **STATUS PENGEMBANGAN**
+1. [**fiako-gpconverter**](/solummaa/gpconverter.qmd) | _Web Application_: Aplikasi web untuk mengkonversi data teks _output_ program GROUP menjadi data terstruktur berupa _Comma-Separated Value_ (CSV) atau JSON. 
+2. [**fiako-gptreader.xl**](/solummaa/gptreader-xl.qmd) | _Excel Worksheet_: Lembar kerja Microsoft Excel untuk membaca dan mengeksplorasi data CSV dari aplikasi [fiako-gpconverter](/solummaa/gpconverter.qmd).
 
 ---
 
-Saat ini `fiako-solummaa` masih dalam status pengembangan. Proyek yang telah dipublikasikan antara lain: [fiako-gpconverter](/solummaa/gpconverter.qmd), [fiako-gptreader.xl](/solummaa/gptreader-xl.qmd).
 
-:::

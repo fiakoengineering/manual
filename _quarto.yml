@@ -78,6 +78,22 @@ website:
             - text: "`fiako-anfrek`"
               href: tutorial/webapps/fiako-anfrek.qmd
         - "---"
+    - id: side-solummaa
+      style: floating
+      search: true
+      border: true
+      collapse-level: 1
+      pinned: true
+      contents:
+        - text: "FIAKO-SOLUMMAA"
+          href: solummaa/index.qmd
+        - "---"    
+        - section: SOLUMMAA PROJECTS
+          contents:
+            - text: GPCONVERTER
+              href: solummaa/gpconverter.qmd
+            - text: GPTREADER.XL
+              href: solummaa/gptreader-xl.qmd
           
 
   ## SIDEBAR
