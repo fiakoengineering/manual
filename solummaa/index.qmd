@@ -19,7 +19,7 @@ sidebar: false
 
 ::: {.text-center}
 
-![](https://img.shields.io/github/license/fiakoenjiniring/feidlambda?color=yellow&labelColor=brown&label=license&){height=25}
+![](https://img.shields.io/badge/license-MIT-yellow)
 
 :::
 
@@ -27,8 +27,8 @@ sidebar: false
 
 Project & Version | Release Date | Status 
 :-: | :-: | :-:
-![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release%20gpconverter&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-development-blueviolet)
-![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release%20gptreader%2Exl&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-development-blueviolet)
+![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
 :::
 
 ::: {.text-center}

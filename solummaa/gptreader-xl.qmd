@@ -1,8 +1,8 @@
 ---
-pagetitle: "fiako-solummaa | gptreader.xl"
-title: "`fiako-gptreader.xl`"
-subtitle: Berkas membaca _records_ dari `fiako-gpconverter`
-sidebar: false
+pagetitle: "fiako-gptreader.xl | eksplorasi output GROUP menggunakan Microsoft Excel"
+# title: "`fiako-gptreader.xl`"
+# subtitle: Berkas membaca _records_ dari `fiako-gpconverter`
+sidebar: side-solummaa
 toc: true
 ---
 
@@ -11,22 +11,28 @@ toc: true
 <img src="assets/logo-by-midjourney-3.png" alt="fiako-gptreader.xl logo" width="300" class="border border-dark rounded">
 
 # FIAKO-GPTREADER.XL {.unlisted}
+##### Explore _summary_ GROUP with Excel Workbook {.unlisted}
 
-[<button type="button" class="btn btn-light m-1">FIAKO-SOLUMMAA</button>](/solummaa/index.qmd)
-[<button type="button" class="btn btn-primary m-1">LEMBAR KERJA (v1.0.0)</button>](https://github.com/fiakoenjiniring/openxl/raw/main/solummaa/gptreader.xl/fiako-gptreader-v1-0-0.xlsx)
-[<button type="button" class="btn btn-info m-1">GITHUB</button>](https://github.com/fiakoenjiniring/openxl/tree/main/solummaa)
+![](https://img.shields.io/github/license/fiakoenjiniring/gptreader.xl)
+![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) 
+![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white)
+
+[<button type="button" class="btn btn-primary m-1">LEMBAR KERJA/WORKBOOK</button>](https://github.com/fiakoenjiniring/gptreader.xl/releases/download/v1.0.0/fiako-gptreader-v1-0-0.xlsx)
+[<button type="button" class="btn btn-info m-1">GITHUB</button>](https://github.com/fiakoenjiniring/gptreader.xl)
 
 :::
 
-:::{.callout-warning .text-center appearance="minimal"} 
+<!-- :::{.callout-warning .text-center appearance="minimal"} 
 Halaman ini masih dalam pengembangan
-:::
+::: -->
 
-## INFO
+## INFO {#sec-info}
 
-`fiako-gptreader.xl` merupakan lembar kerja _Microsoft Excel_ yang digunakan setelah memperoleh berkas `.csv` dari aplikasi [`fiako-gpconverter`](https://fiako-gpconverter.herokuapp.com). Lembar kerja ini digunakan sebagai _starter project_, sehingga pengembangan lebih lanjut dan modifikasi sangat disarankan untuk menyesuaikan dengan pengguna dan keperluannya. 
+**`fiako-gptreader.xl`** merupakan lembar kerja _(workbook)_ _Microsoft Excel_ yang digunakan untuk mengeksplorasi data terstruktur _summary_ GROUP yang diperoleh dari aplikasi [fiako-gpconverter](https://manual.fiako.engineering/solummaa/fiako-gpconverter.html). Lembar kerja ini dapat digunakan sebagai _starter template_. 
 
-## FITUR `GPTREADER.XL`
+Aplikasi ini diuji dengan versi `fiako-gpconverter` versi `v0.2.0`.
+
+## FITUR {#sec-features}
 
 `fiako-gptreader.xl` memiliki beberapa fitur yang dapat digunakan untuk mengeksplorasi data _summary_ hasil GROUP.
 
@@ -36,7 +42,9 @@ Halaman ini masih dalam pengembangan
 4. Melihat rangkuman untuk setiap _load case_ dan _pile_ untuk variabel _reactions_ atau _displacements_. Rangkuman menunjukkan nilai minimum dan maksimum setiap _load case_ dan setiap kategori. Rangkuman dapat dilihat di `SUMMARY`.
 5. Evaluasi setiap variabel tunggal seperti pada `SUMMARY` di `SINGLE_SUMMARY`.
 
-## PENGGUNAAN
+## PERSIAPAN {#sec-preparation}
+
+## PENGGUNAAN {#sec-tutorial}
 
 Berikut langkah penggunaan / pengaturan `fiako-gptreader.xl`:
 

@@ -40,12 +40,13 @@ website:
         href: index.qmd
       - text: "**FIAKODEV-PROJECTS**"
         menu:
+          - "---"
           - text: "_Water Resource Engineering_"
           - text: __FIAKO-HIDROKIT__
             href: "/#"
           - text: _Rainfall Web Apps_
             href: webapps/webapps-rainfall.qmd
-          - text: "---"
+          - "---"
           - text: "_Geotechnical Engineering_"
           - text: __FIAKO-SOLUMMAA__
             href: solummaa/index.qmd
@@ -53,19 +54,23 @@ website:
             href: solummaa/gpconverter.qmd
           - text: "fiako-gptreader.xl"
             href: solummaa/gptreader-xl.qmd
-          - text: "---"
+          - "---"
+          - text: "_Structural Engineering_"
+          - text: "_planning_"
+          - "---"
           - text: "_General_"
           - text: "_In Development_"
-          - text: "---"
+          - "---"
       - text: GREENHORN
         menu:
+          - "---"
           - text: "_G22_"
           - text: "`G22.11.29` - __Mermaid.js & Interpolasi Linear__"
             href: greenhorn/G22-11-29.qmd
-          - text: "---"
+          - "---"
           - text: "_G23_"
           - text: "_In Development_"
-          - text: "---"
+          - "---"
 
     right:
       - icon: github
@@ -107,6 +112,11 @@ website:
           contents:
             - href: solummaa/gpconverter.qmd
             - href: solummaa/gptreader-xl.qmd
+        - "---"    
+        - section: _OTHER PROJECTS_
+          contents:
+            - text: "FIAKO-HIDROKIT"
+              href: https://hidrokit.github.io
         - "---"    
 
   ## SIDEBAR
