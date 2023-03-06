@@ -38,10 +38,20 @@ website:
     left:
       - text: Home
         href: index.qmd
-      - text: HIDROKIT
-        href: https://hidrokit.github.io/hidrokit
-      - text: SOLUMMAA
-        href: solummaa/index.qmd
+      - text: "**FIAKODEV-PROJECTS**"
+        menu:
+          - text: "_Water Resource Engineering_"
+          - text: __FIAKO-HIDROKIT__
+            href: "/#"
+          - text: "---"
+          - text: "_Geotechnical Engineering_"
+          - text: __FIAKO-SOLUMMAA__
+            href: solummaa/index.qmd
+          - text: "fiako-gpconverter"
+            href: solummaa/gpconverter.qmd
+          - text: "fiako-gptreader.xl"
+            href: solummaa/gptreader-xl.qmd
+          - text: "---"
       - text: Tutorial
         href: tutorial/index.qmd
       - text: Artikel
@@ -85,6 +95,7 @@ website:
       collapse-level: 1
       pinned: true
       contents:
+        - text: "<b>FIAKODEV-PROJECTS</b>"
         - text: "FIAKO-SOLUMMAA"
           href: solummaa/index.qmd
         - "---"    
