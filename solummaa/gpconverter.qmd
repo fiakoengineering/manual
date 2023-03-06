@@ -3,6 +3,7 @@ pagetitle: "fiako-gpconverter | konversi output GROUP menjadi data terstruktur"
 # title: "FIAKO-GPCONVERTER"
 # subtitle: Aplikasi web yang mengubah _output_ GROUP menjadi data terstruktur
 sidebar: side-solummaa
+css: gptreader-xl.css
 toc: true
 ---
 
@@ -55,7 +56,7 @@ Penggunaan aplikasi `fiako-gpconverter` cukup sederhana yaitu:
 4. Tunggu proses pengolahan. Jika telah diproses maka akan muncul informasi data _summary_.
 5. _Download_ data terstruktur dengan mengklik "_Download Records (csv)_". Tunggu prosesnya sampai berkas `.csv` terunduh. 
 
-::: {.column-body-outset-right}
+::: {.column-body-outset}
 
 ![Penggunaan aplikasi **`fiako-gpconverter`** .](assets/gpconverter/gpconverter-app-01.gif){#fig-app-01}
 

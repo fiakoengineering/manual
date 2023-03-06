@@ -4,6 +4,7 @@ pagetitle: "fiako-gptreader.xl | eksplorasi output GROUP menggunakan Microsoft E
 # subtitle: Berkas membaca _records_ dari `fiako-gpconverter`
 sidebar: side-solummaa
 toc: true
+toc-depth: 4
 css: gptreader-xl.css
 ---
 
@@ -18,7 +19,7 @@ css: gptreader-xl.css
 ![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) 
 ![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white)
 
-[<button type="button" class="btn btn-primary m-1">LEMBAR KERJA/WORKBOOK</button>](https://github.com/fiakoenjiniring/gptreader.xl/releases/download/v1.0.0/fiako-gptreader-v1-0-0.xlsx)
+[<button type="button" class="btn btn-primary m-1">LEMBAR KERJA/WORKBOOK</button>](https://github.com/fiakoenjiniring/gptreader.xl/releases/latest/download/fiako-gptreader.xlsx)
 [<button type="button" class="btn btn-info m-1">GITHUB</button>](https://github.com/fiakoenjiniring/gptreader.xl)
 
 :::
@@ -50,7 +51,7 @@ Berikut yang harus dipersiapkan sebelum menggunakan lembar kerja `fiako-gptreade
 1. Gunakan aplikasi web `fiako-gpconverter` untuk mengubah _file_ `.gp*t` menjadi `.csv` (_Download Records (CSV)_). 
 2. Pastikan dapat membuka dokumen `.csv` menggunakan Microsoft Excel. Jika teratur otomatis, dapat dibuka melalui FILE > OPEN > berkas `.csv` (ubah tipe file ke untuk menampilkannya). Seperti yang ditampilkan di @fig-pre-01.
 
-::: {.column-body-outset-right}
+::: {.column-body}
 
 ![Membuka berkas `.csv` dengan Microsoft Excel.](assets/gptreader-xl/gptreader-xl-pre-01.gif){#fig-pre-01}
 
@@ -66,13 +67,34 @@ Sebelum mengeksplorasi data _summary_ dari GROUP, perlu pengaturan berupa memind
 
 1. Pastikan langkah [persiapan](#sec-preparation) sudah dilakukan dan berhasil.
 2. Buka berkas `.csv` menggunakan Microsoft Excel (lihat langkah [persiapan](#sec-preparation)).
-3. Buka lembar kerja `fiako-gptreader-v*.xlsx`. 
+3. Buka lembar kerja `fiako-gptreader.xlsx`. 
 4. Pertama kalinya membuka lembar kerja `fiako-gptreader`, terdapat beberapa _sheet_ / lembar yang perlu diketahui.
-    - Lembar/_sheet_ berwarna [KUNING/_YELLOW_]{.sheet-info} seperti lembar [_INFO]{.sheet-info} dan [_LICENSE]{.sheet-info} merupakan **lembar informasi**. Lembar informasi dapat disembunyikan dan selalu ditandai dengan garis bawah (`_`) didepan nama lembar. 
+    - Lembar/_sheet_ berwarna [KUNING/_YELLOW_]{.sheet-info} seperti lembar [_INFO]{.sheet-info} dan [_LICENSE]{.sheet-info} merupakan **lembar informasi**. Lembar informasi dapat disembunyikan dan selalu ditandai dengan garis bawah (`_`) didepan nama lembar. Disarankan untuk tidak menghapus lembar tersebut untuk memastikan versi lembar kerja yang digunakan dan peringatan lisensinya. 
     - Lembar/_sheet_ berwarna [COKLAT/_BROWN_]{.sheet-input} seperti lembar [PROJECT]{.sheet-input}, [INPUT]{.sheet-input}, dan [GPT_INFO]{.sheet-input} merupakan **lembar masukan/_input_**.
     - Lembar/_sheet_ berwarna [BIRU/_DARK BLUE_]{.sheet-explore} seperti lembar [LOAD_VIEWER]{.sheet-explore}, [PILE_VIEWER]{.sheet-explore}, [SUMMARY]{.sheet-explore}, dan [SINGLE_SUMMARY]{.sheet-explore} merupakan **lembar eksplorasi**. 
 
 Pada bagian pengaturan akan fokus pada lembar _input_ yaitu lembar [PROJECT]{.sheet-input}, [INPUT]{.sheet-input}, dan [GPT_INFO]{.sheet-input}.
+
+#### Lembar [PROJECT]{.sheet-input}
+
+Lembar [PROJECT]{.sheet-input} ditujukan untuk tempat menyimpan informasi _metadata_ mengenai proyek/data yang akan dieksplorasi. Lembar [PROJECT]{.sheet-input} tidak terhubung dengan kalkulasi ataupun eksplorasi sama sekali, lembar ini hanya ditujukan sebagai catatan tambahan terkait data yang digunakan. 
+
+#### Lembar [INPUT]{.sheet-input}
+
+Lembar [INPUT]{.sheet-input} merupakan **lembar penting** karena data hasil dari konversi [fiako-gpconverter] akan disimpan pada lembar ini. Berikut langkah-langkah dalam mengisi lembar ini dengan data hasil konversi [fiako-gpconverter]:
+
+1. Setelah terbukanya berkas `.csv` menggunakan Microsoft Excel. Blok seluruh data menggunakan `Ctrl+A` kemudian salin/_copy_ dengan _shortcut_ `Ctrl+C`. 
+2. Buka lembar kerja `fiako-gptreader.xl`, dan buka lembar [INPUT]{.sheet-input}.
+3. Pastikan lembar [INPUT]{.sheet-input} tidak terisi sama data sekali. Bisa dilakukan pembersihan dengan buka lembar [INPUT]{.sheet-input}, blok seluruh sel menggunakan `Ctrl+A`, kemudian hapus dengan tombol `Delete` atau pilih opsi `HOME > EDITING > Clear > Clear All`.
+4. _Paste_ data yang telah disalin ke lembar [INPUT]{.sheet-input}. Pastikan data dimulai dari `A1` (pojok kiri atas). 
+
+Setelah menyalin data ke lembar kerja `fiako-gptreader.xl` pada lembar [INPUT]{.sheet-input}, data sudah siap dieksplorasi. Akan tetapi terdapat tahap tambahan di lembar [GPT_INFO]{.sheet-input} yaitu menentukan batasan/kelompok setiap _Load Case_. 
+
+#### Lembar [GPT_INFO]{.sheet-input}
+
+
+
+[fiako-gpconverter]: /solummaa/gpconverter.qmd
 
 ### Eksplorasi {#sec-tutorial-exploration}
 
@@ -91,3 +113,8 @@ Berikut langkah penggunaan / pengaturan `fiako-gptreader.xl`:
     - **`SINGLE_SUMMARY`**: Merupakan lembar penyederhanaan dari **`SUMMARY`** yang mengubah tabel melebar menjadi memanjang ke bawah. Pada lembar ini hanya fokus variabel yang difokuskan saja. 
 4. Untuk _sheet_ yang berawalan garis bawah (`_`) seperti **`_INFO`** dan **`_LICENSE`** **jangan dihapus** dan cukup disembunyikan saja. Hal ini memudahkan untuk mengetahui versi `fiako-gptreader.xl` yang digunakan dalam lembar kerjanya. 
 
+## Changelog {#sec-changelog}
+
+- v1.0.0 (2023-03-06)
+    - `fiako-gptreader.xl` memiliki _repository_ terpisah dari [fiakoenjiniring/openxl](https://github.com/fiakoenjiniring/openxl). Dan untuk lembar kerja berikut lainnya akan dialihkan ke _repository_ yang terpisah.
+    - 
