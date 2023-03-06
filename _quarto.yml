@@ -43,6 +43,8 @@ website:
           - text: "_Water Resource Engineering_"
           - text: __FIAKO-HIDROKIT__
             href: "/#"
+          - text: _Rainfall Web Apps_
+            href: webapps/webapps-rainfall.qmd
           - text: "---"
           - text: "_Geotechnical Engineering_"
           - text: __FIAKO-SOLUMMAA__
@@ -52,19 +54,20 @@ website:
           - text: "fiako-gptreader.xl"
             href: solummaa/gptreader-xl.qmd
           - text: "---"
-      - text: Tutorial
-        href: tutorial/index.qmd
-      - text: Artikel
-        menu: 
-          - href: webapps/webapps-rainfall.qmd
+          - text: "_General_"
+          - text: "_In Development_"
+          - text: "---"
+      - text: GREENHORN
+        menu:
+          - text: "_G22_"
+          - text: "`G22.11.29` - __Mermaid.js & Interpolasi Linear__"
+            href: greenhorn/G22-11-29.qmd
+          - text: "---"
+          - text: "_G23_"
+          - text: "_In Development_"
+          - text: "---"
 
     right:
-      - text: Aplikasi Web
-        href: webapps/index.qmd
-      - text: "`G2X`"
-        menu:
-          - text: "`G22.11.29`"
-            href: greenhorn/G22-11-29.qmd
       - icon: github
         href: https://github.com/fiakoenjiniring/manual
 
