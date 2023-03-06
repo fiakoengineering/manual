@@ -50,9 +50,9 @@ Berikut yang harus dipersiapkan sebelum menggunakan lembar kerja `fiako-gptreade
 1. Gunakan aplikasi web `fiako-gpconverter` untuk mengubah _file_ `.gp*t` menjadi `.csv` (_Download Records (CSV)_). 
 2. Pastikan dapat membuka dokumen `.csv` menggunakan Microsoft Excel. Jika teratur otomatis, dapat dibuka melalui FILE > OPEN > berkas `.csv` (ubah tipe file ke untuk menampilkannya). Seperti yang ditampilkan di @fig-pre-01.
 
-::: {.column-page }
+::: {.column-body-outset-right}
 
-![Membuka berkas `.csv` dengan Microsoft Excel.](assets/gptreader-xl/gptreader-xl-pre-01.gif){#fig-pre-01 height=550}
+![Membuka berkas `.csv` dengan Microsoft Excel.](assets/gptreader-xl/gptreader-xl-pre-01.gif){#fig-pre-01}
 
 :::
 

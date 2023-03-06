@@ -39,7 +39,7 @@ Berikut yang harus dipersiapkan sebelum menggunakan aplikasi `fiako-gpconverter`
 1. Setelah melakukan analisis/perhitungan menggunakan _software_ GROUP, simpan hasil _summary_ berbentuk `.gp*t`. 
 2. Kompres SATU (1) berkas `.gp*t` ke dalam bentuk `.zip`. Kompresi dapat dilakukan dengan menggunakan kompresi dari Windows 11 (Klik kanan > _Compress to ZIP File_) atau aplikasi lainnya seperti 7-zip atau WinRAR. Perlu diingat, dalam satu `.zip` hanya terisi 1 berkas yaitu _file_ `.gp*t`. 
 
-![Kompresi berkas `.gp*t` ke dalam bentuk `.zip` di Windows 11.](assets/gpconverter/gpconverter-pre-01.gif){#fig-pre-01 height=600}
+![Kompresi berkas `.gp*t` ke dalam bentuk `.zip` di Windows 11.](assets/gpconverter/gpconverter-pre-01.gif){#fig-pre-01}
 
 3. Berkas `.zip` sudah siap untuk dimasukkan ke aplikasi `fiako-gpconverter`. 
 
@@ -55,9 +55,9 @@ Penggunaan aplikasi `fiako-gpconverter` cukup sederhana yaitu:
 4. Tunggu proses pengolahan. Jika telah diproses maka akan muncul informasi data _summary_.
 5. _Download_ data terstruktur dengan mengklik "_Download Records (csv)_". Tunggu prosesnya sampai berkas `.csv` terunduh. 
 
-::: {.column-page}
+::: {.column-body-outset-right}
 
-![Penggunaan aplikasi **`fiako-gpconverter`** .](assets/gpconverter/gpconverter-app-01.gif){#fig-app-01 height=550}
+![Penggunaan aplikasi **`fiako-gpconverter`** .](assets/gpconverter/gpconverter-app-01.gif){#fig-app-01}
 
 :::
 
