@@ -98,16 +98,16 @@ website:
       collapse-level: 1
       pinned: true
       contents:
-        - text: "<b>FIAKODEV-PROJECTS</b>"
+        - "<H3>FIAKODEV-PROJECTS: SOLUMMAA</H3>"
+        - "---"
         - text: "FIAKO-SOLUMMAA"
           href: solummaa/index.qmd
         - "---"    
-        - section: SOLUMMAA PROJECTS
+        - section: __SOLUMMAA PROJECTS__
           contents:
-            - text: GPCONVERTER
-              href: solummaa/gpconverter.qmd
-            - text: GPTREADER.XL
-              href: solummaa/gptreader-xl.qmd
+            - href: solummaa/gpconverter.qmd
+            - href: solummaa/gptreader-xl.qmd
+        - "---"    
           
 
   ## SIDEBAR
