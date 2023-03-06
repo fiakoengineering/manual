@@ -4,6 +4,7 @@ pagetitle: "fiako-gptreader.xl | eksplorasi output GROUP menggunakan Microsoft E
 # subtitle: Berkas membaca _records_ dari `fiako-gpconverter`
 sidebar: side-solummaa
 toc: true
+css: gptreader-xl.css
 ---
 
 ::: {.text-center}
@@ -30,21 +31,51 @@ Halaman ini masih dalam pengembangan
 
 **`fiako-gptreader.xl`** merupakan lembar kerja _(workbook)_ _Microsoft Excel_ yang digunakan untuk mengeksplorasi data terstruktur _summary_ GROUP yang diperoleh dari aplikasi [fiako-gpconverter](https://manual.fiako.engineering/solummaa/fiako-gpconverter.html). Lembar kerja ini dapat digunakan sebagai _starter template_. 
 
-Aplikasi ini diuji dengan versi `fiako-gpconverter` versi `v0.2.0`.
+Lembar kerja `fiako-gptreader.xl` hanya bisa dibuka dan dijalankan menggunakan **Microsoft Excel 365** (v2301+) karena menggunakan fitur _dynamic array_ dan `LAMBDA`. Aplikasi ini diuji dengan menggunakan keluaran `.csv` aplikasi `fiako-gpconverter` versi `v0.2.0`.
 
 ## FITUR {#sec-features}
 
-`fiako-gptreader.xl` memiliki beberapa fitur yang dapat digunakan untuk mengeksplorasi data _summary_ hasil GROUP.
+Berikut fitur yang tersedia di lembar kerja `fiako-gptreader.xl`:
 
 1. Mengeksplorasi tabel _reactions_, _displacements_, _lateral_ yang tersedia di `.gp*t` (_summary_).
 2. Eksplorasi tabel setiap _load case_ pada _sheet_ `LOAD_VIEWER`. 
 3. Eksplorasi tabel setiap _pile_ pada _sheet_ `PILE_VIEWER`. 
-4. Melihat rangkuman untuk setiap _load case_ dan _pile_ untuk variabel _reactions_ atau _displacements_. Rangkuman menunjukkan nilai minimum dan maksimum setiap _load case_ dan setiap kategori. Rangkuman dapat dilihat di `SUMMARY`.
-5. Evaluasi setiap variabel tunggal seperti pada `SUMMARY` di `SINGLE_SUMMARY`.
+4. Melihat rangkuman untuk setiap _load case_ dan _pile_ untuk variabel _reactions_ atau _displacements_. Rangkuman menunjukkan nilai minimum dan maksimum setiap _load case_ dan setiap kategori. Rangkuman dapat dilihat di lembar `SUMMARY`.
+5. Evaluasi setiap variabel tunggal di lembar `SINGLE_SUMMARY`.
 
 ## PERSIAPAN {#sec-preparation}
 
+Berikut yang harus dipersiapkan sebelum menggunakan lembar kerja `fiako-gptreader.xl`:
+
+1. Gunakan aplikasi web `fiako-gpconverter` untuk mengubah _file_ `.gp*t` menjadi `.csv` (_Download Records (CSV)_). 
+2. Pastikan dapat membuka dokumen `.csv` menggunakan Microsoft Excel. Jika teratur otomatis, dapat dibuka melalui FILE > OPEN > berkas `.csv` (ubah tipe file ke untuk menampilkannya). Seperti yang ditampilkan di @fig-pre-01.
+
+::: {.column-page }
+
+![Membuka berkas `.csv` dengan Microsoft Excel.](assets/gptreader-xl/gptreader-xl-pre-01.gif){#fig-pre-01 height=550}
+
+:::
+
 ## PENGGUNAAN {#sec-tutorial}
+
+Penggunaan lembar kerja `fiako-gptreader.xl` dibagi menjadi dua bagian yaitu [pengaturan]( #sec-tutorial-setup) dan [eksplorasi](#sec-tutorial-exploration).
+
+### Pengaturan {#sec-tutorial-setup}
+
+Sebelum mengeksplorasi data _summary_ dari GROUP, perlu pengaturan berupa memindahkan informasi dari `.csv` ke lembar kerja `fiako-gptreader.xl`. Berikut langkah yang perlu dilakukan dalam tahap pengaturan.
+
+1. Pastikan langkah [persiapan](#sec-preparation) sudah dilakukan dan berhasil.
+2. Buka berkas `.csv` menggunakan Microsoft Excel (lihat langkah [persiapan](#sec-preparation)).
+3. Buka lembar kerja `fiako-gptreader-v*.xlsx`. 
+4. Pertama kalinya membuka lembar kerja `fiako-gptreader`, terdapat beberapa _sheet_ / lembar yang perlu diketahui.
+    - Lembar/_sheet_ berwarna [KUNING/_YELLOW_]{.sheet-info} seperti lembar [_INFO]{.sheet-info} dan [_LICENSE]{.sheet-info} merupakan **lembar informasi**. Lembar informasi dapat disembunyikan dan selalu ditandai dengan garis bawah (`_`) didepan nama lembar. 
+    - Lembar/_sheet_ berwarna [COKLAT/_BROWN_]{.sheet-input} seperti lembar [PROJECT]{.sheet-input}, [INPUT]{.sheet-input}, dan [GPT_INFO]{.sheet-input} merupakan **lembar masukan/_input_**.
+    - Lembar/_sheet_ berwarna [BIRU/_DARK BLUE_]{.sheet-explore} seperti lembar [LOAD_VIEWER]{.sheet-explore}, [PILE_VIEWER]{.sheet-explore}, [SUMMARY]{.sheet-explore}, dan [SINGLE_SUMMARY]{.sheet-explore} merupakan **lembar eksplorasi**. 
+
+Pada bagian pengaturan akan fokus pada lembar _input_ yaitu lembar [PROJECT]{.sheet-input}, [INPUT]{.sheet-input}, dan [GPT_INFO]{.sheet-input}.
+
+### Eksplorasi {#sec-tutorial-exploration}
+
 
 Berikut langkah penggunaan / pengaturan `fiako-gptreader.xl`:
 

@@ -1,0 +1,26 @@
+.sheet, .sheet-info, .sheet-input, .sheet-explore {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 2px solid black;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: small;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  
+.sheet-info {
+    background-color: #ffff00;
+}
+  
+.sheet-input {
+    background-color: #c65911;
+    color: white;
+}
+  
+.sheet-explore {
+    background-color: #0070c0;
+    color: white;
+}
+  
