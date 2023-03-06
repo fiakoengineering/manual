@@ -9,7 +9,20 @@
     margin-left: 2px;
     margin-right: 2px;
     vertical-align: middle;
-  }
+    box-shadow: 2px 2px 4px #888888;
+}
+
+.cell-input, .cell-view {
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 1px dashed;
+    border-radius: 10%;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: small;
+    vertical-align: middle;
+    font-style: italic;
+    font-weight: bold;
+}
   
 .sheet-info {
     background-color: #ffff00;
@@ -23,6 +36,16 @@
 .sheet-explore {
     background-color: #0070c0;
     color: white;
+}
+
+.cell-input {
+    background-color: #00b0f0;
+    color: black;
+}
+
+.cell-view {
+    background-color: #ffff00;
+    color: black;
 }
   
 section[id^="sec-"] img {

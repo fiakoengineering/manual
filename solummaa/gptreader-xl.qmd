@@ -88,13 +88,47 @@ Lembar [INPUT]{.sheet-input} merupakan **lembar penting** karena data hasil dari
 3. Pastikan lembar [INPUT]{.sheet-input} tidak terisi sama data sekali. Bisa dilakukan pembersihan dengan buka lembar [INPUT]{.sheet-input}, blok seluruh sel menggunakan `Ctrl+A`, kemudian hapus dengan tombol `Delete` atau pilih opsi `HOME > EDITING > Clear > Clear All`.
 4. _Paste_ data yang telah disalin ke lembar [INPUT]{.sheet-input}. Pastikan data dimulai dari `A1` (pojok kiri atas). 
 
+#TODO: TAMBAH GAMBAR
+
 Setelah menyalin data ke lembar kerja `fiako-gptreader.xl` pada lembar [INPUT]{.sheet-input}, data sudah siap dieksplorasi. Akan tetapi terdapat tahap tambahan di lembar [GPT_INFO]{.sheet-input} yaitu menentukan batasan/kelompok setiap _Load Case_. 
+
+[fiako-gpconverter]: /solummaa/gpconverter.qmd
 
 #### Lembar [GPT_INFO]{.sheet-input}
 
+Setelah memasukkan data di lembar [INPUT]{.sheet-input}, pada lembar [GPT_INFO]{.sheet-input} terdapat informasi umum mengenai data tersebut. Pada lembar [GPT_INFO]{.sheet-input} memiliki informasi jumlah _load case_ dan _pile_ beserta informasi _case name_. Tugas yang harus dilakukan pada lembar [GPT_INFO]{.sheet-input} yaitu menentukan kelompok/_section_ untuk memisahkan kelompok _load case_-nya. 
 
+::: {.callout-tip}
+## Arti Warna Sel/_Cell_
 
-[fiako-gpconverter]: /solummaa/gpconverter.qmd
+Sebelumnya, terdapat informasi mengenai arti dari warna sel/_cell_. Warna sel/_cell_ berwarna [BIRU/_Turquoise_]{.cell-input} berarti **sel input** yang dapat diubah nilainya, sedangkan yang berwarna [KUNING/_Yellow_]{.cell-view} berarti **sel info** yang tidak perlu diubah nilainya dan berubah sendirinya berdasarkan sel input. 
+
+:::
+
+Di lembar [GPT_INFO]{.sheet-input} pada bagian **SECTION SEPARATOR**, terdapat nilai yang perlu kita masukkan yaitu baris akhir setiap pemisahnya di [SECTION x-END]{.cell-input}. Jika terdapat TIGA ($3$) kelompok dengan kelompok $1$ dari _Load case_ $1-12$, kelompok $2$ dari _load case_ $13-20$, dan kelompok $3$ dari _load case_ $21-28$. Maka, yang perlu di-_input_ hanya _load case_ terakhir untuk setiap kelompoknya pada sel [SECTION x-END]{.cell-input} seperti pada @tbl-section-separator. Jika hanya terdapat 2 kelompok, [SECTION-3 END]{.cell-input} dapat diisi dengan _load case_ terakhir kelompok ke-$2$. 
+
+::: {.column-body .px-3} 
+
+Section | LOAD CASE
+:-: | :-:
+[SECTION 1-START]{.cell-view} | $1$
+[SECTION 1-END]{.cell-input} | $12$
+[SECTION 2-START]{.cell-view} | $13$
+[SECTION 2-END]{.cell-input} | $20$
+[SECTION 3-START]{.cell-view} | $21$
+[SECTION 3-END]{.cell-input} | $28$
+[SECTION 4-START]{.cell-view} | $29$
+[SECTION 4-END]{.cell-view} | $28$
+
+: Mengisi nilai pada **SECTION SEPARATOR** {#tbl-section-separator}
+
+:::
+
+Setelah mengisi informasi kelompok _LOAD CASE_, maka dapat dilihat perbedaan warna untuk setiap kelompok _LOAD CASE_.
+
+#TODO: GAMBAR
+
+Dengan terisinya informasi di lembar [INPUT]{.sheet-input} dan [GPT_INFO]{.sheet-input}, maka data sudah siap untuk dieksplorasi lebih lanjut. 
 
 ### Eksplorasi {#sec-tutorial-exploration}
 
