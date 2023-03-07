@@ -61,3 +61,11 @@ section h4 {
 section[id^="sec-"] p, li {
     text-align: justify;
 }
+
+section  h4::after {
+    content: "";
+    display: block;
+    border-top: 1px dashed #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

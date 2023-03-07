@@ -128,9 +128,29 @@ Setelah mengisi informasi kelompok _LOAD CASE_, maka dapat dilihat perbedaan war
 
 #TODO: GAMBAR
 
-Dengan terisinya informasi di lembar [INPUT]{.sheet-input} dan [GPT_INFO]{.sheet-input}, maka data sudah siap untuk dieksplorasi lebih lanjut. 
+Dengan terisinya data dan informasi di lembar [INPUT]{.sheet-input} dan [GPT_INFO]{.sheet-input}, maka data sudah siap untuk dieksplorasi lebih lanjut. 
 
 ### Eksplorasi {#sec-tutorial-exploration}
+
+Di `fiako-gptreader.xl` terdapat EMPAT ($4$) lembar eksplorasi yaitu [LOAD_VIEWER]{.sheet-explore}, [PILE_VIEWER]{.sheet-explore}, [SUMMARY]{.sheet-explore}, [SINGLE_SUMMARY]{.sheet-explore}. 
+
+#### Lembar [LOAD_VIEWER]{.sheet-explore}
+
+Lembar [LOAD_VIEWER]{.sheet-explore} menampilkan seluruh nilai/variabel/informasi dalam bentuk tabel untuk **setiap _LOAD CASE_**. Di lembar ini terdapat 2 sel input yaitu [TABLE]{.cell-input} dan [LOAD CASE]{.cell-input}. Sel [TABLE]{.cell-input} menentukan tabel mana yang ingin ditampilkan, sel [TABLE]{.cell-input} dapat diisi dengan `Reduction Factor`, `GLOBAL`, `LOCAL`, `LATERAL MINIMUM`, `LATERAL MAXIMUM`. Sedangkan sel [LOAD CASE]{.cell-input} dapat diisi dengan nomor _LOAD CASE_ yang ingin ditampilkan. Eksplorasi di [LOAD_VIEWER]{.sheet-explore} tidak jauh berbeda ketika mengeksplorasi langsung dengan membuka berkas _summary_ `.gp*t`. 
+
+#TODO: Gambar demonstrasi Lembar LOAD VIEWER
+
+#### Lembar [PILE_VIEWER]{.sheet-explore}
+
+Lembar [PILE_VIEWER]{.sheet-explore}
+
+#### Lembar [SUMMARY]{.sheet-explore}
+
+Lembar [SUMMARY]{.sheet-explore}
+
+#### Lembar [SINGLE_SUMMARY]{.sheet-explore}
+
+Lembar [SINGLE_SUMMARY]{.sheet-explore}
 
 
 Berikut langkah penggunaan / pengaturan `fiako-gptreader.xl`:
@@ -147,8 +167,9 @@ Berikut langkah penggunaan / pengaturan `fiako-gptreader.xl`:
     - **`SINGLE_SUMMARY`**: Merupakan lembar penyederhanaan dari **`SUMMARY`** yang mengubah tabel melebar menjadi memanjang ke bawah. Pada lembar ini hanya fokus variabel yang difokuskan saja. 
 4. Untuk _sheet_ yang berawalan garis bawah (`_`) seperti **`_INFO`** dan **`_LICENSE`** **jangan dihapus** dan cukup disembunyikan saja. Hal ini memudahkan untuk mengetahui versi `fiako-gptreader.xl` yang digunakan dalam lembar kerjanya. 
 
-## Changelog {#sec-changelog}
+## CHANGELOG {#sec-changelog}
 
+- v1.0.1 (2023-03-07)
+    - Memperbaiki informasi yang tersedia di [_INFO]{.sheet-info} dan [_LICENSE]{.sheet-info}.
 - v1.0.0 (2023-03-06)
     - `fiako-gptreader.xl` memiliki _repository_ terpisah dari [fiakoenjiniring/openxl](https://github.com/fiakoenjiniring/openxl). Dan untuk lembar kerja berikut lainnya akan dialihkan ke _repository_ yang terpisah.
-    - 
