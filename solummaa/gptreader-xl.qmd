@@ -4,7 +4,7 @@ pagetitle: "fiako-gptreader.xl | eksplorasi output GROUP menggunakan Microsoft E
 # subtitle: Berkas membaca _records_ dari `fiako-gpconverter`
 sidebar: side-solummaa
 toc: true
-toc-depth: 4
+toc-depth: 5
 css: gptreader-xl.css
 ---
 
@@ -138,15 +138,48 @@ Di `fiako-gptreader.xl` terdapat EMPAT ($4$) lembar eksplorasi yaitu [LOAD_VIEWE
 
 Lembar [LOAD_VIEWER]{.sheet-explore} menampilkan seluruh nilai/variabel/informasi dalam bentuk tabel untuk **setiap _LOAD CASE_**. Di lembar ini terdapat 2 sel input yaitu [TABLE]{.cell-input} dan [LOAD CASE]{.cell-input}. Sel [TABLE]{.cell-input} menentukan tabel mana yang ingin ditampilkan, sel [TABLE]{.cell-input} dapat diisi dengan `Reduction Factor`, `GLOBAL`, `LOCAL`, `LATERAL MINIMUM`, `LATERAL MAXIMUM`. Sedangkan sel [LOAD CASE]{.cell-input} dapat diisi dengan nomor _LOAD CASE_ yang ingin ditampilkan. Eksplorasi di [LOAD_VIEWER]{.sheet-explore} tidak jauh berbeda ketika mengeksplorasi langsung dengan membuka berkas _summary_ `.gp*t`. 
 
-#TODO: Gambar demonstrasi Lembar LOAD VIEWER
+#TODO: Gambar demonstrasi Lembar [LOAD VIEWER]{.sheet-explore}
 
 #### Lembar [PILE_VIEWER]{.sheet-explore}
 
-Lembar [PILE_VIEWER]{.sheet-explore}
+Berbeda degan [LOAD_VIEWER]{.sheet-explore}, pada lembar [PILE_VIEWER]{.sheet-explore} tabel ditampilkan untuk **setiap _PILE_**. Terdapat dua sel input yaitu [TABLE]{.cell-input} dan [LOAD CASE]{.cell-input}. Sel input [TABLE]{.cell-input} pilihannya sama dengan lembar [LOAD_VIEWER]{.sheet-explore}. Tabel ini tidak tersedia di berkas asli `.gp*t` dan merupakan hasil aggregasi `fiako-gptreader.xl`. 
+
+Di lembar [PILE_VIEWER]{.sheet-explore}, terdapat visual tambahan yang membedakan setiap kelompok _LOAD CASE_. Pembagian kelompok ini berdasarkan lembar [INPUT]{.sheet-input}. 
+
+#TODO: Gambar demonstrasi lembar [PILE VIEWER]{.sheet-explore}
 
 #### Lembar [SUMMARY]{.sheet-explore}
 
-Lembar [SUMMARY]{.sheet-explore}
+Lembar [SUMMARY]{.sheet-explore} merupakan lembar yang meringkas seluruh informasi yang ada di dataset untuk `GLOBAL` dan `LOCAL`. Lembar ini cukup banyak informasi yang diperoleh dan cukup padat indikator visualnya, sehingga dalam memulai memahami lembar ini diharapkan tidak terburu-buru. Di lembar [SUMMARY]{.sheet-explore} hanya mengeksplorasi data `GLOBAL` dan `LOCAL` dengan $12$ variabel yang ditinjau yaitu `DISPLACEMENT - X/Y/Z`, `ROTATION - X/Y/Z`, `FORCE - X/Y/Z`, `MOMENT - X/Y/Z` dengan diberi `COLUMN ID` dari $1-12$. 
+
+##### Komponen [SUMMARY]{.sheet-explore}
+
+Saat melihat Lembar [SUMMARY]{.sheet-explore} terdapat tiga bagian/komponen utama yaitu **INFO/INPUT**, **CROSSTAB TABLE**, dan **SUMMARY MIN/MAX** yang diilustrasikan di @fig-summary-component. 
+
+![Komponen utama pada lembar [SUMMARY]{.sheet-explore}](assets/gptreader-xl/gptreader-xl-summary-01.png){#fig-summary-component}
+
+Berikut penjelasan untuk masing-masing komponen:
+
+1. Bagian pertama yaitu **INFO/INPUT** menunjukkan informasi mengenai data yang sedang ditampilkan dan sel input yaitu [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input}.
+2. Bagian kedua yaitu **CROSSTAB TABLE** merupakan tabel hasil dari _cross tabulation_ yang menampilkan nilai variabel dari [COLUMN ID]{.cell-input} bersamaan dengan setiap _PILE_ dan setiap _LOAD CASE_. Dengan kolom menunjukkan setiap _LOAD CASE_ dan baris menunjukkan setiap _PILE_. 
+3. Bagian ketiga yaitu **SUMMARY MIN/MAX** adalah tabel ringkasan dari **CROSSTAB TABLE** yang memisahkan nilai minimum dan maksimum untuk setiap _LOAD CASE_ dan mengambil informasi variabel lain berdasarkan _PILE_ maksimum/minimum. Jika tidak perlu informasi variabel lainnya, bisa melihat lembar [SINGLE_SUMMARY]{.sheet-explore}. 
+
+Alur pembacaan sebenarnya dari **INFO** > **CROSSTAB TABLE** > **SUMMARY MIN/MAX**, tapi dari layout di @fig-summary-component polanya berbeda yaitu **INFO** > **SUMMARY MIN/MAX** > **CROSSTAB TABLE**. Hal tersebut dikarenakan baris untuk **CROSSTAB TABLE** (jumlah _PILE_) bersifat dinamis (artinya bisa berubah-ubah sesuai input) sedangkan jumlah baris untuk **SUMMARY MIN/MAX** sudah diketahui. 
+
+<details>
+<summary>Penjelasan Tiap Komponen</summary>
+
+###### Komponen **INFO**
+
+Pada komponen **INFO** terdapat dua sel input yaitu [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input}. Sel [AXIS]{.cell-input} atau sumbu yang digunakan diisi dengan nilai _GLOBAL_ atau _LOCAL_. Sedangkan [COLUMN ID]{.cell-input} atau variabel yang ditinjau dapat diisi dengan angka dari $1$ sampai $12$. Arti angka $1$ sampai $12$ yaitu `DISPLACEMENT - X/Y/Z`, `ROTATION - X/Y/Z`, `FORCE - X/Y/Z`, `MOMENT - X/Y/Z` secara berurutan untuk setiap sumbunya. 
+
+#TODO: Demo komponen INFO.
+
+###### Komponen **CROSSTAB TABLE**
+
+Sel input [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input} menentukan _cross tabulation_ yang akan ditampilkan di **CROSSTAB TABLE**.
+
+</details>
 
 #### Lembar [SINGLE_SUMMARY]{.sheet-explore}
 
