@@ -1,4 +1,6 @@
-.sheet-info, .sheet-input, .sheet-explore {
+.sheet-info,
+.sheet-input,
+.sheet-explore {
     padding-left: 4px;
     padding-right: 4px;
     padding-top: 2px;
@@ -12,7 +14,24 @@
     box-shadow: 2px 2px 4px #888888;
 }
 
-.cell-input, .cell-view {
+
+.sheet-info {
+    background-color: #ffff00;
+}
+
+.sheet-input {
+    background-color: #c65911;
+    color: white;
+}
+
+.sheet-explore {
+    background-color: #0070c0;
+    color: white;
+}
+
+
+.cell-input,
+.cell-view {
     padding-left: 6px;
     padding-right: 6px;
     border: 1px dashed;
@@ -22,20 +41,6 @@
     vertical-align: middle;
     font-style: italic;
     font-weight: bold;
-}
-  
-.sheet-info {
-    background-color: #ffff00;
-}
-  
-.sheet-input {
-    background-color: #c65911;
-    color: white;
-}
-  
-.sheet-explore {
-    background-color: #0070c0;
-    color: white;
 }
 
 .cell-input {
@@ -47,7 +52,80 @@
     background-color: #ffff00;
     color: black;
 }
-  
+
+.cell-minimum,
+.cell-maximum {
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 1px solid;
+    border-radius: 10%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    vertical-align: middle;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.cell-minimum {
+    background-color: #ff0000;
+    color: white;
+}
+
+.cell-maximum {
+    background-color: #548235;
+    color: white;
+}
+
+.sum-column-selected {
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 1px solid black;
+    font-size: small;
+    vertical-align: middle;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #1f4e78;
+    color: white;
+    margin-right: 0px;
+}
+
+.sum-values-selected {
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 1px solid black;
+    font-size: small;
+    vertical-align: middle;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #9bc2e6;
+    color: black;
+}
+
+.sum-min-selected {
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 1px dashed black;
+    font-size: small;
+    vertical-align: middle;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #ff8f8f;
+    color: black;
+}
+
+.sum-max-selected {
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 1px dashed black;
+    font-size: small;
+    vertical-align: middle;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #a9d08e;
+    color: black;
+}
+
+
 section[id^="sec-"] img {
     border-radius: 1%;
     border: 1px solid;
@@ -58,11 +136,12 @@ section h4 {
     text-align: center;
 }
 
-section[id^="sec-"] p, li {
+section[id^="sec-"] p,
+li {
     text-align: justify;
 }
 
-section  h4::after {
+section h4::after {
     content: "";
     display: block;
     border-top: 1px dashed #ccc;
