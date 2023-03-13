@@ -26,10 +26,11 @@ anchor-sections: false
 
 ::: {.text-center .px-5}
 
-Project & Version | Release Date | Status 
-:-: | :-: | :-:
-![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-development-blueviolet)
-![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+Type | Project & Version | Release Date | Status 
+:-: | :-: | :-: | :-:
+_Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+_Excel Workbook_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+_Web Application_ | `fiako-gptreader` | - | ![](https://img.shields.io/badge/status-development-blueviolet)
 :::
 
 ::: {.text-center}
@@ -48,7 +49,7 @@ Project & Version | Release Date | Status
 :::
 
 1. [**fiako-gpconverter**](/solummaa/gpconverter.qmd) | _Web Application_: Aplikasi web untuk mengkonversi data teks _output_ program GROUP menjadi data terstruktur berupa _Comma-Separated Value_ (CSV) atau JSON. 
-2. [**fiako-gptreader.xl**](/solummaa/gptreader-xl.qmd) | _Excel Worksheet_: Lembar kerja Microsoft Excel untuk membaca dan mengeksplorasi data CSV dari aplikasi [fiako-gpconverter](/solummaa/gpconverter.qmd).
+2. [**fiako-gptreader.xl**](/solummaa/gptreader-xl.qmd) | _Excel Workbook_: Lembar kerja Microsoft Excel untuk membaca dan mengeksplorasi data CSV dari aplikasi [fiako-gpconverter](/solummaa/gpconverter.qmd).
 
 ---
 
