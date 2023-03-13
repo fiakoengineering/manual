@@ -83,12 +83,18 @@ Lembar [PROJECT]{.sheet-input} ditujukan untuk tempat menyimpan informasi _metad
 
 Lembar [INPUT]{.sheet-input} merupakan **lembar penting** karena data hasil dari konversi [fiako-gpconverter] akan disimpan pada lembar ini. Berikut langkah-langkah dalam mengisi lembar ini dengan data hasil konversi [fiako-gpconverter]:
 
-1. Setelah terbukanya berkas `.csv` menggunakan Microsoft Excel. Blok seluruh data menggunakan `Ctrl+A` kemudian salin/_copy_ dengan _shortcut_ `Ctrl+C`. 
-2. Buka lembar kerja `fiako-gptreader.xl`, dan buka lembar [INPUT]{.sheet-input}.
-3. Pastikan lembar [INPUT]{.sheet-input} tidak terisi sama data sekali. Bisa dilakukan pembersihan dengan buka lembar [INPUT]{.sheet-input}, blok seluruh sel menggunakan `Ctrl+A`, kemudian hapus dengan tombol `Delete` atau pilih opsi `HOME > EDITING > Clear > Clear All`.
+1. Pastikan lembar [INPUT]{.sheet-input} tidak terisi sama data sekali. Bisa dilakukan pembersihan dengan buka lembar [INPUT]{.sheet-input}, blok seluruh sel menggunakan `Ctrl+A`, kemudian hapus dengan tombol `Delete` atau pilih opsi `HOME > EDITING > Clear > Clear All`.
+2. Setelah terbukanya berkas `.csv` menggunakan Microsoft Excel. Blok seluruh data menggunakan `Ctrl+A` kemudian salin/_copy_ dengan _shortcut_ `Ctrl+C`. 
+3. Buka lembar kerja `fiako-gptreader.xl`, dan buka lembar [INPUT]{.sheet-input}.
 4. _Paste_ data yang telah disalin ke lembar [INPUT]{.sheet-input}. Pastikan data dimulai dari `A1` (pojok kiri atas). 
 
-#TODO: TAMBAH GAMBAR cara memasukkan data ke lembar INPUT
+Instruksi diatas dapat dilihat pada @fig-post-01. 
+
+::: {.column-body}
+
+![Memasukkan data ke lembar [INPUT]{.sheet-input}.](assets/gptreader-xl/gptreader-xl-post-01.gif){#fig-post-01}
+
+:::
 
 Setelah menyalin data ke lembar kerja `fiako-gptreader.xl` pada lembar [INPUT]{.sheet-input}, data sudah siap dieksplorasi. Akan tetapi terdapat tahap tambahan di lembar [GPT_INFO]{.sheet-input} yaitu menentukan batasan/kelompok setiap _Load Case_. 
 
@@ -124,9 +130,13 @@ Section | LOAD CASE
 
 :::
 
-Setelah mengisi informasi kelompok _LOAD CASE_, maka dapat dilihat perbedaan warna untuk setiap kelompok _LOAD CASE_.
+Setelah mengisi informasi kelompok _LOAD CASE_, maka dapat dilihat perbedaan warna untuk setiap kelompok _LOAD CASE_ seperti pada @fig-post-02.
 
-#TODO: GAMBAR yang menunjukkan pemisah tiap kelompok dengan warna
+::: {.column-body}
+
+![Memasukkan batasan kelompok _LOAD CASE_ di lembar [GPT_INFO]{.sheet-input}.](assets/gptreader-xl/gptreader-xl-post-02.gif){#fig-post-02}
+
+:::
 
 Dengan terisinya data dan informasi di lembar [INPUT]{.sheet-input} dan [GPT_INFO]{.sheet-input}, maka data sudah siap untuk dieksplorasi lebih lanjut. 
 
@@ -136,17 +146,25 @@ Di `fiako-gptreader.xl` terdapat EMPAT ($4$) lembar eksplorasi yaitu [LOAD_VIEWE
 
 #### Lembar [LOAD_VIEWER]{.sheet-explore}
 
-Lembar [LOAD_VIEWER]{.sheet-explore} menampilkan seluruh nilai/variabel/informasi dalam bentuk tabel untuk **setiap _LOAD CASE_**. Di lembar ini terdapat 2 sel input yaitu [TABLE]{.cell-input} dan [LOAD CASE]{.cell-input}. Sel [TABLE]{.cell-input} menentukan tabel mana yang ingin ditampilkan, sel [TABLE]{.cell-input} dapat diisi dengan `Reduction Factor`, `GLOBAL`, `LOCAL`, `LATERAL MINIMUM`, `LATERAL MAXIMUM`. Sedangkan sel [LOAD CASE]{.cell-input} dapat diisi dengan nomor _LOAD CASE_ yang ingin ditampilkan. Eksplorasi di [LOAD_VIEWER]{.sheet-explore} tidak jauh berbeda ketika mengeksplorasi langsung dengan membuka berkas _summary_ `.gp*t`. 
+Lembar [LOAD_VIEWER]{.sheet-explore} menampilkan seluruh nilai/variabel/informasi dalam bentuk tabel untuk **setiap _LOAD CASE_**. Di lembar ini terdapat 2 sel input yaitu [TABLE]{.cell-input} dan [LOAD CASE]{.cell-input}. Sel [TABLE]{.cell-input} menentukan tabel mana yang ingin ditampilkan, sel [TABLE]{.cell-input} dapat diisi dengan `Reduction Factor`, `GLOBAL`, `LOCAL`, `LATERAL MINIMUM`, `LATERAL MAXIMUM`. Sedangkan sel [LOAD CASE]{.cell-input} dapat diisi dengan nomor _LOAD CASE_ yang ingin ditampilkan. Eksplorasi di [LOAD_VIEWER]{.sheet-explore} tidak jauh berbeda ketika mengeksplorasi langsung dengan membuka berkas _summary_ `.gp*t`. Penggunaannya bisa dilihat di @fig-post-03.
 
-#TODO: Gambar demonstrasi Lembar [LOAD VIEWER]{.sheet-explore}
+::: {.column-body-outset}
+
+![Eksplorasi data setiap _LOAD CASE_ di lembar [LOAD_VIEWER]{.sheet-explore}.](assets/gptreader-xl/gptreader-xl-post-03.gif){#fig-post-03}
+
+:::
 
 #### Lembar [PILE_VIEWER]{.sheet-explore}
 
 Berbeda degan [LOAD_VIEWER]{.sheet-explore}, pada lembar [PILE_VIEWER]{.sheet-explore} tabel ditampilkan untuk **setiap _PILE_**. Terdapat dua sel input yaitu [TABLE]{.cell-input} dan [LOAD CASE]{.cell-input}. Sel input [TABLE]{.cell-input} pilihannya sama dengan lembar [LOAD_VIEWER]{.sheet-explore}. Tabel ini tidak tersedia di berkas asli `.gp*t` dan merupakan hasil aggregasi `fiako-gptreader.xl`. 
 
-Di lembar [PILE_VIEWER]{.sheet-explore}, terdapat visual tambahan yang membedakan setiap kelompok _LOAD CASE_. Pembagian kelompok ini berdasarkan lembar [INPUT]{.sheet-input}. 
+Di lembar [PILE_VIEWER]{.sheet-explore}, terdapat visual tambahan yang membedakan setiap kelompok _LOAD CASE_. Pembagian kelompok ini berdasarkan lembar [INPUT]{.sheet-input}. Contoh eksplorasinya dapat dilihat pada @fig-post-04.
 
-#TODO: Gambar demonstrasi lembar [PILE VIEWER]{.sheet-explore}
+::: {.column-body-outset}
+
+![Eksplorasi data setiap _PILE_ di lembar [PILE_VIEWER]{.sheet-explore}.](assets/gptreader-xl/gptreader-xl-post-04.gif){#fig-post-04}
+
+:::
 
 #### Lembar [SUMMARY]{.sheet-explore}
 
@@ -164,13 +182,23 @@ Berikut penjelasan untuk masing-masing komponen:
 2. Bagian kedua yaitu **CROSSTAB TABLE** merupakan tabel hasil dari _cross tabulation_ yang menampilkan nilai variabel dari [COLUMN ID]{.cell-input} bersamaan dengan setiap _PILE_ dan setiap _LOAD CASE_. Dengan kolom menunjukkan setiap _LOAD CASE_ dan baris menunjukkan setiap _PILE_. 
 3. Bagian ketiga yaitu **SUMMARY MIN/MAX** adalah tabel ringkasan dari **CROSSTAB TABLE** yang memisahkan nilai minimum dan maksimum untuk setiap _LOAD CASE_ dan mengambil informasi variabel lain berdasarkan _PILE_ maksimum/minimum. Jika tidak perlu informasi variabel lainnya, bisa melihat lembar [SINGLE_SUMMARY]{.sheet-explore}. 
 
-Alur pembacaan sebenarnya dari **INFO** > **CROSSTAB TABLE** > **SUMMARY MIN/MAX**, tapi dari layout di @fig-summary-component polanya berbeda yaitu **INFO** > **SUMMARY MIN/MAX** > **CROSSTAB TABLE**. Hal tersebut dikarenakan baris untuk **CROSSTAB TABLE** (jumlah _PILE_) bersifat dinamis (artinya bisa berubah-ubah sesuai input) sedangkan jumlah baris untuk **SUMMARY MIN/MAX** sudah diketahui. 
+Alur pembacaan sebenarnya dari **INFO** > **CROSSTAB TABLE** > **SUMMARY MIN/MAX**, tapi dari layout di @fig-summary-component polanya berbeda yaitu **INFO** > **SUMMARY MIN/MAX** > **CROSSTAB TABLE**. Hal tersebut dikarenakan baris untuk **CROSSTAB TABLE** (jumlah _PILE_) bersifat dinamis (artinya bisa berubah-ubah sesuai input) sedangkan jumlah baris untuk **SUMMARY MIN/MAX** sudah diketahui. Ringkasan penggunaan di lembar [SUMMARY]{.sheet-explore} bisa dilihat pada @fig-post-05.
+
+::: {.column-page}
+
+![Eksplorasi ringkasan/_summary_ data di lembar [SUMMARY]{.sheet-explore}.](assets/gptreader-xl/gptreader-xl-post-05.gif){#fig-post-05}
+
+:::
 
 ###### Komponen **INFO**
 
 Pada komponen **INFO** terdapat dua sel input yaitu [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input}. Sel [AXIS]{.cell-input} atau sumbu yang digunakan diisi dengan nilai _GLOBAL_ atau _LOCAL_. Sedangkan [COLUMN ID]{.cell-input} atau variabel yang ditinjau dapat diisi dengan angka dari $1$ sampai $12$. Arti angka $1$ sampai $12$ yaitu `DISPLACEMENT - X/Y/Z`, `ROTATION - X/Y/Z`, `FORCE - X/Y/Z`, `MOMENT - X/Y/Z` secara berurutan untuk setiap sumbunya. 
 
-#TODO: Demo komponen INFO.
+::: {.column-body}
+
+![Komponen **INFO**.](assets/gptreader-xl/gptreader-xl-post-06.gif){#fig-post-06}
+
+:::
 
 ###### Komponen **CROSSTAB TABLE**
 
@@ -178,7 +206,11 @@ Sel input [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input} menentukan _cross tab
 
 Pada komponen ini, terdapat pemisah kelompok secara visual/warna. Berbeda dengan di lembar [PILE_VIEWER]{.sheet-explore} atau [GPT_INFO]{.sheet-input}, visualiassi pemisah di lembar [SUMMARY]{.sheet-explore} menggunakan orientasi horizontal (pembagian berdasarkan kolom). Selain visualisasi pemisah kelompok, terdapat juga visualiasi **nilai [minimum]{.cell-minimum} dan [maksimum]{.cell-maximum} setiap kolom/_LOAD CASE_**. 
 
-#TODO: Demo komponen CROSSTAB TABLE
+::: {.column-body}
+
+![Komponen **CROSSTAB TABLE**.](assets/gptreader-xl/gptreader-xl-post-07.gif){#fig-post-07}
+
+:::
 
 ###### Komponen **SUMMARY MIN/MAX**
 
@@ -192,9 +224,15 @@ Setelah memperoleh nilai [minimum]{.cell-minimum} dan [maksimum]{.cell-maximum} 
     - **Setiap kelompok** akan memiliki visual indikator tambahan yaitu **nilai minimum dan maksimum untuk setiap kelompok**. Warna yang digunakan sebagai berikut [MINIMUM / _Rose_]{.sum-min-selected} dan [MAXIMUM / _Light Green_]{.sum-max-selected}.
     - Sebagai pengingat lagi, kolom minimum/maksimum ditentukan berdasarkan setiap kelompok _LOAD CASE_ dan bukan keseluruhan _LOAD CASE_. 
 
-#TODO: Demo komponen SUMMARY MIN/MAX
+Demonstrasi komponen **SUMMARY MIN/MAX** dapat dilihat di @fig-post-08.
 
-Karena informasi dan indikator visual di lembar [SUMMARY]{.sheet-explore} cukup banyak dan padat, tampilan ringkasan atau _summary_ disederhanakan jadi meninjau variabel yang dipilih saja dalam lembar baru bernama [SINGLE_SUMMARY]{.sheet-explore}. 
+::: {.column-body}
+
+![Komponen **SUMMARY MIN/MAX**.](assets/gptreader-xl/gptreader-xl-post-08.gif){#fig-post-08}
+
+:::
+
+Karena informasi dan indikator visual di lembar [SUMMARY]{.sheet-explore} cukup banyak dan padat, tampilan yang lebih sederhana dengan meninjau variabel yang dipilih saja dapat dilihat di lembar baru bernama [SINGLE_SUMMARY]{.sheet-explore}. 
 
 #### Lembar [SINGLE_SUMMARY]{.sheet-explore}
 
@@ -205,13 +243,29 @@ Indikator warna visual sama saja dengan lembar [SUMMARY]{.sheet-explore} seperti
 1. Setiap kelompok diberi warna latar serupa dengan lembar [GPT_INFO]{.sheet-input}.
 2. Indikator [MINIMUM]{.sum-min-selected} dan [MAXIMUM]{.sum-max-selected} berdasarkan setiap kelompok _LOAD CASE_.
 
-Pada lembar [SINGLE_SUMMARY] tidak memiliki sel input dan untuk mengubah variabel yang dipilih bisa menggunakan objek _scroll_ atau klik panah atas atau bawah. 
+Pada lembar [SINGLE_SUMMARY]{.sheet-explore} tidak memiliki sel input dan untuk mengubah variabel yang dipilih bisa menggunakan objek _scroll_ atau klik panah atas atau bawah. Eksplorasi dapat dilihat di @fig-post-09.
 
-#TODO: Demo SINGLE SUMMARY
+::: {.column-page}
+
+![Eksplorasi penyederhanaan ringkasan/_summary_ data di lembar [SINGLE_SUMMARY]{.sheet-explore}.](assets/gptreader-xl/gptreader-xl-post-09.gif){#fig-post-09}
+
+:::
+
+## PENUTUP
+
+Dari cara penggunaan yang disampaikan di bagian [PENGGUNAAN]{#sec-tutorial} dapat disimpulkan bahwa lembar yang terlampir ini belum dapat digunakan dalam pengambilan keputusan dan masih perlu diolah lagi lebih lanjut. Sehingga, penambahan lembar lainnya oleh pengguna sangat disarankan untuk memperoleh informasi yang dibutuhkan. 
+
+Jika kamu memiliki ide pengembangan lembar kerja `fiako-gptreader.xl` atau pertanyaan terkait pengembangan bisa langsung [membuat isu di repository fiakoenjiniring/gptreader.xl](https://github.com/fiakoenjiniring/gptreader.xl/issues/new). Jika dokumentasi atau halaman ini ada yang keliru jangan ragu untuk [membuat isu di fiako-manual](https://github.com/fiakoenjiniring/manual/issues/new).
+
+::: {.column-screen-inset-shaded}
+
+---
+
+:::
 
 ## CHANGELOG {#sec-changelog}
 
-- v1.0.1 (2023-03-07)
+- v1.0.1 (2023-03-15)
     - Memperbaiki informasi yang tersedia di [_INFO]{.sheet-info} dan [_LICENSE]{.sheet-info}.
 - v1.0.0 (2023-03-06)
     - `fiako-gptreader.xl` memiliki _repository_ terpisah dari [fiakoenjiniring/openxl](https://github.com/fiakoenjiniring/openxl). Dan untuk lembar kerja berikut lainnya akan dialihkan ke _repository_ yang terpisah.
