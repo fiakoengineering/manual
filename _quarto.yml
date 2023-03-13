@@ -117,7 +117,7 @@ website:
         - section: _OTHER PROJECTS_
           contents:
             - text: "FIAKO-HIDROKIT"
-              href: https://hidrokit.github.io
+              href: hidrokit/index.qmd
         - "---"    
 
   ## SIDEBAR
