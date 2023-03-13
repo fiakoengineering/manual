@@ -1,8 +1,9 @@
 ---
-pagetitle: "fiako-solummaa | gpconverter"
-title: "`fiako-gpconverter`"
-subtitle: Aplikasi web mengubah berkas `.gp*t` menjadi `.csv`
-sidebar: false
+pagetitle: "fiako-gpconverter | konversi output GROUP menjadi data terstruktur"
+# title: "FIAKO-GPCONVERTER"
+# subtitle: Aplikasi web yang mengubah _output_ GROUP menjadi data terstruktur
+sidebar: side-solummaa
+css: gptreader-xl.css
 toc: true
 ---
 
@@ -11,28 +12,58 @@ toc: true
 <img src="assets/logo-by-midjourney-2.png" alt="fiako-gpconverter logo" width="300" class="border border-dark rounded">
 
 # FIAKO-GPCONVERTER {.unlisted}
+##### Convert `.gp*t` to CSV/JSON {.unlisted}
 
-[<button type="button" class="btn btn-light m-1">FIAKO-SOLUMMAA</button>](/solummaa/index.qmd)
+![](https://img.shields.io/github/license/fiakoenjiniring/gpconverter?color=yellow&labelColor=brown&label=license&)
+![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square)
+![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white)
+
 [<button type="button" class="btn btn-primary m-1">APLIKASI WEB</button>](https://fiako-gpconverter.herokuapp.com)
 [<button type="button" class="btn btn-info m-1">GITHUB</button>](https://github.com/fiakoenjiniring/gpconverter)
 
 :::
 
-:::{.callout-warning .text-center appearance="minimal"} 
+<!-- :::{.callout-warning .text-center appearance="minimal"} 
 Halaman ini masih dalam pengembangan
-:::
+::: -->
 
-## INFO
+## INFO {#sec-info}
 
-`fiako-gpconverter` merupakan aplikasi web yang mengkonversi keluaran _summary_ aplikasi GROUP (Ensoft) yang berekstensi `.gp*t` (dengan versi yang diuji 8, 11, dan 12) menjadi terstruktur berupa CSV atau JSON. Aplikasi dapat diakses di [fiako-gpconverter.herokuapp.com](https://fiako-gpconverter.herokuapp.com).
+**`fiako-gpconverter`** merupakan aplikasi web yang mengubah _summary_ aplikasi GROUP `.gp*t` menjadi data terstruktur berupa CSV atau JSON. Aplikasi dapat diakses di [**fiako-gpconverter.herokuapp.com**](https://fiako-gpconverter.herokuapp.com). 
 
-## PENGGUNAAN
+Aplikasi ini diuji dengan versi `.gp8t`, `.gp11t`, dan `.gp12t`.
+
+## PERSIAPAN {#sec-preparation}
+
+Berikut yang harus dipersiapkan sebelum menggunakan aplikasi `fiako-gpconverter`:
+
+1. Setelah melakukan analisis/perhitungan menggunakan _software_ GROUP, simpan hasil _summary_ berbentuk `.gp*t`. 
+2. Kompres SATU (1) berkas `.gp*t` ke dalam bentuk `.zip`. Kompresi dapat dilakukan dengan menggunakan kompresi dari Windows 11 (Klik kanan > _Compress to ZIP File_) atau aplikasi lainnya seperti 7-zip atau WinRAR. Perlu diingat, dalam satu `.zip` hanya terisi 1 berkas yaitu _file_ `.gp*t`. 
+
+![Kompresi berkas `.gp*t` ke dalam bentuk `.zip` di Windows 11.](assets/gpconverter/gpconverter-pre-01.gif){#fig-pre-01}
+
+3. Berkas `.zip` sudah siap untuk dimasukkan ke aplikasi `fiako-gpconverter`. 
+
+Dari langkah-langkah diatas dihasilkan berkas `.zip` yang dapat digunakan nantinya di aplikasi `fiako-gpconverter`. 
+
+## PENGGUNAAN APLIKASI {#sec-tutorial}
 
 Penggunaan aplikasi `fiako-gpconverter` cukup sederhana yaitu:
 
-1. Setelah melakukan analisis/perhitungan menggunakan software GROUP, buka folder kerja yang menyimpan berkas `.gp*t`. Untuk versi 2022, ekstensi yang digunakan yaitu `.gp12t`. 
-2. Kompres berkas tunggal `.gp*t` ke `.zip`. Berkas `.zip` harus hanya memiliki satu berkas berekstensi `.gp*t`.
-3. Buka aplikasi [fiako-gpconverter](https://fiako-gpconverter.herokuapp.com) dan _upload_ berkas `.zip` yang telah disiapkan.
-4. Setelah diproses akan muncul informasi umum mengenai data yang telah di-_upload_.
-5. Unduh data dalam bentuk CSV dengan memilih "_Download Records (csv)_" yang dapat digunakan sebagai input `fiako-gptreader.xl`. 
+1. Siapkan berkas `.zip` yang telah disiapkan sebelumnya di [bagian persiapan](#sec-preparation). 
+2. Buka aplikasi web [**`fiako-gpconverter`**](https://fiako-gpconverter.herokuapp.com) .
+3. _Upload_ berkas `.zip` yang telah disiapkan (dapat juga dengan cara _drag_ berkas ke tulisan select file (.zip)).
+4. Tunggu proses pengolahan. Jika telah diproses maka akan muncul informasi data _summary_.
+5. _Download_ data terstruktur dengan mengklik "_Download Records (csv)_". Tunggu prosesnya sampai berkas `.csv` terunduh. 
 
+Langkah diatas dapat dilihat di @fig-app-01.
+
+::: {.column-page}
+
+![Penggunaan aplikasi **`fiako-gpconverter`** .](assets/gpconverter/gpconverter-app-01.gif){#fig-app-01}
+
+:::
+
+6. Setelah memperoleh _Records_ berbentuk `.csv`, data tersebut bisa disalin ke lembar kerja [**`fiako-gptreader.xl`**](gptreader-xl.qmd) untuk dieksplorasi lebih lanjut. 
+
+Terdapat dua opsi lainnya yaitu _Download Summary (json)_ dan _Download Records (json)_. Berkas JSON dapat digunakan untuk aplikasi web selanjutnya atau ditujukan untuk para _developer_. Saat ini, hanya _Records_ berbentuk CSV saja yang sudah dapat digunakan untuk aplikasi/lembar kerja selanjutnya yaitu `fiako-gptreader.xl`, lembar kerja Excel untuk mengeksplorasi data _summary_ GROUP.  

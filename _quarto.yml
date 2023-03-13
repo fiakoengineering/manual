@@ -7,7 +7,7 @@ execute:
   freeze: auto
 
 website:
-  title: "FIAKO Manual"
+  title: "fiako-manual | Dokumentasi & Manual oleh FIAKO Engineering"
   description: "Dokumentasi Manual oleh FIAKO Engineering"
   
   site-url: https://manual.fiako.engineering
@@ -21,8 +21,8 @@ website:
   page-navigation: true
 
   # FOR TWITTER / open-graph
-  image: "fiakologo.png"
-  favicon: "fiakologo.png"
+  image: /assets/logo-fiako-manual.png
+  favicon: /assets/logo-fiako-manual.png
 
   ## NAVIGATION BAR
   navbar:
@@ -33,24 +33,47 @@ website:
 
     collapse: true
 
-    logo: "fiakologo.png"
+    logo: /assets/logo-fiako-manual.png
 
     left:
       - text: Home
         href: index.qmd
-      - text: Tutorial
-        href: tutorial/index.qmd
-      - text: Artikel
-        menu: 
-          - href: webapps/webapps-rainfall.qmd
+      - text: "**FIAKODEV-PROJECTS**"
+        menu:
+          - text: "---"
+          - text: "_General_"
+          - text: "__FEIDLAMBDA__"
+            href: https://lambda.fiako.engineering
+          - "---"
+          - text: "_Water Resource Engineering_"
+          - text: __FIAKO-HIDROKIT__
+            href: hidrokit/index.qmd
+          - text: _Rainfall Web Apps_
+            href: webapps/webapps-rainfall.qmd
+          - "---"
+          - text: "_Geotechnical Engineering_"
+          - text: __FIAKO-SOLUMMAA__
+            href: solummaa/index.qmd
+          - text: "fiako-gpconverter"
+            href: solummaa/gpconverter.qmd
+          - text: "fiako-gptreader.xl"
+            href: solummaa/gptreader-xl.qmd
+          - "---"
+          - text: "_Structural Engineering_"
+          - text: "_planning_"
+          - "---"
+      - text: GREENHORN
+        menu:
+          - "---"
+          - text: "_G22_"
+          - text: "`G22.11.29` - __Mermaid.js & Interpolasi Linear__"
+            href: greenhorn/G22-11-29.qmd
+          - "---"
+          - text: "_G23_"
+          - text: "_In Development_"
+          - "---"
 
     right:
-      - text: Aplikasi Web
-        href: webapps/index.qmd
-      - text: "`G2X`"
-        menu:
-          - text: "`G22.11.29`"
-            href: greenhorn/G22-11-29.qmd
       - icon: github
         href: https://github.com/fiakoenjiniring/manual
 
@@ -74,15 +97,35 @@ website:
             - text: "`fiako-anfrek`"
               href: tutorial/webapps/fiako-anfrek.qmd
         - "---"
-          
+    - id: side-solummaa
+      style: floating
+      search: true
+      border: true
+      collapse-level: 1
+      pinned: true
+      contents:
+        - "<H3>FIAKODEV-PROJECTS: SOLUMMAA</H3>"
+        - "---"
+        - text: "FIAKO-SOLUMMAA"
+          href: solummaa/index.qmd
+        - "---"    
+        - section: __SOLUMMAA PROJECTS__
+          contents:
+            - href: solummaa/gpconverter.qmd
+            - href: solummaa/gptreader-xl.qmd
+        - "---"    
+        - section: _OTHER PROJECTS_
+          contents:
+            - text: "FIAKO-HIDROKIT"
+              href: https://hidrokit.github.io
+        - "---"    
 
   ## SIDEBAR
   page-footer:
     right: >-
-      website by **fiako**dev, 
-      built with [Quarto](https://quarto.org/).
+      [open-source](https://github.com/fiakoenjiniring/manual) website by [**fiako**dev](https://dev.fiako.engineering)
     left: >-
-      &copy; 2022 PT. FIAKO ENJINIRING INDONESIA.
+      &copy; 2022-2023 PT. FIAKO ENJINIRING INDONESIA.
     # center:
     #   - "About"
 
@@ -94,7 +137,7 @@ format:
     css: styles.css
     toc: true
     link-external-newwindow: true
-    language: language_id.yml
+    # language: language_id.yml
 
 
 

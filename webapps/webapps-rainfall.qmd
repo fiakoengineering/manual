@@ -54,7 +54,7 @@ tbl-cap-location: top
 format:
   html: 
     css: article.css
-    mermaid-format: png # js
+    mermaid-format: js
 
 ---
 
