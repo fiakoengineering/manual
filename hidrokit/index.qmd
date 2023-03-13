@@ -39,6 +39,6 @@ Project & Version | Release Date | Status
 
 ### HALAMAN INI SEDANG DALAM PENGEMBANGAN 
 
-<small>MOHON DIPERIKSA SECARA BERKALA</small>
+<small>MOHON DIPERIKSA KEMBALI SECARA BERKALA</small>
 
 :::

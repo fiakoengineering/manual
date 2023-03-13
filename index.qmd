@@ -6,16 +6,50 @@ toc: false
 link-external-newwindow: true
 page-layout: full
 sidebar: false
+anchor-sections: false
 ---
 
-::: {.text-center .fs-4 .fw-bold}
 
-Situs tersedia juga di `STAGNATZ::_INSITE::fiako-manual`
+::: {.text-center}
+![](/assets/logo-fiako-manual.png){width="300"}
+:::
+
+::: {.text-center .mb-4}
+
+# FIAKO-MANUAL {.m-0}
+
+#### **DOKUMENTASI & MANUAL OLEH FIAKO ENGINEERING** {.text-muted .m-0}
+
+:::
+
+::: {.text-center .mb-4}
+
+![](https://img.shields.io/github/actions/workflow/status/fiakoenjiniring/manual/publish.yml?branch=main&label=quarto&labelColor=informational&logo=GitHub%20Actions&logoColor=white)
+![](https://img.shields.io/github/license/fiakoenjiniring/manual?color=yellow&labelColor=brown&label=license&)
+
+:::
+
+::: {.text-center}
+
+**`fiako-manual`** merupakan website dokumentasi dan manual oleh FIAKO Engineering. Dokumentasi/manual dapat berupa cara penggunaan aplikasi web, tutorial, _style guide_, dll.
+
+::: 
+
+::: {.text-center .callout-caution appearance="simple"}
+
+### WEBSITE `fiako-manual` SEDANG DALAM PENGEMBANGAN 
+
+<small>MOHON DIPERIKSA KEMBALI SECARA BERKALA</small>
+
+:::
+
+::: {.text-center}
+
+## FIAKODEV-PROJECTS
+
+[<button type="button" class="btn btn-primary m-1">FIAKO-HIDROKIT</button>](/hidrokit/index.qmd)
+[<button type="button" class="btn btn-info m-1">FIAKO-SOLUMMAA</button>](/solummaa/index.qmd)
 
 :::
 
 
-::: {.callout-important appearance="default" icon="true"}
-## Dalam Pengembangan (_Work in Progress_)
-Situs ini digunakan sebagai dokumentasi/manual oleh FIAKO Engineering untuk panduan internal yang dapat digunakan oleh publik/eksternal. Manual dapat berupa penggunaan aplikasi, instalasi, _style guide_. 
-:::

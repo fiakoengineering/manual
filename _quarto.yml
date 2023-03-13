@@ -40,6 +40,10 @@ website:
         href: index.qmd
       - text: "**FIAKODEV-PROJECTS**"
         menu:
+          - text: "---"
+          - text: "_General_"
+          - text: "__FEIDLAMBDA__"
+            href: https://lambda.fiako.engineering
           - "---"
           - text: "_Water Resource Engineering_"
           - text: __FIAKO-HIDROKIT__
@@ -57,9 +61,6 @@ website:
           - "---"
           - text: "_Structural Engineering_"
           - text: "_planning_"
-          - "---"
-          - text: "_General_"
-          - text: "_In Development_"
           - "---"
       - text: GREENHORN
         menu:
