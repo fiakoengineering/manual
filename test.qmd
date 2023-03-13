@@ -1,0 +1,12 @@
+---
+pagetitle: "test-pages"
+# title: "`fiako-gptreader.xl`"
+# subtitle: Berkas membaca _records_ dari `fiako-gpconverter`
+sidebar: side-solummaa
+toc: true
+toc-depth: 5
+---
+
+![](solummaa/assets/gptreader-xl/Test.mp4)
+
+{{< video solummaa/assets/gptreader-xl/Test.mp4 >}}
