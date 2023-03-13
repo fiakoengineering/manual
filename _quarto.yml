@@ -43,7 +43,7 @@ website:
           - "---"
           - text: "_Water Resource Engineering_"
           - text: __FIAKO-HIDROKIT__
-            href: "/#"
+            href: hidrokit/index.qmd
           - text: _Rainfall Web Apps_
             href: webapps/webapps-rainfall.qmd
           - "---"

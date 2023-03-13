@@ -1,0 +1,44 @@
+---
+pagetitle: "fiako-hidrokit | Technology for Water Resources Engineering by FIAKO Engineering"
+format: html
+toc: false
+link-external-newwindow: true
+page-layout: full
+sidebar: false
+anchor-sections: false
+---
+
+::: {.text-center}
+<img src="assets/fiako-hidrokit-logo.png" alt="fiako-hidrokit logo" width="300">
+:::
+
+::: {.text-center .mb-4}
+# FIAKO-HIDROKIT
+##### Technology for Water Resources Engineering by FIAKO Engineering & **fiako**dev
+:::
+<!-- 
+::: {.text-center}
+
+![](https://img.shields.io/badge/license-MIT-yellow)
+
+:::
+
+::: {.text-center .px-5}
+
+Project & Version | Release Date | Status 
+:-: | :-: | :-:
+![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-development-blueviolet)
+![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+:::
+
+::: {.text-center}
+**`fiako-hidrokit`** merupakan kumpulan proyek penelitian dan pengembangan teknologi di bidang teknik sumber daya yang diawali oleh [taruma](https://github.com/taruma) yang kemudian didukung dan diolah lebih lanjut oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering).
+::: -->
+
+::: {.text-center .callout-caution appearance="simple"}
+
+### HALAMAN INI SEDANG DALAM PENGEMBANGAN 
+
+<small>MOHON DIPERIKSA SECARA BERKALA</small>
+
+:::
