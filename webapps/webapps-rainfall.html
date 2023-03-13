@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../tutorial/webapps/fiako-stations.html" rel="next">
 <link href="../webapps/index.html" rel="prev">
-<link href="../fiakologo.png" rel="icon" type="image/png">
+<link href="..//assets/logo-fiako-manual.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,6 +61,9 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -75,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../fiakologo.png" alt="" class="navbar-logo">
+    <img src="../assets/logo-fiako-manual.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">fiako-manual</span>
@@ -90,38 +93,66 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../tutorial/index.html">
- <span class="menu-text">Tutorial</span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-artikel" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Artikel</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fiakodev-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><strong>FIAKODEV-PROJECTS</strong></span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-artikel">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fiakodev-projects">    
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header"><em>General</em></li>
+        <li>
+    <a class="dropdown-item" href="https://lambda.fiako.engineering">
+ <span class="dropdown-text"><strong>FEIDLAMBDA</strong></span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header"><em>Water Resource Engineering</em></li>
+        <li>
+    <a class="dropdown-item" href="../hidrokit/index.html">
+ <span class="dropdown-text"><strong>FIAKO-HIDROKIT</strong></span></a>
+  </li>  
         <li>
     <a class="dropdown-item" href="../webapps/webapps-rainfall.html">
- <span class="dropdown-text">Aplikasi Pengolahan Data Hujan</span></a>
+ <span class="dropdown-text"><em>Rainfall Web Apps</em></span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header"><em>Geotechnical Engineering</em></li>
+        <li>
+    <a class="dropdown-item" href="../solummaa/index.html">
+ <span class="dropdown-text"><strong>FIAKO-SOLUMMAA</strong></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../solummaa/gpconverter.html">
+ <span class="dropdown-text">fiako-gpconverter</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../solummaa/gptreader-xl.html">
+ <span class="dropdown-text">fiako-gptreader.xl</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header"><em>Structural Engineering</em></li>
+        <li class="dropdown-header"><em>planning</em></li>
+        <li><hr class="dropdown-divider"></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-greenhorn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">GREENHORN</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-greenhorn">    
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header"><em>G22</em></li>
+        <li>
+    <a class="dropdown-item" href="../greenhorn/G22-11-29.html">
+ <span class="dropdown-text"><code>G22.11.29</code> - <strong>Mermaid.js &amp; Interpolasi Linear</strong></span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header"><em>G23</em></li>
+        <li class="dropdown-header"><em>In Development</em></li>
+        <li><hr class="dropdown-divider"></li>
     </ul>
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="../webapps/index.html" aria-current="page">
- <span class="menu-text">Aplikasi Web</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-g2x" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text"><code>G2X</code></span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-g2x">    
-        <li>
-    <a class="dropdown-item" href="../greenhorn/G22-11-29.html">
- <span class="dropdown-text"><code>G22.11.29</code></span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/fiakoenjiniring/manual"><i class="bi bi-github" role="img">
 </i> 
@@ -641,12 +672,43 @@ Perbedaan Artikel dengan Makalah PIT HATHI ke-39
 </div>
 <p>Hubungan antara file bisa dilihat pada <a href="#fig-structure-apps">Gambar&nbsp;4</a>. Struktur aplikasi tersebut tidak begitu ketat sehingga beberapa file/modul yang seharusnya tidak digunakan di <code>app.py</code> tetap dipanggil. Struktur ini hanya memudahkan <em>developer</em> untuk menyusun fitur ataupun menelusuri fungsi. Dengan struktur tersebut, harapannya memudahkan untuk <em>developer</em> atau kontributor untuk berkontribusi ataupun mengembangkan.</p>
 <div class="column-body-outset text-center">
-<div class="cell">
+<div class="cell" data-fig-height="100%">
 <div class="cell-output-display">
 <div id="fig-structure-apps" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p>
-</p><p><img src="webapps-rainfall_files/figure-html/mermaid-figure-1.png" class="img-fluid figure-img"></p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">%%{ init: { 'flowchart': { 'curve': 'bump' }, 'theme': 'forest' } }%%
+flowchart RL
+    pylayout[pylayout.py]
+    pylayoutfunc[pylayoutfunc.py]
+    pyfigure[pyfigure.py]
+    pytemplate[pytemplate.py]
+    pyfunc[pyfunc.py]
+    pyconfig[pyconfig.py]
+    appconfig[app_config.yml]
+    app[app.py]
+
+    appconfig -.- pyconfig
+
+    pyconfig -.-&gt; pylayout
+    pyconfig -.-&gt; pyfigure
+    pyconfig -.-&gt; pytemplate
+    pyconfig -.-&gt; pyfunc
+    
+    pytemplate -.-&gt; pyfigure
+    pytemplate -.-&gt; pylayoutfunc
+    
+    
+    pylayoutfunc -.-&gt; pylayout
+    pyfigure -.-&gt; pylayout
+    
+    pyconfig ====&gt; app
+    pylayout ====&gt; app
+    pyfunc ====&gt; app
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
 <p></p>
 <p></p><figcaption class="figure-caption">Gambar&nbsp;4: Gambaran struktur aplikasi<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</figcaption><p></p>
 </figure>
@@ -662,12 +724,35 @@ Perbedaan Artikel dengan Makalah PIT HATHI ke-39
 <p>Aplikasi pengolahan data hujan hanya fokus pada visualisasi. Jadi, beberapa fitur analisis itu tergantung <em>package/library</em> yang digunakan pada aplikasinya. Untuk <code>fiako-stations</code> tidak ada proses analisis sehingga pengujian hanya sebatas visualisasi dan interaktif antar komponennya. Pada <code>hidrokit-rainfall</code> dan <code>fiako-anfrek</code> bergantung dengan paket <a href="https://github.com/hidrokit/hidrokit"><code>hidrokit</code></a>, sehingga untuk hasil analisis akan bergantung pengujian pada paket tersebut.</p>
 <p>Pengujian dimulai dengan memeriksa interaksi komponen dengan melihat visualisasi dan outputnya sesuai ekspetasi. Jika tidak sesuai ekspetasi, kembali lagi ke tahap pengembangan, tapi jika sesuai ekspetasi bisa dilanjutkan ke tahap publikasi. Proses pengujian manual ini dapat diilustrasikan seperti <a href="#fig-testing-apps">Gambar&nbsp;5</a>.</p>
 <div class="column-page">
-<div class="cell">
+<div class="cell" data-fig-height="100%">
 <div class="cell-output-display">
 <div id="fig-testing-apps" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p>
-</p><p><img src="webapps-rainfall_files/figure-html/mermaid-figure-5.png" class="img-fluid figure-img"></p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'forest' } }%%
+flowchart LR
+    pengujian(Mulai Pengujian)
+    pengembangan[[Pengembangan]]
+    publikasi[[Publikasi]]
+    interaksi[Interaksi Komponen]
+    intended{Interaksi Sesuai Ekspetasi?}
+    visualisasi[Visualisasi]
+    output["Output (CSV / TXT)"]
+
+    intended == sesuai ekspetasi ==&gt; publikasi
+    pengujian ==&gt; interaksi
+    interaksi ==&gt; intended
+    interaksi -.- visualisasi
+    interaksi -.- output
+    pengembangan -.-&gt; pengujian
+    visualisasi -.-&gt; intended
+    output -.-&gt; intended
+    intended -. tidak sesuai ekspetasi .-&gt; pengembangan
+
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
+</div>
 <p></p>
 <p></p><figcaption class="figure-caption">Gambar&nbsp;5: Gambaran pengujian aplikasi secara manual.</figcaption><p></p>
 </figure>
@@ -685,7 +770,30 @@ Perbedaan Artikel dengan Makalah PIT HATHI ke-39
 <div id="fig-publish-apps" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p>
-</p><p><img src="webapps-rainfall_files/figure-html/mermaid-figure-4.png" style="width:4.66in;height:5.02in" class="figure-img"></p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-3">%%{ init: { 'flowchart': { 'curve': 'bump'}, 'theme': 'forest' } }%%
+flowchart TD
+    publikasi(Mulai Publikasi)
+    pengujian[[Pengujian]]
+    refactor["Refactor &amp; Dokumentasi"]
+    publish["Publikasi dan Rilis di GitHub"]
+    osdev["Open Source Software Development"]
+    deploy["Deployment"]
+    maintain["Pengelolaan / Maintenance"]
+
+    publikasi ==&gt; refactor
+    refactor ==&gt; publish
+    refactor -.-&gt; pengujian
+    pengujian -.-&gt; publikasi
+    publish == "Tanggung Jawab Komunitas" ====&gt; osdev
+    publish -.-&gt; deploy
+    deploy -.-&gt; maintain
+    publish -.-&gt; maintain
+    maintain -.-&gt; osdev
+
+</pre>
+<div id="mermaid-tooltip-3" class="mermaidTooltip">
+
+</div>
 <p></p>
 <p></p><figcaption class="figure-caption">Gambar&nbsp;6: Gambaran publikasi dan rilis aplikasi.</figcaption><p></p>
 </figure>
@@ -1141,12 +1249,37 @@ Perbedaan Artikel dengan Makalah PIT HATHI ke-39
 </ol>
 <p>Proses tersebut bisa dilihat pada <a href="#fig-prepare-fiako-stations">Gambar&nbsp;20</a>.</p>
 <div class="column-screen-inset">
-<div class="cell">
+<div class="cell" data-fig-width="100%">
 <div class="cell-output-display">
 <div id="fig-prepare-fiako-stations" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p>
-</p><p><img src="webapps-rainfall_files/figure-html/mermaid-figure-3.png" class="img-fluid figure-img"></p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-4">%%{ init: { 'flowchart':{'curve': 'bump'}, 'theme': 'forest' } }%%
+flowchart LR
+    rawdata[Data Mentah]
+    storedata[Dataset HDF5 di aplikasi]
+    completescript[Menjalankan &lt;code&gt;run_completeness.py&lt;/code&gt;]
+    metadatascript[Menjalankan &lt;code&gt;run_metadata.py&lt;/code&gt;]
+    outcomplete[Completeness HDF5]
+    outmetadata[Metadata CSV]
+    aplikasi[["Aplikasi &lt;code&gt;fiako-stations&lt;/code&gt;"]]
+    runapp["Jalankan Aplikasi"]
+
+    rawdata -- Kompilasi Dataset --&gt; storedata
+    completescript --&gt; metadatascript
+    metadatascript --&gt; outmetadata
+    storedata --&gt; completescript
+    completescript --&gt; outcomplete
+
+    storedata -.- runapp
+    outcomplete -.- runapp
+    outmetadata -.- runapp
+    runapp --&gt; aplikasi
+
+</pre>
+<div id="mermaid-tooltip-4" class="mermaidTooltip">
+
+</div>
 <p></p>
 <p></p><figcaption class="figure-caption">Gambar&nbsp;20: Gambaran persiapan aplikasi <code>fiako-stations</code>.</figcaption><p></p>
 </figure>
@@ -1169,12 +1302,65 @@ Perbedaan Artikel dengan Makalah PIT HATHI ke-39
 </ol>
 <p>Proses tersebut dapat dilihat ilustrasinya dalam bentuk <em>sequence diagram</em> di <a href="#fig-using-apps">Gambar&nbsp;21</a>.</p>
 <div class="column-body-outset">
-<div class="cell">
+<div class="cell" data-fig-width="100%">
 <div class="cell-output-display">
 <div id="fig-using-apps" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p>
-</p><p><img src="webapps-rainfall_files/figure-html/mermaid-figure-2.png" class="img-fluid figure-img"></p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-5">%%{ init: { 'sequence': {'useMaxWidth': false, 'showSequenceNumbers': true }, 'theme': 'forest' } }%%
+sequenceDiagram
+    actor user as Engineer 1
+    participant stations as FIAKO-STATIONS
+    participant rainfall as HIDROKIT-RAINFALL
+    participant anfrek as FIAKO-ANFREK
+    actor super as Engineer 2
+
+    user-&gt;&gt;stations: Titik koordinat
+    Note over user, stations: INPUT: latitude, longitude
+    
+    activate stations
+    %% stations --&gt; user: evaluasi dan pengambilan keputusan
+    stations -&gt;&gt; rainfall: Hujan harian&lt;br/&gt;seluruh stasiun
+    Note over stations, rainfall: OUTPUT: CSV
+    deactivate stations
+
+    activate rainfall
+    %% rainfall --&gt; user: evaluasi dan pengambilan keputusan
+    rainfall -&gt;&gt; user: Resample data hujan per periode
+    Note over rainfall, user: OUTPUT: CSV
+    deactivate rainfall
+
+    activate user
+    Note right of user: Proses manual
+    opt Evaluasi ulang/Koreksi
+    user --&gt;&gt; rainfall: Hujan harian (wilayah / koreksi)
+    Note over user, rainfall: INPUT: CSV
+    deactivate user
+    activate rainfall
+    rainfall -&gt;&gt; user: Resample data hujan per periode
+    Note over rainfall, user: OUTPUT: CSV
+    deactivate rainfall
+    activate user
+    end
+    user -&gt;&gt; anfrek: Hujan wilayah maksimum tahunan
+    Note over user, anfrek: INPUT: CSV
+    deactivate user
+
+    activate anfrek
+    %% anfrek --&gt; user: evaluasi dan pengambilan keputusan
+    anfrek -&gt;&gt; user: Analisis frekuensi &amp;&lt;br&gt;Uji kecocokan distribusi
+    Note over anfrek, user: OUTPUT: CSV
+    deactivate anfrek
+
+    activate user
+    user -&gt;&gt; super: Laporan analisis data hujan
+    Note over user, super: REPORT/DELEGATE
+    deactivate user
+
+</pre>
+<div id="mermaid-tooltip-5" class="mermaidTooltip">
+
+</div>
 <p></p>
 <p></p><figcaption class="figure-caption">Gambar&nbsp;21: Contoh alur pekerjaan dengan menggunakan aplikasi pengolahan data hujan.</figcaption><p></p>
 </figure>
@@ -1419,8 +1605,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© 2022 PT. FIAKO ENJINIRING INDONESIA.</div>   
-    <div class="nav-footer-right">website by <strong>fiako</strong>dev, built with <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="nav-footer-left">© 2022-2023 PT. FIAKO ENJINIRING INDONESIA.</div>   
+    <div class="nav-footer-right"><a href="https://github.com/fiakoenjiniring/manual">open-source</a> website by <a href="https://dev.fiako.engineering"><strong>fiako</strong>dev</a></div>
   </div>
 </footer>
 
