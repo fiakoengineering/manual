@@ -39,19 +39,19 @@ Lembar kerja `fiako-gptreader.xl` hanya bisa dibuka dan dijalankan menggunakan *
 Berikut fitur yang tersedia di lembar kerja `fiako-gptreader.xl`:
 
 1. Mengeksplorasi tabel _reactions_, _displacements_, _lateral_ yang tersedia di `.gp*t` (_summary_).
-2. Eksplorasi tabel setiap _load case_ pada _sheet_ `LOAD_VIEWER`. 
-3. Eksplorasi tabel setiap _pile_ pada _sheet_ `PILE_VIEWER`. 
-4. Melihat rangkuman untuk setiap _load case_ dan _pile_ untuk variabel _reactions_ atau _displacements_. Rangkuman menunjukkan nilai minimum dan maksimum setiap _load case_ dan setiap kategori. Rangkuman dapat dilihat di lembar `SUMMARY`.
-5. Evaluasi setiap variabel tunggal di lembar `SINGLE_SUMMARY`.
+2. Eksplorasi tabel setiap _load case_ pada _sheet_ / lembar [LOAD_VIEWER]{.sheet-explore}. 
+3. Eksplorasi tabel setiap _pile_ pada _sheet_ / lembar [PILE_VIEWER]{.sheet-explore}. 
+4. Melihat rangkuman untuk setiap _load case_ dan _pile_ untuk variabel _reactions_ atau _displacements_. Rangkuman menunjukkan nilai minimum dan maksimum setiap _load case_ dan setiap kategori. Rangkuman dapat dilihat di lembar [SUMMARY]{.sheet-explore}.
+5. Melihat rangkuman seperti [SUMMARY]{.sheet-explore} untuk meninjau satu variabel di lembar [SINGLE_SUMMARY]{.sheet-explore}.
 
 ## PERSIAPAN {#sec-preparation}
 
 Berikut yang harus dipersiapkan sebelum menggunakan lembar kerja `fiako-gptreader.xl`:
 
 1. Gunakan aplikasi web `fiako-gpconverter` untuk mengubah _file_ `.gp*t` menjadi `.csv` (_Download Records (CSV)_). 
-2. Pastikan dapat membuka dokumen `.csv` menggunakan Microsoft Excel. Jika teratur otomatis, dapat dibuka melalui FILE > OPEN > berkas `.csv` (ubah tipe file ke untuk menampilkannya). Seperti yang ditampilkan di @fig-pre-01.
+2. Pastikan dapat membuka dokumen `.csv` menggunakan Microsoft Excel. Jika tidak teratur otomatis, dapat dibuka melalui FILE > OPEN > berkas `.csv` (ubah tipe file ke untuk menampilkannya). Seperti yang ditampilkan di @fig-pre-01.
 
-::: {.column-body}
+::: {.column-page}
 
 ![Membuka berkas `.csv` dengan Microsoft Excel.](assets/gptreader-xl/gptreader-xl-pre-01.gif){#fig-pre-01}
 
@@ -90,7 +90,7 @@ Lembar [INPUT]{.sheet-input} merupakan **lembar penting** karena data hasil dari
 
 Instruksi diatas dapat dilihat pada @fig-post-01. 
 
-::: {.column-body}
+::: {.column-page}
 
 ![Memasukkan data ke lembar [INPUT]{.sheet-input}.](assets/gptreader-xl/gptreader-xl-post-01.gif){#fig-post-01}
 
@@ -107,7 +107,7 @@ Setelah memasukkan data di lembar [INPUT]{.sheet-input}, pada lembar [GPT_INFO]{
 ::: {.callout-tip}
 ## Arti Warna Sel/_Cell_
 
-Sebelumnya, terdapat informasi mengenai arti dari warna sel/_cell_. Warna sel/_cell_ berwarna [BIRU/_Turquoise_]{.cell-input} berarti **sel input** yang dapat diubah nilainya, sedangkan yang berwarna [KUNING/_Yellow_]{.cell-view} berarti **sel info** yang tidak perlu diubah nilainya dan berubah sendirinya berdasarkan sel input. 
+Sebelum membahas lebih lanjut, terdapat informasi mengenai arti dari warna sel/_cell_. Sel/_cell_ berwarna [BIRU/_Turquoise_]{.cell-input} berarti **sel input** yang dapat diubah nilainya, sedangkan yang berwarna [KUNING/_Yellow_]{.cell-view} berarti **sel info** yang tidak perlu diubah nilainya dan berubah sendirinya berdasarkan sel input. 
 
 :::
 
@@ -132,7 +132,7 @@ Section | LOAD CASE
 
 Setelah mengisi informasi kelompok _LOAD CASE_, maka dapat dilihat perbedaan warna untuk setiap kelompok _LOAD CASE_ seperti pada @fig-post-02.
 
-::: {.column-body}
+::: {.column-page}
 
 ![Memasukkan batasan kelompok _LOAD CASE_ di lembar [GPT_INFO]{.sheet-input}.](assets/gptreader-xl/gptreader-xl-post-02.gif){#fig-post-02}
 
@@ -148,7 +148,7 @@ Di `fiako-gptreader.xl` terdapat EMPAT ($4$) lembar eksplorasi yaitu [LOAD_VIEWE
 
 Lembar [LOAD_VIEWER]{.sheet-explore} menampilkan seluruh nilai/variabel/informasi dalam bentuk tabel untuk **setiap _LOAD CASE_**. Di lembar ini terdapat 2 sel input yaitu [TABLE]{.cell-input} dan [LOAD CASE]{.cell-input}. Sel [TABLE]{.cell-input} menentukan tabel mana yang ingin ditampilkan, sel [TABLE]{.cell-input} dapat diisi dengan `Reduction Factor`, `GLOBAL`, `LOCAL`, `LATERAL MINIMUM`, `LATERAL MAXIMUM`. Sedangkan sel [LOAD CASE]{.cell-input} dapat diisi dengan nomor _LOAD CASE_ yang ingin ditampilkan. Eksplorasi di [LOAD_VIEWER]{.sheet-explore} tidak jauh berbeda ketika mengeksplorasi langsung dengan membuka berkas _summary_ `.gp*t`. Penggunaannya bisa dilihat di @fig-post-03.
 
-::: {.column-body-outset}
+::: {.column-page}
 
 ![Eksplorasi data setiap _LOAD CASE_ di lembar [LOAD_VIEWER]{.sheet-explore}.](assets/gptreader-xl/gptreader-xl-post-03.gif){#fig-post-03}
 
@@ -160,7 +160,7 @@ Berbeda degan [LOAD_VIEWER]{.sheet-explore}, pada lembar [PILE_VIEWER]{.sheet-ex
 
 Di lembar [PILE_VIEWER]{.sheet-explore}, terdapat visual tambahan yang membedakan setiap kelompok _LOAD CASE_. Pembagian kelompok ini berdasarkan lembar [INPUT]{.sheet-input}. Contoh eksplorasinya dapat dilihat pada @fig-post-04.
 
-::: {.column-body-outset}
+::: {.column-page}
 
 ![Eksplorasi data setiap _PILE_ di lembar [PILE_VIEWER]{.sheet-explore}.](assets/gptreader-xl/gptreader-xl-post-04.gif){#fig-post-04}
 
@@ -168,7 +168,7 @@ Di lembar [PILE_VIEWER]{.sheet-explore}, terdapat visual tambahan yang membedaka
 
 #### Lembar [SUMMARY]{.sheet-explore}
 
-Lembar [SUMMARY]{.sheet-explore} merupakan lembar yang meringkas seluruh informasi yang ada di dataset untuk `GLOBAL` dan `LOCAL`. Lembar ini cukup banyak informasi yang diperoleh dan cukup padat indikator visualnya, sehingga dalam memulai memahami lembar ini diharapkan tidak terburu-buru. Di lembar [SUMMARY]{.sheet-explore} hanya mengeksplorasi data `GLOBAL` dan `LOCAL` dengan $12$ variabel yang ditinjau yaitu `DISPLACEMENT - X/Y/Z`, `ROTATION - X/Y/Z`, `FORCE - X/Y/Z`, `MOMENT - X/Y/Z` dengan diberi `COLUMN ID` dari $1-12$. 
+Lembar [SUMMARY]{.sheet-explore} merupakan lembar yang meringkas seluruh informasi yang ada di dataset untuk `GLOBAL` dan `LOCAL`. Lembar ini cukup banyak informasi yang ditampilkan dan cukup padat indikator visualnya, sehingga dalam memulai memahami lembar ini diharapkan tidak terburu-buru. Di lembar [SUMMARY]{.sheet-explore} hanya mengeksplorasi data `GLOBAL` dan `LOCAL` dengan $12$ variabel yang ditinjau yaitu `DISPLACEMENT - X/Y/Z`, `ROTATION - X/Y/Z`, `FORCE - X/Y/Z`, `MOMENT - X/Y/Z` dengan diberi `COLUMN ID` dari $1-12$. 
 
 ##### Komponen [SUMMARY]{.sheet-explore}
 
@@ -178,11 +178,16 @@ Saat melihat Lembar [SUMMARY]{.sheet-explore} terdapat tiga bagian/komponen utam
 
 Berikut penjelasan untuk masing-masing komponen:
 
-1. Bagian pertama yaitu **INFO/INPUT** menunjukkan informasi mengenai data yang sedang ditampilkan dan sel input yaitu [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input}.
-2. Bagian kedua yaitu **CROSSTAB TABLE** merupakan tabel hasil dari _cross tabulation_ yang menampilkan nilai variabel dari [COLUMN ID]{.cell-input} bersamaan dengan setiap _PILE_ dan setiap _LOAD CASE_. Dengan kolom menunjukkan setiap _LOAD CASE_ dan baris menunjukkan setiap _PILE_. 
+1. Bagian pertama yaitu **INFO/INPUT** menunjukkan informasi mengenai data yang sedang ditampilkan dengan sel input yaitu [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input}.
+2. Bagian kedua yaitu **CROSSTAB TABLE** merupakan tabel hasil dari _cross tabulation_ yang menampilkan nilai variabel dari [COLUMN ID]{.cell-input} bersamaan dengan setiap _PILE_ dan setiap _LOAD CASE_. Kolom menunjukkan setiap _LOAD CASE_ dan baris menunjukkan setiap _PILE_. 
 3. Bagian ketiga yaitu **SUMMARY MIN/MAX** adalah tabel ringkasan dari **CROSSTAB TABLE** yang memisahkan nilai minimum dan maksimum untuk setiap _LOAD CASE_ dan mengambil informasi variabel lain berdasarkan _PILE_ maksimum/minimum. Jika tidak perlu informasi variabel lainnya, bisa melihat lembar [SINGLE_SUMMARY]{.sheet-explore}. 
 
-Alur pembacaan sebenarnya dari **INFO** > **CROSSTAB TABLE** > **SUMMARY MIN/MAX**, tapi dari layout di @fig-summary-component polanya berbeda yaitu **INFO** > **SUMMARY MIN/MAX** > **CROSSTAB TABLE**. Hal tersebut dikarenakan baris untuk **CROSSTAB TABLE** (jumlah _PILE_) bersifat dinamis (artinya bisa berubah-ubah sesuai input) sedangkan jumlah baris untuk **SUMMARY MIN/MAX** sudah diketahui. Ringkasan penggunaan di lembar [SUMMARY]{.sheet-explore} bisa dilihat pada @fig-post-05.
+::: {.callout-note}
+
+Alur pembacaan sebenarnya dari **INFO** > **CROSSTAB TABLE** > **SUMMARY MIN/MAX**, tapi dari layout di @fig-summary-component polanya berbeda yaitu **INFO** > **SUMMARY MIN/MAX** > **CROSSTAB TABLE**. Hal tersebut dikarenakan baris untuk **CROSSTAB TABLE** (jumlah _PILE_) bersifat dinamis (artinya bisa berubah-ubah sesuai input) sedangkan jumlah baris untuk **SUMMARY MIN/MAX** sudah diketahui. 
+:::
+
+Ringkasan penggunaan lembar [SUMMARY]{.sheet-explore} bisa dilihat pada @fig-post-05.
 
 ::: {.column-page}
 
@@ -190,9 +195,11 @@ Alur pembacaan sebenarnya dari **INFO** > **CROSSTAB TABLE** > **SUMMARY MIN/MAX
 
 :::
 
+Berikut penjelasan lebih lanjut untuk masing-masing komponen yang ada di lembar [SUMMARY]{.sheet-explore}:
+
 ###### Komponen **INFO**
 
-Pada komponen **INFO** terdapat dua sel input yaitu [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input}. Sel [AXIS]{.cell-input} atau sumbu yang digunakan diisi dengan nilai _GLOBAL_ atau _LOCAL_. Sedangkan [COLUMN ID]{.cell-input} atau variabel yang ditinjau dapat diisi dengan angka dari $1$ sampai $12$. Arti angka $1$ sampai $12$ yaitu `DISPLACEMENT - X/Y/Z`, `ROTATION - X/Y/Z`, `FORCE - X/Y/Z`, `MOMENT - X/Y/Z` secara berurutan untuk setiap sumbunya. 
+Pada komponen **INFO** terdapat dua sel input yaitu [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input}. Sel [AXIS]{.cell-input} atau sumbu yang digunakan diisi dengan nilai _GLOBAL_ atau _LOCAL_. Sedangkan [COLUMN ID]{.cell-input} atau variabel yang ditinjau dapat diisi dengan angka dari $1$ sampai $12$. Arti angka $1$ sampai $12$ yaitu `DISPLACEMENT - X/Y/Z`, `ROTATION - X/Y/Z`, `FORCE - X/Y/Z`, `MOMENT - X/Y/Z` secara berurutan untuk setiap sumbunya. Untuk mengubah nilai [AXIS]{.cell-input} dapat menggunakan _dropdown_ atau mengetik langsung sumbunya, sedangkan untuk [COLUMN ID]{.cell-input} bisa memasukkan langsung angka ID Kolom atau menggunakan objek _spin button_ dengan mengklik segitiga atas/bawah.  
 
 ::: {.column-body}
 
@@ -204,7 +211,7 @@ Pada komponen **INFO** terdapat dua sel input yaitu [AXIS]{.cell-input} dan [COL
 
 Sel input [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input} menentukan _cross tabulation_ yang akan ditampilkan di **CROSSTAB TABLE**. Kolom menunjukkan setiap _LOAD CASE_ dan baris menunjukkan setiap _PILE_. Sedangkan nilainya merupakan variabel yang dipilih berdasarkan [COLUMN ID]{.cell-input}. 
 
-Pada komponen ini, terdapat pemisah kelompok secara visual/warna. Berbeda dengan di lembar [PILE_VIEWER]{.sheet-explore} atau [GPT_INFO]{.sheet-input}, visualiassi pemisah di lembar [SUMMARY]{.sheet-explore} menggunakan orientasi horizontal (pembagian berdasarkan kolom). Selain visualisasi pemisah kelompok, terdapat juga visualiasi **nilai [minimum]{.cell-minimum} dan [maksimum]{.cell-maximum} setiap kolom/_LOAD CASE_**. 
+Pada komponen ini, terdapat pemisah kelompok secara visual/warna. Berbeda dengan di lembar [PILE_VIEWER]{.sheet-explore} atau [GPT_INFO]{.sheet-input}, visualiasi pemisah di lembar [SUMMARY]{.sheet-explore} menggunakan orientasi horizontal (pembagian berdasarkan kolom). Selain visualisasi pemisah kelompok, terdapat juga visualiasi **nilai [minimum]{.cell-minimum} dan [maksimum]{.cell-maximum} setiap kolom/_LOAD CASE_**. 
 
 ::: {.column-body}
 
@@ -214,7 +221,7 @@ Pada komponen ini, terdapat pemisah kelompok secara visual/warna. Berbeda dengan
 
 ###### Komponen **SUMMARY MIN/MAX**
 
-Setelah memperoleh nilai [minimum]{.cell-minimum} dan [maksimum]{.cell-maximum} dari **CROSSTAB TABLE** pada setiap _LOAD CASE_, disajikan ulang dalam bentuk tabel **SUMMARY MIN/MAX**. Berikut informasi yang disajikan untuk tabel **SUMMARY**:
+Setelah memperoleh nilai [minimum]{.cell-minimum} dan [maksimum]{.cell-maximum} dari **CROSSTAB TABLE** pada setiap _LOAD CASE_, diringkas lagi dalam bentuk tabel **SUMMARY MIN/MAX**. Berikut informasi yang disajikan untuk tabel **SUMMARY**:
 
 1. Terdapat dua tabel dalam komponen **SUMMARY MIN/MAX** yaitu tabel SUMMARY MINIMUM dan SUMMARY MAXIMUM.
 2. Setelah mendapatkan nilai minimum/maksimum untuk variabel yang dipilih setiap _LOAD CASE_ dari tabel **CROSSTAB TABLE**, dicari nilai pasangan variabel lainnya (Contoh: nilai minimum `MOMENT - Y` pada _LOAD CASE_ $1$ yaitu di _PILE_ $20$, maka variabel lainnya seperti `DISPLACEMENT` ditampilkan juga untuk _PILE_ $20$ di tabel **SUMMARY**).
@@ -243,7 +250,7 @@ Indikator warna visual sama saja dengan lembar [SUMMARY]{.sheet-explore} seperti
 1. Setiap kelompok diberi warna latar serupa dengan lembar [GPT_INFO]{.sheet-input}.
 2. Indikator [MINIMUM]{.sum-min-selected} dan [MAXIMUM]{.sum-max-selected} berdasarkan setiap kelompok _LOAD CASE_.
 
-Pada lembar [SINGLE_SUMMARY]{.sheet-explore} tidak memiliki sel input dan untuk mengubah variabel yang dipilih bisa menggunakan objek _scroll_ atau klik panah atas atau bawah. Eksplorasi dapat dilihat di @fig-post-09.
+Pada lembar [SINGLE_SUMMARY]{.sheet-explore} tidak memiliki sel input dan untuk mengubah variabel yang dipilih bisa menggunakan objek _spin button_ atau klik panah atas atau bawah. Eksplorasi dapat dilihat di @fig-post-09.
 
 ::: {.column-page}
 
@@ -253,7 +260,7 @@ Pada lembar [SINGLE_SUMMARY]{.sheet-explore} tidak memiliki sel input dan untuk 
 
 ## PENUTUP
 
-Dari cara penggunaan yang disampaikan di bagian [PENGGUNAAN]{#sec-tutorial} dapat disimpulkan bahwa lembar yang terlampir ini belum dapat digunakan dalam pengambilan keputusan dan masih perlu diolah lagi lebih lanjut. Sehingga, penambahan lembar lainnya oleh pengguna sangat disarankan untuk memperoleh informasi yang dibutuhkan. 
+Dari informasi yang telah disampaikan dapat disimpulkan bahwa lembar yang terlampir ini dapat memudahkan dalam mengeksplorasi data terstruktur dari _summary_ GROUP. Akan tetapi, `fiako-gptreader.xl` belum dapat digunakan dalam pengambilan keputusan dan masih perlu diolah lagi lebih lanjut seperti melakukan analisis berdasarkan eksplorasi yang telah dilakukan. Sehingga, penambahan lembar lainnya oleh pengguna sangat disarankan untuk menyajikan informasi yang relevan sehingga dapat diambil keputusan dengan tepat. 
 
 Jika kamu memiliki ide pengembangan lembar kerja `fiako-gptreader.xl` atau pertanyaan terkait pengembangan bisa langsung [membuat isu di repository fiakoenjiniring/gptreader.xl](https://github.com/fiakoenjiniring/gptreader.xl/issues/new). Jika dokumentasi atau halaman ini ada yang keliru jangan ragu untuk [membuat isu di fiako-manual](https://github.com/fiakoenjiniring/manual/issues/new).
 
