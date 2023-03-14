@@ -1,0 +1,21 @@
+dt::after {
+    content: "";
+    display: block;
+    border-top: 1px dashed #ccc;
+    margin-top: 5px;
+    /* margin-bottom: 3px; */
+}
+
+dt {
+    font-weight: lighter;
+}
+
+dd {
+    color: #6c757d !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+

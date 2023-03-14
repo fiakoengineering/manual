@@ -6,6 +6,7 @@ link-external-newwindow: true
 page-layout: full
 sidebar: false
 anchor-sections: false
+css: hidrokit-styles.css
 ---
 
 ::: {.text-center}
@@ -16,7 +17,7 @@ anchor-sections: false
 # FIAKO-HIDROKIT
 ##### Technology for Water Resources Engineering by FIAKO Engineering & **fiako**dev
 :::
-<!-- 
+
 ::: {.text-center}
 
 ![](https://img.shields.io/badge/license-MIT-yellow)
@@ -25,20 +26,32 @@ anchor-sections: false
 
 ::: {.text-center .px-5}
 
-Project & Version | Release Date | Status 
-:-: | :-: | :-:
-![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-development-blueviolet)
-![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+Type | Project & Version | Release Date | Status 
+:-: | :-: | :-: | :-:
+_Python Package_ |  |  | 
+_Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/demo-stations?color=informational&label=demo-stations&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/demo-stations?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+_Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/rainfall?color=informational&label=rainfall&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/rainfall?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+_Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/anfrek?color=informational&label=anfrek&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/anfrek?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
 :::
 
+
 ::: {.text-center}
-**`fiako-hidrokit`** merupakan kumpulan proyek penelitian dan pengembangan teknologi di bidang teknik sumber daya yang diawali oleh [taruma](https://github.com/taruma) yang kemudian didukung dan diolah lebih lanjut oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering).
-::: -->
 
-::: {.text-center .callout-caution appearance="simple"}
+**hidrokit** (_Python Package_) | ![](https://img.shields.io/github/v/release/hidrokit/hidrokit?color=blue&label=hidrokit.py&labelColor=navy&logo=Python&style=flat-square) | ![](https://img.shields.io/github/release-date/hidrokit/hidrokit?color=black&label=release&labelColor=brown&logo=Python&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+: Proyek open source paket python yang dapat digunakan untuk membantu proses analisis hidrologi dimulai dari pengolahan data, analisis data, dan visualisasi data
 
-### HALAMAN INI SEDANG DALAM PENGEMBANGAN 
+**hidrokit** (_Python Package_) | ![](https://img.shields.io/github/v/release/hidrokit/hidrokit?color=blue&label=hidrokit.py&labelColor=navy&logo=Python&style=flat-square) | ![](https://img.shields.io/github/release-date/hidrokit/hidrokit?color=black&label=release&labelColor=brown&logo=Python&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
+: Proyek open source paket python yang dapat digunakan untuk membantu proses analisis hidrologi dimulai dari pengolahan data, analisis data, dan visualisasi data
 
-<small>MOHON DIPERIKSA KEMBALI SECARA BERKALA</small>
+:::
 
+2. askdasjdk a | asdakjsd aksj da
+: aksdjak sdka jsdka sd
+
+
+10. aksda sda sda sad 
+: asd asd asd
+
+::: {.text-center}
+**`fiako-hidrokit`** merupakan kumpulan proyek penelitian dan pengembangan teknologi di bidang teknik sumber daya yang diawali oleh [taruma](https://github.com/taruma) yang kemudian dikembangkan lebih lanjut oleh [FIAKO Engineering](https://fiako.engineering) dan [**fiako**dev](https://dev.fiako.engineering).
 :::
