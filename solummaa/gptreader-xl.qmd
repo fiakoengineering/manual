@@ -10,7 +10,7 @@ css: gptreader-xl.css
 
 ::: {.text-center}
 
-<img src="assets/logo-by-midjourney-3.png" alt="fiako-gptreader.xl logo" width="300" class="border border-dark rounded">
+<img src="assets/logo-by-midjourney-3.png" alt="fiako-gptreader.xl logo" width="300" class="logo">
 
 # FIAKO-GPTREADER.XL {.unlisted}
 ##### Explore _summary_ GROUP with Excel Workbook {.unlisted}

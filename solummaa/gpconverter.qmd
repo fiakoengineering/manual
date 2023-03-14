@@ -9,7 +9,7 @@ toc: true
 
 ::: {.text-center}
 
-<img src="assets/logo-by-midjourney-2.png" alt="fiako-gpconverter logo" width="300" class="border border-dark rounded">
+<img src="assets/logo-by-midjourney-2.png" alt="fiako-gpconverter logo" width="300" class="logo">
 
 # FIAKO-GPCONVERTER {.unlisted}
 ##### Convert `.gp*t` to CSV/JSON {.unlisted}

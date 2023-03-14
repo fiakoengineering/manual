@@ -11,7 +11,7 @@ anchor-sections: false
 
 
 ::: {.text-center}
-![](/assets/logo-fiako-manual.png){width="300"}
+![](/assets/logo-fiako-manual.png){.logo width="300"}
 :::
 
 ::: {.text-center .mb-4}
