@@ -10,7 +10,7 @@ anchor-sections: false
 
 
 ::: {.text-center}
-<img src="assets/fiako-solummaa.png" alt="fiako-solummaa logo" width="300" class="border border-dark rounded">
+<img src="assets/fiako-solummaa.png" alt="fiako-solummaa logo" width="300" class="logo">
 :::
 
 ::: {.text-center .mb-4}
