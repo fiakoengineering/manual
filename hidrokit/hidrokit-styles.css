@@ -1,8 +1,10 @@
 dt::after {
     content: "";
     display: block;
-    border-top: 1px dashed #ccc;
+    border-top: 1px dashed gray;
     margin-top: 5px;
+    margin-left: 15%;
+    margin-right: 15%;
     /* margin-bottom: 3px; */
 }
 
@@ -15,3 +17,6 @@ dd {
     margin-bottom: 15px;
 }
 
+hr {
+    color: black;
+}
