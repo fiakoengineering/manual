@@ -1,18 +1,75 @@
 ---
-pagetitle: "fiako-gpconverter | konversi output GROUP menjadi data terstruktur"
-# title: "FIAKO-GPCONVERTER"
-# subtitle: Aplikasi web yang mengubah _output_ GROUP menjadi data terstruktur
+pagetitle: "fiako-gpconverter | mengubah summary GROUP menjadi data terstruktur"
+title: "FIAKO-GPCONVERTER"
+subtitle: Aplikasi web mengubah _summary_ GROUP menjadi data terstruktur
 sidebar: side-solummaa
 css: gptreader-xl.css
+
 toc: true
+toc-depth: 4
+toc-location: right
+
+page-layout: article
+
+author:
+    - name: Taruma Sakti Megariansyah
+      url: mailto:hi@taruma.info
+      affiliation: Developer, fiakodev
+    - name: FJO
+      affiliation: Konsultan, FIAKO Engineering
+    - name: DWN
+      affiliation: Konsultan, FIAKO Engineering
+    - name: NDE
+      affiliation: Konsultan, FIAKO Engineering
+    - name: ANH
+      affiliation: Konsultan, FIAKO Engineering
+
+citation:
+    language: id
+    type: article
+    license: CC-BY-NC-SA 4.0
+    issued: 2023-03-15
+    url: "https://manual.fiako.engineering/solummaa/gpconverter.html"
+
+license: CC-BY-NC-SA 4.0
+
+lang: id
+
+date: 2023-03-17
+date-modified: 2023-03-17
+date-format: full
+language:
+  title-block-modified: "Diperbarui"
+  title-block-author-plural: "Penulis/Pencipta"
+  title-block-affiliation-plural: "Afiliasi"
+
+abstract: |
+    Dalam analisis hidrologi, pengolahan data hujan merupakan proses yang penting. 
+    Dengan membesarnya penyimpanan data dan permintaan pengolahan data yang lebih cepat, 
+    diperlukan solusi teknologi yang dapat menjawab tantangan tersebut.
+    Dikembangkan tiga aplikasi pengolahan data hujan berbasis web yang mampu mempersingkat proses pengerjaan pengolahan data hujan
+    dan mengurangi kekeliruan yang terjadi. 
+    Aplikasi yang telah dikembangkan yaitu Rainfall Stations Explorer, 
+    Rainfall Data Explorer, dan Frequency Analysis. 
+
+callout-appearance: simple
+number-sections: true
+fig-responsive: true
+tbl-cap-location: top
+
+crossref: 
+  chapters: true
+---
+
 ---
 
 ::: {.text-center}
 
-<img src="assets/logo-by-midjourney-2.png" alt="fiako-gpconverter logo" width="300" class="logo">
+<img src="assets/logo-by-midjourney-2.png" alt="fiako-gpconverter logo" width="300" class="logo mt-3">
 
-# FIAKO-GPCONVERTER {.unlisted}
-##### Convert `.gp*t` to CSV/JSON {.unlisted}
+[FIAKO-GPCONVERTER]{.h1}
+
+[Convert `.gp*t` to CSV/JSON]{.h5}
 
 ![](https://img.shields.io/github/license/fiakoenjiniring/gpconverter?color=yellow&labelColor=brown&label=license&)
 ![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square)
@@ -27,13 +84,15 @@ toc: true
 Halaman ini masih dalam pengembangan
 ::: -->
 
-## INFO {#sec-info}
+---
+
+# INFO {#sec-info}
 
 **`fiako-gpconverter`** merupakan aplikasi web yang mengubah _summary_ aplikasi GROUP `.gp*t` menjadi data terstruktur berupa CSV atau JSON. Aplikasi dapat diakses di [**fiako-gpconverter.herokuapp.com**](https://fiako-gpconverter.herokuapp.com). 
 
 Aplikasi ini diuji dengan versi `.gp8t`, `.gp11t`, dan `.gp12t`.
 
-## PERSIAPAN {#sec-preparation}
+# PERSIAPAN {#sec-preparation}
 
 Berikut yang harus dipersiapkan sebelum menggunakan aplikasi `fiako-gpconverter`:
 
@@ -46,7 +105,7 @@ Berikut yang harus dipersiapkan sebelum menggunakan aplikasi `fiako-gpconverter`
 
 Dari langkah-langkah diatas dihasilkan berkas `.zip` yang dapat digunakan nantinya di aplikasi `fiako-gpconverter`. 
 
-## PENGGUNAAN APLIKASI {#sec-tutorial}
+# PENGGUNAAN APLIKASI {#sec-tutorial}
 
 Penggunaan aplikasi `fiako-gpconverter` cukup sederhana yaitu:
 

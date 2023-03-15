@@ -64,7 +64,7 @@ aliases:
 ::: {.callout-important}
 ## Mengutip Artikel
 
-Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari prosiding PIT HATHI ke-39. Jika bukan untuk makalah formal, dapat menggunakan sitasi yang tersedia [di akhir halaman](#sitasi) (mensitasi halaman ini).  
+Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari [prosiding PIT HATHI ke-39](https://hathi.id/pit39-hathi/#tab-915) (Makalah di Jilid 5). Jika ingin mengutip halaman ini secara spesifik, dapat menggunakan sitasi yang tersedia [di akhir halaman](#sitasi) (mensitasi halaman ini).  
 :::
 
 ::: {.callout-note}
@@ -72,7 +72,7 @@ Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "
 
 Ketiga aplikasi ini telah dipresentasikan di kegiatan Pertemuan Ilmiah Tahunan (PIT) Himpunan Ahli Teknik Hidrolik Indonesia (HATHI) ke-39 yang diadakan pada tanggal 29 Oktober 2022 dalam bentuk makalah berjudul "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web". 
 
-Artikel ini ditujukan sebagai penjelasan teknis dengan penyampaian informal dan bukan sebagai pengganti makalah yang dipublikasikan di PIT HATHI ke-39. Harapannya, artikel ini memudahkan kontributor dan _developer_ untuk berkontribusi maupun mengembangkan aplikasi yang serupa. 
+Artikel ini ditujukan sebagai penjelasan teknis dengan penyampaian informal dan bukan sebagai pengganti makalah yang dipublikasikan di PIT HATHI ke-39. Harapannya, artikel ini memudahkan kontributor dan _developer_ untuk berkontribusi maupun mengembangkan aplikasi yang serupa. Artikel ini bisa dianggap sebagai _white paper_. 
 
 Artikel ini juga dapat dikembangkan seiringnya waktu, sesuai perkembangan aplikasi ataupun teknologi yang digunakan. 
 :::

@@ -112,7 +112,7 @@ website:
         - text: "FIAKO-HIDROKIT"
           href: hidrokit/index.qmd
         - "---"
-        - section: "_WHITE PAPER_/ARTIKEL"
+        - section: "ARTIKEL"
           contents:
             - href: hidrokit/webapps-rainfall.qmd        
         - "---"    

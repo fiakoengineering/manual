@@ -148,3 +148,16 @@ section h4::after {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+p.affiliation {
+    margin-block-end: 0px !important;
+}
+
+.abstract p {
+    text-align: justify;
+}
+
+.abstract-title {
+    text-align: center;
+    font-size: large !important;
+}
