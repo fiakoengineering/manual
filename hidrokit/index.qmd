@@ -20,38 +20,43 @@ css: hidrokit-styles.css
 
 ::: {.text-center}
 
-![](https://img.shields.io/badge/license-MIT-yellow)
+---
 
-:::
-
-::: {.text-center .px-5}
-
-Type | Project & Version | Release Date | Status 
-:-: | :-: | :-: | :-:
-_Python Package_ |  |  | 
-_Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/demo-stations?color=informational&label=demo-stations&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/demo-stations?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
-_Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/rainfall?color=informational&label=rainfall&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/rainfall?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
-_Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/anfrek?color=informational&label=anfrek&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/anfrek?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
-:::
-
-
-::: {.text-center}
-
-**hidrokit** (_Python Package_) | ![](https://img.shields.io/github/v/release/hidrokit/hidrokit?color=blue&label=hidrokit.py&labelColor=navy&logo=Python&style=flat-square) | ![](https://img.shields.io/github/release-date/hidrokit/hidrokit?color=black&label=release&labelColor=brown&logo=Python&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
-: Proyek open source paket python yang dapat digunakan untuk membantu proses analisis hidrologi dimulai dari pengolahan data, analisis data, dan visualisasi data
-
-**hidrokit** (_Python Package_) | ![](https://img.shields.io/github/v/release/hidrokit/hidrokit?color=blue&label=hidrokit.py&labelColor=navy&logo=Python&style=flat-square) | ![](https://img.shields.io/github/release-date/hidrokit/hidrokit?color=black&label=release&labelColor=brown&logo=Python&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
-: Proyek open source paket python yang dapat digunakan untuk membantu proses analisis hidrologi dimulai dari pengolahan data, analisis data, dan visualisasi data
-
-:::
-
-2. askdasjdk a | asdakjsd aksj da
-: aksdjak sdka jsdka sd
-
-
-10. aksda sda sda sad 
-: asd asd asd
-
-::: {.text-center}
 **`fiako-hidrokit`** merupakan kumpulan proyek penelitian dan pengembangan teknologi di bidang teknik sumber daya yang diawali oleh [taruma](https://github.com/taruma) yang kemudian dikembangkan lebih lanjut oleh [FIAKO Engineering](https://fiako.engineering) dan [**fiako**dev](https://dev.fiako.engineering).
+
+---
+
 :::
+
+::: {.text-center}
+
+## HIDROKIT-PROJECTS
+
+**hidrokit** | _Python Package_ | ![](https://img.shields.io/pypi/v/hidrokit.svg?logo=pypi) | ![](https://img.shields.io/github/v/release/hidrokit/hidrokit?color=blue&label=hidrokit.py&labelColor=navy&logo=Python&style=flat-square) | ![](https://img.shields.io/github/release-date/hidrokit/hidrokit?color=black&label=release&labelColor=brown&logo=Python&logoColor=white) | ![](https://img.shields.io/github/license/hidrokit/hidrokit) | ![](https://img.shields.io/badge/status-maintenance-brown)
+: Paket python yang dapat digunakan untuk membantu proses analisis hidrologi dimulai dari pengolahan data, analisis data, dan visualisasi data. Fiturnya antara lain pemodelan NRECA dan FJMock, rekap/ringkasan data hujan harian, debit andal, analisis frekuensi. 
+
+[<button type="button" class="btn btn-primary m-1">HIDROKIT.py</button>](https://github.com/hidrokit/hidrokit)
+
+---
+
+##### APLIKASI PENGOLAHAN DATA HUJAN
+
+[<button type="button" class="btn btn-danger m-1">WHITE PAPER: APLIKASI PENGOLAHAN DATA HUJAN</button>](/webapps/webapps-rainfall.qmd)
+
+**fiako-stations** | _Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/demo-stations?color=informational&label=demo-stations&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/demo-stations?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/github/license/fiakoenjiniring/demo-stations) | ![](https://img.shields.io/badge/status-maintenance-brown)
+: Aplikasi web untuk mengeksplorasi pos hujan dengan data hujan harian yang tersedia di _database_. Dengan aplikasi ini dapat memperoleh informasi kelengkapan data dan akuisisi data hujan harian dengan mudah dan cepat.
+
+**hidrokit-rainfall** | _Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/rainfall?color=informational&label=rainfall&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/rainfall?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/github/license/fiakoenjiniring/rainfall) | ![](https://img.shields.io/badge/status-maintenance-brown)
+: Aplikasi web untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, hari hujan, hari kering, kejadian hujan maksimum setiap periode, kumulatif tahunan, dan konsistensi (kurva massa ganda).
+
+**fiako-anfrek** | _Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/anfrek?color=informational&label=anfrek&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/anfrek?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/github/license/fiakoenjiniring/anfrek) | ![](https://img.shields.io/badge/status-maintenance-brown)
+:  aplikasi web untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt.
+
+[<button type="button" class="btn btn-info m-1">FIAKO-STATIONS</button>](https://github.com/fiakoenjiniring/demo-stations)
+[<button type="button" class="btn btn-info m-1">HIDROKIT-RAINFALL</button>](https://github.com/fiakoenjiniring/rainfall)
+[<button type="button" class="btn btn-info m-1">FIAKO-ANFREK</button>](https://github.com/fiakoenjiniring/anfrek)
+
+---
+
+:::
+
