@@ -7,6 +7,8 @@ page-layout: full
 sidebar: false
 anchor-sections: false
 css: /fiakodev-home.css
+aliases: 
+  - webapps/index.html
 ---
 
 ::: {.text-center}
@@ -41,7 +43,7 @@ css: /fiakodev-home.css
 
 ##### APLIKASI PENGOLAHAN DATA HUJAN
 
-[<button type="button" class="btn btn-danger m-1">WHITE PAPER: APLIKASI PENGOLAHAN DATA HUJAN</button>](/webapps/webapps-rainfall.qmd)
+[<button type="button" class="btn btn-danger m-1">WHITE PAPER: APLIKASI PENGOLAHAN DATA HUJAN</button>](webapps-rainfall.qmd)
 
 **fiako-stations** | _Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/demo-stations?color=informational&label=demo-stations&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/demo-stations?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/github/license/fiakoenjiniring/demo-stations) | ![](https://img.shields.io/badge/status-maintenance-brown)
 : Aplikasi web untuk mengeksplorasi pos hujan dengan data hujan harian yang tersedia di _database_. Dengan aplikasi ini dapat memperoleh informasi kelengkapan data dan akuisisi data hujan harian dengan mudah dan cepat.

@@ -10,7 +10,7 @@ toc: true
 toc-depth: 4
 toc-location: right
 toc-title: Daftar isi
-sidebar: side-webapps
+sidebar: side-hidrokit
 page-layout: article
 lang: id
 
@@ -27,7 +27,7 @@ citation:
     type: article
     license: CC-BY-NC-SA 4.0
     issued: 2022-11-22
-    url: "https://manual.fiako.engineering/webapps/webapps-rainfall.html"
+    url: "https://manual.fiako.engineering/hidrokit/webapps-rainfall.html"
 
 license: CC-BY-NC-SA 4.0
 
@@ -55,6 +55,9 @@ format:
   html: 
     css: article.css
     mermaid-format: js
+
+aliases: 
+  - /webapps/webapps-rainfall.html
 
 ---
 
