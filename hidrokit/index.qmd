@@ -6,7 +6,7 @@ link-external-newwindow: true
 page-layout: full
 sidebar: false
 anchor-sections: false
-css: hidrokit-styles.css
+css: /fiakodev-home.css
 ---
 
 ::: {.text-center}

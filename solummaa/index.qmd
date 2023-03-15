@@ -6,6 +6,7 @@ link-external-newwindow: true
 page-layout: full
 sidebar: false
 anchor-sections: false
+css: /fiakodev-home.css
 ---
 
 
@@ -20,37 +21,29 @@ anchor-sections: false
 
 ::: {.text-center}
 
-![](https://img.shields.io/badge/license-MIT-yellow)
+---
 
-:::
-
-::: {.text-center .px-5}
-
-Type | Project & Version | Release Date | Status 
-:-: | :-: | :-: | :-:
-_Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
-_Excel Workbook_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/badge/status-maintenance-brown)
-_Web Application_ | `fiako-gptreader` | - | ![](https://img.shields.io/badge/status-development-blueviolet)
-:::
-
-::: {.text-center}
 **`fiako-solummaa`** merupakan kumpulan proyek penelitian dan pengembangan teknologi di bidang geoteknik oleh [FIAKO Engineering](https://fiako.engineering) dan tim [**fiako**dev](https://dev.fiako.engineering).
+
+---
+
 :::
 
 ::: {.text-center}
+
 ## SOLUMMAA-PROJECTS
-:::
 
-::: {.text-center}
+**fiako-gpconverter** | _Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&label=gpconverter&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/github/license/fiakoenjiniring/gpconverter) | ![](https://img.shields.io/badge/status-maintenance-brown)
+: Aplikasi web untuk mengkonversi data teks _output_ program GROUP menjadi data terstruktur berupa _Comma-Separated Value_ (CSV) atau JSON. 
+
+**fiako-gptreader.xl** | _Excel Workbook_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/github/license/fiakoenjiniring/gptreader.xl) | ![](https://img.shields.io/badge/status-maintenance-brown)
+: Lembar kerja Microsoft Excel untuk membaca dan mengeksplorasi data CSV dari aplikasi [fiako-gpconverter](/solummaa/gpconverter.qmd).
+
+---
 
 [<button type="button" class="btn btn-primary m-1">GPCONVERTER</button>](/solummaa/gpconverter.qmd)
 [<button type="button" class="btn btn-info m-1">GPTREADER.XL</button>](/solummaa/gptreader-xl.qmd)
 
-:::
-
-1. [**fiako-gpconverter**](/solummaa/gpconverter.qmd) | _Web Application_: Aplikasi web untuk mengkonversi data teks _output_ program GROUP menjadi data terstruktur berupa _Comma-Separated Value_ (CSV) atau JSON. 
-2. [**fiako-gptreader.xl**](/solummaa/gptreader-xl.qmd) | _Excel Workbook_: Lembar kerja Microsoft Excel untuk membaca dan mengeksplorasi data CSV dari aplikasi [fiako-gpconverter](/solummaa/gpconverter.qmd).
-
 ---
 
-
+:::
