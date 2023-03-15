@@ -32,7 +32,7 @@ citation:
 license: CC-BY-NC-SA 4.0
 
 date: 2022-11-22
-date-modified: 2022-11-25
+date-modified: 2023-03-16
 date-format: full
 language:
   title-block-modified: "Diperbarui"
@@ -62,9 +62,13 @@ aliases:
 ---
 
 ::: {.callout-important}
-## Mengutip Artikel
+## Mengutip/Sitasi Artikel
 
-Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari [prosiding PIT HATHI ke-39](https://hathi.id/pit39-hathi/#tab-915) (Makalah di Jilid 5). Jika ingin mengutip halaman ini secara spesifik, dapat menggunakan sitasi yang tersedia [di akhir halaman](#sitasi) (mensitasi halaman ini).  
+Untuk mensitasi artikel ini dalam makalah formal, disarankan mensitasi makalah "Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web" dari [prosiding PIT HATHI ke-39](https://hathi.id/pit39-hathi/#tab-915) (Makalah di Jilid 5). Berikut contoh sitasi untuk makalahnya:
+
+> Megariansyah, T. S., Enung, Suryadi, C. (2022). Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web. Prosiding Pertemuan Ilmiah Tahunan (PIT) Himpunan Ahli Teknik Hidrolik Indonesia (HATHI) ke-39, Mataram, Indonesia: 28-29 Oktober 2022, jilid 5, hal. 2297-2308. <https://hathi.id/download/155/?tmstv=1678886738>
+
+Jika ingin mengutip halaman ini secara spesifik, dapat menggunakan sitasi yang tersedia [di akhir halaman](#sitasi) (mensitasi halaman ini).  
 :::
 
 ::: {.callout-note}
@@ -207,7 +211,7 @@ _Filename_ | Kegunaan | Catatan
 
 Hubungan antara file bisa dilihat pada @fig-structure-apps. Struktur aplikasi tersebut tidak begitu ketat sehingga beberapa file/modul yang seharusnya tidak digunakan di `app.py` tetap dipanggil. Struktur ini hanya memudahkan _developer_ untuk menyusun fitur ataupun menelusuri fungsi. Dengan struktur tersebut, harapannya memudahkan untuk _developer_ atau kontributor untuk berkontribusi ataupun mengembangkan. 
 
-::: {.column-body-outset .text-center}
+::: {.column-page .text-center}
 
 ```{mermaid}
 %%| label: fig-structure-apps
@@ -294,6 +298,8 @@ Setelah hasil aplikasi memuaskan dan dapat digunakan, aplikasi dirilis dalam ben
 
 Sebelum dipublikasikan ke publik, ada tahap _refactoring_ dengan harapannya memudahkan _developer_ lain membaca kode aplikasi. Setelah dipublikasikan di github, aplikasi bisa didemonstrasikan melalui _deployment_ ke server, dan pengelolaan. Akan tetapi, tahap tersebut merupakan opsional dan tergantung kebutuhan saja. Pada akhirnya, setelah dipublikasikan di github, dikembalikan ke tanggung jawab komunitas untuk mengembangkannya ketika repository tidak ada pengelolanya. Alur publikasi seperti pada gambaran @fig-publish-apps. 
 
+::: {.text-center}
+
 ```{mermaid}
 %%| label: fig-publish-apps
 %%| fig-cap: Gambaran publikasi dan rilis aplikasi.
@@ -320,6 +326,7 @@ flowchart TD
 
 ```
 
+:::
 
 Sesuai ilustrasi diatas, aplikasi yang telah dipublikasikan diserahkan ke komunitas untuk mengembangkannya lebih lanjut. Dengan lisensi MIT, aplikasi juga bisa dimodifikasi dan dirilis dengan lisensi yang berbeda^[Harap membaca lisensi masing-masing aplikasi untuk lebih jelasnya.]. Pada tahap terakhir mengacu pada pengembangan dengan menggunakan [_Open Source Software Development_](https://en.wikipedia.org/wiki/Open-source_software_development).
 
@@ -593,7 +600,7 @@ Ketiga aplikasi diatas dapat membantu proses analisis hidrologi dari menyimpan d
 
 Proses tersebut dapat dilihat ilustrasinya dalam bentuk _sequence diagram_ di @fig-using-apps. 
 
-::: {.column-body-outset}
+::: {.column-page .text-center}
 
 ```{mermaid}
 %%| label: fig-using-apps
