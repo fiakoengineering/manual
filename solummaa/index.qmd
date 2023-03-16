@@ -39,10 +39,10 @@ css: /fiakodev-home.css
 **fiako-gptreader.xl** | _Excel Workbook_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&label=release&labelColor=olive&logo=Microsoft%20Excel&logoColor=white) | ![](https://img.shields.io/github/license/fiakoenjiniring/gptreader.xl) | ![](https://img.shields.io/badge/status-maintenance-brown)
 : Lembar kerja Microsoft Excel untuk membaca dan mengeksplorasi data CSV dari aplikasi [fiako-gpconverter](/solummaa/gpconverter.qmd).
 
----
-
 [<button type="button" class="btn btn-primary m-1">GPCONVERTER</button>](/solummaa/gpconverter.qmd)
 [<button type="button" class="btn btn-info m-1">GPTREADER.XL</button>](/solummaa/gptreader-xl.qmd)
+
+[////]{.h3}
 
 ---
 

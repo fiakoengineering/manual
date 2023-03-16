@@ -30,20 +30,22 @@ aliases:
 
 :::
 
-::: {.text-center}
+::: {.text-center .mt-5}
 
-## HIDROKIT-PROJECTS
+[HIDROKIT-PROJECTS]{.h1}
 
 **hidrokit** | _Python Package_ | ![](https://img.shields.io/pypi/v/hidrokit.svg?logo=pypi) | ![](https://img.shields.io/github/v/release/hidrokit/hidrokit?color=blue&label=hidrokit.py&labelColor=navy&logo=Python&style=flat-square) | ![](https://img.shields.io/github/release-date/hidrokit/hidrokit?color=black&label=release&labelColor=brown&logo=Python&logoColor=white) | ![](https://img.shields.io/github/license/hidrokit/hidrokit) | ![](https://img.shields.io/badge/status-maintenance-brown)
 : Paket python yang dapat digunakan untuk membantu proses analisis hidrologi dimulai dari pengolahan data, analisis data, dan visualisasi data. Fiturnya antara lain pemodelan NRECA dan FJMock, rekap/ringkasan data hujan harian, debit andal, analisis frekuensi. 
 
 [<button type="button" class="btn btn-primary m-1">HIDROKIT.py</button>](https://github.com/hidrokit/hidrokit)
+[<button type="button" class="btn btn-info m-1">HIDROKIT-WEBSITE</button>](https://hidrokit.github.io/hidrokit)
+[<button type="button" class="btn btn-info m-1">HIDROKIT-NOTEBOOK</button>](https://hidrokit.github.io/notebook)
 
----
+[////]{.h3}
 
-##### APLIKASI PENGOLAHAN DATA HUJAN
+### APLIKASI PENGOLAHAN DATA HUJAN [[fiako-stations, hidrokit-rainfall, fiako-anfrek]]{.text-muted}
 
-[<button type="button" class="btn btn-danger m-1">WHITE PAPER: APLIKASI PENGOLAHAN DATA HUJAN</button>](webapps-rainfall.qmd)
+[_pengembangan tiga aplikasi web untuk membantu pekerjaan pengolahan data hujan hingga analisis frekuensi_]{.h5 .text-muted}
 
 **fiako-stations** | _Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/demo-stations?color=informational&label=demo-stations&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/demo-stations?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/github/license/fiakoenjiniring/demo-stations) | ![](https://img.shields.io/badge/status-maintenance-brown)
 : Aplikasi web untuk mengeksplorasi pos hujan dengan data hujan harian yang tersedia di _database_. Dengan aplikasi ini dapat memperoleh informasi kelengkapan data dan akuisisi data hujan harian dengan mudah dan cepat.
@@ -52,13 +54,43 @@ aliases:
 : Aplikasi web untuk menganalisis data hujan harian. Dari aplikasi ini dapat memperoleh informasi hujan maksimum, hari hujan, hari kering, kejadian hujan maksimum setiap periode, kumulatif tahunan, dan konsistensi (kurva massa ganda).
 
 **fiako-anfrek** | _Web Application_ | ![](https://img.shields.io/github/v/release/fiakoenjiniring/anfrek?color=informational&label=anfrek&labelColor=blueviolet&logo=Plotly&style=flat-square) | ![](https://img.shields.io/github/release-date/fiakoenjiniring/anfrek?color=black&label=release&labelColor=brown&logo=Plotly&logoColor=white) | ![](https://img.shields.io/github/license/fiakoenjiniring/anfrek) | ![](https://img.shields.io/badge/status-maintenance-brown)
-:  aplikasi web untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt.
+: Aplikasi web untuk menghitung parameter statistik, jenis sebarannya (distribusi), analisis frekuensi, dan uji kecocokan distribusi. Output aplikasi ini berupa visualisasi hasil perhitungan dan tabel/teks berupa .csv/.txt.
+
+[<button type="button" class="btn btn-danger m-1">WHITE PAPER/ARTIKEL: APLIKASI PENGOLAHAN DATA HUJAN</button>](webapps-rainfall.qmd){target="blank"}
+[<button type="button" class="btn btn-success m-1">MAKALAH: PENGEMBANGAN APLIKASI PENGOLAHAN DATA HUJAN BERBASIS WEB (PIT HATHI ke-39, Jilid 5)</button>](https://hathi.id/pit39-hathi/#tab-915)
 
 [<button type="button" class="btn btn-info m-1">FIAKO-STATIONS</button>](https://github.com/fiakoenjiniring/demo-stations)
 [<button type="button" class="btn btn-info m-1">HIDROKIT-RAINFALL</button>](https://github.com/fiakoenjiniring/rainfall)
 [<button type="button" class="btn btn-info m-1">FIAKO-ANFREK</button>](https://github.com/fiakoenjiniring/anfrek)
 
+[////]{.h3}
+
+### LAPORAN IMPLEMENTASI
+[_Jupyter Notebook yang mendemonstrasikan/mengimplementasikan python pada bidang teknik sumber daya air menggunakan [hidrokit]{.code-clean}_]{.h5 .text-muted}
+
+[LI-01]{.code-clean} | **_Single-Output Regression Neural Network_ pada kasus Prediksi Kualitas Air**
+: (13 Juli 2019) | _Machine Learning_ | ![](https://img.shields.io/badge/hidrokit-0.2.0-blue)
+
+[LI-02]{.code-clean} | **Prediksi Debit Aliran Menggunakan _Long Short-Term Memory_ (LSTM)**
+: (22 Oktober 2019) | _Machine Learning_ | ![](https://img.shields.io/badge/hidrokit-0.3.2-blue)
+
+[LI-03]{.code-clean} | **Analisis Hidrologi menggunakan [hidrokit]{.code-clean}**
+: (16 Januari 2020) | _Python_ | ![](https://img.shields.io/badge/hidrokit-0.3.5-blue)
+
+[LI-04]{.code-clean} | **Perbandingan Model Variasi _Recurrent Neural Networks_ pada Kasus Prediksi Debit Aliran**
+: (11 Februari 2020) | _Machine Learning_ | ![](https://img.shields.io/badge/hidrokit-0.3.5-blue)
+
+[LI-05]{.code-clean} | **Analisis Frekuensi dan Uji Kecocokan Distribusi**
+: (05 April 2022) | _Machine Learning_ | ![](https://img.shields.io/badge/hidrokit-0.4.0-blue)
+
+[<button type="button" class="btn btn-primary m-1">LI-01</button>](https://nbviewer.jupyter.org/gist/12bf06ab7307340525eecf5b3c8beb9c)
+[<button type="button" class="btn btn-primary m-1">LI-02</button>](https://nbviewer.jupyter.org/gist/8186dba212875f6b3f1677a5e2f9a70f)
+[<button type="button" class="btn btn-primary m-1">LI-03</button>](https://nbviewer.jupyter.org/gist/4c1ed1212290965ecda056f45d7aaea2)
+[<button type="button" class="btn btn-primary m-1">LI-04</button>](https://nbviewer.jupyter.org/gist/9d1ef5c6d629c792bed0c3f68b324675)
+[<button type="button" class="btn btn-primary m-1">LI-05</button>](https://nbviewer.jupyter.org/gist/560eecd2e55b5fdc3a357b6d3ac4f20c)
+
 ---
+
 
 :::
 

@@ -20,3 +20,8 @@ dd {
 hr {
     color: black;
 }
+
+.code-clean {
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: medium;
+}
