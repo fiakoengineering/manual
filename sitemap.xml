@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://manual.fiako.engineering/webapps/webapps-rainfall.html</loc>
-    <lastmod>2023-03-14T02:55:52.010Z</lastmod>
+    <loc>https://manual.fiako.engineering/test.html</loc>
+    <lastmod>2023-03-17T06:46:05.161Z</lastmod>
   </url>
   <url>
-    <loc>https://manual.fiako.engineering/webapps/index.html</loc>
-    <lastmod>2023-03-14T02:55:52.938Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/webapps/hidrokit-rainfall.html</loc>
-    <lastmod>2023-03-14T02:55:53.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-anfrek.html</loc>
-    <lastmod>2023-03-14T02:55:53.962Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-stations.html</loc>
-    <lastmod>2023-03-14T02:55:54.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/editor/tsm-1-batch-multiple-picture.html</loc>
-    <lastmod>2023-03-14T02:55:55.086Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/editor/inr-1-batch-multiple-picture-into-word.html</loc>
-    <lastmod>2023-03-14T02:55:55.618Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/tutorial/index.html</loc>
-    <lastmod>2023-03-14T02:55:56.042Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/assets/notes.html</loc>
-    <lastmod>2023-03-14T02:55:56.486Z</lastmod>
+    <loc>https://manual.fiako.engineering/hidrokit/webapps-rainfall.html</loc>
+    <lastmod>2023-03-17T06:46:06.877Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/hidrokit/index.html</loc>
-    <lastmod>2023-03-14T02:55:56.882Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/test.html</loc>
-    <lastmod>2023-03-14T02:55:57.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/greenhorn/G22-11-29.html</loc>
-    <lastmod>2023-03-14T02:55:57.786Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/index.html</loc>
-    <lastmod>2023-03-14T02:55:58.218Z</lastmod>
-  </url>
-  <url>
-    <loc>https://manual.fiako.engineering/solummaa/index.html</loc>
-    <lastmod>2023-03-14T02:55:58.706Z</lastmod>
+    <lastmod>2023-03-17T06:46:07.313Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/solummaa/gpconverter.html</loc>
-    <lastmod>2023-03-14T02:55:59.170Z</lastmod>
+    <lastmod>2023-03-17T06:46:07.865Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/solummaa/index.html</loc>
+    <lastmod>2023-03-17T06:46:08.221Z</lastmod>
   </url>
   <url>
     <loc>https://manual.fiako.engineering/solummaa/gptreader-xl.html</loc>
-    <lastmod>2023-03-14T02:55:59.974Z</lastmod>
+    <lastmod>2023-03-17T06:46:08.969Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/assets/notes.html</loc>
+    <lastmod>2023-03-17T06:46:09.305Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/general/feidlambda.html</loc>
+    <lastmod>2023-03-17T06:46:09.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/webapps/hidrokit-rainfall.html</loc>
+    <lastmod>2023-03-17T06:46:10.093Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-stations.html</loc>
+    <lastmod>2023-03-17T06:46:10.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/webapps/fiako-anfrek.html</loc>
+    <lastmod>2023-03-17T06:46:10.953Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/index.html</loc>
+    <lastmod>2023-03-17T06:46:11.333Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/editor/inr-1-batch-multiple-picture-into-word.html</loc>
+    <lastmod>2023-03-17T06:46:11.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/tutorial/editor/tsm-1-batch-multiple-picture.html</loc>
+    <lastmod>2023-03-17T06:46:12.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/index.html</loc>
+    <lastmod>2023-03-17T06:46:12.613Z</lastmod>
+  </url>
+  <url>
+    <loc>https://manual.fiako.engineering/greenhorn/G22-11-29.html</loc>
+    <lastmod>2023-03-17T06:46:13.021Z</lastmod>
   </url>
 </urlset>

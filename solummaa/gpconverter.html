@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Taruma Sakti Megariansyah">
+<meta name="author" content="Firman Joeanda">
+<meta name="author" content="Dina Widia Ningsih">
+<meta name="author" content="Nurbella Dewi">
+<meta name="author" content="Afif Nur Hani">
 
-<title>fiako-gpconverter | konversi output GROUP menjadi data terstruktur</title>
+<title>fiako-gpconverter | mengubah summary GROUP menjadi data terstruktur</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header"><em>General</em></li>
         <li>
-    <a class="dropdown-item" href="https://lambda.fiako.engineering">
+    <a class="dropdown-item" href="../general/feidlambda.html">
  <span class="dropdown-text"><strong>FEIDLAMBDA</strong></span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
@@ -106,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text"><strong>FIAKO-HIDROKIT</strong></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../webapps/webapps-rainfall.html">
+    <a class="dropdown-item" href="../hidrokit/webapps-rainfall.html">
  <span class="dropdown-text"><em>Rainfall Web Apps</em></span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
@@ -167,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">FIAKO-GPCONVERTER</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -188,12 +193,6 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <h3>FIAKODEV-PROJECTS: SOLUMMAA</h3>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../solummaa/index.html" class="sidebar-item-text sidebar-link">FIAKO-SOLUMMAA</a>
-  </div>
-</li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -218,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false"><em>OTHER PROJECTS</em></a>
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false"><em>FIAKODEV PROJECTS</em></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -226,7 +225,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../general/feidlambda.html" class="sidebar-item-text sidebar-link">FEIDLAMBDA</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../hidrokit/index.html" class="sidebar-item-text sidebar-link">FIAKO-HIDROKIT</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../solummaa/index.html" class="sidebar-item-text sidebar-link">FIAKO-SOLUMMAA</a>
   </div>
 </li>
       </ul>
@@ -241,38 +250,108 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Daftar isi</h2>
    
   <ul>
-  <li><a href="#sec-info" id="toc-sec-info" class="nav-link active" data-scroll-target="#sec-info">INFO</a></li>
-  <li><a href="#sec-preparation" id="toc-sec-preparation" class="nav-link" data-scroll-target="#sec-preparation">PERSIAPAN</a></li>
-  <li><a href="#sec-tutorial" id="toc-sec-tutorial" class="nav-link" data-scroll-target="#sec-tutorial">PENGGUNAAN APLIKASI</a></li>
+  <li><a href="#sec-info" id="toc-sec-info" class="nav-link active" data-scroll-target="#sec-info"><span class="toc-section-number">1</span>  INFO</a></li>
+  <li><a href="#sec-preparation" id="toc-sec-preparation" class="nav-link" data-scroll-target="#sec-preparation"><span class="toc-section-number">2</span>  PERSIAPAN</a></li>
+  <li><a href="#sec-tutorial" id="toc-sec-tutorial" class="nav-link" data-scroll-target="#sec-tutorial"><span class="toc-section-number">3</span>  PENGGUNAAN APLIKASI</a></li>
+  <li><a href="#sec-changelog" id="toc-sec-changelog" class="nav-link" data-scroll-target="#sec-changelog">CHANGELOG</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fiakoenjiniring/manual/edit/main/solummaa/gpconverter.qmd" class="toc-action">Ubah halaman ini</a></p><p><a href="https://github.com/fiakoenjiniring/manual/issues/new" class="toc-action">Melaporkan isu</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">FIAKO-GPCONVERTER</h1>
+<p class="subtitle lead">Aplikasi web mengubah <em>summary</em> GROUP menjadi data terstruktur</p>
+</div>
 
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Penulis/Pencipta</div>
+  <div class="quarto-title-meta-heading">Afiliasi</div>
+  
+    <div class="quarto-title-meta-contents">
+    <a href="https://taruma.my.id">Taruma Sakti Megariansyah</a> 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://dev.fiako.engineering">
+            Developer, fiakodev
+            </a>
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Firman Joeanda 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Konsultan, FIAKO Engineering
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Dina Widia Ningsih 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Konsultan, FIAKO Engineering
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Nurbella Dewi 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Konsultan, FIAKO Engineering
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Afif Nur Hani 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Konsultan, FIAKO Engineering
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Diterbitkan</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Senin, 06 Februari 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Diperbarui</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">Jumat, 17 Maret 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
 
 <div class="text-center">
-<p><img src="assets/logo-by-midjourney-2.png" alt="fiako-gpconverter logo" width="300" class="logo"></p>
-<section id="fiako-gpconverter" class="level1 unlisted">
-<h1 class="unlisted">FIAKO-GPCONVERTER</h1>
-<section id="convert-.gpt-to-csvjson" class="level5 unlisted">
-<h5 class="unlisted anchored" data-anchor-id="convert-.gpt-to-csvjson">Convert <code>.gp*t</code> to CSV/JSON</h5>
+<p><img src="assets/logo-by-midjourney-2.png" alt="fiako-gpconverter logo" width="300" class="logo mt-3"></p>
+<p><span class="h1">FIAKO-GPCONVERTER</span></p>
+<p><span class="h5">Convert <code>.gp*t</code> to CSV/JSON</span></p>
 <p><img src="https://img.shields.io/github/license/fiakoenjiniring/gpconverter?color=yellow&amp;labelColor=brown&amp;label=license&amp;.png" class="img-fluid"> <img src="https://img.shields.io/github/v/release/fiakoenjiniring/gpconverter?color=informational&amp;label=gpconverter&amp;labelColor=blueviolet&amp;logo=Plotly&amp;style=flat-square.png" class="img-fluid"> <img src="https://img.shields.io/github/release-date/fiakoenjiniring/gpconverter?color=black&amp;label=release&amp;labelColor=brown&amp;logo=Plotly&amp;logoColor=white.png" class="img-fluid"></p>
 <p><a href="https://fiako-gpconverter.herokuapp.com"><button type="button" class="btn btn-primary m-1">APLIKASI WEB</button></a> <a href="https://github.com/fiakoenjiniring/gpconverter"><button type="button" class="btn btn-info m-1">GITHUB</button></a></p>
-</section>
-</section>
 </div>
-<!-- :::{.callout-warning .text-center appearance="minimal"} 
-Halaman ini masih dalam pengembangan
-::: -->
-<section id="sec-info" class="level2">
-<h2 class="anchored" data-anchor-id="sec-info">INFO</h2>
+<hr>
+<section id="sec-info" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> INFO</h1>
 <p><strong><code>fiako-gpconverter</code></strong> merupakan aplikasi web yang mengubah <em>summary</em> aplikasi GROUP <code>.gp*t</code> menjadi data terstruktur berupa CSV atau JSON. Aplikasi dapat diakses di <a href="https://fiako-gpconverter.herokuapp.com"><strong>fiako-gpconverter.herokuapp.com</strong></a>.</p>
 <p>Aplikasi ini diuji dengan versi <code>.gp8t</code>, <code>.gp11t</code>, dan <code>.gp12t</code>.</p>
 </section>
-<section id="sec-preparation" class="level2">
-<h2 class="anchored" data-anchor-id="sec-preparation">PERSIAPAN</h2>
+<section id="sec-preparation" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> PERSIAPAN</h1>
 <p>Berikut yang harus dipersiapkan sebelum menggunakan aplikasi <code>fiako-gpconverter</code>:</p>
 <ol type="1">
 <li>Setelah melakukan analisis/perhitungan menggunakan <em>software</em> GROUP, simpan hasil <em>summary</em> berbentuk <code>.gp*t</code>.</li>
@@ -281,7 +360,7 @@ Halaman ini masih dalam pengembangan
 <div id="fig-pre-01" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gpconverter/gpconverter-pre-01.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;1: Kompresi berkas <code>.gp*t</code> ke dalam bentuk <code>.zip</code> di Windows 11.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;2.1: Kompresi berkas <code>.gp*t</code> ke dalam bentuk <code>.zip</code> di Windows 11.</figcaption><p></p>
 </figure>
 </div>
 <ol start="3" type="1">
@@ -289,8 +368,8 @@ Halaman ini masih dalam pengembangan
 </ol>
 <p>Dari langkah-langkah diatas dihasilkan berkas <code>.zip</code> yang dapat digunakan nantinya di aplikasi <code>fiako-gpconverter</code>.</p>
 </section>
-<section id="sec-tutorial" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sec-tutorial">PENGGUNAAN APLIKASI</h2>
+<section id="sec-tutorial" class="level1 page-columns page-full" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> PENGGUNAAN APLIKASI</h1>
 <p>Penggunaan aplikasi <code>fiako-gpconverter</code> cukup sederhana yaitu:</p>
 <ol type="1">
 <li>Siapkan berkas <code>.zip</code> yang telah disiapkan sebelumnya di <a href="#sec-preparation">bagian persiapan</a>.</li>
@@ -299,12 +378,12 @@ Halaman ini masih dalam pengembangan
 <li>Tunggu proses pengolahan. Jika telah diproses maka akan muncul informasi data <em>summary</em>.</li>
 <li><em>Download</em> data terstruktur dengan mengklik “<em>Download Records (csv)</em>”. Tunggu prosesnya sampai berkas <code>.csv</code> terunduh.</li>
 </ol>
-<p>Langkah diatas dapat dilihat di <a href="#fig-app-01">Gambar&nbsp;2</a>.</p>
+<p>Langkah diatas dapat dilihat di <a href="#fig-app-01">Gambar&nbsp;3.1</a>.</p>
 <div class="column-page">
 <div id="fig-app-01" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gpconverter/gpconverter-app-01.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;2: Penggunaan aplikasi <strong><code>fiako-gpconverter</code></strong> .</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;3.1: Penggunaan aplikasi <strong><code>fiako-gpconverter</code></strong> .</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -312,11 +391,34 @@ Halaman ini masih dalam pengembangan
 <li>Setelah memperoleh <em>Records</em> berbentuk <code>.csv</code>, data tersebut bisa disalin ke lembar kerja <a href="../solummaa/gptreader-xl.html"><strong><code>fiako-gptreader.xl</code></strong></a> untuk dieksplorasi lebih lanjut.</li>
 </ol>
 <p>Terdapat dua opsi lainnya yaitu <em>Download Summary (json)</em> dan <em>Download Records (json)</em>. Berkas JSON dapat digunakan untuk aplikasi web selanjutnya atau ditujukan untuk para <em>developer</em>. Saat ini, hanya <em>Records</em> berbentuk CSV saja yang sudah dapat digunakan untuk aplikasi/lembar kerja selanjutnya yaitu <code>fiako-gptreader.xl</code>, lembar kerja Excel untuk mengeksplorasi data <em>summary</em> GROUP.</p>
+<div class="column-screen-inset-shaded">
+<hr>
+</div>
+</section>
+<section id="sec-changelog" class="level1 unnumbered">
+<h1 class="unnumbered">CHANGELOG</h1>
+<ul>
+<li>v0.2.0 (2023-02-06)
+<ul>
+<li>Publikasi aplikasi web FIAKO-GPCONVERTER.</li>
+</ul></li>
+</ul>
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Penggunaan Kembali</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>CC-BY-NC-SA 4.0</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@misc{saktimegariansyah2023,
+  author = {Taruma Sakti Megariansyah and Firman Joeanda and Dina Widia
+    Ningsih and Nurbella Dewi and Afif Nur Hani},
+  title = {FIAKO-GPCONVERTER},
+  date = {2023-03-15},
+  url = {https://manual.fiako.engineering/solummaa/gpconverter.html},
+  langid = {id}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Untuk atribusi, harap kutip karya ini sebagai:</div><div id="ref-saktimegariansyah2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Taruma Sakti Megariansyah, Firman Joeanda, Dina Widia Ningsih, Nurbella
+Dewi, and Afif Nur Hani. 2023. <span>“FIAKO-GPCONVERTER.”</span> <a href="https://manual.fiako.engineering/solummaa/gpconverter.html">https://manual.fiako.engineering/solummaa/gpconverter.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

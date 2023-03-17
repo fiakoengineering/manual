@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Taruma Sakti Megariansyah">
+<meta name="author" content="Firman Joeanda">
+<meta name="author" content="Dina Widia Ningsih">
+<meta name="author" content="Nurbella Dewi">
+<meta name="author" content="Afif Nur Hani">
 
 <title>fiako-gptreader.xl | eksplorasi output GROUP menggunakan Microsoft Excel</title>
 <style>
@@ -97,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header"><em>General</em></li>
         <li>
-    <a class="dropdown-item" href="https://lambda.fiako.engineering">
+    <a class="dropdown-item" href="../general/feidlambda.html">
  <span class="dropdown-text"><strong>FEIDLAMBDA</strong></span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
@@ -107,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text"><strong>FIAKO-HIDROKIT</strong></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../webapps/webapps-rainfall.html">
+    <a class="dropdown-item" href="../hidrokit/webapps-rainfall.html">
  <span class="dropdown-text"><em>Rainfall Web Apps</em></span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
@@ -168,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">FIAKO-GPTREADER.XL</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -189,12 +194,6 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <h3>FIAKODEV-PROJECTS: SOLUMMAA</h3>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../solummaa/index.html" class="sidebar-item-text sidebar-link">FIAKO-SOLUMMAA</a>
-  </div>
-</li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -219,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false"><em>OTHER PROJECTS</em></a>
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false"><em>FIAKODEV PROJECTS</em></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -227,7 +226,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../general/feidlambda.html" class="sidebar-item-text sidebar-link">FEIDLAMBDA</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../hidrokit/index.html" class="sidebar-item-text sidebar-link">FIAKO-HIDROKIT</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../solummaa/index.html" class="sidebar-item-text sidebar-link">FIAKO-SOLUMMAA</a>
   </div>
 </li>
       </ul>
@@ -242,29 +251,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Daftar isi</h2>
    
   <ul>
-  <li><a href="#sec-info" id="toc-sec-info" class="nav-link active" data-scroll-target="#sec-info">INFO</a></li>
-  <li><a href="#sec-features" id="toc-sec-features" class="nav-link" data-scroll-target="#sec-features">FITUR</a></li>
-  <li><a href="#sec-preparation" id="toc-sec-preparation" class="nav-link" data-scroll-target="#sec-preparation">PERSIAPAN</a></li>
-  <li><a href="#sec-tutorial" id="toc-sec-tutorial" class="nav-link" data-scroll-target="#sec-tutorial">PENGGUNAAN</a>
+  <li><a href="#sec-info" id="toc-sec-info" class="nav-link active" data-scroll-target="#sec-info"><span class="toc-section-number">1</span>  INFO</a></li>
+  <li><a href="#sec-features" id="toc-sec-features" class="nav-link" data-scroll-target="#sec-features"><span class="toc-section-number">2</span>  FITUR</a></li>
+  <li><a href="#sec-preparation" id="toc-sec-preparation" class="nav-link" data-scroll-target="#sec-preparation"><span class="toc-section-number">3</span>  PERSIAPAN</a></li>
+  <li><a href="#sec-tutorial" id="toc-sec-tutorial" class="nav-link" data-scroll-target="#sec-tutorial"><span class="toc-section-number">4</span>  PENGGUNAAN</a>
   <ul>
-  <li><a href="#sec-tutorial-setup" id="toc-sec-tutorial-setup" class="nav-link" data-scroll-target="#sec-tutorial-setup">Pengaturan</a>
-  <ul>
-  <li><a href="#lembar-project" id="toc-lembar-project" class="nav-link" data-scroll-target="#lembar-project">Lembar <span class="sheet-input">PROJECT</span></a></li>
-  <li><a href="#lembar-input" id="toc-lembar-input" class="nav-link" data-scroll-target="#lembar-input">Lembar <span class="sheet-input">INPUT</span></a></li>
-  <li><a href="#lembar-gpt_info" id="toc-lembar-gpt_info" class="nav-link" data-scroll-target="#lembar-gpt_info">Lembar <span class="sheet-input">GPT_INFO</span></a></li>
-  </ul></li>
-  <li><a href="#sec-tutorial-exploration" id="toc-sec-tutorial-exploration" class="nav-link" data-scroll-target="#sec-tutorial-exploration">Eksplorasi</a>
-  <ul>
-  <li><a href="#lembar-load_viewer" id="toc-lembar-load_viewer" class="nav-link" data-scroll-target="#lembar-load_viewer">Lembar <span class="sheet-explore">LOAD_VIEWER</span></a></li>
-  <li><a href="#lembar-pile_viewer" id="toc-lembar-pile_viewer" class="nav-link" data-scroll-target="#lembar-pile_viewer">Lembar <span class="sheet-explore">PILE_VIEWER</span></a></li>
-  <li><a href="#lembar-summary" id="toc-lembar-summary" class="nav-link" data-scroll-target="#lembar-summary">Lembar <span class="sheet-explore">SUMMARY</span></a>
+  <li><a href="#sec-tutorial-setup" id="toc-sec-tutorial-setup" class="nav-link" data-scroll-target="#sec-tutorial-setup"><span class="toc-section-number">4.1</span>  Pengaturan</a>
   <ul class="collapse">
-  <li><a href="#komponen-summary" id="toc-komponen-summary" class="nav-link" data-scroll-target="#komponen-summary">Komponen <span class="sheet-explore">SUMMARY</span></a></li>
+  <li><a href="#lembar-project" id="toc-lembar-project" class="nav-link" data-scroll-target="#lembar-project"><span class="toc-section-number">4.1.1</span>  Lembar <span class="sheet-input">PROJECT</span></a></li>
+  <li><a href="#lembar-input" id="toc-lembar-input" class="nav-link" data-scroll-target="#lembar-input"><span class="toc-section-number">4.1.2</span>  Lembar <span class="sheet-input">INPUT</span></a></li>
+  <li><a href="#lembar-gpt_info" id="toc-lembar-gpt_info" class="nav-link" data-scroll-target="#lembar-gpt_info"><span class="toc-section-number">4.1.3</span>  Lembar <span class="sheet-input">GPT_INFO</span></a></li>
   </ul></li>
-  <li><a href="#lembar-single_summary" id="toc-lembar-single_summary" class="nav-link" data-scroll-target="#lembar-single_summary">Lembar <span class="sheet-explore">SINGLE_SUMMARY</span></a></li>
+  <li><a href="#sec-tutorial-exploration" id="toc-sec-tutorial-exploration" class="nav-link" data-scroll-target="#sec-tutorial-exploration"><span class="toc-section-number">4.2</span>  Eksplorasi</a>
+  <ul class="collapse">
+  <li><a href="#lembar-load_viewer" id="toc-lembar-load_viewer" class="nav-link" data-scroll-target="#lembar-load_viewer"><span class="toc-section-number">4.2.1</span>  Lembar <span class="sheet-explore">LOAD_VIEWER</span></a></li>
+  <li><a href="#lembar-pile_viewer" id="toc-lembar-pile_viewer" class="nav-link" data-scroll-target="#lembar-pile_viewer"><span class="toc-section-number">4.2.2</span>  Lembar <span class="sheet-explore">PILE_VIEWER</span></a></li>
+  <li><a href="#lembar-summary" id="toc-lembar-summary" class="nav-link" data-scroll-target="#lembar-summary"><span class="toc-section-number">4.2.3</span>  Lembar <span class="sheet-explore">SUMMARY</span></a>
+  <ul class="collapse">
+  <li><a href="#komponen-summary" id="toc-komponen-summary" class="nav-link" data-scroll-target="#komponen-summary"><span class="toc-section-number">4.2.3.1</span>  Komponen <span class="sheet-explore">SUMMARY</span></a></li>
+  </ul></li>
+  <li><a href="#lembar-single_summary" id="toc-lembar-single_summary" class="nav-link" data-scroll-target="#lembar-single_summary"><span class="toc-section-number">4.2.4</span>  Lembar <span class="sheet-explore">SINGLE_SUMMARY</span></a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#penutup" id="toc-penutup" class="nav-link" data-scroll-target="#penutup">PENUTUP</a></li>
+  <li><a href="#penutup" id="toc-penutup" class="nav-link" data-scroll-target="#penutup"><span class="toc-section-number">5</span>  PENUTUP</a></li>
   <li><a href="#sec-changelog" id="toc-sec-changelog" class="nav-link" data-scroll-target="#sec-changelog">CHANGELOG</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fiakoenjiniring/manual/edit/main/solummaa/gptreader-xl.qmd" class="toc-action">Ubah halaman ini</a></p><p><a href="https://github.com/fiakoenjiniring/manual/issues/new" class="toc-action">Melaporkan isu</a></p></div></div></nav>
@@ -272,29 +281,97 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">FIAKO-GPTREADER.XL</h1>
+<p class="subtitle lead">Lembar kerja excel untuk membaca <em>summary</em> GROUP</p>
+</div>
 
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Penulis/Pencipta</div>
+  <div class="quarto-title-meta-heading">Afiliasi</div>
+  
+    <div class="quarto-title-meta-contents">
+    <a href="https://taruma.my.id">Taruma Sakti Megariansyah</a> 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://dev.fiako.engineering">
+            Developer, fiakodev
+            </a>
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Firman Joeanda 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Konsultan, FIAKO Engineering
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Dina Widia Ningsih 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Konsultan, FIAKO Engineering
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Nurbella Dewi 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Konsultan, FIAKO Engineering
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Afif Nur Hani 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Konsultan, FIAKO Engineering
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Diterbitkan</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Senin, 06 Maret 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Diperbarui</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">Jumat, 17 Maret 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
 
 <div class="text-center">
 <p><img src="assets/logo-by-midjourney-3.png" alt="fiako-gptreader.xl logo" width="300" class="logo"></p>
-<section id="fiako-gptreader.xl" class="level1 unlisted">
-<h1 class="unlisted">FIAKO-GPTREADER.XL</h1>
-<section id="explore-summary-group-with-excel-workbook" class="level5 unlisted">
-<h5 class="unlisted anchored" data-anchor-id="explore-summary-group-with-excel-workbook">Explore <em>summary</em> GROUP with Excel Workbook</h5>
+<p><span class="h1">FIAKO-GPTREADER.XL</span></p>
+<p><span class="h5">Explore <em>summary</em> GROUP with Excel Workbook</span></p>
 <p><img src="https://img.shields.io/github/license/fiakoenjiniring/gptreader.xl" class="img-fluid"> <img src="https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&amp;label=gptreader%2Exl&amp;labelColor=coral&amp;logo=Microsoft%20Excel&amp;style=flat-square" class="img-fluid"> <img src="https://img.shields.io/github/release-date/fiakoenjiniring/gptreader.xl?color=black&amp;label=release&amp;labelColor=olive&amp;logo=Microsoft%20Excel&amp;logoColor=white" class="img-fluid"></p>
 <p><a href="https://github.com/fiakoenjiniring/gptreader.xl/releases/latest/download/fiako-gptreader.xlsx"><button type="button" class="btn btn-primary m-1">LEMBAR KERJA/WORKBOOK</button></a> <a href="https://github.com/fiakoenjiniring/gptreader.xl"><button type="button" class="btn btn-info m-1">GITHUB</button></a></p>
-</section>
-</section>
 </div>
-<!-- :::{.callout-warning .text-center appearance="minimal"} 
-Halaman ini masih dalam pengembangan
-::: -->
-<section id="sec-info" class="level2">
-<h2 class="anchored" data-anchor-id="sec-info">INFO</h2>
+<section id="sec-info" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> INFO</h1>
 <p><strong><code>fiako-gptreader.xl</code></strong> merupakan lembar kerja <em>(workbook)</em> <em>Microsoft Excel</em> yang digunakan untuk mengeksplorasi data terstruktur <em>summary</em> GROUP yang diperoleh dari aplikasi <a href="https://manual.fiako.engineering/solummaa/fiako-gpconverter.html">fiako-gpconverter</a>. Lembar kerja ini dapat digunakan sebagai <em>starter template</em>.</p>
 <p>Lembar kerja <code>fiako-gptreader.xl</code> hanya bisa dibuka dan dijalankan menggunakan <strong>Microsoft Excel 365</strong> (v2301+) karena menggunakan fitur <em>dynamic array</em> dan <code>LAMBDA</code>. Aplikasi ini diuji dengan menggunakan keluaran <code>.csv</code> aplikasi <code>fiako-gpconverter</code> versi <code>v0.2.0</code>.</p>
 </section>
-<section id="sec-features" class="level2">
-<h2 class="anchored" data-anchor-id="sec-features">FITUR</h2>
+<section id="sec-features" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> FITUR</h1>
 <p>Berikut fitur yang tersedia di lembar kerja <code>fiako-gptreader.xl</code>:</p>
 <ol type="1">
 <li>Mengeksplorasi tabel <em>reactions</em>, <em>displacements</em>, <em>lateral</em> yang tersedia di <code>.gp*t</code> (<em>summary</em>).</li>
@@ -304,27 +381,27 @@ Halaman ini masih dalam pengembangan
 <li>Melihat rangkuman seperti <span class="sheet-explore">SUMMARY</span> untuk meninjau satu variabel di lembar <span class="sheet-explore">SINGLE_SUMMARY</span>.</li>
 </ol>
 </section>
-<section id="sec-preparation" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sec-preparation">PERSIAPAN</h2>
+<section id="sec-preparation" class="level1 page-columns page-full" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> PERSIAPAN</h1>
 <p>Berikut yang harus dipersiapkan sebelum menggunakan lembar kerja <code>fiako-gptreader.xl</code>:</p>
 <ol type="1">
 <li>Gunakan aplikasi web <code>fiako-gpconverter</code> untuk mengubah <em>file</em> <code>.gp*t</code> menjadi <code>.csv</code> (<em>Download Records (CSV)</em>).</li>
-<li>Pastikan dapat membuka dokumen <code>.csv</code> menggunakan Microsoft Excel. Jika tidak teratur otomatis, dapat dibuka melalui FILE &gt; OPEN &gt; berkas <code>.csv</code> (ubah tipe file ke untuk menampilkannya). Seperti yang ditampilkan di <a href="#fig-pre-01">Gambar&nbsp;1</a>.</li>
+<li>Pastikan dapat membuka dokumen <code>.csv</code> menggunakan Microsoft Excel. Jika tidak teratur otomatis, dapat dibuka melalui FILE &gt; OPEN &gt; berkas <code>.csv</code> (ubah tipe file ke untuk menampilkannya). Seperti yang ditampilkan di <a href="#fig-pre-01">Gambar&nbsp;3.1</a>.</li>
 </ol>
 <div class="column-page">
 <div id="fig-pre-01" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-pre-01.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;1: Membuka berkas <code>.csv</code> dengan Microsoft Excel.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;3.1: Membuka berkas <code>.csv</code> dengan Microsoft Excel.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="sec-tutorial" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sec-tutorial">PENGGUNAAN</h2>
+<section id="sec-tutorial" class="level1 page-columns page-full" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> PENGGUNAAN</h1>
 <p>Penggunaan lembar kerja <code>fiako-gptreader.xl</code> dibagi menjadi dua bagian yaitu <a href="#sec-tutorial-setup">pengaturan</a> dan <a href="#sec-tutorial-exploration">eksplorasi</a>.</p>
-<section id="sec-tutorial-setup" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="sec-tutorial-setup">Pengaturan</h3>
+<section id="sec-tutorial-setup" class="level2 page-columns page-full" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-tutorial-setup"><span class="header-section-number">4.1</span> Pengaturan</h2>
 <p>Sebelum mengeksplorasi data <em>summary</em> dari GROUP, perlu pengaturan berupa memindahkan informasi dari <code>.csv</code> ke lembar kerja <code>fiako-gptreader.xl</code>. Berikut langkah yang perlu dilakukan dalam tahap pengaturan.</p>
 <ol type="1">
 <li>Pastikan langkah <a href="#sec-preparation">persiapan</a> sudah dilakukan dan berhasil.</li>
@@ -338,12 +415,12 @@ Halaman ini masih dalam pengembangan
 </ul></li>
 </ol>
 <p>Pada bagian pengaturan akan fokus pada lembar <em>input</em> yaitu lembar <span class="sheet-input">PROJECT</span>, <span class="sheet-input">INPUT</span>, dan <span class="sheet-input">GPT_INFO</span>.</p>
-<section id="lembar-project" class="level4">
-<h4 class="anchored" data-anchor-id="lembar-project">Lembar <span class="sheet-input">PROJECT</span></h4>
+<section id="lembar-project" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="lembar-project"><span class="header-section-number">4.1.1</span> Lembar <span class="sheet-input">PROJECT</span></h3>
 <p>Lembar <span class="sheet-input">PROJECT</span> ditujukan untuk tempat menyimpan informasi <em>metadata</em> mengenai proyek/data yang akan dieksplorasi. Lembar <span class="sheet-input">PROJECT</span> tidak terhubung dengan kalkulasi ataupun eksplorasi sama sekali, lembar ini hanya ditujukan sebagai catatan tambahan terkait data yang digunakan.</p>
 </section>
-<section id="lembar-input" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="lembar-input">Lembar <span class="sheet-input">INPUT</span></h4>
+<section id="lembar-input" class="level3 page-columns page-full" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="lembar-input"><span class="header-section-number">4.1.2</span> Lembar <span class="sheet-input">INPUT</span></h3>
 <p>Lembar <span class="sheet-input">INPUT</span> merupakan <strong>lembar penting</strong> karena data hasil dari konversi <a href="../solummaa/gpconverter.html">fiako-gpconverter</a> akan disimpan pada lembar ini. Berikut langkah-langkah dalam mengisi lembar ini dengan data hasil konversi <a href="../solummaa/gpconverter.html">fiako-gpconverter</a>:</p>
 <ol type="1">
 <li>Pastikan lembar <span class="sheet-input">INPUT</span> tidak terisi sama data sekali. Bisa dilakukan pembersihan dengan buka lembar <span class="sheet-input">INPUT</span>, blok seluruh sel menggunakan <code>Ctrl+A</code>, kemudian hapus dengan tombol <code>Delete</code> atau pilih opsi <code>HOME &gt; EDITING &gt; Clear &gt; Clear All</code>.</li>
@@ -351,21 +428,21 @@ Halaman ini masih dalam pengembangan
 <li>Buka lembar kerja <code>fiako-gptreader.xl</code>, dan buka lembar <span class="sheet-input">INPUT</span>.</li>
 <li><em>Paste</em> data yang telah disalin ke lembar <span class="sheet-input">INPUT</span>. Pastikan data dimulai dari <code>A1</code> (pojok kiri atas).</li>
 </ol>
-<p>Instruksi diatas dapat dilihat pada <a href="#fig-post-01">Gambar&nbsp;2</a>.</p>
+<p>Instruksi diatas dapat dilihat pada <a href="#fig-post-01">Gambar&nbsp;4.1</a>.</p>
 <div class="column-page">
 <div id="fig-post-01" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-post-01.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;2: Memasukkan data ke lembar <span class="sheet-input">INPUT</span>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.1: Memasukkan data ke lembar <span class="sheet-input">INPUT</span>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 <p>Setelah menyalin data ke lembar kerja <code>fiako-gptreader.xl</code> pada lembar <span class="sheet-input">INPUT</span>, data sudah siap dieksplorasi. Akan tetapi terdapat tahap tambahan di lembar <span class="sheet-input">GPT_INFO</span> yaitu menentukan batasan/kelompok setiap <em>Load Case</em>.</p>
 </section>
-<section id="lembar-gpt_info" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="lembar-gpt_info">Lembar <span class="sheet-input">GPT_INFO</span></h4>
+<section id="lembar-gpt_info" class="level3 page-columns page-full" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="lembar-gpt_info"><span class="header-section-number">4.1.3</span> Lembar <span class="sheet-input">GPT_INFO</span></h3>
 <p>Setelah memasukkan data di lembar <span class="sheet-input">INPUT</span>, pada lembar <span class="sheet-input">GPT_INFO</span> terdapat informasi umum mengenai data tersebut. Pada lembar <span class="sheet-input">GPT_INFO</span> memiliki informasi jumlah <em>load case</em> dan <em>pile</em> beserta informasi <em>case name</em>. Tugas yang harus dilakukan pada lembar <span class="sheet-input">GPT_INFO</span> yaitu menentukan kelompok/<em>section</em> untuk memisahkan kelompok <em>load case</em>-nya.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -378,11 +455,11 @@ Arti Warna Sel/<em>Cell</em>
 <p>Sebelum membahas lebih lanjut, terdapat informasi mengenai arti dari warna sel/<em>cell</em>. Sel/<em>cell</em> berwarna <span class="cell-input">BIRU/<em>Turquoise</em></span> berarti <strong>sel input</strong> yang dapat diubah nilainya, sedangkan yang berwarna <span class="cell-view">KUNING/<em>Yellow</em></span> berarti <strong>sel info</strong> yang tidak perlu diubah nilainya dan berubah sendirinya berdasarkan sel input.</p>
 </div>
 </div>
-<p>Di lembar <span class="sheet-input">GPT_INFO</span> pada bagian <strong>SECTION SEPARATOR</strong>, terdapat nilai yang perlu kita masukkan yaitu baris akhir setiap pemisahnya di <span class="cell-input">SECTION x-END</span>. Jika terdapat TIGA (<span class="math inline">\(3\)</span>) kelompok dengan kelompok <span class="math inline">\(1\)</span> dari <em>Load case</em> <span class="math inline">\(1-12\)</span>, kelompok <span class="math inline">\(2\)</span> dari <em>load case</em> <span class="math inline">\(13-20\)</span>, dan kelompok <span class="math inline">\(3\)</span> dari <em>load case</em> <span class="math inline">\(21-28\)</span>. Maka, yang perlu di-<em>input</em> hanya <em>load case</em> terakhir untuk setiap kelompoknya pada sel <span class="cell-input">SECTION x-END</span> seperti pada <a href="#tbl-section-separator">Tabel&nbsp;1</a>. Jika hanya terdapat 2 kelompok, <span class="cell-input">SECTION-3 END</span> dapat diisi dengan <em>load case</em> terakhir kelompok ke-<span class="math inline">\(2\)</span>.</p>
+<p>Di lembar <span class="sheet-input">GPT_INFO</span> pada bagian <strong>SECTION SEPARATOR</strong>, terdapat nilai yang perlu kita masukkan yaitu baris akhir setiap pemisahnya di <span class="cell-input">SECTION x-END</span>. Jika terdapat TIGA (<span class="math inline">\(3\)</span>) kelompok dengan kelompok <span class="math inline">\(1\)</span> dari <em>Load case</em> <span class="math inline">\(1-12\)</span>, kelompok <span class="math inline">\(2\)</span> dari <em>load case</em> <span class="math inline">\(13-20\)</span>, dan kelompok <span class="math inline">\(3\)</span> dari <em>load case</em> <span class="math inline">\(21-28\)</span>. Maka, yang perlu di-<em>input</em> hanya <em>load case</em> terakhir untuk setiap kelompoknya pada sel <span class="cell-input">SECTION x-END</span> seperti pada <a href="#tbl-section-separator">Tabel&nbsp;4.1</a>. Jika hanya terdapat 2 kelompok, <span class="cell-input">SECTION-3 END</span> dapat diisi dengan <em>load case</em> terakhir kelompok ke-<span class="math inline">\(2\)</span>.</p>
 <div class="column-body px-3">
 <div id="tbl-section-separator" class="anchored">
 <table class="table">
-<caption>Tabel&nbsp;1: Mengisi nilai pada <strong>SECTION SEPARATOR</strong></caption>
+<caption>Tabel&nbsp;4.1: Mengisi nilai pada <strong>SECTION SEPARATOR</strong></caption>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Section</th>
@@ -426,56 +503,56 @@ Arti Warna Sel/<em>Cell</em>
 </table>
 </div>
 </div>
-<p>Setelah mengisi informasi kelompok <em>LOAD CASE</em>, maka dapat dilihat perbedaan warna untuk setiap kelompok <em>LOAD CASE</em> seperti pada <a href="#fig-post-02">Gambar&nbsp;3</a>.</p>
+<p>Setelah mengisi informasi kelompok <em>LOAD CASE</em>, maka dapat dilihat perbedaan warna untuk setiap kelompok <em>LOAD CASE</em> seperti pada <a href="#fig-post-02">Gambar&nbsp;4.2</a>.</p>
 <div class="column-page">
 <div id="fig-post-02" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-post-02.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;3: Memasukkan batasan kelompok <em>LOAD CASE</em> di lembar <span class="sheet-input">GPT_INFO</span>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.2: Memasukkan batasan kelompok <em>LOAD CASE</em> di lembar <span class="sheet-input">GPT_INFO</span>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 <p>Dengan terisinya data dan informasi di lembar <span class="sheet-input">INPUT</span> dan <span class="sheet-input">GPT_INFO</span>, maka data sudah siap untuk dieksplorasi lebih lanjut.</p>
 </section>
 </section>
-<section id="sec-tutorial-exploration" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="sec-tutorial-exploration">Eksplorasi</h3>
+<section id="sec-tutorial-exploration" class="level2 page-columns page-full" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-tutorial-exploration"><span class="header-section-number">4.2</span> Eksplorasi</h2>
 <p>Di <code>fiako-gptreader.xl</code> terdapat EMPAT (<span class="math inline">\(4\)</span>) lembar eksplorasi yaitu <span class="sheet-explore">LOAD_VIEWER</span>, <span class="sheet-explore">PILE_VIEWER</span>, <span class="sheet-explore">SUMMARY</span>, <span class="sheet-explore">SINGLE_SUMMARY</span>.</p>
-<section id="lembar-load_viewer" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="lembar-load_viewer">Lembar <span class="sheet-explore">LOAD_VIEWER</span></h4>
-<p>Lembar <span class="sheet-explore">LOAD_VIEWER</span> menampilkan seluruh nilai/variabel/informasi dalam bentuk tabel untuk <strong>setiap <em>LOAD CASE</em></strong>. Di lembar ini terdapat 2 sel input yaitu <span class="cell-input">TABLE</span> dan <span class="cell-input">LOAD CASE</span>. Sel <span class="cell-input">TABLE</span> menentukan tabel mana yang ingin ditampilkan, sel <span class="cell-input">TABLE</span> dapat diisi dengan <code>Reduction Factor</code>, <code>GLOBAL</code>, <code>LOCAL</code>, <code>LATERAL MINIMUM</code>, <code>LATERAL MAXIMUM</code>. Sedangkan sel <span class="cell-input">LOAD CASE</span> dapat diisi dengan nomor <em>LOAD CASE</em> yang ingin ditampilkan. Eksplorasi di <span class="sheet-explore">LOAD_VIEWER</span> tidak jauh berbeda ketika mengeksplorasi langsung dengan membuka berkas <em>summary</em> <code>.gp*t</code>. Penggunaannya bisa dilihat di <a href="#fig-post-03">Gambar&nbsp;4</a>.</p>
+<section id="lembar-load_viewer" class="level3 page-columns page-full" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="lembar-load_viewer"><span class="header-section-number">4.2.1</span> Lembar <span class="sheet-explore">LOAD_VIEWER</span></h3>
+<p>Lembar <span class="sheet-explore">LOAD_VIEWER</span> menampilkan seluruh nilai/variabel/informasi dalam bentuk tabel untuk <strong>setiap <em>LOAD CASE</em></strong>. Di lembar ini terdapat 2 sel input yaitu <span class="cell-input">TABLE</span> dan <span class="cell-input">LOAD CASE</span>. Sel <span class="cell-input">TABLE</span> menentukan tabel mana yang ingin ditampilkan, sel <span class="cell-input">TABLE</span> dapat diisi dengan <code>Reduction Factor</code>, <code>GLOBAL</code>, <code>LOCAL</code>, <code>LATERAL MINIMUM</code>, <code>LATERAL MAXIMUM</code>. Sedangkan sel <span class="cell-input">LOAD CASE</span> dapat diisi dengan nomor <em>LOAD CASE</em> yang ingin ditampilkan. Eksplorasi di <span class="sheet-explore">LOAD_VIEWER</span> tidak jauh berbeda ketika mengeksplorasi langsung dengan membuka berkas <em>summary</em> <code>.gp*t</code>. Penggunaannya bisa dilihat di <a href="#fig-post-03">Gambar&nbsp;4.3</a>.</p>
 <div class="column-page">
 <div id="fig-post-03" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-post-03.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;4: Eksplorasi data setiap <em>LOAD CASE</em> di lembar <span class="sheet-explore">LOAD_VIEWER</span>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.3: Eksplorasi data setiap <em>LOAD CASE</em> di lembar <span class="sheet-explore">LOAD_VIEWER</span>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="lembar-pile_viewer" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="lembar-pile_viewer">Lembar <span class="sheet-explore">PILE_VIEWER</span></h4>
+<section id="lembar-pile_viewer" class="level3 page-columns page-full" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="lembar-pile_viewer"><span class="header-section-number">4.2.2</span> Lembar <span class="sheet-explore">PILE_VIEWER</span></h3>
 <p>Berbeda degan <span class="sheet-explore">LOAD_VIEWER</span>, pada lembar <span class="sheet-explore">PILE_VIEWER</span> tabel ditampilkan untuk <strong>setiap <em>PILE</em></strong>. Terdapat dua sel input yaitu <span class="cell-input">TABLE</span> dan <span class="cell-input">LOAD CASE</span>. Sel input <span class="cell-input">TABLE</span> pilihannya sama dengan lembar <span class="sheet-explore">LOAD_VIEWER</span>. Tabel ini tidak tersedia di berkas asli <code>.gp*t</code> dan merupakan hasil aggregasi <code>fiako-gptreader.xl</code>.</p>
-<p>Di lembar <span class="sheet-explore">PILE_VIEWER</span>, terdapat visual tambahan yang membedakan setiap kelompok <em>LOAD CASE</em>. Pembagian kelompok ini berdasarkan lembar <span class="sheet-input">INPUT</span>. Contoh eksplorasinya dapat dilihat pada <a href="#fig-post-04">Gambar&nbsp;5</a>.</p>
+<p>Di lembar <span class="sheet-explore">PILE_VIEWER</span>, terdapat visual tambahan yang membedakan setiap kelompok <em>LOAD CASE</em>. Pembagian kelompok ini berdasarkan lembar <span class="sheet-input">INPUT</span>. Contoh eksplorasinya dapat dilihat pada <a href="#fig-post-04">Gambar&nbsp;4.4</a>.</p>
 <div class="column-page">
 <div id="fig-post-04" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-post-04.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;5: Eksplorasi data setiap <em>PILE</em> di lembar <span class="sheet-explore">PILE_VIEWER</span>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.4: Eksplorasi data setiap <em>PILE</em> di lembar <span class="sheet-explore">PILE_VIEWER</span>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="lembar-summary" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="lembar-summary">Lembar <span class="sheet-explore">SUMMARY</span></h4>
+<section id="lembar-summary" class="level3 page-columns page-full" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="lembar-summary"><span class="header-section-number">4.2.3</span> Lembar <span class="sheet-explore">SUMMARY</span></h3>
 <p>Lembar <span class="sheet-explore">SUMMARY</span> merupakan lembar yang meringkas seluruh informasi yang ada di dataset untuk <code>GLOBAL</code> dan <code>LOCAL</code>. Lembar ini cukup banyak informasi yang ditampilkan dan cukup padat indikator visualnya, sehingga dalam memulai memahami lembar ini diharapkan tidak terburu-buru. Di lembar <span class="sheet-explore">SUMMARY</span> hanya mengeksplorasi data <code>GLOBAL</code> dan <code>LOCAL</code> dengan <span class="math inline">\(12\)</span> variabel yang ditinjau yaitu <code>DISPLACEMENT - X/Y/Z</code>, <code>ROTATION - X/Y/Z</code>, <code>FORCE - X/Y/Z</code>, <code>MOMENT - X/Y/Z</code> dengan diberi <code>COLUMN ID</code> dari <span class="math inline">\(1-12\)</span>.</p>
-<section id="komponen-summary" class="level5 page-columns page-full">
-<h5 class="anchored" data-anchor-id="komponen-summary">Komponen <span class="sheet-explore">SUMMARY</span></h5>
-<p>Saat melihat Lembar <span class="sheet-explore">SUMMARY</span> terdapat tiga bagian/komponen utama yaitu <strong>INFO/INPUT</strong>, <strong>CROSSTAB TABLE</strong>, dan <strong>SUMMARY MIN/MAX</strong> yang diilustrasikan di <a href="#fig-summary-component">Gambar&nbsp;6</a>.</p>
+<section id="komponen-summary" class="level4 page-columns page-full" data-number="4.2.3.1">
+<h4 data-number="4.2.3.1" class="anchored" data-anchor-id="komponen-summary"><span class="header-section-number">4.2.3.1</span> Komponen <span class="sheet-explore">SUMMARY</span></h4>
+<p>Saat melihat Lembar <span class="sheet-explore">SUMMARY</span> terdapat tiga bagian/komponen utama yaitu <strong>INFO/INPUT</strong>, <strong>CROSSTAB TABLE</strong>, dan <strong>SUMMARY MIN/MAX</strong> yang diilustrasikan di <a href="#fig-summary-component">Gambar&nbsp;4.5</a>.</p>
 <div id="fig-summary-component" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-summary-01.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;6: Komponen utama pada lembar <span class="sheet-explore">SUMMARY</span></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.5: Komponen utama pada lembar <span class="sheet-explore">SUMMARY</span></figcaption><p></p>
 </figure>
 </div>
 <p>Berikut penjelasan untuk masing-masing komponen:</p>
@@ -484,56 +561,53 @@ Arti Warna Sel/<em>Cell</em>
 <li>Bagian kedua yaitu <strong>CROSSTAB TABLE</strong> merupakan tabel hasil dari <em>cross tabulation</em> yang menampilkan nilai variabel dari <span class="cell-input">COLUMN ID</span> bersamaan dengan setiap <em>PILE</em> dan setiap <em>LOAD CASE</em>. Kolom menunjukkan setiap <em>LOAD CASE</em> dan baris menunjukkan setiap <em>PILE</em>.</li>
 <li>Bagian ketiga yaitu <strong>SUMMARY MIN/MAX</strong> adalah tabel ringkasan dari <strong>CROSSTAB TABLE</strong> yang memisahkan nilai minimum dan maksimum untuk setiap <em>LOAD CASE</em> dan mengambil informasi variabel lain berdasarkan <em>PILE</em> maksimum/minimum. Jika tidak perlu informasi variabel lainnya, bisa melihat lembar <span class="sheet-explore">SINGLE_SUMMARY</span>.</li>
 </ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-note callout callout-style-simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Catatan
+<div class="callout-body-container">
+<p>Alur pembacaan sebenarnya dari <strong>INFO</strong> &gt; <strong>CROSSTAB TABLE</strong> &gt; <strong>SUMMARY MIN/MAX</strong>, tapi dari layout di <a href="#fig-summary-component">Gambar&nbsp;4.5</a> polanya berbeda yaitu <strong>INFO</strong> &gt; <strong>SUMMARY MIN/MAX</strong> &gt; <strong>CROSSTAB TABLE</strong>. Hal tersebut dikarenakan baris untuk <strong>CROSSTAB TABLE</strong> (jumlah <em>PILE</em>) bersifat dinamis (artinya bisa berubah-ubah sesuai input) sedangkan jumlah baris untuk <strong>SUMMARY MIN/MAX</strong> sudah diketahui.</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Alur pembacaan sebenarnya dari <strong>INFO</strong> &gt; <strong>CROSSTAB TABLE</strong> &gt; <strong>SUMMARY MIN/MAX</strong>, tapi dari layout di <a href="#fig-summary-component">Gambar&nbsp;6</a> polanya berbeda yaitu <strong>INFO</strong> &gt; <strong>SUMMARY MIN/MAX</strong> &gt; <strong>CROSSTAB TABLE</strong>. Hal tersebut dikarenakan baris untuk <strong>CROSSTAB TABLE</strong> (jumlah <em>PILE</em>) bersifat dinamis (artinya bisa berubah-ubah sesuai input) sedangkan jumlah baris untuk <strong>SUMMARY MIN/MAX</strong> sudah diketahui.</p>
 </div>
-</div>
-<p>Ringkasan penggunaan lembar <span class="sheet-explore">SUMMARY</span> bisa dilihat pada <a href="#fig-post-05">Gambar&nbsp;7</a>.</p>
+<p>Ringkasan penggunaan lembar <span class="sheet-explore">SUMMARY</span> bisa dilihat pada <a href="#fig-post-05">Gambar&nbsp;4.6</a>.</p>
 <div class="column-page">
 <div id="fig-post-05" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-post-05.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;7: Eksplorasi ringkasan/<em>summary</em> data di lembar <span class="sheet-explore">SUMMARY</span>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.6: Eksplorasi ringkasan/<em>summary</em> data di lembar <span class="sheet-explore">SUMMARY</span>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 <p>Berikut penjelasan lebih lanjut untuk masing-masing komponen yang ada di lembar <span class="sheet-explore">SUMMARY</span>:</p>
-<section id="komponen-info" class="level6 page-columns page-full">
-<h6 class="anchored" data-anchor-id="komponen-info">Komponen <strong>INFO</strong></h6>
+<section id="komponen-info" class="level5 page-columns page-full" data-number="4.2.3.1.1">
+<h5 data-number="4.2.3.1.1" class="anchored" data-anchor-id="komponen-info"><span class="header-section-number">4.2.3.1.1</span> Komponen <strong>INFO</strong></h5>
 <p>Pada komponen <strong>INFO</strong> terdapat dua sel input yaitu <span class="cell-input">AXIS</span> dan <span class="cell-input">COLUMN ID</span>. Sel <span class="cell-input">AXIS</span> atau sumbu yang digunakan diisi dengan nilai <em>GLOBAL</em> atau <em>LOCAL</em>. Sedangkan <span class="cell-input">COLUMN ID</span> atau variabel yang ditinjau dapat diisi dengan angka dari <span class="math inline">\(1\)</span> sampai <span class="math inline">\(12\)</span>. Arti angka <span class="math inline">\(1\)</span> sampai <span class="math inline">\(12\)</span> yaitu <code>DISPLACEMENT - X/Y/Z</code>, <code>ROTATION - X/Y/Z</code>, <code>FORCE - X/Y/Z</code>, <code>MOMENT - X/Y/Z</code> secara berurutan untuk setiap sumbunya. Untuk mengubah nilai <span class="cell-input">AXIS</span> dapat menggunakan <em>dropdown</em> atau mengetik langsung sumbunya, sedangkan untuk <span class="cell-input">COLUMN ID</span> bisa memasukkan langsung angka ID Kolom atau menggunakan objek <em>spin button</em> dengan mengklik segitiga atas/bawah.</p>
 <div class="column-body">
 <div id="fig-post-06" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-post-06.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;8: Komponen <strong>INFO</strong>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.7: Komponen <strong>INFO</strong>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="komponen-crosstab-table" class="level6 page-columns page-full">
-<h6 class="anchored" data-anchor-id="komponen-crosstab-table">Komponen <strong>CROSSTAB TABLE</strong></h6>
+<section id="komponen-crosstab-table" class="level5 page-columns page-full" data-number="4.2.3.1.2">
+<h5 data-number="4.2.3.1.2" class="anchored" data-anchor-id="komponen-crosstab-table"><span class="header-section-number">4.2.3.1.2</span> Komponen <strong>CROSSTAB TABLE</strong></h5>
 <p>Sel input <span class="cell-input">AXIS</span> dan <span class="cell-input">COLUMN ID</span> menentukan <em>cross tabulation</em> yang akan ditampilkan di <strong>CROSSTAB TABLE</strong>. Kolom menunjukkan setiap <em>LOAD CASE</em> dan baris menunjukkan setiap <em>PILE</em>. Sedangkan nilainya merupakan variabel yang dipilih berdasarkan <span class="cell-input">COLUMN ID</span>.</p>
 <p>Pada komponen ini, terdapat pemisah kelompok secara visual/warna. Berbeda dengan di lembar <span class="sheet-explore">PILE_VIEWER</span> atau <span class="sheet-input">GPT_INFO</span>, visualiasi pemisah di lembar <span class="sheet-explore">SUMMARY</span> menggunakan orientasi horizontal (pembagian berdasarkan kolom). Selain visualisasi pemisah kelompok, terdapat juga visualiasi <strong>nilai <span class="cell-minimum">minimum</span> dan <span class="cell-maximum">maksimum</span> setiap kolom/<em>LOAD CASE</em></strong>.</p>
 <div class="column-body">
 <div id="fig-post-07" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-post-07.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;9: Komponen <strong>CROSSTAB TABLE</strong>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.8: Komponen <strong>CROSSTAB TABLE</strong>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="komponen-summary-minmax" class="level6 page-columns page-full">
-<h6 class="anchored" data-anchor-id="komponen-summary-minmax">Komponen <strong>SUMMARY MIN/MAX</strong></h6>
+<section id="komponen-summary-minmax" class="level5 page-columns page-full" data-number="4.2.3.1.3">
+<h5 data-number="4.2.3.1.3" class="anchored" data-anchor-id="komponen-summary-minmax"><span class="header-section-number">4.2.3.1.3</span> Komponen <strong>SUMMARY MIN/MAX</strong></h5>
 <p>Setelah memperoleh nilai <span class="cell-minimum">minimum</span> dan <span class="cell-maximum">maksimum</span> dari <strong>CROSSTAB TABLE</strong> pada setiap <em>LOAD CASE</em>, diringkas lagi dalam bentuk tabel <strong>SUMMARY MIN/MAX</strong>. Berikut informasi yang disajikan untuk tabel <strong>SUMMARY</strong>:</p>
 <ol type="1">
 <li>Terdapat dua tabel dalam komponen <strong>SUMMARY MIN/MAX</strong> yaitu tabel SUMMARY MINIMUM dan SUMMARY MAXIMUM.</li>
@@ -546,12 +620,12 @@ Catatan
 <li>Sebagai pengingat lagi, kolom minimum/maksimum ditentukan berdasarkan setiap kelompok <em>LOAD CASE</em> dan bukan keseluruhan <em>LOAD CASE</em>.</li>
 </ul></li>
 </ol>
-<p>Demonstrasi komponen <strong>SUMMARY MIN/MAX</strong> dapat dilihat di <a href="#fig-post-08">Gambar&nbsp;10</a>.</p>
+<p>Demonstrasi komponen <strong>SUMMARY MIN/MAX</strong> dapat dilihat di <a href="#fig-post-08">Gambar&nbsp;4.9</a>.</p>
 <div class="column-body">
 <div id="fig-post-08" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-post-08.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;10: Komponen <strong>SUMMARY MIN/MAX</strong>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.9: Komponen <strong>SUMMARY MIN/MAX</strong>.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -559,38 +633,38 @@ Catatan
 </section>
 </section>
 </section>
-<section id="lembar-single_summary" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="lembar-single_summary">Lembar <span class="sheet-explore">SINGLE_SUMMARY</span></h4>
+<section id="lembar-single_summary" class="level3 page-columns page-full" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="lembar-single_summary"><span class="header-section-number">4.2.4</span> Lembar <span class="sheet-explore">SINGLE_SUMMARY</span></h3>
 <p>Lembar <span class="sheet-explore">SINGLE_SUMMARY</span> merupakan penyederhanaan visualisasi dan tabel dari lembar <span class="sheet-explore">SUMMARY</span>. Berbeda dengan lembar <span class="sheet-explore">SUMMARY</span>, pada lembar <span class="sheet-explore">SINGLE_SUMMARY</span> hanya fokus pada variabel yang ditinjau dan dibuat dinamis memanjang kebawah.</p>
 <p>Indikator warna visual sama saja dengan lembar <span class="sheet-explore">SUMMARY</span> seperti:</p>
 <ol type="1">
 <li>Setiap kelompok diberi warna latar serupa dengan lembar <span class="sheet-input">GPT_INFO</span>.</li>
 <li>Indikator <span class="sum-min-selected">MINIMUM</span> dan <span class="sum-max-selected">MAXIMUM</span> berdasarkan setiap kelompok <em>LOAD CASE</em>.</li>
 </ol>
-<p>Pada lembar <span class="sheet-explore">SINGLE_SUMMARY</span> tidak memiliki sel input dan untuk mengubah variabel yang dipilih bisa menggunakan objek <em>spin button</em> atau klik panah atas atau bawah. Eksplorasi dapat dilihat di <a href="#fig-post-09">Gambar&nbsp;11</a>.</p>
+<p>Pada lembar <span class="sheet-explore">SINGLE_SUMMARY</span> tidak memiliki sel input dan untuk mengubah variabel yang dipilih bisa menggunakan objek <em>spin button</em> atau klik panah atas atau bawah. Eksplorasi dapat dilihat di <a href="#fig-post-09">Gambar&nbsp;4.10</a>.</p>
 <div class="column-page">
 <div id="fig-post-09" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="assets/gptreader-xl/gptreader-xl-post-09.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gambar&nbsp;11: Eksplorasi penyederhanaan ringkasan/<em>summary</em> data di lembar <span class="sheet-explore">SINGLE_SUMMARY</span>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;4.10: Eksplorasi penyederhanaan ringkasan/<em>summary</em> data di lembar <span class="sheet-explore">SINGLE_SUMMARY</span>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </section>
 </section>
 </section>
-<section id="penutup" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="penutup">PENUTUP</h2>
+<section id="penutup" class="level1 page-columns page-full" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> PENUTUP</h1>
 <p>Dari informasi yang telah disampaikan dapat disimpulkan bahwa lembar yang terlampir ini dapat memudahkan dalam mengeksplorasi data terstruktur dari <em>summary</em> GROUP. Akan tetapi, <code>fiako-gptreader.xl</code> belum dapat digunakan dalam pengambilan keputusan dan masih perlu diolah lagi lebih lanjut seperti melakukan analisis berdasarkan eksplorasi yang telah dilakukan. Sehingga, penambahan lembar lainnya oleh pengguna sangat disarankan untuk menyajikan informasi yang relevan sehingga dapat diambil keputusan dengan tepat.</p>
 <p>Jika kamu memiliki ide pengembangan lembar kerja <code>fiako-gptreader.xl</code> atau pertanyaan terkait pengembangan bisa langsung <a href="https://github.com/fiakoenjiniring/gptreader.xl/issues/new">membuat isu di repository fiakoenjiniring/gptreader.xl</a>. Jika dokumentasi atau halaman ini ada yang keliru jangan ragu untuk <a href="https://github.com/fiakoenjiniring/manual/issues/new">membuat isu di fiako-manual</a>.</p>
 <div class="column-screen-inset-shaded">
 <hr>
 </div>
 </section>
-<section id="sec-changelog" class="level2">
-<h2 class="anchored" data-anchor-id="sec-changelog">CHANGELOG</h2>
+<section id="sec-changelog" class="level1 unnumbered">
+<h1 class="unnumbered">CHANGELOG</h1>
 <ul>
-<li>v1.0.1 (2023-03-15)
+<li>v1.0.1 (2023-03-14)
 <ul>
 <li>Memperbaiki informasi yang tersedia di <span class="sheet-info">_INFO</span> dan <span class="sheet-info">_LICENSE</span>.</li>
 </ul></li>
@@ -603,7 +677,18 @@ Catatan
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Penggunaan Kembali</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>CC-BY-NC-SA 4.0</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@misc{saktimegariansyah2023,
+  author = {Taruma Sakti Megariansyah and Firman Joeanda and Dina Widia
+    Ningsih and Nurbella Dewi and Afif Nur Hani},
+  title = {FIAKO-GPTREADER.XL},
+  date = {2023-03-15},
+  url = {https://manual.fiako.engineering/solummaa/gpconverter.html},
+  langid = {id}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Untuk atribusi, harap kutip karya ini sebagai:</div><div id="ref-saktimegariansyah2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Taruma Sakti Megariansyah, Firman Joeanda, Dina Widia Ningsih, Nurbella
+Dewi, and Afif Nur Hani. 2023. <span>“FIAKO-GPTREADER.XL.”</span> <a href="https://manual.fiako.engineering/solummaa/gpconverter.html">https://manual.fiako.engineering/solummaa/gpconverter.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
