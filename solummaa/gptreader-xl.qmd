@@ -1,10 +1,56 @@
 ---
 pagetitle: "fiako-gptreader.xl | eksplorasi output GROUP menggunakan Microsoft Excel"
-# title: "`fiako-gptreader.xl`"
-# subtitle: Berkas membaca _records_ dari `fiako-gpconverter`
+title: "FIAKO-GPTREADER.XL"
+subtitle: Lembar kerja excel untuk membaca _summary_ GROUP
 sidebar: side-solummaa
+
 toc: true
-toc-depth: 5
+toc-depth: 4
+toc-location: right
+
+page-layout: article
+
+author:
+    - name: Taruma Sakti Megariansyah
+      url: https://taruma.my.id
+      affiliation: Developer, fiakodev
+      affiliation-url: https://dev.fiako.engineering
+    - name: Firman Joeanda
+      affiliation: Konsultan, FIAKO Engineering
+    - name: Dina Widia Ningsih
+      affiliation: Konsultan, FIAKO Engineering
+    - name: Nurbella Dewi
+      affiliation: Konsultan, FIAKO Engineering
+    - name: Afif Nur Hani
+      affiliation: Konsultan, FIAKO Engineering
+
+citation:
+    language: id
+    type: article
+    license: CC-BY-NC-SA 4.0
+    issued: 2023-03-15
+    url: "https://manual.fiako.engineering/solummaa/gpconverter.html"
+
+license: CC-BY-NC-SA 4.0
+
+lang: id
+
+date: 2023-03-06
+date-modified: 2023-03-17
+date-format: full
+language:
+  title-block-modified: "Diperbarui"
+  title-block-author-plural: "Penulis/Pencipta"
+  title-block-affiliation-plural: "Afiliasi"
+
+callout-appearance: simple
+number-sections: true
+fig-responsive: true
+tbl-cap-location: top
+
+crossref: 
+  chapters: true
+
 css: gptreader-xl.css
 ---
 
@@ -12,8 +58,9 @@ css: gptreader-xl.css
 
 <img src="assets/logo-by-midjourney-3.png" alt="fiako-gptreader.xl logo" width="300" class="logo">
 
-# FIAKO-GPTREADER.XL {.unlisted}
-##### Explore _summary_ GROUP with Excel Workbook {.unlisted}
+[FIAKO-GPTREADER.XL]{.h1}
+
+[Explore _summary_ GROUP with Excel Workbook]{.h5}
 
 ![](https://img.shields.io/github/license/fiakoenjiniring/gptreader.xl)
 ![](https://img.shields.io/github/v/release/fiakoenjiniring/gptreader.xl?color=informational&label=gptreader%2Exl&labelColor=coral&logo=Microsoft%20Excel&style=flat-square) 
@@ -24,17 +71,13 @@ css: gptreader-xl.css
 
 :::
 
-<!-- :::{.callout-warning .text-center appearance="minimal"} 
-Halaman ini masih dalam pengembangan
-::: -->
-
-## INFO {#sec-info}
+# INFO {#sec-info}
 
 **`fiako-gptreader.xl`** merupakan lembar kerja _(workbook)_ _Microsoft Excel_ yang digunakan untuk mengeksplorasi data terstruktur _summary_ GROUP yang diperoleh dari aplikasi [fiako-gpconverter](https://manual.fiako.engineering/solummaa/fiako-gpconverter.html). Lembar kerja ini dapat digunakan sebagai _starter template_. 
 
 Lembar kerja `fiako-gptreader.xl` hanya bisa dibuka dan dijalankan menggunakan **Microsoft Excel 365** (v2301+) karena menggunakan fitur _dynamic array_ dan `LAMBDA`. Aplikasi ini diuji dengan menggunakan keluaran `.csv` aplikasi `fiako-gpconverter` versi `v0.2.0`.
 
-## FITUR {#sec-features}
+# FITUR {#sec-features}
 
 Berikut fitur yang tersedia di lembar kerja `fiako-gptreader.xl`:
 
@@ -44,7 +87,7 @@ Berikut fitur yang tersedia di lembar kerja `fiako-gptreader.xl`:
 4. Melihat rangkuman untuk setiap _load case_ dan _pile_ untuk variabel _reactions_ atau _displacements_. Rangkuman menunjukkan nilai minimum dan maksimum setiap _load case_ dan setiap kategori. Rangkuman dapat dilihat di lembar [SUMMARY]{.sheet-explore}.
 5. Melihat rangkuman seperti [SUMMARY]{.sheet-explore} untuk meninjau satu variabel di lembar [SINGLE_SUMMARY]{.sheet-explore}.
 
-## PERSIAPAN {#sec-preparation}
+# PERSIAPAN {#sec-preparation}
 
 Berikut yang harus dipersiapkan sebelum menggunakan lembar kerja `fiako-gptreader.xl`:
 
@@ -57,11 +100,11 @@ Berikut yang harus dipersiapkan sebelum menggunakan lembar kerja `fiako-gptreade
 
 :::
 
-## PENGGUNAAN {#sec-tutorial}
+# PENGGUNAAN {#sec-tutorial}
 
 Penggunaan lembar kerja `fiako-gptreader.xl` dibagi menjadi dua bagian yaitu [pengaturan]( #sec-tutorial-setup) dan [eksplorasi](#sec-tutorial-exploration).
 
-### Pengaturan {#sec-tutorial-setup}
+## Pengaturan {#sec-tutorial-setup}
 
 Sebelum mengeksplorasi data _summary_ dari GROUP, perlu pengaturan berupa memindahkan informasi dari `.csv` ke lembar kerja `fiako-gptreader.xl`. Berikut langkah yang perlu dilakukan dalam tahap pengaturan.
 
@@ -75,11 +118,11 @@ Sebelum mengeksplorasi data _summary_ dari GROUP, perlu pengaturan berupa memind
 
 Pada bagian pengaturan akan fokus pada lembar _input_ yaitu lembar [PROJECT]{.sheet-input}, [INPUT]{.sheet-input}, dan [GPT_INFO]{.sheet-input}.
 
-#### Lembar [PROJECT]{.sheet-input}
+### Lembar [PROJECT]{.sheet-input}
 
 Lembar [PROJECT]{.sheet-input} ditujukan untuk tempat menyimpan informasi _metadata_ mengenai proyek/data yang akan dieksplorasi. Lembar [PROJECT]{.sheet-input} tidak terhubung dengan kalkulasi ataupun eksplorasi sama sekali, lembar ini hanya ditujukan sebagai catatan tambahan terkait data yang digunakan. 
 
-#### Lembar [INPUT]{.sheet-input}
+### Lembar [INPUT]{.sheet-input}
 
 Lembar [INPUT]{.sheet-input} merupakan **lembar penting** karena data hasil dari konversi [fiako-gpconverter] akan disimpan pada lembar ini. Berikut langkah-langkah dalam mengisi lembar ini dengan data hasil konversi [fiako-gpconverter]:
 
@@ -100,12 +143,12 @@ Setelah menyalin data ke lembar kerja `fiako-gptreader.xl` pada lembar [INPUT]{.
 
 [fiako-gpconverter]: /solummaa/gpconverter.qmd
 
-#### Lembar [GPT_INFO]{.sheet-input}
+### Lembar [GPT_INFO]{.sheet-input}
 
 Setelah memasukkan data di lembar [INPUT]{.sheet-input}, pada lembar [GPT_INFO]{.sheet-input} terdapat informasi umum mengenai data tersebut. Pada lembar [GPT_INFO]{.sheet-input} memiliki informasi jumlah _load case_ dan _pile_ beserta informasi _case name_. Tugas yang harus dilakukan pada lembar [GPT_INFO]{.sheet-input} yaitu menentukan kelompok/_section_ untuk memisahkan kelompok _load case_-nya. 
 
 ::: {.callout-tip}
-## Arti Warna Sel/_Cell_
+# Arti Warna Sel/_Cell_
 
 Sebelum membahas lebih lanjut, terdapat informasi mengenai arti dari warna sel/_cell_. Sel/_cell_ berwarna [BIRU/_Turquoise_]{.cell-input} berarti **sel input** yang dapat diubah nilainya, sedangkan yang berwarna [KUNING/_Yellow_]{.cell-view} berarti **sel info** yang tidak perlu diubah nilainya dan berubah sendirinya berdasarkan sel input. 
 
@@ -140,11 +183,11 @@ Setelah mengisi informasi kelompok _LOAD CASE_, maka dapat dilihat perbedaan war
 
 Dengan terisinya data dan informasi di lembar [INPUT]{.sheet-input} dan [GPT_INFO]{.sheet-input}, maka data sudah siap untuk dieksplorasi lebih lanjut. 
 
-### Eksplorasi {#sec-tutorial-exploration}
+## Eksplorasi {#sec-tutorial-exploration}
 
 Di `fiako-gptreader.xl` terdapat EMPAT ($4$) lembar eksplorasi yaitu [LOAD_VIEWER]{.sheet-explore}, [PILE_VIEWER]{.sheet-explore}, [SUMMARY]{.sheet-explore}, [SINGLE_SUMMARY]{.sheet-explore}. 
 
-#### Lembar [LOAD_VIEWER]{.sheet-explore}
+### Lembar [LOAD_VIEWER]{.sheet-explore}
 
 Lembar [LOAD_VIEWER]{.sheet-explore} menampilkan seluruh nilai/variabel/informasi dalam bentuk tabel untuk **setiap _LOAD CASE_**. Di lembar ini terdapat 2 sel input yaitu [TABLE]{.cell-input} dan [LOAD CASE]{.cell-input}. Sel [TABLE]{.cell-input} menentukan tabel mana yang ingin ditampilkan, sel [TABLE]{.cell-input} dapat diisi dengan `Reduction Factor`, `GLOBAL`, `LOCAL`, `LATERAL MINIMUM`, `LATERAL MAXIMUM`. Sedangkan sel [LOAD CASE]{.cell-input} dapat diisi dengan nomor _LOAD CASE_ yang ingin ditampilkan. Eksplorasi di [LOAD_VIEWER]{.sheet-explore} tidak jauh berbeda ketika mengeksplorasi langsung dengan membuka berkas _summary_ `.gp*t`. Penggunaannya bisa dilihat di @fig-post-03.
 
@@ -154,7 +197,7 @@ Lembar [LOAD_VIEWER]{.sheet-explore} menampilkan seluruh nilai/variabel/informas
 
 :::
 
-#### Lembar [PILE_VIEWER]{.sheet-explore}
+### Lembar [PILE_VIEWER]{.sheet-explore}
 
 Berbeda degan [LOAD_VIEWER]{.sheet-explore}, pada lembar [PILE_VIEWER]{.sheet-explore} tabel ditampilkan untuk **setiap _PILE_**. Terdapat dua sel input yaitu [TABLE]{.cell-input} dan [LOAD CASE]{.cell-input}. Sel input [TABLE]{.cell-input} pilihannya sama dengan lembar [LOAD_VIEWER]{.sheet-explore}. Tabel ini tidak tersedia di berkas asli `.gp*t` dan merupakan hasil aggregasi `fiako-gptreader.xl`. 
 
@@ -166,11 +209,11 @@ Di lembar [PILE_VIEWER]{.sheet-explore}, terdapat visual tambahan yang membedaka
 
 :::
 
-#### Lembar [SUMMARY]{.sheet-explore}
+### Lembar [SUMMARY]{.sheet-explore}
 
 Lembar [SUMMARY]{.sheet-explore} merupakan lembar yang meringkas seluruh informasi yang ada di dataset untuk `GLOBAL` dan `LOCAL`. Lembar ini cukup banyak informasi yang ditampilkan dan cukup padat indikator visualnya, sehingga dalam memulai memahami lembar ini diharapkan tidak terburu-buru. Di lembar [SUMMARY]{.sheet-explore} hanya mengeksplorasi data `GLOBAL` dan `LOCAL` dengan $12$ variabel yang ditinjau yaitu `DISPLACEMENT - X/Y/Z`, `ROTATION - X/Y/Z`, `FORCE - X/Y/Z`, `MOMENT - X/Y/Z` dengan diberi `COLUMN ID` dari $1-12$. 
 
-##### Komponen [SUMMARY]{.sheet-explore}
+#### Komponen [SUMMARY]{.sheet-explore}
 
 Saat melihat Lembar [SUMMARY]{.sheet-explore} terdapat tiga bagian/komponen utama yaitu **INFO/INPUT**, **CROSSTAB TABLE**, dan **SUMMARY MIN/MAX** yang diilustrasikan di @fig-summary-component. 
 
@@ -197,7 +240,7 @@ Ringkasan penggunaan lembar [SUMMARY]{.sheet-explore} bisa dilihat pada @fig-pos
 
 Berikut penjelasan lebih lanjut untuk masing-masing komponen yang ada di lembar [SUMMARY]{.sheet-explore}:
 
-###### Komponen **INFO**
+##### Komponen **INFO**
 
 Pada komponen **INFO** terdapat dua sel input yaitu [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input}. Sel [AXIS]{.cell-input} atau sumbu yang digunakan diisi dengan nilai _GLOBAL_ atau _LOCAL_. Sedangkan [COLUMN ID]{.cell-input} atau variabel yang ditinjau dapat diisi dengan angka dari $1$ sampai $12$. Arti angka $1$ sampai $12$ yaitu `DISPLACEMENT - X/Y/Z`, `ROTATION - X/Y/Z`, `FORCE - X/Y/Z`, `MOMENT - X/Y/Z` secara berurutan untuk setiap sumbunya. Untuk mengubah nilai [AXIS]{.cell-input} dapat menggunakan _dropdown_ atau mengetik langsung sumbunya, sedangkan untuk [COLUMN ID]{.cell-input} bisa memasukkan langsung angka ID Kolom atau menggunakan objek _spin button_ dengan mengklik segitiga atas/bawah.  
 
@@ -207,7 +250,7 @@ Pada komponen **INFO** terdapat dua sel input yaitu [AXIS]{.cell-input} dan [COL
 
 :::
 
-###### Komponen **CROSSTAB TABLE**
+##### Komponen **CROSSTAB TABLE**
 
 Sel input [AXIS]{.cell-input} dan [COLUMN ID]{.cell-input} menentukan _cross tabulation_ yang akan ditampilkan di **CROSSTAB TABLE**. Kolom menunjukkan setiap _LOAD CASE_ dan baris menunjukkan setiap _PILE_. Sedangkan nilainya merupakan variabel yang dipilih berdasarkan [COLUMN ID]{.cell-input}. 
 
@@ -219,7 +262,7 @@ Pada komponen ini, terdapat pemisah kelompok secara visual/warna. Berbeda dengan
 
 :::
 
-###### Komponen **SUMMARY MIN/MAX**
+##### Komponen **SUMMARY MIN/MAX**
 
 Setelah memperoleh nilai [minimum]{.cell-minimum} dan [maksimum]{.cell-maximum} dari **CROSSTAB TABLE** pada setiap _LOAD CASE_, diringkas lagi dalam bentuk tabel **SUMMARY MIN/MAX**. Berikut informasi yang disajikan untuk tabel **SUMMARY**:
 
@@ -241,7 +284,7 @@ Demonstrasi komponen **SUMMARY MIN/MAX** dapat dilihat di @fig-post-08.
 
 Karena informasi dan indikator visual di lembar [SUMMARY]{.sheet-explore} cukup banyak dan padat, tampilan yang lebih sederhana dengan meninjau variabel yang dipilih saja dapat dilihat di lembar baru bernama [SINGLE_SUMMARY]{.sheet-explore}. 
 
-#### Lembar [SINGLE_SUMMARY]{.sheet-explore}
+### Lembar [SINGLE_SUMMARY]{.sheet-explore}
 
 Lembar [SINGLE_SUMMARY]{.sheet-explore} merupakan penyederhanaan visualisasi dan tabel dari lembar [SUMMARY]{.sheet-explore}. Berbeda dengan lembar [SUMMARY]{.sheet-explore}, pada lembar [SINGLE_SUMMARY]{.sheet-explore} hanya fokus pada variabel yang ditinjau dan dibuat dinamis memanjang kebawah.
 
@@ -258,7 +301,7 @@ Pada lembar [SINGLE_SUMMARY]{.sheet-explore} tidak memiliki sel input dan untuk 
 
 :::
 
-## PENUTUP
+# PENUTUP
 
 Dari informasi yang telah disampaikan dapat disimpulkan bahwa lembar yang terlampir ini dapat memudahkan dalam mengeksplorasi data terstruktur dari _summary_ GROUP. Akan tetapi, `fiako-gptreader.xl` belum dapat digunakan dalam pengambilan keputusan dan masih perlu diolah lagi lebih lanjut seperti melakukan analisis berdasarkan eksplorasi yang telah dilakukan. Sehingga, penambahan lembar lainnya oleh pengguna sangat disarankan untuk menyajikan informasi yang relevan sehingga dapat diambil keputusan dengan tepat. 
 
@@ -270,9 +313,9 @@ Jika kamu memiliki ide pengembangan lembar kerja `fiako-gptreader.xl` atau perta
 
 :::
 
-## CHANGELOG {#sec-changelog}
+# CHANGELOG {#sec-changelog .unnumbered}
 
-- v1.0.1 (2023-03-15)
+- v1.0.1 (2023-03-14)
     - Memperbaiki informasi yang tersedia di [_INFO]{.sheet-info} dan [_LICENSE]{.sheet-info}.
 - v1.0.0 (2023-03-06)
     - `fiako-gptreader.xl` memiliki _repository_ terpisah dari [fiakoenjiniring/openxl](https://github.com/fiakoenjiniring/openxl). Dan untuk lembar kerja berikut lainnya akan dialihkan ke _repository_ yang terpisah.

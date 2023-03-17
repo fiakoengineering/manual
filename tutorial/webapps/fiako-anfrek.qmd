@@ -7,7 +7,7 @@ subtitle: |
 
 toc: true
 toc-location: right
-sidebar: side-webapps
+sidebar: side-hidrokit
 
 page-layout: full
 

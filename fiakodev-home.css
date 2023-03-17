@@ -1,0 +1,27 @@
+dt::after {
+    content: "";
+    display: block;
+    border-top: 1px dashed gray;
+    margin-top: 5px;
+    margin-left: 15%;
+    margin-right: 15%;
+    /* margin-bottom: 3px; */
+}
+
+dd {
+    color: #6c757d !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+hr {
+    color: black;
+}
+
+.code-clean {
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: medium;
+}

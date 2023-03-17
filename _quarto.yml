@@ -43,13 +43,13 @@ website:
           - text: "---"
           - text: "_General_"
           - text: "__FEIDLAMBDA__"
-            href: https://lambda.fiako.engineering
+            href: general/feidlambda.qmd
           - "---"
           - text: "_Water Resource Engineering_"
           - text: __FIAKO-HIDROKIT__
             href: hidrokit/index.qmd
           - text: _Rainfall Web Apps_
-            href: webapps/webapps-rainfall.qmd
+            href: hidrokit/webapps-rainfall.qmd
           - "---"
           - text: "_Geotechnical Engineering_"
           - text: __FIAKO-SOLUMMAA__
@@ -78,25 +78,6 @@ website:
         href: https://github.com/fiakoenjiniring/manual
 
   sidebar:
-    - id: side-webapps
-      style: floating
-      search: true
-      border: true
-      collapse-level: 1
-      pinned: true
-      contents:
-        - text: "Ringkasan"
-          href: webapps/index.qmd
-        - webapps/webapps-rainfall.qmd
-        - section: Tutorial _Rainfall Apps_
-          contents:
-            - text: "`fiako-stations`"
-              href: tutorial/webapps/fiako-stations.qmd
-            - text: "`hidrokit-rainfall`"
-              href: tutorial/webapps/hidrokit-rainfall.qmd
-            - text: "`fiako-anfrek`"
-              href: tutorial/webapps/fiako-anfrek.qmd
-        - "---"
     - id: side-solummaa
       style: floating
       search: true
@@ -106,19 +87,68 @@ website:
       contents:
         - "<H3>FIAKODEV-PROJECTS: SOLUMMAA</H3>"
         - "---"
-        - text: "FIAKO-SOLUMMAA"
-          href: solummaa/index.qmd
-        - "---"    
+        # - text: "FIAKO-SOLUMMAA"
+        #   href: solummaa/index.qmd
+        # - "---"    
         - section: __SOLUMMAA PROJECTS__
           contents:
             - href: solummaa/gpconverter.qmd
             - href: solummaa/gptreader-xl.qmd
         - "---"    
-        - section: _OTHER PROJECTS_
+        - section: _FIAKODEV PROJECTS_
           contents:
+            - text: "FEIDLAMBDA"
+              href: general/feidlambda.qmd
             - text: "FIAKO-HIDROKIT"
               href: hidrokit/index.qmd
+            - text: "FIAKO-SOLUMMAA"
+              href: solummaa/index.qmd
         - "---"    
+    - id: side-hidrokit
+      style: floating
+      search: true
+      border: true
+      collapse-level: 1
+      pinned: true
+      contents:
+        - "<H3>FIAKODEV-PROJECTS: HIDROKIT</H3>"
+        - "---"
+        # - text: "FIAKO-HIDROKIT"
+        #   href: hidrokit/index.qmd
+        # - "---"
+        - section: "ARTIKEL"
+          contents:
+            - href: hidrokit/webapps-rainfall.qmd        
+        - "---"    
+        # - section: __HIDROKIT PROJECTS__
+        #   contents:
+        #     - text: hidrokit.py
+        #       href: https://github.com/hidrokit/hidrokit
+        #     - text: FIAKO-STATIONS
+        #       href: https://github.com/fiakoenjiniring/demo-stations
+        #     - text: HIDROKIT-RAINFALL
+        #       href: https://github.com/fiakoenjiniring/rainfall
+        #     - text: FIAKO-ANFREK
+        #       href: https://github.com/fiakoenjiniring/anfrek
+        # - "---"    
+        - section: _FIAKODEV PROJECTS_
+          contents:
+            - text: "FEIDLAMBDA"
+              href: general/feidlambda.qmd
+            - text: "FIAKO-HIDROKIT"
+              href: hidrokit/index.qmd
+            - text: "FIAKO-SOLUMMAA"
+              href: solummaa/index.qmd
+        - "---"
+        - section: Tutorial _Rainfall Apps_
+          contents:
+            - text: "`fiako-stations`"
+              href: tutorial/webapps/fiako-stations.qmd
+            - text: "`hidrokit-rainfall`"
+              href: tutorial/webapps/hidrokit-rainfall.qmd
+            - text: "`fiako-anfrek`"
+              href: tutorial/webapps/fiako-anfrek.qmd
+        - "---"
 
   ## SIDEBAR
   page-footer:
