@@ -13,15 +13,16 @@ page-layout: article
 
 author:
     - name: Taruma Sakti Megariansyah
-      url: mailto:hi@taruma.info
+      url: https://taruma.my.id
       affiliation: Developer, fiakodev
-    - name: FJO
+      affiliation-url: https://dev.fiako.engineering
+    - name: Firman Joeanda
       affiliation: Konsultan, FIAKO Engineering
-    - name: DWN
+    - name: Dina Widia Ningsih
       affiliation: Konsultan, FIAKO Engineering
-    - name: NDE
+    - name: Nurbella Dewi
       affiliation: Konsultan, FIAKO Engineering
-    - name: ANH
+    - name: Afif Nur Hani
       affiliation: Konsultan, FIAKO Engineering
 
 citation:
@@ -35,22 +36,13 @@ license: CC-BY-NC-SA 4.0
 
 lang: id
 
-date: 2023-03-17
+date: 2023-02-06
 date-modified: 2023-03-17
 date-format: full
 language:
   title-block-modified: "Diperbarui"
   title-block-author-plural: "Penulis/Pencipta"
   title-block-affiliation-plural: "Afiliasi"
-
-abstract: |
-    Dalam analisis hidrologi, pengolahan data hujan merupakan proses yang penting. 
-    Dengan membesarnya penyimpanan data dan permintaan pengolahan data yang lebih cepat, 
-    diperlukan solusi teknologi yang dapat menjawab tantangan tersebut.
-    Dikembangkan tiga aplikasi pengolahan data hujan berbasis web yang mampu mempersingkat proses pengerjaan pengolahan data hujan
-    dan mengurangi kekeliruan yang terjadi. 
-    Aplikasi yang telah dikembangkan yaitu Rainfall Stations Explorer, 
-    Rainfall Data Explorer, dan Frequency Analysis. 
 
 callout-appearance: simple
 number-sections: true
@@ -59,8 +51,6 @@ tbl-cap-location: top
 
 crossref: 
   chapters: true
----
-
 ---
 
 ::: {.text-center}
@@ -79,10 +69,6 @@ crossref:
 [<button type="button" class="btn btn-info m-1">GITHUB</button>](https://github.com/fiakoenjiniring/gpconverter)
 
 :::
-
-<!-- :::{.callout-warning .text-center appearance="minimal"} 
-Halaman ini masih dalam pengembangan
-::: -->
 
 ---
 
@@ -126,3 +112,14 @@ Langkah diatas dapat dilihat di @fig-app-01.
 6. Setelah memperoleh _Records_ berbentuk `.csv`, data tersebut bisa disalin ke lembar kerja [**`fiako-gptreader.xl`**](gptreader-xl.qmd) untuk dieksplorasi lebih lanjut. 
 
 Terdapat dua opsi lainnya yaitu _Download Summary (json)_ dan _Download Records (json)_. Berkas JSON dapat digunakan untuk aplikasi web selanjutnya atau ditujukan untuk para _developer_. Saat ini, hanya _Records_ berbentuk CSV saja yang sudah dapat digunakan untuk aplikasi/lembar kerja selanjutnya yaitu `fiako-gptreader.xl`, lembar kerja Excel untuk mengeksplorasi data _summary_ GROUP.  
+
+::: {.column-screen-inset-shaded}
+
+---
+
+:::
+
+# CHANGELOG {#sec-changelog .unnumbered}
+
+- v0.2.0 (2023-02-06)
+    - Publikasi aplikasi web FIAKO-GPCONVERTER.

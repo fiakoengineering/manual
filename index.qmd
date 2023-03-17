@@ -49,7 +49,7 @@ anchor-sections: false
 
 ## FIAKODEV-PROJECTS
 
-[<button type="button" class="btn btn-danger m-1">FEIDLAMBDA<br>[_GENERAL_]{.fw-light}</button>](https://lambda.fiako.engineering)
+[<button type="button" class="btn btn-danger m-1">FEIDLAMBDA<br>[_GENERAL_]{.fw-light}</button>](/general/feidlambda.qmd)
 [<button type="button" class="btn btn-primary m-1">FIAKO-HIDROKIT<br>[_WATER RESOURCES ENGINEERING_]{.fw-light}</button>](/hidrokit/index.qmd)
 [<button type="button" class="btn btn-info m-1">FIAKO-SOLUMMAA<br>[_GEOTECHNICAL ENGINEERING_]{.fw-light}</button>](/solummaa/index.qmd)
 
