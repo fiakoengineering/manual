@@ -43,7 +43,7 @@ website:
           - text: "---"
           - text: "_General_"
           - text: "__FEIDLAMBDA__"
-            href: https://lambda.fiako.engineering
+            href: general/feidlambda.qmd
           - "---"
           - text: "_Water Resource Engineering_"
           - text: __FIAKO-HIDROKIT__
@@ -87,18 +87,22 @@ website:
       contents:
         - "<H3>FIAKODEV-PROJECTS: SOLUMMAA</H3>"
         - "---"
-        - text: "FIAKO-SOLUMMAA"
-          href: solummaa/index.qmd
-        - "---"    
+        # - text: "FIAKO-SOLUMMAA"
+        #   href: solummaa/index.qmd
+        # - "---"    
         - section: __SOLUMMAA PROJECTS__
           contents:
             - href: solummaa/gpconverter.qmd
             - href: solummaa/gptreader-xl.qmd
         - "---"    
-        - section: _OTHER PROJECTS_
+        - section: _FIAKODEV PROJECTS_
           contents:
+            - text: "FEIDLAMBDA"
+              href: general/feidlambda.qmd
             - text: "FIAKO-HIDROKIT"
               href: hidrokit/index.qmd
+            - text: "FIAKO-SOLUMMAA"
+              href: solummaa/index.qmd
         - "---"    
     - id: side-hidrokit
       style: floating
@@ -109,26 +113,30 @@ website:
       contents:
         - "<H3>FIAKODEV-PROJECTS: HIDROKIT</H3>"
         - "---"
-        - text: "FIAKO-HIDROKIT"
-          href: hidrokit/index.qmd
-        - "---"
+        # - text: "FIAKO-HIDROKIT"
+        #   href: hidrokit/index.qmd
+        # - "---"
         - section: "ARTIKEL"
           contents:
             - href: hidrokit/webapps-rainfall.qmd        
         - "---"    
-        - section: __HIDROKIT PROJECTS__
+        # - section: __HIDROKIT PROJECTS__
+        #   contents:
+        #     - text: hidrokit.py
+        #       href: https://github.com/hidrokit/hidrokit
+        #     - text: FIAKO-STATIONS
+        #       href: https://github.com/fiakoenjiniring/demo-stations
+        #     - text: HIDROKIT-RAINFALL
+        #       href: https://github.com/fiakoenjiniring/rainfall
+        #     - text: FIAKO-ANFREK
+        #       href: https://github.com/fiakoenjiniring/anfrek
+        # - "---"    
+        - section: _FIAKODEV PROJECTS_
           contents:
-            - text: hidrokit.py
-              href: https://github.com/hidrokit/hidrokit
-            - text: FIAKO-STATIONS
-              href: https://github.com/fiakoenjiniring/demo-stations
-            - text: HIDROKIT-RAINFALL
-              href: https://github.com/fiakoenjiniring/rainfall
-            - text: FIAKO-ANFREK
-              href: https://github.com/fiakoenjiniring/anfrek
-        - "---"    
-        - section: _OTHER PROJECTS_
-          contents:
+            - text: "FEIDLAMBDA"
+              href: general/feidlambda.qmd
+            - text: "FIAKO-HIDROKIT"
+              href: hidrokit/index.qmd
             - text: "FIAKO-SOLUMMAA"
               href: solummaa/index.qmd
         - "---"

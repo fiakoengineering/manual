@@ -1,0 +1,53 @@
+---
+pagetitle: "feidlambda | User Defined LAMBDA by FIAKO Engineering"
+format: html
+toc: false
+link-external-newwindow: true
+page-layout: full
+sidebar: false
+anchor-sections: false
+css: /fiakodev-home.css
+---
+
+::: {.text-center}
+![](assets/original_feidlambda.png){width="300"}
+
+:::
+
+::: {.text-center .mb-4}
+[[FIAKO-]{.text-muted}FEIDLAMBDA]{.h1 .m-0}<br>
+[[lambda.fiako.engineering](https://lambda.fiako.engineering)]{.text-muted .m-0}
+
+##### User Defined LAMBDA (UDL) by FIAKO Engineering & **fiako**dev
+
+![](https://img.shields.io/github/v/release/fiakoenjiniring/feidlambda?color=informational&label=feidlambda&labelColor=blueviolet&logo=Microsoft%20Excel&style=flat-square)
+![](https://img.shields.io/github/release-date/fiakoenjiniring/feidlambda?color=black&label=release%20date&labelColor=brown&logo=GitHub&logoColor=white)
+![](https://img.shields.io/github/actions/workflow/status/fiakoenjiniring/feidlambda/publish.yml?branch=main&label=quarto&labelColor=informational&logo=GitHub%20Actions&logoColor=white)
+![](https://img.shields.io/github/license/fiakoenjiniring/feidlambda?color=yellow&labelColor=brown&label=license&)
+
+:::
+
+::: {.text-center}
+
+---
+
+**`feidlambda`** merupakan kumpulan _User Defined LAMBDA_ (UDL) untuk Microsoft Excel yang dikembangkan oleh [FIAKO Engineering](https://fiako.engineering) dan [**fiako**dev](https://dev.fiako.engineering).
+
+---
+
+:::
+
+::: {.text-center}
+
+[<button type="button" class="btn btn-primary m-1">WEBSITE</button>](https://lambda.fiako.engineering)
+
+[<button type="button" class="btn btn-primary m-1">INSTALASI</button>](https://lambda.fiako.engineering/docs/install.html )
+[<button type="button" class="btn btn-info m-1">MANUAL/API</button>](https://lambda.fiako.engineering/release/latest.html)
+[<button type="button" class="btn btn-dark m-1">_SOURCE CODE_</button>](https://lambda.fiako.engineering/release/source-code.html)
+
+[////]{.h3}
+
+---
+
+:::
+

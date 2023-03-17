@@ -7,8 +7,6 @@ page-layout: full
 sidebar: false
 anchor-sections: false
 css: /fiakodev-home.css
-aliases: 
-  - webapps/index.html
 ---
 
 ::: {.text-center}
@@ -88,6 +86,8 @@ aliases:
 [<button type="button" class="btn btn-primary m-1">LI-03</button>](https://nbviewer.jupyter.org/gist/4c1ed1212290965ecda056f45d7aaea2)
 [<button type="button" class="btn btn-primary m-1">LI-04</button>](https://nbviewer.jupyter.org/gist/9d1ef5c6d629c792bed0c3f68b324675)
 [<button type="button" class="btn btn-primary m-1">LI-05</button>](https://nbviewer.jupyter.org/gist/560eecd2e55b5fdc3a357b6d3ac4f20c)
+
+[////]{.h3}
 
 ---
 
