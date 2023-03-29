@@ -28,7 +28,7 @@ website:
   navbar:
     title: fiako-manual
     background: dark
-    # foreground: warning
+    foreground: light
     # pinned: false
 
     collapse: true
@@ -87,9 +87,6 @@ website:
       contents:
         - "<H3>FIAKODEV-PROJECTS: SOLUMMAA</H3>"
         - "---"
-        # - text: "FIAKO-SOLUMMAA"
-        #   href: solummaa/index.qmd
-        # - "---"    
         - section: __SOLUMMAA PROJECTS__
           contents:
             - href: solummaa/gpconverter.qmd
@@ -113,24 +110,10 @@ website:
       contents:
         - "<H3>FIAKODEV-PROJECTS: HIDROKIT</H3>"
         - "---"
-        # - text: "FIAKO-HIDROKIT"
-        #   href: hidrokit/index.qmd
-        # - "---"
         - section: "ARTIKEL"
           contents:
             - href: hidrokit/webapps-rainfall.qmd        
         - "---"    
-        # - section: __HIDROKIT PROJECTS__
-        #   contents:
-        #     - text: hidrokit.py
-        #       href: https://github.com/hidrokit/hidrokit
-        #     - text: FIAKO-STATIONS
-        #       href: https://github.com/fiakoenjiniring/demo-stations
-        #     - text: HIDROKIT-RAINFALL
-        #       href: https://github.com/fiakoenjiniring/rainfall
-        #     - text: FIAKO-ANFREK
-        #       href: https://github.com/fiakoenjiniring/anfrek
-        # - "---"    
         - section: _FIAKODEV PROJECTS_
           contents:
             - text: "FEIDLAMBDA"
@@ -152,12 +135,12 @@ website:
 
   ## SIDEBAR
   page-footer:
-    right: >-
-      [open-source](https://github.com/fiakoenjiniring/manual) website by [**fiako**dev](https://dev.fiako.engineering)
-    left: >-
-      &copy; 2022-2023 PT. FIAKO ENJINIRING INDONESIA.
-    # center:
-    #   - "About"
+    # right: >-
+    #   [open-source](https://github.com/fiakoenjiniring/manual) website by [**fiako**dev](https://dev.fiako.engineering)
+    # left: >-
+    #   &copy; 2022-2023 PT. FIAKO ENJINIRING INDONESIA.
+    center: >-
+      &copy; 2022-2023 PT. FIAKO ENJINIRING INDONESIA
 
   
 
