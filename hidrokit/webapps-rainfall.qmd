@@ -54,7 +54,7 @@ tbl-cap-location: top
 format:
   html: 
     css: article.css
-    mermaid-format: png
+    mermaid-format: js
 
 aliases: 
   - /webapps/webapps-rainfall.html
@@ -599,7 +599,7 @@ Ketiga aplikasi diatas dapat membantu proses analisis hidrologi dari menyimpan d
 
 Proses tersebut dapat dilihat ilustrasinya dalam bentuk _sequence diagram_ di @fig-using-apps. 
 
-::: {.column-body .text-center}
+::: {.column-page .text-center}
 
 ```{mermaid}
 %%| label: fig-using-apps
