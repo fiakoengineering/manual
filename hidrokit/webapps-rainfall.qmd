@@ -71,7 +71,7 @@ Untuk mensitasi artikel ini dalam makalah formal, disarankan mengutip makalah "P
 
 > Megariansyah, T. S., Enung, Suryadi, C. (2022). Pengembangan Aplikasi Pengolahan Data Hujan Berbasis Web. Prosiding Pertemuan Ilmiah Tahunan (PIT) Himpunan Ahli Teknik Hidrolik Indonesia (HATHI) ke-39, Mataram, Indonesia: 28-29 Oktober 2022, jilid 5, hal. 2297-2308. <https://hathi.id/download/155/?tmstv=1678886738>
 
-Jika ingin mengutip artikel/halaman ini secara spesifik, dapat menggunakan sitasi yang tersedia [di akhir halaman](#sitasi) (mensitasi halaman ini).  
+Jika ingin mengutip artikel/halaman ini secara spesifik, dapat menggunakan sitasi yang tersedia [di akhir halaman](#sitasi) (mensitasi halaman ini).
 :::
 
 ::: {.callout-note}
